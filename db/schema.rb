@@ -11,21 +11,16 @@
 
 ActiveRecord::Schema.define(:version => 20091107184838) do
 
-  create_table "assignments", :force => true do |t|
-    t.boolean  "is_recruited",     :default => false, :null => false
-    t.boolean  "is_confirmed",     :default => false, :null => false
-    t.boolean  "is_participated",  :default => false, :null => false
-    t.date     "thankyou_sent_on"
-    t.datetime "created_at",                          :null => false
-    t.datetime "updated_at",                          :null => false
-  end
-
   create_table "contact_contact_types", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "contact_id",      :null => false
+    t.integer  "contact_type_id", :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   create_table "contact_skills", :force => true do |t|
+    t.integer  "contact_id", :null => false
+    t.integer  "skill_id",   :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -69,17 +64,23 @@ ActiveRecord::Schema.define(:version => 20091107184838) do
   end
 
   create_table "house_skills", :force => true do |t|
+    t.integer  "house_id",   :null => false
+    t.integer  "skill_id",   :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "houses", :force => true do |t|
+    t.integer  "contact_id",                                     :null => false
+    t.integer  "project_id",                                     :null => false
     t.string   "ethnicity"
     t.string   "disability"
     t.string   "years_in_home"
     t.boolean  "is_homeowner",                :default => false, :null => false
     t.string   "annual_income"
     t.string   "monthly_payments"
+    t.integer  "number_of_people_in_house"
+    t.integer  "number_of_children"
     t.text     "children_names_and_ages"
     t.date     "application_submitted_on"
     t.boolean  "is_application_complete",     :default => false, :null => false
@@ -89,6 +90,7 @@ ActiveRecord::Schema.define(:version => 20091107184838) do
     t.boolean  "is_previous_cia_application", :default => false, :null => false
     t.string   "referral_organization"
     t.string   "referral_agent"
+    t.integer  "house_number"
     t.string   "area_of_town"
     t.text     "repairs_needed"
     t.string   "number_of_volunteers_needed"
@@ -97,18 +99,21 @@ ActiveRecord::Schema.define(:version => 20091107184838) do
     t.text     "comments"
     t.boolean  "is_accepted",                 :default => false, :null => false
     t.date     "accept_letter_sent_on"
+    t.integer  "previewer_contact_id"
+    t.integer  "house_captain_contact_id"
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
   end
 
   create_table "projects", :force => true do |t|
-    t.string   "project_type", :null => false
-    t.string   "project_name", :null => false
+    t.string   "project_type",                :null => false
+    t.string   "project_name",                :null => false
     t.string   "cia_lead"
-    t.date     "starts_on",    :null => false
-    t.date     "ends_on",      :null => false
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.date     "starts_on",                   :null => false
+    t.date     "ends_on",                     :null => false
+    t.integer  "number_of_volunteers_needed"
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
   end
 
   create_table "skills", :force => true do |t|
@@ -121,11 +126,19 @@ ActiveRecord::Schema.define(:version => 20091107184838) do
   end
 
   create_table "volunteer_groups", :force => true do |t|
+    t.integer  "contact_id",                                         :null => false
+    t.integer  "project_id",                                         :null => false
+    t.integer  "number_of_people",                                   :null => false
     t.string   "group_name"
+    t.boolean  "is_group_contact",                :default => false, :null => false
     t.boolean  "is_volunteer_year_round",         :default => false, :null => false
     t.boolean  "is_volunteer_week_before_bigday", :default => false, :null => false
     t.boolean  "is_volunteer_on_bigday",          :default => false, :null => false
     t.boolean  "is_volunteer_week_after_bigday",  :default => false, :null => false
+    t.integer  "house_id",                                           :null => false
+    t.boolean  "is_recruited",                    :default => false, :null => false
+    t.boolean  "is_confirmed",                    :default => false, :null => false
+    t.boolean  "is_participated",                 :default => false, :null => false
     t.datetime "created_at",                                         :null => false
     t.datetime "updated_at",                                         :null => false
   end
