@@ -35,13 +35,18 @@ class InitialDb < ActiveRecord::Migration
       end
       
       create_table :contact_contact_types do |t|
+        t.int :id, :null => false
       t.int :contact_id, :null => false
       t.int :contact_type_id, :null => false
+      t.datetime :created_at, :null => false
+      t.datetime :updated_at, :null => false
       end
       
       create_table :contact_types do |t|
       t.int :id, :null => false
       t.string :description, :null => false
+      t.datetime :created_at, :null => false
+      t.datetime :updated_at, :null => false
       end
       
     create_table :houses do |t|
@@ -93,13 +98,19 @@ class InitialDb < ActiveRecord::Migration
       end
       
       create_table :contact_skills do |t|
+        t.int :id, :null => false
       t.int :contact_id, :null => false
-      t.int :skills_id, :null => false
+      t.int :skill_id, :null => false
+      t.datetime :created_at, :null => false
+      t.datetime :updated_at, :null => false
       end
       
-      create_table :houses_skills do |t|
+      create_table :house_skills do |t|
+        t.int :id, :null => false
       t.int :house_id, :null => false
       t.int :skill_id, :null => false
+      t.datetime :created_at, :null => false
+      t.datetime :updated_at, :null => false
       end
       
       create_table :skills do |t|
@@ -108,6 +119,8 @@ class InitialDb < ActiveRecord::Migration
       t.boolean :is_trade_skill, :null => false, :default => 0
       t.boolean :is_house_skill, :null => false, :default => 0
       t.boolean :is_contact_skill, :null => false, :default => 0
+      t.datetime :created_at, :null => false
+      t.datetime :updated_at, :null => false
       end
       
       create_table :assignments do |t|
@@ -126,7 +139,7 @@ class InitialDb < ActiveRecord::Migration
       t.int :id, :null => false
       t.int :contact_id, :null => false
       t.int :project_id, :null => false
-      t.int :number_of_people, :null => false
+      t.int :number_of_peple, :null => false
       t.string :group_name
       t.boolean :is_volunteer_year_round, :null => false, :default => 0
       t.boolean :is_volunteer_week_before_bigday, :null => false, :default => 0
