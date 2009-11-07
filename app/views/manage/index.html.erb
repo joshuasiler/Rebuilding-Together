@@ -1,0 +1,43 @@
+<%
+   @grid.rendering do |conf|
+     conf.records do |table|
+       table.start do |records|
+         "<table>" + @display_columns.inject("<tr>") do |acc, name|
+           acc + case name
+             when "first_name"
+               "<th>Name</th>"
+             else
+               "<th>#{h name}</th>"
+             end 
+         end + "</tr>"
+       end
+
+       table.end do |records|
+         "</table>"
+       end
+
+       conf.record do |row|
+         row.start do |records, record|
+           "<tr>"
+         end
+   
+         row.end do |records, record|
+           "</tr>"
+         end
+
+         conf.attribute do |cell|
+           cell.start do |record, name, value|
+             case name 
+             when "first_name"
+               "<td>#{h record.first_name} #{h record.last_name}</td>"
+             else
+               "<td>#{h value}</td>"
+             end
+           end
+         end
+       end
+     end
+   end
+%>
+<h1>Manage#index</h1>
+<%= @grid.render %>

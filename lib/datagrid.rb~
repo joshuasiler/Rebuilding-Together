@@ -1,0 +1,13 @@
+
+class DataGrid 
+  class Configurator
+    attr
+    def get_data(&blk)
+    end
+  end
+
+  def configure
+    @conf = Configurator.new
+    yield @conf if block_given?
+  end
+end
