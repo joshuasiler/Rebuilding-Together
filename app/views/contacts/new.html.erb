@@ -1,0 +1,11 @@
+  <%= stylesheet_link_tag "formtastic" %>
+	<%= stylesheet_link_tag "formtastic_changes" %>
+	
+<% semantic_form_for @contact do |form| %>
+				<%= form.inputs %>
+				<%= form.inputs :description, :as => :check_boxes, :for => :skills %>
+
+				<%= form.buttons %>
+<% end %>
+
+

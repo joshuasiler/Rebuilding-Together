@@ -21,13 +21,19 @@ ActiveRecord::Schema.define(:version => 20091107184838) do
   end
 
   create_table "contact_contact_types", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "contact_skills", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "contact_types", :force => true do |t|
-    t.string "description", :null => false
+    t.string   "description", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "contacts", :force => true do |t|
@@ -62,6 +68,11 @@ ActiveRecord::Schema.define(:version => 20091107184838) do
     t.datetime "updated_at",                            :null => false
   end
 
+  create_table "house_skills", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "houses", :force => true do |t|
     t.string   "ethnicity"
     t.string   "disability"
@@ -90,9 +101,6 @@ ActiveRecord::Schema.define(:version => 20091107184838) do
     t.datetime "updated_at",                                     :null => false
   end
 
-  create_table "houses_skills", :force => true do |t|
-  end
-
   create_table "projects", :force => true do |t|
     t.string   "project_type", :null => false
     t.string   "project_name", :null => false
@@ -104,10 +112,12 @@ ActiveRecord::Schema.define(:version => 20091107184838) do
   end
 
   create_table "skills", :force => true do |t|
-    t.string  "description",                         :null => false
-    t.boolean "is_trade_skill",   :default => false, :null => false
-    t.boolean "is_house_skill",   :default => false, :null => false
-    t.boolean "is_contact_skill", :default => false, :null => false
+    t.string   "description",                         :null => false
+    t.boolean  "is_trade_skill",   :default => false, :null => false
+    t.boolean  "is_house_skill",   :default => false, :null => false
+    t.boolean  "is_contact_skill", :default => false, :null => false
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
   end
 
   create_table "volunteer_groups", :force => true do |t|
