@@ -31,3 +31,24 @@ input,select
   clear:left;
   margin-bottom:10px;
 }
+
+.manage-contacts-table table, th, tr, td{
+    margin: 0; padding: 0; 
+}
+
+.manage-contacts-row-true {
+    margin: 0; padding: 0;
+}
+
+.manage-contacts-row-false {
+    margin: 0; padding: 0;
+    background: lightgreen;
+}
+
+.manage-contacts-col-true {
+    padding: 0; margin: 0;
+}
+
+.manage-contacts-col-false {
+    padding: 0; margin: 0;
+}
