@@ -2,37 +2,36 @@
    @grid.rendering do |conf|
      conf.records do |table|
        table.start do |records|
-         "<table>" + @display_columns.inject("<tr>") do |acc, name|
-           acc + case name
-             when "first_name"
-               "<th>Name</th>"
-             else
-               "<th>#{h name}</th>"
-             end 
-         end + "</tr>"
+         render(:partial => "query.html.erb") +
+           %(<table class="manage-contacts-table">\n) + 
+           @display_columns.inject("\t<tr>\n") do |acc, name|
+             acc + "\t\t<th>" + case name 
+               when "company"
+                 "Company/Group"
+               else
+                 h(name.capitalize)
+               end + "</th>\n"
+           end + "\t</tr>\n" + if records.length == 0: %(<tr><td colspan="#{@display_columns.length}">No result</td></tr>); else "";
+         end
        end
 
        table.end do |records|
-         "</table>"
+         "</table>\n"
        end
 
        conf.record do |row|
          row.start do |records, record|
-           "<tr>"
+           @which = ! @which
+           %(\t<tr class="manage-contacts-row-#{@which}">\n)
          end
    
          row.end do |records, record|
-           "</tr>"
+           "\t</tr>\n"
          end
 
          conf.attribute do |cell|
            cell.start do |record, name, value|
-             case name 
-             when "first_name"
-               "<td>#{h record.first_name} #{h record.last_name}</td>"
-             else
-               "<td>#{h value}</td>"
-             end
+             %(\t\t<td class="manage-contacts-col-#{@which}">#{value.blank? ? "&nbsp;" : h(value)}</td>\n)
            end
          end
        end

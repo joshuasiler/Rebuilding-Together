@@ -1,0 +1,15 @@
+<div>
+  <% form_tag :controller => 'manage' do %>
+    <input type=checkbox name="query[unassigned]" >Not assigned to house
+    <br />
+    <input type=checkbox name="query[any_skills]" >Any Skills
+    <br />
+    Specific skills: <select multiple=multiple size=5 name="query[skills]"><%= options_for_select(Skill.all.collect { |skill| [h(skill.description), skill.id] }) %></select>
+    <br />
+    <input type=checkbox name="query[inactive]" >Include inactive
+    <br />
+    <input type=submit name="query[filter]" value="Filter"></input>
+    <input type=submit name="query[clear]" value="Clear"></input>
+  <% end %>
+  </form>
+</div>
