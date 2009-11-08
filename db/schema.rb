@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091107184838) do
+ActiveRecord::Schema.define(:version => 20091108004632) do
 
   create_table "contact_contact_types", :force => true do |t|
     t.integer  "contact_id",      :null => false
