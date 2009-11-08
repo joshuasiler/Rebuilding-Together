@@ -3,9 +3,8 @@
 <div style="clear:both;font-size:0em;">&nbsp;</div>	
 <div class="contactform">
 <form action="/contacts" id="new_contact" method="post">
-				<div style="margin:0;padding:0;display:inline">
-								<%= token_tag %></div>
-				<fieldset class="inputs">
+								<%= token_tag %>
+
 				<ol>
 <h2>About Yourself</h2>
 				<li class="string required first_name" id="contact_first_name_input">
@@ -21,12 +20,12 @@
 								<input id="contact_address_1" maxlength="255" name="contact[address_1]" size="30" type="text" /></li>
 				
 				<li class="string required address_2" id="contact_address_2_input">
-								<label for="contact_address_2">Address 2</label>
-								<input id="contact_address_2" maxlength="255" name="contact[address_2]" size="30" type="text" /></li>
+								<label>Address 2</label>
+								<input id="contact_address_2" maxlength="255" name="contact[address_2]" size="30" type="text" />
+				<div style="clear:both;font-size:0em;">&nbsp;</div></li>
 				
 				<li>
-								<label for="contact_city">City</label>
-								<label style="width:200px;"><input id="contact_city" maxlength="255" name="contact[city]" size="20" type="text" /></label>
+								<label>City</label><label style="width:200px;"><input id="contact_city" maxlength="255" name="contact[city]" size="20" type="text" /></label>
 								<label style="margin-left:10px;width:50px;">State</label>
 								<label style="margin-left:10px;width:130px;"><input id="contact_state" maxlength="255" name="contact[state]" size="10" type="text" /></label>
 								<label style="margin-left:10px;width:50px;" for="contact_zip">Zip</label>
@@ -36,14 +35,19 @@
 				
 				<li>
 								<label for="contact_country">Country</label>
-								<input type="textbox" name="contact[country]" size="20" maxlength="255" /> (if not US)
+								<input type="text" name="contact[country]" size="20" maxlength="255" /> (if not US)
 												</li>
 				
-				<li style="padding-left:175px;>
-								<label for="contact_home_phone">Home phone</label><label for="contact_work_phone">Work phone</label><label for="contact_mobile_phone">Mobile phone</label><BR />
-								<label><input id="contact_home_phone" maxlength="255" name="contact[home_phone]" size="12" type="text" /></label>
-								<label><input id="contact_work_phone" maxlength="255" name="contact[work_phone]" size="12" type="text" /></label>
-								<label><input id="contact_mobile_phone" maxlength="255" name="contact[mobile_phone]" size="12" type="text" /></label>
+				<li style="padding-left:155px;">
+								<label for="contact_work_phone">Home phone<BR />
+								<input type="text" id="contact_home_phone" maxlength="255" name="contact[home_phone]" size="12" /></label>
+				</li><LI>
+								<label>Work phone<BR />
+								<input id="contact_work_phone" maxlength="255" name="contact[work_phone]" size="12" type="text" />
+								</label>
+								<label for="contact_mobile_phone">Mobile phone<BR />
+								<input id="contact_mobile_phone" maxlength="255" name="contact[mobile_phone]" size="12" type="text" />
+								</label>
 				<div style="clear:both;font-size:0em;">&nbsp;</div>
 								</li>
 
@@ -99,6 +103,6 @@
 <% end %>
 </div><div style="clear:both;font-size:1em;">&nbsp;</div>
 				<li><input class="create" id="contact_submit" name="commit" type="submit" value="Sign Up" /></li>
-</ol></fieldset>
+</ol>
 </form>
 </div>
