@@ -1,0 +1,104 @@
+<img src="/images/RebuildingPortlandLogo.JPG" style="float:right;" />
+<h1><%= Project.latest.project_name %></h1>
+<div style="clear:both;font-size:0em;">&nbsp;</div>	
+<div class="contactform">
+<form action="/contacts" id="new_contact" method="post">
+				<div style="margin:0;padding:0;display:inline">
+								<%= token_tag %></div>
+				<fieldset class="inputs">
+				<ol>
+<h2>About Yourself</h2>
+				<li class="string required first_name" id="contact_first_name_input">
+								<label for="contact_first_name">First name</label>
+								<input id="contact_first_name" maxlength="255" name="contact[first_name]" size="20" type="text" /></li>
+				
+				<li class="string required last_name" id="contact_last_name_input">
+								<label for="contact_last_name">Last name</label>
+								<input id="contact_last_name" maxlength="255" name="contact[last_name]" size="20" type="text" /></li>
+				
+				<li class="string required address_1" id="contact_address_1_input">
+								<label for="contact_address_1">Address 1</label>
+								<input id="contact_address_1" maxlength="255" name="contact[address_1]" size="30" type="text" /></li>
+				
+				<li class="string required address_2" id="contact_address_2_input">
+								<label for="contact_address_2">Address 2</label>
+								<input id="contact_address_2" maxlength="255" name="contact[address_2]" size="30" type="text" /></li>
+				
+				<li>
+								<label for="contact_city">City</label>
+								<label style="width:200px;"><input id="contact_city" maxlength="255" name="contact[city]" size="20" type="text" /></label>
+								<label style="margin-left:10px;width:50px;">State</label>
+								<label style="margin-left:10px;width:130px;"><input id="contact_state" maxlength="255" name="contact[state]" size="10" type="text" /></label>
+								<label style="margin-left:10px;width:50px;" for="contact_zip">Zip</label>
+								<label><input id="contact_zip" maxlength="255" name="contact[zip]" size="10" type="text" /></label>
+				<div style="clear:both;font-size:0em;">&nbsp;</div>
+				</li>
+				
+				<li>
+								<label for="contact_country">Country</label>
+								<input type="textbox" name="contact[country]" size="20" maxlength="255" /> (if not US)
+												</li>
+				
+				<li style="padding-left:175px;>
+								<label for="contact_home_phone">Home phone</label><label for="contact_work_phone">Work phone</label><label for="contact_mobile_phone">Mobile phone</label><BR />
+								<label><input id="contact_home_phone" maxlength="255" name="contact[home_phone]" size="12" type="text" /></label>
+								<label><input id="contact_work_phone" maxlength="255" name="contact[work_phone]" size="12" type="text" /></label>
+								<label><input id="contact_mobile_phone" maxlength="255" name="contact[mobile_phone]" size="12" type="text" /></label>
+				<div style="clear:both;font-size:0em;">&nbsp;</div>
+								</li>
+
+				<li>
+								<label for="contact_email">Email </label>
+								<input id="contact_email" maxlength="255" name="contact[email]" size="50" type="text" /></li>
+				<li>
+								<label for="contact_email">Retype Your Email</label>
+								<input id="contact_email" maxlength="255" name="contact[email]" size="50" type="text" /></li>
+<h2>About Your Group</h2>				
+				
+				<li class="string required company_name" id="contact_company_name_input">
+								<label for="contact_company_name">Company Name </label>
+								<input id="contact_company_name" maxlength="255" name="contact[company_name]" size="50" type="text" /></li>
+
+
+<li>
+								<label>Group Name </label>
+								<input maxlength="255" name="groupname" size="50" type="text" /></li>
+<h2>Let's Rebuild</h2>
+				
+												<input name="contact[is_active]" type="hidden" value="1" />
+
+				Skills:<BR />
+				<div style="width:350px; float:left;">
+<% cnt = 0
+@skills.each do |skill| %>
+				<input type="checkbox" name="skills" value="<%=skill.id %>" /><%= skill.description %><BR />
+				<% cnt+=1
+				if cnt > @skills.length/2
+								cnt = -1000000 %>
+				</div>			<div style="width:350px; float:left;">
+				<% end %>
+<% end %>
+</div><div style="clear:both;font-size:0em;">&nbsp;</div>
+	<BR />
+<li class="text required other_skills" id="contact_other_skills_input">
+								<label for="contact_other_skills">Other Skills </label>
+								<textarea cols="40" rows="4" id="contact_other_skills" name="contact[other_skills]" rows="20"></textarea></li>
+				
+				<li class="text required comments" id="contact_comments_input">
+								<label for="contact_comments">Comments </label>
+								<textarea cols="40" rows="4" id="contact_comments" name="contact[comments]" rows="20"></textarea></li>
+				Interests:<BR /><div style="width:350px; float:left;">
+<% cnt = 0
+@ctypes.each do |ctype| %>
+				<input type="checkbox" name="ctypes" value="<%=ctype.id %>" /><%= ctype.description %><BR />
+				<% cnt+=1
+				if cnt > @ctypes.length/2
+								cnt = -1000000 %>
+				</div>			<div style="width:350px; float:left;">
+				<% end %>
+<% end %>
+</div><div style="clear:both;font-size:1em;">&nbsp;</div>
+				<li><input class="create" id="contact_submit" name="commit" type="submit" value="Sign Up" /></li>
+</ol></fieldset>
+</form>
+</div>
