@@ -3,6 +3,7 @@ class ContactsController < ApplicationController
   def new
     @contact = Contact.new(params[:contact])
     @skills = Skill.find(:all)
+    @ctypes = ContactType.find(:all)
   end
   
   def create
@@ -13,6 +14,7 @@ class ContactsController < ApplicationController
     else
       # collect errors in flash and rerender
       @skills = Skill.find(:all)
+      @ctypes = ContactType.find(:all)
       render :new
     end
   end

@@ -125,7 +125,7 @@ ActiveRecord::Schema.define(:version => 20091107184838) do
     t.datetime "updated_at",                          :null => false
   end
 
-  create_table "volunteer_groups", :force => true do |t|
+  create_table "volunteers", :force => true do |t|
     t.integer  "contact_id",                                         :null => false
     t.integer  "project_id",                                         :null => false
     t.integer  "number_of_people",                                   :null => false

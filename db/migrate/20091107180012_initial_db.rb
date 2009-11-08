@@ -123,7 +123,7 @@ class InitialDb < ActiveRecord::Migration
       t.datetime :updated_at, :null => false
       end
       
-      create_table :volunteer_groups do |t|
+      create_table :volunteers do |t|
       t.integer :id, :null => false
       t.integer :contact_id, :null => false
       t.integer :project_id, :null => false

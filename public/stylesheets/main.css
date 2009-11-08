@@ -1,0 +1,33 @@
+body{
+  font-family: arial;
+  margin: 10px;
+  font-size: 1.1em;
+  text-align:center;
+}
+main{
+  width:900px;
+  text-align:left;
+  margin:auto;
+}
+
+input,select
+{
+  font-size: 1.1em;
+}
+
+.contactform label
+{
+  float:left; 
+  display: block;
+  width: 200px;
+}
+
+.contactform ol
+{
+  list-style: none;
+}
+.contactform li
+{
+  clear:left;
+  margin-bottom:10px;
+}
