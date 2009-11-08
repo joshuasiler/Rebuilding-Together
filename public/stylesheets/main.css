@@ -19,9 +19,8 @@ input,select
 {
   float:left; 
   display: block;
-  width: 175px;
+  width: 155px;
 }
-
 .contactform ol
 {
   list-style: none;
