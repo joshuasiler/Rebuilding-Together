@@ -43,7 +43,7 @@ class DataGrid
   end
 
   class Wrap
-    attr_accessor :start_fn, :end_fn
+    attr_accessor :start_fn, :end_fn, :last_fn
 
     def initialize
       @start_fn = proc { "" }
@@ -52,6 +52,10 @@ class DataGrid
 
     def start(&blk)
       @start_fn = blk
+    end
+
+    def last(&blk)
+      @last_fn = blk
     end
 
     def end(&blk)
@@ -82,16 +86,29 @@ class DataGrid
         raise "bar"
       end
 
-    
+    record = nil
     @conf.table.start_fn.call(data) +
-      data.inject("") { |acc, record|
-      acc + @conf.row.start_fn.call(data, record) +
-        @conf.get_columns_fn.call(exec, @conf.model, record).
-          inject("") { |acc, attr|
-            key, value = attr
-            acc + @conf.cell.start_fn.call(record, key, value) + 
-              @conf.cell.end_fn.call(record, key, value)
-          } + @conf.row.end_fn.call(data, record)
-      } + @conf.table.end_fn.call(data)
+      data.inject("") { |acc, r|
+        acc += do_row(@conf.row.start_fn, data, record, exec) if record
+        record = r
+        acc
+      } + if record: do_row(@conf.row.last_fn, data, record, exec); else ""; end + @conf.table.end_fn.call(data)
+  end
+
+  def do_row(start_fn, data, record, exec)
+    attr = nil
+    start_fn.call(data, record) +
+      @conf.get_columns_fn.call(exec, @conf.model, record).
+        inject("") { |acc, a|
+          acc += do_column(@conf.cell.start_fn, record, attr[0], attr[1]) if attr
+          attr = a
+          acc 
+        } + do_column(@conf.cell.last_fn, record, attr[0], attr[1]) + 
+      @conf.row.end_fn.call(data, record)      
+  end
+
+  def do_column(start_fn, record, key, value)
+    start_fn.call(record, key, value) + 
+      @conf.cell.end_fn.call(record, key, value)
   end
 end

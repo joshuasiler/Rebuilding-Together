@@ -1,12 +1,11 @@
 <div>
   <% form_tag :controller => 'manage' do %>
-    <input type=checkbox name="query[unassigned]" >Not assigned to house
+    <%= check_box_tag "query[unassigned]", "1", !! @query["unassigned"] %>    Not assigned to house
     <br />
-    <input type=checkbox name="query[any_skills]" >Any Skills
+    <%= check_box_tag "query[any_skills]", "1", !! @query["any_skills"] %> Any Skills
+    Specific skills: <%= select_tag "query[skills]", options_for_select(Skill.all_skills, @query["skills"]), :multiple => true, :size => 3 %>
     <br />
-    Specific skills: <select multiple=multiple size=5 name="query[skills]"><%= options_for_select(Skill.all.collect { |skill| [h(skill.description), skill.id] }) %></select>
-    <br />
-    <input type=checkbox name="query[inactive]" >Include inactive
+    <%= check_box_tag "query[inactive]", "1", !! @query["inactive"] %>Include inactive
     <br />
     <input type=submit name="query[filter]" value="Filter"></input>
     <input type=submit name="query[clear]" value="Clear"></input>

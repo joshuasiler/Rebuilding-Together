@@ -11,12 +11,21 @@ class ManageController < ApplicationController
       # g.page = 1
       # g.per_page = 10
 
+      # Restore query form state if "filter" button
+      # pressed.
+      @query = 
+        if request["query"] && request["query"]["filter"] 
+          request["query"]
+        else
+          Hash.new
+        end
+
       g.get_data do |exec, model|
-        if request["query"]["filter"]
+        if @query["filter"]
           cond = []
-          if request["query"]["any_skills"]
+          if @query["any_skills"]
             cond << "id in (select contact_id from contact_skills)"
-          elsif request["query"]["skills"]
+          elsif @query["skills"]
             cond << "" 
           end
             model.find(:all, :conditions => cond.join(" AND "))

@@ -24,6 +24,10 @@
            @which = ! @which
            %(\t<tr class="manage-contacts-row-#{@which}">\n)
          end
+
+         row.last do |records, record|
+           %(\t<tr class="manage-contacts-row-#{!@which} manage-contacts-row-last">\n)
+         end
    
          row.end do |records, record|
            "\t</tr>\n"
@@ -32,6 +36,10 @@
          conf.attribute do |cell|
            cell.start do |record, name, value|
              %(\t\t<td class="manage-contacts-col-#{@which}">#{value.blank? ? "&nbsp;" : h(value)}</td>\n)
+           end
+
+           cell.last do |record, name, value|
+             %(\t\t<td class="manage-contacts-col-#{@which} manage-contacts-col-last">#{value.blank? ? "&nbsp;" : h(value)}</td>\n)
            end
          end
        end
