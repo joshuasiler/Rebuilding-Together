@@ -20,7 +20,7 @@ class ManageController < ApplicationController
           Hash.new
         end
 
-      g.get_data do |exec, model|
+      g.get_data do |state, model|
         if @query["filter"]
           cond = []
           if @query["any_skills"]
@@ -34,7 +34,7 @@ class ManageController < ApplicationController
         end
       end
 
-      g.get_columns do |exec, model, contact|
+      g.get_columns do |state, model, contact|
         @display_columns.collect do |col| 
           case col
           when "name"

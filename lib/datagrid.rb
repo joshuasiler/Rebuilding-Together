@@ -10,7 +10,9 @@ class DataGrid
     # the grid level. Wrap blocks should take the following arguments:
     #
     #   Wrap#start - The state hash, all records and an accumulator
+    #
     #   Wrap#end - The state hash, all records an an accumulator
+    #
     #   Wrap#last - Not called in this case.
     #
     # Wrap#start and Wrap#end will be called once each, even if
@@ -26,9 +28,14 @@ class DataGrid
     # Yields a Wrap object will hold the blocks for rendering at the
     # row level. Wrap blocks should take the following arguments.
     #
-    #   Wrap#start - The state hash, all records, the current record, and an accumulator.
-    #   Wrap#end - The state hash, all records, the current record, and an accumulator.
-    #   Wrap#last - The state hash, all records, the current record, and an accumulator.
+    #   Wrap#start - The state hash, all records, the current record,
+    #   and an accumulator.
+    #
+    #   Wrap#end - The state hash, all records, the current record,
+    #   and an accumulator.
+    #
+    #   Wrap#last - The state hash, all records, the current record,
+    #   and an accumulator.
     #
     # Wrap#start will not be called if there is only one record to be
     # called; only Wrap#last will be called in that case. Wrap#end
@@ -46,9 +53,14 @@ class DataGrid
     # the column level. Wrap blocks should take the following
     # arguments.
     #
-    #   Wrap#start - The state hash, the current record, the current column name, the current column value and an accumulator.
-    #   Wrap#end - The state hash, the current record, the current column name, the current column value and an accumulator.
-    #   Wrap#last - The state hash, the current record, the current column name, the current column value and an accumulator.
+    #   Wrap#start - The state hash, the current record, the current
+    #   column name, the current column value and an accumulator.
+    #
+    #   Wrap#end - The state hash, the current record, the current
+    #   column name, the current column value and an accumulator.
+    #
+    #   Wrap#last - The state hash, the current record, the current
+    #   column name, the current column value and an accumulator.
     #
     # Wrap#start will not be called if there is only one record to be
     # called; only Wrap#last will be called in that case. Wrap#end
@@ -166,7 +178,7 @@ class DataGrid
         @conf.get_data_fn.call(state, @conf.model)
       elsif @conf.model.nil?
         raise "No model supplied with configuration"
-      elsif @conf.model.is_a?(Class) && @conf.model.ancestors.include?(ActiveActiveRecord::Base) 
+      elsif @conf.model.is_a?(Class) && @conf.model.ancestors.include?(ActiveRecord::Base) 
         @conf.model.all
       elsif @conf.model.is_a?(Enumerable)
         @conf.model
@@ -180,7 +192,6 @@ class DataGrid
         do_row(render, state, render.row.start_fn, data, prev) if prev
         r
       end
-
     do_row(render, state, render.row.last_fn, data, last) if last && render.row.last_fn
     render.table.end_fn.call(state, data, render.accumulator) if render.table.end_fn
 
