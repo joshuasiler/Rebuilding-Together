@@ -1,8 +1,11 @@
 <div>
   <% form_tag :controller => 'manage' do %>
-    <%= check_box_tag "query[unassigned]", "1", !! @query["unassigned"] %>    Not assigned to house
+    <%= radio_button_tag "query[assigned]", "1", @query["assigned"] && @query["assigned"] == "1" %>Assigned to a house
+    <%= radio_button_tag "query[assigned]", "2", @query["assigned"] && @query["assigned"] == "2" %>Unassigned
+    <%= radio_button_tag "query[assigned]", "3", (! @query["assigned"]) || @query["assigned"] == "3" %>Assigned & Unassigned
     <br />
     <%= check_box_tag "query[any_skills]", "1", !! @query["any_skills"] %> Any Skills
+    <br />
     Specific skills: <%= select_tag "query[skills]", options_for_select(Skill.all_skills, @query["skills"]), :multiple => true, :size => 3 %>
     <br />
     <%= check_box_tag "query[inactive]", "1", !! @query["inactive"] %>Include inactive

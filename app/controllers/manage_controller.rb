@@ -21,17 +21,30 @@ class ManageController < ApplicationController
         end
 
       g.get_data do |state, model|
+        cond = Conditions.new
         if @query["filter"]
-          cond = []
           if @query["any_skills"]
-            cond << "id in (select contact_id from contact_skills)"
+            cond.any_skills = true
           elsif @query["skills"]
-            cond << "" 
+            cond.skills = @query["skills"].split(",")
           end
-            model.find(:all, :conditions => cond.join(" AND "))
-        else
-            model.all
+
+          case @query["assigned"]
+          when "1"
+            cond.assigned = true
+            cond.unassigned = false
+          when "2"
+            cond.assigned = false
+            cond.unassigned = true
+          else
+            cond.assigned = true
+            cond.unassigned = true
+          end
+
+          cond.include_inactive = !! @query["inactive"]
         end
+
+        model.find(:all, :conditions => cond.conditions)
       end
 
       g.get_columns do |state, model, contact|
@@ -57,4 +70,64 @@ class ManageController < ApplicationController
   def update
   end
 
+  # Helps build conditions statement for
+  # contact query on this page.
+  class Conditions
+    include ::ActiveRecord::ConnectionAdapters::Quoting
+
+    # An array of skill IDs. Defaults to empty.
+    attr_accessor :skills
+    # A boolean, defaults to false
+    attr_accessor :assigned
+    # A boolean, defaults to false
+    attr_accessor :unassigned
+    # A boolean, defaults to false.
+    attr_accessor :include_inactive
+    # A boolean, defaults to false. Overrides skills list.
+    attr_accessor :any_skills
+
+    def initialize
+      @skills = []
+      @assigned = false
+      @unassigned = false
+      @include_inactive = false
+      @any_skills = false
+    end
+
+    def conditions
+      cond = []
+      if @any_skills
+        cond << "id in (select contact_id from contact_skills)"
+      elsif @skills && @skills.length > 0
+        cond << %(id in (select contact_id from contact_skills where skill_id in (#{@skills.collect { |s| "'#{quote_string((s || "").to_s)}'"}.join(",")})))
+      end
+
+      assigned_contacts = <<-SQL
+      (select v.contact_id 
+       from volunteers v inner join
+            projects p on v.project_id = p.id
+       where p.ends_on is null OR p.ends_on > now())
+SQL
+
+      if @assigned && ! @unassigned
+        cond << "id in (#{assigned_contacts})"
+      elsif ! @assigned && @unassigned
+        cond << "id not in (#{assigned_contacts})"
+      end
+
+      if @include_inactive
+        cond << "is_active = 1"
+      end
+
+      cond.join " AND "
+    end
+    
+    def clear
+      @skills = nil
+      @not_assigned = false
+      @include_inactive = false
+      @any_skills = false
+    end
+
+  end
 end
