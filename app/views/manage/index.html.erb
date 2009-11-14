@@ -1,8 +1,9 @@
 <%
    @grid.rendering do |conf|
+     conf.accumulator = ""
      conf.records do |table|
-       table.start do |records|
-         render(:partial => "query.html.erb") +
+       table.start do |state, records, acc|
+         acc << render(:partial => "query.html.erb") +
            %(<table class="manage-contacts-table">\n) + 
            @display_columns.inject("\t<tr>\n") do |acc, name|
              acc + "\t\t<th>" + case name 
@@ -15,33 +16,33 @@
          end
        end
 
-       table.end do |records|
-         "</table>\n"
+       table.end do |state, records, acc|
+         acc << "</table>\n"
+       end
+     end
+
+     conf.record do |row|
+       row.start do |state, records, record, acc|
+         @which = ! @which
+         acc << %(\t<tr class="manage-contacts-row-#{@which}">\n)
        end
 
-       conf.record do |row|
-         row.start do |records, record|
-           @which = ! @which
-           %(\t<tr class="manage-contacts-row-#{@which}">\n)
-         end
-
-         row.last do |records, record|
-           %(\t<tr class="manage-contacts-row-#{!@which} manage-contacts-row-last">\n)
-         end
+       row.last do |state, records, record, acc|
+         acc << %(\t<tr class="manage-contacts-row-#{!@which} manage-contacts-row-last">\n)
+       end
    
-         row.end do |records, record|
-           "\t</tr>\n"
-         end
+       row.end do |state, records, record, acc|
+         acc << "\t</tr>\n"
+       end
+     end
 
-         conf.attribute do |cell|
-           cell.start do |record, name, value|
-             %(\t\t<td class="manage-contacts-col-#{@which}">#{value.blank? ? "&nbsp;" : h(value)}</td>\n)
-           end
+     conf.attribute do |cell|
+       cell.start do |state, record, name, value, acc|
+         acc << %(\t\t<td class="manage-contacts-col-#{@which}">#{value.blank? ? "&nbsp;" : h(value)}</td>\n)
+       end
 
-           cell.last do |record, name, value|
-             %(\t\t<td class="manage-contacts-col-#{@which} manage-contacts-col-last">#{value.blank? ? "&nbsp;" : h(value)}</td>\n)
-           end
-         end
+       cell.last do |state, record, name, value, acc|
+         acc << %(\t\t<td class="manage-contacts-col-#{@which} manage-contacts-col-last">#{value.blank? ? "&nbsp;" : h(value)}</td>\n)
        end
      end
    end
