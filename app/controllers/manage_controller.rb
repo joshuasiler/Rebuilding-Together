@@ -1,4 +1,4 @@
-require 'datagrid'
+require 'data_grid'
 
 class ManageController < ApplicationController
   def index
