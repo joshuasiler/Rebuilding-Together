@@ -1,50 +1,52 @@
 require 'data_grid'
+require 'cgi'
 
 class ManageController < ApplicationController
+
+  def initialize
+    @display_columns = %w(name email company skills house)
+    super
+  end
+
   def index
     @grid = DataGrid.new
-    @display_columns = %w(name email company skills house)
+    
+    # Restore query form state if "filter" button
+    # pressed.
+    @query = 
+      if request["query"] && request["query"]["filter"] 
+        request["query"]
+      else
+        Hash.new
+      end
+
+    @cond = Conditions.new
+    if @query["filter"]
+      if @query["any_skills"]
+        @cond.any_skills = true
+      elsif @query["skills"]
+        @cond.skills = @query["skills"].split(",")
+      end
+      
+      case @query["assigned"]
+      when "1"
+        @cond.assigned = true
+        @cond.unassigned = false
+      when "2"
+        @cond.assigned = false
+        @cond.unassigned = true
+      else
+        @cond.assigned = true
+        @cond.unassigned = true
+      end
+      
+      @cond.include_inactive = !! @query["inactive"]
+    end
     
     @grid.configure do |g|
       g.model = Contact
-
-      # g.page = 1
-      # g.per_page = 10
-
-      # Restore query form state if "filter" button
-      # pressed.
-      @query = 
-        if request["query"] && request["query"]["filter"] 
-          request["query"]
-        else
-          Hash.new
-        end
-
       g.get_data do |state, model|
-        cond = Conditions.new
-        if @query["filter"]
-          if @query["any_skills"]
-            cond.any_skills = true
-          elsif @query["skills"]
-            cond.skills = @query["skills"].split(",")
-          end
-
-          case @query["assigned"]
-          when "1"
-            cond.assigned = true
-            cond.unassigned = false
-          when "2"
-            cond.assigned = false
-            cond.unassigned = true
-          else
-            cond.assigned = true
-            cond.unassigned = true
-          end
-
-          cond.include_inactive = !! @query["inactive"]
-        end
-
-        model.find(:all, :conditions => cond.conditions)
+        model.find(:all, :conditions => @cond.conditions)
       end
 
       g.get_columns do |state, model, contact|
@@ -68,6 +70,23 @@ class ManageController < ApplicationController
   end
 
   def update
+  end
+  
+  def download
+    @cond = Conditions.from_param(request["cond"])
+    @list = Contact.find(:all, :conditions => @cond.conditions)
+
+    csv_string = FasterCSV.generate do |csv|
+      csv << Contact.column_names
+
+      @list.each do |record|
+        csv << record.attributes.collect { |k, v| v }
+      end
+    end
+
+    send_data(csv_string,
+      :type => 'text/csv; charset=utf-8; header=present',
+      :filename => "contacts.csv")
   end
 
   # Helps build conditions statement for
@@ -129,5 +148,30 @@ SQL
       @any_skills = false
     end
 
+    # A string containing all the query conditions which can be used
+    # as the value for a URL parameter
+    def to_param
+      # split on newlines, join with ampersands, and escape
+      CGI.escape(<<-QRY.split.join("&"))
+skills=#{@skills ? @skills.join(",") : ""}
+not_assigned=#{!! @not_assigned}
+include_inactive=#{!! @include_inactive}
+any_skills=#{!! @any_skills}
+QRY
+    end
+
+    # Restores query conditions from the string given. The
+    # string must be one produced by to_param
+    def self.from_param(val)
+      c = Conditions.new
+      if val && ! val.blank?
+        vals = CGI.parse(CGI.unescape(val))
+        c.skills = vals.has_key?("skills") ? vals["skills"].split(",") : nil
+        c.unassigned = vals.has_key?("not_assigned") ? (!! vals["not_assigned"]) : false
+        c.include_inactive = vals.has_key?("include_inactive") ? (!! vals["include_inactive"]) : false
+        c.any_skills = vals.has_key?("any_skills") ? (!! vals["any_skills"]) : false
+      end
+      c
+    end
   end
 end

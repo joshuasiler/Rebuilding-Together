@@ -3,8 +3,7 @@
      conf.accumulator = ""
      conf.records do |table|
        table.start do |state, records, acc|
-         acc << render(:partial => "query.html.erb") +
-           %(<table class="manage-contacts-table">\n) + 
+         acc << %(<table class="manage-contacts-table">\n) + 
            @display_columns.inject("\t<tr>\n") do |acc, name|
              acc + "\t\t<th>" + case name 
                when "company"
@@ -46,6 +45,10 @@
        end
      end
    end
+
+   puts "@cond.to_param: #{@cond.to_param.inspect}"
 %>
 <h1>Manage#index</h1>
+<%= render(:partial => "query.html.erb") %>
 <%= @grid.render %>
+<a href="<%= url_for :action => "download", :cond => @cond.to_param%>">Download these contacts</a>
