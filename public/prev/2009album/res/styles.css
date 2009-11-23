@@ -1,0 +1,26 @@
+/*
+ * Combined style sheet for the index pages and the slide pages.
+ */
+
+/* Style for all bodies. */
+body {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 13px;
+	background-color: white;
+	color: black;
+	margin: 5;
+}
+
+
+/* Put a border on all generated images */
+.image {
+	border-width: 1;
+	border-color: black;
+	border-style: solid;
+	margin: 5;
+}
+
+/* Style for all table cells. */
+td {
+	font-size: 10px;
+}
