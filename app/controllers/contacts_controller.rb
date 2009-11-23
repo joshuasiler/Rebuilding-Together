@@ -3,7 +3,7 @@ class ContactsController < ApplicationController
   def new
     @contact = Contact.new(params[:contact])
     @skills = Skill.find(:all)
-    @ctypes = ContactType.find(:all)
+    @ctypes = ContactContacttype.find(:all)
   end
   
   def create
@@ -17,9 +17,9 @@ class ContactsController < ApplicationController
 	  s.save
 	} unless params[:skills].blank?
         params[:ctypes].each { |value|
-	  s = ContactType.new
+	  s = ContactContacttype.new
 	  s.contact_id = @contact.id
-	  s.type_id = value
+	  s.contacttype_id = value
 	  s.save
 	} unless params[:ctypes].blank?
       redirect_to "/contacts/thanks/"+@contact.id.to_s
@@ -27,7 +27,7 @@ class ContactsController < ApplicationController
       # collect errors in flash and rerender
       
       @skills = Skill.find(:all)
-      @ctypes = ContactType.find(:all)
+      @ctypes = ContactContacttype.find(:all)
       render :new
     end
   end
