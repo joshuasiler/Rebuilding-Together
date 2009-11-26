@@ -2,9 +2,9 @@
 #   gem install sqlite3-ruby (not necessary on OS X Leopard)
 development:
   adapter: mysql
-  database: rebuilding_dev
+  database: rebuilding
   user: root
-  password: bnjstyle
+
   
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

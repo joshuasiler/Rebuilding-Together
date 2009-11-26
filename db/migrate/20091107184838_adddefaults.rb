@@ -35,19 +35,19 @@ class Adddefaults < ActiveRecord::Migration
     Skill.create(:description => "Publicity", :is_contact_skill => 1)
     Skill.create(:description => "Data Entry", :is_contact_skill => 1)
         
-    ContactType.create(:description => "Normal Volunteer")
-    ContactType.create(:description => "Skilled Trade Volunteer")
-    ContactType.create(:description => "Office Volunteer")
-    ContactType.create(:description => "Money Contributor")
-    ContactType.create(:description => "In-Kind Contributor")
-    ContactType.create(:description => "House Sponsor")
-    ContactType.create(:description => "Homeowner")
-    ContactType.create(:description => "Board Member")
-    ContactType.create(:description => "Committee Member")
+    Contacttype.create(:description => "Normal Volunteer")
+    Contacttype.create(:description => "Skilled Trade Volunteer")
+    Contacttype.create(:description => "Office Volunteer")
+    Contacttype.create(:description => "Money Contributor")
+    Contacttype.create(:description => "In-Kind Contributor")
+    Contacttype.create(:description => "House Sponsor")
+    Contacttype.create(:description => "Homeowner")
+    Contacttype.create(:description => "Board Member")
+    Contacttype.create(:description => "Committee Member")
   end
 
   def self.down
     Contact.connection.execute("delete from skills")
-    Contact.connection.execute("delete from contact_types")
+    Contact.connection.execute("delete from contacttypes")
   end
 end

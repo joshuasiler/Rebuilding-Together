@@ -1,8 +1,12 @@
 class ChangeTableNames < ActiveRecord::Migration
   def self.up
-    Contact.connection.execute("rename table contact_types to contacttypes")
-    Contact.connection.execute("rename table contact_contact_types to contact_contacttypes")
-    Contact.connection.execute("ALTER TABLE contact_contacttypes CHANGE COLUMN contact_type_id contacttype_id integer")
+    begin
+      Contact.connection.execute("rename table contact_types to contacttypes")
+      Contact.connection.execute("rename table contact_contact_types to contact_contacttypes")
+      Contact.connection.execute("ALTER TABLE contact_contacttypes CHANGE COLUMN contact_type_id contacttype_id integer")
+    rescue
+      puts "table renaming not necessary for clean builds"
+    end
   end
 
   def self.down

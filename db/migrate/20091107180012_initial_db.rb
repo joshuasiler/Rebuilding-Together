@@ -34,7 +34,7 @@ class InitialDb < ActiveRecord::Migration
       t.datetime :updated_at, :null => false
       end
       
-      create_table :contact_contact_types do |t|
+      create_table :contact_contacttypes do |t|
         t.integer :id, :null => false
       t.integer :contact_id, :null => false
       t.integer :contact_type_id, :null => false
@@ -42,7 +42,7 @@ class InitialDb < ActiveRecord::Migration
       t.datetime :updated_at, :null => false
       end
       
-      create_table :contact_types do |t|
+      create_table :contacttypes do |t|
       t.integer :id, :null => false
       t.string :description, :null => false
       t.datetime :created_at, :null => false
