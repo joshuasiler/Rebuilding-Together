@@ -14,11 +14,11 @@
 		<div style="clear:both;font-size:0em;">&nbsp;</div>
 		<div id="nav">
 		    <a href="/">Home</a>
-		    <a href="/r/about_page">About Us</a>
-		    <a href="/contacts/new">Volunteer</a>
-		    <a href="/r/homeowners_page">Homeowners</a>
-		    <a href="/r/nonprofits_page">Non-Profits</a>
-		    <a href="/r/board_page">Board of Directors</a>
+		    <a href="<%= url_for :controller => :mainsite, :action => :about_page%>">About Us</a>
+		    <a href="<%= url_for :controller => :contacts, :action => :new%>">Volunteer</a>
+		    <a href="<%= url_for :controller => :mainsite, :action => :homeowners_page %>">Homeowners</a>
+		    <a href="<%= url_for :controller => :mainsite, :action => :nonprofits_page %>">Non-Profits</a>
+		    <a href="<%= url_for :controller => :mainsite, :action => :board_page %>">Board of Directors</a>
 		</div>
 		<div id="content">
 		    
