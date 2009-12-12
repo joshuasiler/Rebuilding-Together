@@ -1,4 +1,4 @@
-class ModifySkillsAndContactTypesData < ActiveRecord::Migration
+class ModifySkillsAndContacttypesData < ActiveRecord::Migration
   def self.up
     Contact.connection.execute("delete from skills")
     Contact.connection.execute("delete from contacttypes")
