@@ -4,7 +4,7 @@ class ContactsController < ApplicationController
   def new
     @contact = Contact.new(params[:contact])
     @skills = Skill.find(:all)
-    @ctypes = ContactContacttype.find(:all)
+    @ctypes = Contacttype.find(:all)
   end
   
   def create

@@ -13,6 +13,7 @@ color: #60bb46;
 }
 h2
 {
+margin-top: 20px;
 font-size: 1.2em;
 border-bottom: 1px solid #888;
 }
@@ -37,7 +38,7 @@ border-bottom: 1px solid #888;
 }
 #content
 {
-padding: 20px;
+    padding: 20px;
 }
 #containerOuter {
 	width: 960px;
@@ -62,11 +63,35 @@ padding: 20px;
 }
 .boardnames td
 {
-padding:4px;
-padding-left: 15px;
+    padding:4px;
+    padding-left: 15px;
 }
 
 .boardnames .name
 {
     font-weight: bold;
+}
+
+.contactform ol
+{
+    list-style: none;
+    padding-left: 0px;
+    margin-left: 0px;
+}
+.contactform li
+{
+    margin-bottom: 5px;
+}
+.contactform label
+{
+    padding-right:7px;
+}
+.contactform .required
+{
+    font-weight: bold;
+}
+.contactform .label
+{
+    float:left;
+    width: 100px;
 }
