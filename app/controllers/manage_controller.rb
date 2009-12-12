@@ -6,7 +6,7 @@ class ManageController < ApplicationController
   layout "mainsite"
 
   def initialize
-    @display_columns = %w(name email company skills house)
+    @display_columns = %w(name email company house)
     super
   end
 
@@ -61,7 +61,7 @@ class ManageController < ApplicationController
     @grid.configure do |g|
       g.model = Contact
       g.get_data do |state, model|
-        model.find(:all, :conditions => @cond.conditions)
+        model.find(:all, :conditions => @cond.conditions, :include => :skills)
       end
 
       g.get_columns do |state, model, contact|
@@ -70,7 +70,7 @@ class ManageController < ApplicationController
           when "name"
             [col, "#{contact.first_name} #{contact.last_name}".strip]
           when "skills"
-            [col, contact.skills.inject { |acc, skill| acc + ", " + skill }.to_s]
+            [col, contact.skills.collect { |skill| skill.description }. inject { |acc, skill| acc + ", " + skill }]
           when "company"
             [col, contact.company_name]
           else
@@ -202,8 +202,6 @@ QRY
       end
     end
 
-    attr_accessor :vals
-
     # Convenience method - lets us construct
     # an instance, configure it, and return the result.
     def self.make_from_params(val)
@@ -212,6 +210,8 @@ QRY
       yield(c)
       c
     end
+
+    attr_accessor :vals
 
     # Convenience method. If the key is found in the vals
     # hash, pass the first element of value array to the 
