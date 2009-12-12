@@ -6,7 +6,7 @@
     <br />
     <%= check_box_tag "query[inactive]", "1", !! @query["inactive"] %>Include inactive
     <br />
-    <%= radio_button_tag "query[skill_sel]", "1", @query["skill_sel"] == "1"%> Skilled & Unskilled
+    <%= radio_button_tag "query[skill_sel]", "1", (! @query["skill_sel"]) || @query["skill_sel"] == "1" %> Skilled & Unskilled
     <%= radio_button_tag "query[skill_sel]", "2", @query["skill_sel"] == "2"%> Unskilled Only
     <%= radio_button_tag "query[skill_sel]", "3", @query["skill_sel"] == "3"%> Skilled Only
     <br />
