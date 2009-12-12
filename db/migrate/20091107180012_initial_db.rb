@@ -140,7 +140,7 @@ class InitialDb < ActiveRecord::Migration
       t.boolean :is_recruited, :null => false, :default => 0
       t.boolean :is_confirmed, :null => false, :default => 0
       t.boolean :is_participated, :null => false, :default => 0
-      t.datetim :thankyou_sent_at
+      t.datetime :thankyou_sent_at
       
       t.datetime :created_at, :null => false
       t.datetime :updated_at, :null => false

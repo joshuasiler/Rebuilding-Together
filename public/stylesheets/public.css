@@ -1,0 +1,72 @@
+body
+{
+    margin-top: 0px;
+    color: #333;
+    font-family: arial, sans-serif;
+}
+
+h1
+{
+font-size: 1.6em;
+margin-top: 0px;
+color: #60bb46;
+}
+h2
+{
+font-size: 1.2em;
+border-bottom: 1px solid #888;
+}
+
+#nav
+{
+    background-color: #000;
+    padding: 5px;
+    padding-left: 30px;
+}
+#nav a
+{
+    color: #FFF;
+    font-weight:bold;
+    text-decoration: none;
+    padding-left: 15px;
+}
+#nav a:hover
+{
+    text-decoration: underline;
+ 
+}
+#content
+{
+padding: 20px;
+}
+#containerOuter {
+	width: 960px;
+	padding: 0 10px 0 0;
+	background: #fff url(/images/container_bg_right.gif) top right repeat-y;
+	margin: 0 auto;
+	text-align: left;
+}
+
+#container {
+	width: 950px;
+	padding: 0 0 0 10px;
+	background: url(/images/container_bg_left.gif) top left repeat-y;
+	position: relative;
+}
+#footer
+{
+    background-color: #000;
+    padding: 5px;
+    padding-left: 30px;
+    color: #FFF;
+}
+.boardnames td
+{
+padding:4px;
+padding-left: 15px;
+}
+
+.boardnames .name
+{
+    font-weight: bold;
+}

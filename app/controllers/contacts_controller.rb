@@ -1,4 +1,5 @@
 class ContactsController < ApplicationController
+  layout 'mainsite'
   
   def new
     @contact = Contact.new(params[:contact])
