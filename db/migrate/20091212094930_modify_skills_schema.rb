@@ -1,6 +1,5 @@
 class ModifySkillsSchema < ActiveRecord::Migration
   def self.up
-    begin
       change_column :volunteers, :number_of_people, :integer, :null => false, :default => 1 #Add default=1
       remove_column :skills, :is_contact_skill
       remove_column :skills, :is_house_skill
