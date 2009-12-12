@@ -3,9 +3,10 @@ require 'cgi'
 require 'faster_csv'
 
 class ManageController < ApplicationController
+  layout "mainsite"
 
   def initialize
-    @display_columns = %w(name email company skills house)
+    @display_columns = %w(name email company house)
     super
   end
 
@@ -50,8 +51,8 @@ class ManageController < ApplicationController
         @cond.assigned = false
         @cond.unassigned = true
       else
-        @cond.assigned = true
-        @cond.unassigned = true
+        @cond.assigned = false
+        @cond.unassigned = false
       end
       
       @cond.include_inactive = (@query["inactive"] == "1")
@@ -60,7 +61,7 @@ class ManageController < ApplicationController
     @grid.configure do |g|
       g.model = Contact
       g.get_data do |state, model|
-        model.find(:all, :conditions => @cond.conditions)
+        model.find(:all, :conditions => @cond.conditions, :include => :skills)
       end
 
       g.get_columns do |state, model, contact|
@@ -69,7 +70,7 @@ class ManageController < ApplicationController
           when "name"
             [col, "#{contact.first_name} #{contact.last_name}".strip]
           when "skills"
-            [col, contact.skills.inject { |acc, skill| acc + ", " + skill }.to_s]
+            [col, contact.skills.collect { |skill| skill.description }. inject { |acc, skill| acc + ", " + skill }]
           when "company"
             [col, contact.company_name]
           else
@@ -92,7 +93,7 @@ class ManageController < ApplicationController
     list = Contact.find(:all, :conditions => cond.conditions)
 
     csv_string = FasterCSV.generate do |csv|
-      columns = Contact.column_names
+      columns = Contact.column_names << "skills"
       csv << columns
 
       list.each do |record|
@@ -190,38 +191,34 @@ QRY
     # Restores query conditions from the string given. The
     # string must be one produced by to_param
     def self.from_param(val)
-      puts "Got val: #{val.inspect}"
-      if val && ! val.blank?
-        make_conditions do |c|
-          vals = CGI.parse(CGI.unescape(val))
-          puts "Parsed to vals: #{vals.inspect}"
-          c.skills = for_key(vals, "skills", nil) { |v| v.split(",") }
-          c.unassigned = for_key(vals, "not_assigned", false) { |v| v == "true" }
-          c.assigned = for_key(vals, "assigned", false) { |v| v == "true" }
-          c.include_inactive = for_key(vals, "include_inactive", false) { |v| v == "true" }
-          c.any_skills = for_key(vals, "any_skills", false) { |v| v == "true" }
-          c.no_skills = for_key(vals, "no_skills", false) { |v| v == "true" }
-        end
-      else
-        nil
+      make_from_params(val) do |c|
+        puts "Parsed to vals: #{c.vals.inspect}"
+        c.skills = c.for_key("skills", nil) { |v| v.split(",") }
+        c.unassigned = c.for_key("not_assigned", false) { |v| v == "true" }
+        c.assigned = c.for_key("assigned", false) { |v| v == "true" }
+        c.include_inactive = c.for_key("include_inactive", false) { |v| v == "true" }
+        c.any_skills = c.for_key("any_skills", false) { |v| v == "true" }
+        c.no_skills = c.for_key("no_skills", false) { |v| v == "true" }
       end
     end
 
-  private
     # Convenience method - lets us construct
     # an instance, configure it, and return the result.
-    def self.make_conditions
+    def self.make_from_params(val)
       c = Conditions.new
+      c.vals = val ? CGI.parse(CGI.unescape(val)) : ""
       yield(c)
       c
     end
+
+    attr_accessor :vals
 
     # Convenience method. If the key is found in the vals
     # hash, pass the first element of value array to the 
     # block given and return the result. Otherwise, return
     # the default value given.
-    def self.for_key(vals, key, default)
-      vals.has_key?(key) ? yield(vals[key].first) : default
+    def for_key(key, default)
+      @vals.has_key?(key) ? yield(vals[key].first) : default
     end
   end
 end

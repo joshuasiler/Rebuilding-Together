@@ -1,5 +1,6 @@
-<%
-   @grid.rendering do |conf|
+<%= render(:partial => "query.html.erb") %>
+<%= 
+   @grid.render_with do |conf|
      conf.accumulator = ""
      conf.records do |table|
        table.start do |state, records, acc|
@@ -45,10 +46,5 @@
        end
      end
    end
-
-   puts "@cond.to_param: #{@cond.to_param.inspect}"
 %>
-<h1>Manage#index</h1>
-<%= render(:partial => "query.html.erb") %>
-<%= @grid.render %>
 <a href="<%= url_for :action => "download", :cond => @cond.to_param%>">Download these contacts</a>

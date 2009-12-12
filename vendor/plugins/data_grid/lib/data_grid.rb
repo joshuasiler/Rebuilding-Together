@@ -198,6 +198,18 @@ class DataGrid
     render.accumulator
   end
 
+  # Convenience method - allows configuring and 
+  # rendering in one pass, suitable for use withing <%= %>
+  # tags. 
+  # 
+  # Calls 'rendering' with the
+  # block provided, then passes the Renderator to
+  # the render method. The accumulator on the Renderator
+  # is returned.
+  def render_with(&blk)
+    render(rendering(&blk))
+  end
+
   private
 
   def do_row(render, state, start_fn, data, record)
