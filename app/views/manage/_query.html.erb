@@ -1,14 +1,17 @@
 <div>
   <% form_tag :controller => 'manage' do %>
+    <%= radio_button_tag "query[assigned]", "3", (! @query["assigned"]) || @query["assigned"] == "3" %>Assigned & Unassigned
     <%= radio_button_tag "query[assigned]", "1", @query["assigned"] && @query["assigned"] == "1" %>Assigned to a house
     <%= radio_button_tag "query[assigned]", "2", @query["assigned"] && @query["assigned"] == "2" %>Unassigned
-    <%= radio_button_tag "query[assigned]", "3", (! @query["assigned"]) || @query["assigned"] == "3" %>Assigned & Unassigned
-    <br />
-    <%= check_box_tag "query[any_skills]", "1", !! @query["any_skills"] %> Any Skills
-    <br />
-    Specific skills: <%= select_tag "query[skills]", options_for_select(Skill.all_skills, @query["skills"]), :multiple => true, :size => 3 %>
     <br />
     <%= check_box_tag "query[inactive]", "1", !! @query["inactive"] %>Include inactive
+    <br />
+    <%= radio_button_tag "query[skill_sel]", "1", @query["skill_sel"] == "1"%> Skilled & Unskilled
+    <%= radio_button_tag "query[skill_sel]", "2", @query["skill_sel"] == "2"%> Unskilled Only
+    <%= radio_button_tag "query[skill_sel]", "3", @query["skill_sel"] == "3"%> Skilled Only
+    <br />
+    <%= radio_button_tag "query[skill_sel]", "4", @query["skill_sel"] == "4"%> Specific Skills:
+    <%= select_tag "query[skills]", options_for_select(Skill.all_skills, @query["skills"]), :multiple => true, :size => 3 %>
     <br />
     <input type=submit name="query[filter]" value="Filter"></input>
     <input type=submit name="query[clear]" value="Clear"></input>

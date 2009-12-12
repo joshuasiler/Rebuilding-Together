@@ -1,5 +1,6 @@
 require 'data_grid'
 require 'cgi'
+require 'faster_csv'
 
 class ManageController < ApplicationController
 
@@ -22,10 +23,23 @@ class ManageController < ApplicationController
 
     @cond = Conditions.new
     if @query["filter"]
-      if @query["any_skills"]
+      case @query["skill_sel"]
+      when "1"
+        @cond.any_skills = false
+        @cond.no_skills = false
+        @cond.skills = nil
+      when "2"
+        @cond.any_skills = false
+        @cond.no_skills = true
+        @cond.skills = nil
+      when "3"
         @cond.any_skills = true
-      elsif @query["skills"]
-        @cond.skills = @query["skills"].split(",")
+        @cond.no_skills = false
+        @cond.skills = nil
+      when "4"
+        @cond.any_skills = false
+        @cond.no_skills = false
+        @cond.skills = @query["skills"]
       end
       
       case @query["assigned"]
@@ -40,7 +54,7 @@ class ManageController < ApplicationController
         @cond.unassigned = true
       end
       
-      @cond.include_inactive = !! @query["inactive"]
+      @cond.include_inactive = (@query["inactive"] == "1")
     end
     
     @grid.configure do |g|
@@ -73,14 +87,16 @@ class ManageController < ApplicationController
   end
   
   def download
-    @cond = Conditions.from_param(request["cond"])
-    @list = Contact.find(:all, :conditions => @cond.conditions)
+    cond = Conditions.from_param(request["cond"])
+    puts "Got conditions: #{cond.inspect}"
+    list = Contact.find(:all, :conditions => cond.conditions)
 
     csv_string = FasterCSV.generate do |csv|
-      csv << Contact.column_names
+      columns = Contact.column_names
+      csv << columns
 
-      @list.each do |record|
-        csv << record.attributes.collect { |k, v| v }
+      list.each do |record|
+        csv << columns.collect { |col| record[col].to_s }
       end
     end
 
@@ -102,8 +118,12 @@ class ManageController < ApplicationController
     attr_accessor :unassigned
     # A boolean, defaults to false.
     attr_accessor :include_inactive
-    # A boolean, defaults to false. Overrides skills list.
+    # A boolean, defaults to false. Selects only contacts
+    # with skills. Overrides skills list.
     attr_accessor :any_skills
+    # A boolean, defaults to false. Selects only contacts
+    # w/o skills. Overrides any_skills.
+    attr_accessor :no_skills
 
     def initialize
       @skills = []
@@ -111,11 +131,14 @@ class ManageController < ApplicationController
       @unassigned = false
       @include_inactive = false
       @any_skills = false
+      @no_skills = false
     end
 
     def conditions
       cond = []
-      if @any_skills
+      if @no_skills
+        cond << "id not in (select contact_id from contact_skills)"
+      elsif @any_skills
         cond << "id in (select contact_id from contact_skills)"
       elsif @skills && @skills.length > 0
         cond << %(id in (select contact_id from contact_skills where skill_id in (#{@skills.collect { |s| "'#{quote_string((s || "").to_s)}'"}.join(",")})))
@@ -134,7 +157,7 @@ SQL
         cond << "id not in (#{assigned_contacts})"
       end
 
-      if @include_inactive
+      if ! @include_inactive
         cond << "is_active = 1"
       end
 
@@ -143,9 +166,11 @@ SQL
     
     def clear
       @skills = nil
-      @not_assigned = false
+      @unassigned = false
+      @assigned = false
       @include_inactive = false
       @any_skills = false
+      @no_skills = false
     end
 
     # A string containing all the query conditions which can be used
@@ -154,24 +179,49 @@ SQL
       # split on newlines, join with ampersands, and escape
       CGI.escape(<<-QRY.split.join("&"))
 skills=#{@skills ? @skills.join(",") : ""}
-not_assigned=#{!! @not_assigned}
+unassigned=#{!! @unassigned}
+assigned=#{!! @assigned}
 include_inactive=#{!! @include_inactive}
 any_skills=#{!! @any_skills}
+no_skills=#{!! @no_skills}
 QRY
     end
-
+    
     # Restores query conditions from the string given. The
     # string must be one produced by to_param
     def self.from_param(val)
-      c = Conditions.new
+      puts "Got val: #{val.inspect}"
       if val && ! val.blank?
-        vals = CGI.parse(CGI.unescape(val))
-        c.skills = vals.has_key?("skills") ? vals["skills"].split(",") : nil
-        c.unassigned = vals.has_key?("not_assigned") ? (!! vals["not_assigned"]) : false
-        c.include_inactive = vals.has_key?("include_inactive") ? (!! vals["include_inactive"]) : false
-        c.any_skills = vals.has_key?("any_skills") ? (!! vals["any_skills"]) : false
+        make_conditions do |c|
+          vals = CGI.parse(CGI.unescape(val))
+          puts "Parsed to vals: #{vals.inspect}"
+          c.skills = for_key(vals, "skills", nil) { |v| v.split(",") }
+          c.unassigned = for_key(vals, "not_assigned", false) { |v| v == "true" }
+          c.assigned = for_key(vals, "assigned", false) { |v| v == "true" }
+          c.include_inactive = for_key(vals, "include_inactive", false) { |v| v == "true" }
+          c.any_skills = for_key(vals, "any_skills", false) { |v| v == "true" }
+          c.no_skills = for_key(vals, "no_skills", false) { |v| v == "true" }
+        end
+      else
+        nil
       end
+    end
+
+  private
+    # Convenience method - lets us construct
+    # an instance, configure it, and return the result.
+    def self.make_conditions
+      c = Conditions.new
+      yield(c)
       c
+    end
+
+    # Convenience method. If the key is found in the vals
+    # hash, pass the first element of value array to the 
+    # block given and return the result. Otherwise, return
+    # the default value given.
+    def self.for_key(vals, key, default)
+      vals.has_key?(key) ? yield(vals[key].first) : default
     end
   end
 end
