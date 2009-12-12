@@ -1,76 +1,79 @@
-<img src="/images/RebuildingPortlandLogo.JPG" style="float:right;" />
-<h1><%= Project.latest.project_name %></h1>
+
+<h1>Volunteer Today - <%= Project.latest.project_name %></h1>
+<strong>You can make a difference.</strong> Experience the great feeling that comes with helping out your community. Our volunteers come to
+us with all different levels of skills, and every helping hand makes a difference. Whether you're a skilled trademan or simply looking to help out
+any way you can, please fill out the form below to get started.
 <div style="clear:both;font-size:0em;">&nbsp;</div>	
 <div class="contactform">
 <form action="/contacts/create" id="new_contact" method="post">
   <%= token_tag %>
 
-<ol>
 <h2>About Yourself</h2>
-<li class="string required first_name" id="contact_first_name_input">
-  <label for="contact_first_name">First name</label>
-  <input id="contact_first_name" maxlength="255" name="contact[first_name]" size="20" type="text" /></li>
-
-<li class="string required last_name" id="contact_last_name_input">
-  <label for="contact_last_name">Last name</label>
-  <input id="contact_last_name" maxlength="255" name="contact[last_name]" size="20" type="text" /></li>
-
-<li class="string required address_1" id="contact_address_1_input">
-  <label for="contact_address_1">Address 1</label>
-  <input id="contact_address_1" maxlength="255" name="contact[address_1]" size="30" type="text" /></li>
-
-<li class="string required address_2" id="contact_address_2_input">
-  <label>Address 2</label>
-  <input id="contact_address_2" maxlength="255" name="contact[address_2]" size="30" type="text" />
-<div style="clear:both;font-size:0em;">&nbsp;</div></li>
-
-<li>
-  <label>City</label><label style="width:200px;"><input id="contact_city" maxlength="255" name="contact[city]" size="20" type="text" /></label>
-  <label style="margin-left:10px;width:50px;">State</label>
-  <label style="margin-left:10px;width:130px;"><input id="contact_state" maxlength="255" name="contact[state]" size="10" type="text" /></label>
-  <label style="margin-left:10px;width:50px;" for="contact_zip">Zip</label>
-  <label><input id="contact_zip" maxlength="255" name="contact[zip]" size="10" type="text" /></label>
-<div style="clear:both;font-size:0em;">&nbsp;</div>
-</li>
-
-<li>
-  <label for="contact_country">Country</label>
-  <input type="text" name="contact[country]" size="20" maxlength="255" /> (if not US)
-				  </li>
-
-<li style="padding-left:155px;">
-  <label for="contact_work_phone">Home phone<BR />
-  <input type="text" id="contact_home_phone" maxlength="255" name="contact[home_phone]" size="12" /></label>
-  <label>Work phone<BR />
+  <em>Bold fields are required</em><BR />
+<div style="float:right; width:250px;">
+  <strong>Contact Information</strong><BR />
+  <ol>
+    <li>
+  <div class="label">Home phone </div>
+  <input type="text" id="contact_home_phone" maxlength="255" name="contact[home_phone]" size="12" />
+    </li><li>
+  <div class="label">Work phone </div>
   <input id="contact_work_phone" maxlength="255" name="contact[work_phone]" size="12" type="text" />
-  </label>
-  <label for="contact_mobile_phone">Mobile phone<BR />
+  </li><li>
+  <div class="label">Mobile phone </div>
   <input id="contact_mobile_phone" maxlength="255" name="contact[mobile_phone]" size="12" type="text" />
-  </label>
-<div style="clear:both;font-size:0em;">&nbsp;</div>
-  </li>
+  </li></ol>
+</div>
+
+<ol>
+<li class="required">
+  <div class="label">First Name</div>
+  <input maxlength="255" name="contact[first_name]" size="20" type="text" /></li>
+
+<li class="required">
+  <div class="label">Last Name</div>
+  <input maxlength="255" name="contact[last_name]" size="20" type="text" /></li>
 
 <li>
-  <label for="contact_email">Email </label>
-  <input id="contact_email" maxlength="255" name="contact[email]" size="50" type="text" /></li>
+  <div class="label">Address 1</div>
+  <input maxlength="255" name="contact[address_1]" size="30" type="text" /></li>
+
 <li>
-  <label for="contact_email">Retype Your Email</label>
-  <input id="contact_email" maxlength="255" name="contact[email]" size="50" type="text" /></li>
+  <div class="label">Address 2</div>
+  <input maxlength="255" name="contact[address_2]" size="30" type="text" /></li>
+
+<li>
+  <div class="label">City</div><input maxlength="255" name="contact[city]" size="20" type="text" /></li>
+
+<li>
+  <div class="label">State</div><input maxlength="2" name="contact[state]" size="5" type="text" /></li>
+
+
+<li>
+  <div class="label">Zip</div><input maxlength="10" name="contact[zip]" size="7" type="text" /></li>
+
+<li>
+  <div class="label">Country</div><input maxlength="255" name="contact[country]" size="20" type="text" /></li>
+
+<li class="required">
+  <div class="label">Email</div><input maxlength="255" name="contact[email]" size="40" type="text" /></li>
+
 <h2>About Your Group</h2>				
-
-<li class="string required company_name" id="contact_company_name_input">
-  <label for="contact_company_name">Company Name </label>
-  <input id="contact_company_name" maxlength="255" name="contact[company_name]" size="50" type="text" /></li>
-
+If you are signing up as part of a group, please enter the company/group name here.
+<BR /><BR />
+<li>
+  <div class="label" style="width: 150px;">Company Name</div><input maxlength="255" name="contact[company_name]" size="50" type="text" /></li>
 
 <li>
-  <label>Group Name </label>
+  <div class="label" style="width: 150px;">Group Name </div>
   <input maxlength="255" name="groupname" size="50" type="text" /></li>
+
 <h2>Let's Rebuild</h2>
+Tell us a little bit about your skills, interests and let us know what you're thinking.
+<BR /><BR />
+<input name="contact[is_active]" type="hidden" value="1" />
 
-				  <input name="contact[is_active]" type="hidden" value="1" />
-
-Skills:<BR />
+ <div class="label" >Skills:</div>
 <div style="width:350px; float:left;">
 <% cnt = 0
 @skills.each do |skill| %>
@@ -83,14 +86,14 @@ if cnt > @skills.length/2
 <% end %>
 </div><div style="clear:both;font-size:0em;">&nbsp;</div>
 <BR />
-<li class="text required other_skills" id="contact_other_skills_input">
-  <label for="contact_other_skills">Other Skills </label>
+<li id="contact_other_skills_input">
+  <div class="label" > Other Skills:</div>
   <textarea cols="40" rows="4" id="contact_other_skills" name="contact[other_skills]" rows="20"></textarea></li>
 
-<li class="text required comments" id="contact_comments_input">
-  <label for="contact_comments">Comments </label>
+<li id="contact_comments_input">
+   <div class="label" >Comments:</div>
   <textarea cols="40" rows="4" id="contact_comments" name="contact[comments]" rows="20"></textarea></li>
-Interests:<BR /><div style="width:350px; float:left;">
+ <div class="label" >Interests:</div><div style="width:350px; float:left;">
 <% cnt = 0
 @ctypes.each do |ctype| %>
 <input type="checkbox" name="ctypes" value="<%=ctype.id %>" /><%= ctype.description %><BR />
