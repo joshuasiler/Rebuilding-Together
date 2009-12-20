@@ -13,6 +13,8 @@
     <%= radio_button_tag "query[skill_sel]", "4", @query["skill_sel"] == "4"%> Specific Skills:
     <%= select_tag "query[skills]", options_for_select(Skill.all_skills, @query["skills"]), :multiple => true, :size => 3 %>
     <br />
+    Group/Company: <%= text_field_tag "query[group]", @query["group"] %>
+    <br />
     <input type=submit name="query[filter]" value="Filter"></input>
     <input type=submit name="query[clear]" value="Clear"></input>
   <% end %>

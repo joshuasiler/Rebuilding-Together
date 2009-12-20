@@ -17,7 +17,8 @@
        end
 
        table.end do |state, records, acc|
-         acc << "</table>\n"
+         acc << "</table>\n\n"
+         acc << render(:partial => "pager.html.erb")
        end
      end
 

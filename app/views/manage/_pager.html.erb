@@ -1,0 +1,22 @@
+<div>
+<%
+  first = @page == 0
+  last = @page == @record_count / @per_page
+  case 
+  when first %>
+<%= "Page #{@page + 1} of #{(@record_count/ @per_page) + 1 } (#{@record_count} total)" %>
+<a href="<%= url_for :controller => :manage, :action => :index, :page => @page + 1, :cond => @cond.to_param%>">Next</a> 
+<a href="<%= url_for :controller => :manage, :action => :index, :page => @record_count / @per_page, :cond => @cond.to_param%>">Last</a><%
+  when last %>
+<a href="<%= url_for :controller => :manage, :action => :index, :page => 0, :cond => @cond.to_param%>">First</a> 
+<a href="<%= url_for :controller => :manage, :action => :index, :page => @page - 1, :cond => @cond.to_param%>">Prev</a>
+<%= "Page #{@page + 1} of #{(@record_count/ @per_page) + 1 } (#{@record_count} total)"%><%
+  else %>
+<a href="<%= url_for :controller => :manage, :action => :index, :page => 0, :cond => @cond.to_param%>">First</a> 
+<a href="<%= url_for :controller => :manage, :action => :index, :page => @page - 1, :cond => @cond.to_param%>">Prev</a>
+<%= "Page #{@page + 1} of #{(@record_count/ @per_page) + 1 } (#{@record_count} total)" %>
+<a href="<%= url_for :controller => :manage, :action => :index, :page => @page + 1, :cond => @cond.to_param%>">Next</a> 
+<a href="<%= url_for :controller => :manage, :action => :index, :page => @record_count / @per_page, :cond => @cond.to_param%>">Last</a><%
+  end
+%>
+</div>

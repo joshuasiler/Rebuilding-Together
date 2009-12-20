@@ -15,14 +15,10 @@ class ManageController < ApplicationController
     
     # Restore query form state if "filter" button
     # pressed.
-    @query = 
-      if request["query"] && request["query"]["filter"] 
-        request["query"]
-      else
-        Hash.new
-      end
-
+    @query = request["query"] || Hash.new
     @cond = Conditions.new
+    @page = 0
+
     if @query["filter"]
       case @query["skill_sel"]
       when "1"
@@ -54,14 +50,22 @@ class ManageController < ApplicationController
         @cond.assigned = false
         @cond.unassigned = false
       end
-      
+
+      @cond.group = @query["group"] unless @query["group"].blank?
       @cond.include_inactive = (@query["inactive"] == "1")
+    elsif request["page"] 
+      @cond = Conditions.from_param(request["cond"])
+      @page = request["page"].to_i
     end
+    
+    @per_page = 20
+    @record_count = Contact.count(:conditions => @cond.conditions)
     
     @grid.configure do |g|
       g.model = Contact
       g.get_data do |state, model|
-        model.find(:all, :conditions => @cond.conditions, :include => :skills)
+        model.find(:all, :conditions => @cond.conditions, :include => :skills,
+                   :offset => (@page * @per_page), :limit => @per_page)
       end
 
       g.get_columns do |state, model, contact|
@@ -89,7 +93,6 @@ class ManageController < ApplicationController
   
   def download
     cond = Conditions.from_param(request["cond"])
-    puts "Got conditions: #{cond.inspect}"
     list = Contact.find(:all, :conditions => cond.conditions)
 
     csv_string = FasterCSV.generate do |csv|
@@ -125,6 +128,9 @@ class ManageController < ApplicationController
     # A boolean, defaults to false. Selects only contacts
     # w/o skills. Overrides any_skills.
     attr_accessor :no_skills
+    # Limits query to groups which match the name given. Ignored
+    # if blank.
+    attr_accessor :group
 
     def initialize
       @skills = []
@@ -133,6 +139,7 @@ class ManageController < ApplicationController
       @include_inactive = false
       @any_skills = false
       @no_skills = false
+      @group = nil
     end
 
     def conditions
@@ -160,6 +167,10 @@ SQL
 
       if ! @include_inactive
         cond << "is_active = 1"
+      end
+
+      if ! @group.blank?
+        cond << "company_name LIKE '#{quote_string(@group)}%'"
       end
 
       cond.join " AND "
