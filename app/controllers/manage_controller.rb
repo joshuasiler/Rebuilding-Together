@@ -6,7 +6,7 @@ class ManageController < ApplicationController
   layout "mainsite"
 
   def initialize
-    @display_columns = %w(name email company house)
+    @display_columns = %w(last_name email company house skills)
     super
   end
 
@@ -56,23 +56,28 @@ class ManageController < ApplicationController
     elsif request["page"] 
       @cond = Conditions.from_param(request["cond"])
       @page = request["page"].to_i
+    elsif request["sort"] 
+      @cond = Conditions.from_param(request["sort"])
+      @page = request["curr_page"].to_i
     end
     
     @per_page = 20
     @record_count = Contact.count(:conditions => @cond.conditions)
-    
+    @sort_by, @sort_ascending = @cond.sort_by, @cond.sort_ascending
+
     @grid.configure do |g|
       g.model = Contact
       g.get_data do |state, model|
         model.find(:all, :conditions => @cond.conditions, :include => :skills,
-                   :offset => (@page * @per_page), :limit => @per_page)
+                   :offset => (@page * @per_page), :limit => @per_page, 
+                   :order => @cond.ordering)
       end
 
       g.get_columns do |state, model, contact|
         @display_columns.collect do |col| 
           case col
-          when "name"
-            [col, "#{contact.first_name} #{contact.last_name}".strip]
+          when "last_name"
+            [col, " #{contact.last_name}, #{contact.first_name}".strip]
           when "skills"
             [col, contact.skills.collect { |skill| skill.description }. inject { |acc, skill| acc + ", " + skill }]
           when "company"
@@ -93,7 +98,7 @@ class ManageController < ApplicationController
   
   def download
     cond = Conditions.from_param(request["cond"])
-    list = Contact.find(:all, :conditions => cond.conditions)
+    list = Contact.find(:all, :conditions => cond.conditions, :order => cond.ordering)
 
     csv_string = FasterCSV.generate do |csv|
       columns = Contact.column_names << "skills"
@@ -131,6 +136,10 @@ class ManageController < ApplicationController
     # Limits query to groups which match the name given. Ignored
     # if blank.
     attr_accessor :group
+    # Sort column
+    attr_accessor :sort_by
+    # True if ascending sort, false otherwise.
+    attr_accessor :sort_ascending
 
     def initialize
       @skills = []
@@ -140,6 +149,7 @@ class ManageController < ApplicationController
       @any_skills = false
       @no_skills = false
       @group = nil
+      @sort_by, @sort_ascending = "last_name", true
     end
 
     def conditions
@@ -176,6 +186,10 @@ SQL
       cond.join " AND "
     end
     
+    def ordering
+      "#{@sort_by} #{@sort_ascending ? "ASC" : "DESC"}"
+    end
+
     def clear
       @skills = nil
       @unassigned = false
@@ -183,19 +197,24 @@ SQL
       @include_inactive = false
       @any_skills = false
       @no_skills = false
+      @group = nil
+      @sort_by, @sort_ascending = "last_name", true
     end
 
     # A string containing all the query conditions which can be used
     # as the value for a URL parameter
-    def to_param
+    def to_param(p = {})
+      
       # split on newlines, join with ampersands, and escape
       CGI.escape(<<-QRY.split.join("&"))
-skills=#{@skills ? @skills.join(",") : ""}
-unassigned=#{!! @unassigned}
-assigned=#{!! @assigned}
-include_inactive=#{!! @include_inactive}
-any_skills=#{!! @any_skills}
-no_skills=#{!! @no_skills}
+skills=#{p[:skills] || (@skills ? @skills.join(",") : "")}
+unassigned=#{p[:unassigned] == nil ? (!! @unassigned) : (!! p[:unassigned])}
+assigned=#{p[:assigned] == nil ? (!! @assigned) : (!! p[:assigned])}
+include_inactive=#{p[:include_inactive] == nil ? (!! @include_inactive) : (!! p[:include_inactive])}
+any_skills=#{p[:any_skills] == nil ? (!! @any_skills) : (!! p[:any_skills])}
+no_skills=#{p[:no_skills] == nil ? (!! @no_skills) : (!! p[:no_skills])}
+sort_by=#{p[:sort_by] || @sort_by}
+sort_asc=#{p[:sort_ascending] == nil ? (!! @sort_ascending) : (!! p[:sort_ascending])}
 QRY
     end
     
@@ -210,6 +229,8 @@ QRY
         c.include_inactive = c.for_key("include_inactive", false) { |v| v == "true" }
         c.any_skills = c.for_key("any_skills", false) { |v| v == "true" }
         c.no_skills = c.for_key("no_skills", false) { |v| v == "true" }
+        c.sort_by = c.for_key("sort_by", "last_name") { |v| v }
+        c.sort_ascending = c.for_key("sort_asc", true) { |v| v == "true" }
       end
     end
 

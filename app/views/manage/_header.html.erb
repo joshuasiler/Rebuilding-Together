@@ -1,0 +1,27 @@
+<%
+  def with_sorting(sorted, name, asc)
+    if sorted
+      %(<i><a href=") + url_for(:controller => :manage, :action => :index, :curr_page => @page,
+                           :sort => @cond.to_param(:sort_by => name, :sort_ascending => asc)) + %(">) +
+       yield + "</a></i>"
+    else
+      %(<a href=") + url_for(:controller => :manage, :action => :index, :curr_page => @page,
+                           :sort => @cond.to_param(:sort_by => name)) + %(">) +
+       yield + "</a>"
+    end
+  end
+%>
+<%=
+  @display_columns.inject("\t<tr>\n") do |acc, name|
+    acc << "\t\t<th>" + with_sorting(@cond.sort_by == name, name, ! @cond.sort_ascending) do
+      case name 
+      when "company"
+        "Company/Group"
+      when "last_name"
+        "Name"
+      else
+        h(name.capitalize)
+      end 
+    end << "</th>\n"
+  end 
+%>
