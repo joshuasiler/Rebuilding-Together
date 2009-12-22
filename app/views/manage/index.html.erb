@@ -5,16 +5,20 @@
      conf.records do |table|
        table.start do |state, records, acc|
          acc << %(<table class="manage-contacts-table">\n)
-         acc << "\t<tr>" << render(:partial => "header.html.erb") << "</tr>"
          if records.length == 0
            acc << %(<tr><td colspan="#{@display_columns.length}">No result</td></tr>) 
+         else
+           acc << %(\t<tr><td colspan="#{@display_columns.length}">) << 
+           render(:partial => "pager.html.erb") << 
+           %(</td></tr>) <<
+           "\t<tr>" << render(:partial => "header.html.erb") << "</tr>"
          end
        end
 
        table.end do |state, records, acc|
          acc << %(\t<tr><td colspan="#{@display_columns.length}">) << 
-             render(:partial => "pager.html.erb") << 
-             %(</td></tr>) << "</table>\n\n"
+         render(:partial => "pager.html.erb") << 
+         %(</td></tr>) << "</table>\n\n"
        end
      end
 

@@ -79,7 +79,7 @@ class ManageController < ApplicationController
           when "last_name"
             [col, " #{contact.last_name}, #{contact.first_name}".strip]
           when "skills"
-            [col, contact.skills.collect { |skill| skill.description }. inject { |acc, skill| acc + ", " + skill }]
+            [col, contact.skills.compact.collect { |skill| skill.description }. inject { |acc, skill| acc + ", " + skill }]
           when "company"
             [col, contact.company_name]
           else
@@ -170,9 +170,9 @@ class ManageController < ApplicationController
 SQL
 
       if @assigned && ! @unassigned
-        cond << "id in (#{assigned_contacts})"
+        cond << "contacts.id in (#{assigned_contacts})"
       elsif ! @assigned && @unassigned
-        cond << "id not in (#{assigned_contacts})"
+        cond << "contacts.id not in (#{assigned_contacts})"
       end
 
       if ! @include_inactive
@@ -187,7 +187,19 @@ SQL
     end
     
     def ordering
-      "#{@sort_by} #{@sort_ascending ? "ASC" : "DESC"}"
+      case @sort_by
+      when "email"
+        "email"
+      when "company"
+        "company_name"
+      when "house"
+        @sort_by
+      when "skills"
+      when "last_name"
+        @sort_by
+      else
+        @sort_by
+      end + " " + (@sort_ascending ? "ASC" : "DESC")
     end
 
     def clear

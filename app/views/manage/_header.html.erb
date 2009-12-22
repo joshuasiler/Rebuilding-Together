@@ -4,10 +4,12 @@
       %(<i><a href=") + url_for(:controller => :manage, :action => :index, :curr_page => @page,
                            :sort => @cond.to_param(:sort_by => name, :sort_ascending => asc)) + %(">) +
        yield + "</a></i>"
-    else
+    elsif ! %w(house skills).include?(name) 
       %(<a href=") + url_for(:controller => :manage, :action => :index, :curr_page => @page,
                            :sort => @cond.to_param(:sort_by => name)) + %(">) +
-       yield + "</a>"
+      yield + "</a>"
+    else
+      yield
     end
   end
 %>
