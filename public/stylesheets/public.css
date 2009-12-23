@@ -95,3 +95,43 @@ border-bottom: 1px solid #888;
     float:left;
     width: 100px;
 }
+
+/* Placeholder, used on manage/ page */
+.manage-contacts-table  {
+    margin: 0; padding: 0; 
+}
+
+/* Placeholder, used on manage/ page */
+.manage-contacts-row-true {
+    margin: 0; padding: 0;
+}
+
+/* Placeholder, used on manage/ page */
+.manage-contacts-row-false {
+    margin: 0; padding: 0;
+}
+
+/* Placeholder for manage/ page. Used in conjunction with manage-contacts-row-[true|false] */
+.manage-contacts-row-last {
+    padding: 0; margin: 0;
+}
+
+/* Placeholder, used on manage/ page */
+.manage-contacts-col-true {
+    padding: 0; margin: 0;
+}
+
+/* Placeholder, used on manage/ page */
+.manage-contacts-col-false {
+    padding: 0; margin: 0;
+}
+
+/* Placeholder for manage/ page. Used in conjunction with manage-contacts-col-[true|false] */
+.manage-contacts-col-last {
+    padding: 0; margin: 0;
+}
+
+/* Styles pager row on manage contacts page. */
+.manage-contacts-pager {
+  text-align: right;
+}

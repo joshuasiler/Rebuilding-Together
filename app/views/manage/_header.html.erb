@@ -1,9 +1,9 @@
 <%
   def with_sorting(sorted, name, asc)
     if sorted
-      %(<i><a href=") + url_for(:controller => :manage, :action => :index, :curr_page => @page,
-                           :sort => @cond.to_param(:sort_by => name, :sort_ascending => asc)) + %(">) +
-       yield + "</a></i>"
+      %(<a href=") + url_for(:controller => :manage, :action => :index, :curr_page => @page,
+                           :sort => @cond.to_param(:sort_by => name, :sort_ascending => asc)) +
+       %("><i>#{yield}</i>&nbsp;#{asc ? "&#x25B2;" : "&#x25BC;" }</a>)
     elsif ! %w(house skills).include?(name) 
       %(<a href=") + url_for(:controller => :manage, :action => :index, :curr_page => @page,
                            :sort => @cond.to_param(:sort_by => name)) + %(">) +

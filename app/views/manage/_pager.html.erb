@@ -1,24 +1,23 @@
-<div>
+<div class="manage-contacts-pager">
 <%
+  nextL = %(<a href="#{url_for :controller => :manage, :action => :index, :page => @page + 1, :cond => @cond.to_param}">&gt;</a>)
+  lastL = %(<a href="#{url_for :controller => :manage, :action => :index, :page => @record_count / @per_page, :cond => @cond.to_param}">&gt;&gt;</a>)
+  prevL = %(<a href="#{url_for :controller => :manage, :action => :index, :page => @page - 1, :cond => @cond.to_param}">&lt;</a>)
+  firstL =%(<a href="#{url_for :controller => :manage, :action => :index, :page => 0, :cond => @cond.to_param}">&lt;&lt;</a>)
+ 
   first = @page == 0
   last = @page == @record_count / @per_page
+
   case
   when first && last 
     ""
   when first %>
-<%= "Page #{@page + 1} of #{(@record_count/ @per_page) + 1 } (#{@record_count} volunteers total)" %>
-<a href="<%= url_for :controller => :manage, :action => :index, :page => @page + 1, :cond => @cond.to_param%>">Next</a> 
-<a href="<%= url_for :controller => :manage, :action => :index, :page => @record_count / @per_page, :cond => @cond.to_param%>">Last</a><%
+<%= "Page #{@page + 1} of #{(@record_count/ @per_page) + 1 } (#{@record_count} volunteers total)" %><%= nextL %> <%= lastL %><%
   when last %>
-<a href="<%= url_for :controller => :manage, :action => :index, :page => 0, :cond => @cond.to_param%>">First</a> 
-<a href="<%= url_for :controller => :manage, :action => :index, :page => @page - 1, :cond => @cond.to_param%>">Prev</a>
-<%= "Page #{@page + 1} of #{(@record_count/ @per_page) + 1 } (#{@record_count} volunteers total)"%><%
-  else %>
-<a href="<%= url_for :controller => :manage, :action => :index, :page => 0, :cond => @cond.to_param%>">First</a> 
-<a href="<%= url_for :controller => :manage, :action => :index, :page => @page - 1, :cond => @cond.to_param%>">Prev</a>
-<%= "Page #{@page + 1} of #{(@record_count/ @per_page) + 1 } (#{@record_count} volunteers total)" %>
-<a href="<%= url_for :controller => :manage, :action => :index, :page => @page + 1, :cond => @cond.to_param%>">Next</a> 
-<a href="<%= url_for :controller => :manage, :action => :index, :page => @record_count / @per_page, :cond => @cond.to_param%>">Last</a><%
+<%=firstL%> <%=prevL%> <%= "Page #{@page + 1} of #{(@record_count/ @per_page) + 1 } (#{@record_count} volunteers total)"%><%
+  else %> 
+<%=firstL%> <%=prevL%> <%= "Page #{@page + 1} of #{(@record_count/ @per_page) + 1 } (#{@record_count} volunteers total)" %> 
+<%=nextL%> <%=lastL%> <%
   end
 %>
 </div>
