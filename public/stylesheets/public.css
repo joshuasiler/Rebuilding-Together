@@ -99,6 +99,7 @@ border-bottom: 1px solid #888;
 /* Placeholder, used on manage/ page */
 .manage-contacts-table  {
     margin: 0; padding: 0; 
+    width: 100%;
 }
 
 /* Placeholder, used on manage/ page */

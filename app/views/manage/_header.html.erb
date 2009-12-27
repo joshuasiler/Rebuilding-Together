@@ -1,13 +1,15 @@
 <%
   def with_sorting(sorted, name, asc)
     if sorted
-      %(<a href=") + url_for(:controller => :manage, :action => :index, :curr_page => @page,
-                           :sort => @cond.to_param(:sort_by => name, :sort_ascending => asc)) +
-       %("><i>#{yield}</i>&nbsp;#{asc ? "&#x25B2;" : "&#x25BC;" }</a>)
+      link_to_remote(%(<i>#{yield}</i>&nbsp;#{asc ? "&#x25B2;" : "&#x25BC;" }</a>), 
+                     :url => { :controller => :manage, :action => :sort_grid, :curr_page => @page,
+                           :sort => @cond.to_param(:sort_by => name, :sort_ascending => asc) }, 
+                     :success => %(Element.replace("grid", request.responseText)))
     elsif ! %w(house skills).include?(name) 
-      %(<a href=") + url_for(:controller => :manage, :action => :index, :curr_page => @page,
-                           :sort => @cond.to_param(:sort_by => name)) + %(">) +
-      yield + "</a>"
+      link_to_remote(yield, 
+                     :url => { :controller => :manage, :action => :sort_grid, :curr_page => @page,
+                           :sort => @cond.to_param(:sort_by => name)}, 
+                     :success => %(Element.replace("grid", request.responseText)))
     else
       yield
     end

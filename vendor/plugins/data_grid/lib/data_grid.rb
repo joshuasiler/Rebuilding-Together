@@ -1,6 +1,13 @@
 require 'active_record'
 
 class DataGrid 
+  # A name for the data grid. 
+  attr_reader :name
+
+  # Create a DataGrid with the name given.
+  def initialize(name)
+    @name = name
+  end
 
   # Configuration for rendering
   class Renderator
@@ -11,7 +18,7 @@ class DataGrid
     #
     #   Wrap#start - The state hash, all records and an accumulator
     #
-    #   Wrap#end - The state hash, all records an an accumulator
+    #   Wrap#end - The state hash, all records and an accumulator
     #
     #   Wrap#last - Not called in this case.
     #
@@ -199,7 +206,7 @@ class DataGrid
   end
 
   # Convenience method - allows configuring and 
-  # rendering in one pass, suitable for use withing <%= %>
+  # rendering in one pass, suitable for use within <%= %>
   # tags. 
   # 
   # Calls 'rendering' with the

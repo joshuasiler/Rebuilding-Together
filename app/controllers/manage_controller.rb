@@ -3,16 +3,31 @@ require 'cgi'
 require 'faster_csv'
 
 class ManageController < ApplicationController
-  layout "mainsite"
+  layout "mainsite", :except => [:sort_grid, :page_grid]
 
   def initialize
     @display_columns = %w(last_name email company house skills)
     super
   end
 
+  # Sort in-place 
+  def sort_grid
+    @cond = Conditions.new
+    @cond = Conditions.from_param(request["sort"])
+    @page = request["curr_page"].to_i
+    grid @cond, @page
+    render :partial => "grid.html.erb"
+  end
+
+  def page_grid
+    @cond = Conditions.new
+    @cond = Conditions.from_param(request["cond"])
+    @page = request["page"].to_i
+    grid @cond, @page
+    render :partial => "grid.html.erb"
+  end
+
   def index
-    @grid = DataGrid.new
-    
     # Restore query form state if "filter" button
     # pressed.
     @query = request["query"] || Hash.new
@@ -53,41 +68,9 @@ class ManageController < ApplicationController
 
       @cond.group = @query["group"] unless @query["group"].blank?
       @cond.include_inactive = (@query["inactive"] == "1")
-    elsif request["page"] 
-      @cond = Conditions.from_param(request["cond"])
-      @page = request["page"].to_i
-    elsif request["sort"] 
-      @cond = Conditions.from_param(request["sort"])
-      @page = request["curr_page"].to_i
     end
-    
-    @per_page = 20
-    @record_count = Contact.count(:conditions => @cond.conditions)
-    @sort_by, @sort_ascending = @cond.sort_by, @cond.sort_ascending
 
-    @grid.configure do |g|
-      g.model = Contact
-      g.get_data do |state, model|
-        model.find(:all, :conditions => @cond.conditions, :include => :skills,
-                   :offset => (@page * @per_page), :limit => @per_page, 
-                   :order => @cond.ordering)
-      end
-
-      g.get_columns do |state, model, contact|
-        @display_columns.collect do |col| 
-          case col
-          when "last_name"
-            [col, " #{contact.last_name}, #{contact.first_name}".strip]
-          when "skills"
-            [col, contact.skills.compact.collect { |skill| skill.description }. inject { |acc, skill| acc + ", " + skill }]
-          when "company"
-            [col, contact.company_name]
-          else
-            [col, contact[col].to_s]
-          end
-        end
-      end
-    end
+    grid @cond, @page
   end
 
   def add
@@ -113,6 +96,38 @@ class ManageController < ApplicationController
       :type => 'text/csv; charset=utf-8; header=present',
       :filename => "contacts.csv")
   end
+
+private
+
+  def grid(cond, page)
+    @grid = DataGrid.new :grid
+    @grid.configure do |g|
+      @per_page = 20
+      @record_count = Contact.count(:conditions => cond.conditions)
+      g.model = Contact
+      g.get_data do |state, model|
+        model.find(:all, :conditions => cond.conditions, :include => :skills,
+                   :offset => (page * @per_page), :limit => @per_page, 
+                   :order => cond.ordering)
+      end
+
+      g.get_columns do |state, model, contact|
+        @display_columns.collect do |col| 
+          case col
+          when "last_name"
+            [col, " #{contact.last_name}, #{contact.first_name}".strip]
+          when "skills"
+            [col, contact.skills.compact.collect { |skill| skill.description }. inject { |acc, skill| acc + ", " + skill }]
+          when "company"
+            [col, contact.company_name]
+          else
+            [col, contact[col].to_s]
+          end
+        end
+      end
+    end
+  end
+
 
   # Helps build conditions statement for
   # contact query on this page.

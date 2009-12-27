@@ -1,10 +1,16 @@
 <div class="manage-contacts-pager">
 <%
-  nextL = %(<a href="#{url_for :controller => :manage, :action => :index, :page => @page + 1, :cond => @cond.to_param}">&gt;</a>)
-  lastL = %(<a href="#{url_for :controller => :manage, :action => :index, :page => @record_count / @per_page, :cond => @cond.to_param}">&gt;&gt;</a>)
-  prevL = %(<a href="#{url_for :controller => :manage, :action => :index, :page => @page - 1, :cond => @cond.to_param}">&lt;</a>)
-  firstL =%(<a href="#{url_for :controller => :manage, :action => :index, :page => 0, :cond => @cond.to_param}">&lt;&lt;</a>)
- 
+  success = %(Element.replace("grid", request.responseText))
+  nextO = { :url => { :controller => :manage, :action => :page_grid, :page => @page + 1, :cond => @cond.to_param }, :success => success }
+  lastO = { :url => { :controller => :manage, :action => :page_grid, :page => @record_count / @per_page, :cond => @cond.to_param}, :success => success }
+  prevO = { :url => { :controller => :manage, :action => :page_grid, :page => @page - 1, :cond => @cond.to_param}, :success => success }
+  firstO = { :url => { :controller => :manage, :action => :page_grid, :page => 0, :cond => @cond.to_param}, :success => success }
+
+  nextL = link_to_remote "&gt;", nextO 
+  lastL = link_to_remote "&gt;&gt;", lastO
+  prevL = link_to_remote "&lt;", prevO
+  firstL = link_to_remote "&lt;&lt;", firstO
+
   first = @page == 0
   last = @page == @record_count / @per_page
 
