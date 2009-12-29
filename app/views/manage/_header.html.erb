@@ -3,7 +3,7 @@
     if sorted
       link_to_remote(%(<i>#{yield}</i>&nbsp;#{asc ? "&#x25B2;" : "&#x25BC;" }</a>), 
                      :url => { :controller => :manage, :action => :sort_grid, :curr_page => @page,
-                           :sort => @cond.to_param(:sort_by => name, :sort_ascending => asc) }, 
+                           :sort => @cond.to_param(:sort_by => name, :sort_ascending => ! asc) }, 
                      :success => %(Element.replace("grid", request.responseText)))
     elsif ! %w(house skills).include?(name) 
       link_to_remote(yield, 
@@ -17,14 +17,14 @@
 %>
 <%=
   @display_columns.inject("\t<tr>\n") do |acc, name|
-    acc << "\t\t<th>" + with_sorting(@cond.sort_by == name, name, ! @cond.sort_ascending) do
+    acc << %(\t\t<th class="manage-contacts-header">) + with_sorting(@cond.sort_by == name, name, @cond.sort_ascending) do
       case name 
       when "company"
         "Company/Group"
       when "last_name"
         "Name"
       when "house"
-        "House #"     
+        "<nobr>House #</nobr>"     
       else
         h(name.capitalize)
       end 

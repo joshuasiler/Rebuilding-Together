@@ -88,21 +88,10 @@ class DataGrid
     # Set by get_data and get_columns, respectively.
     attr_reader :get_data_fn, :get_columns_fn
     
-    # If get_data is used, then the object set here
-    # will be passed to that function. If get_data
-    # is not set, this object will be used in one of 
-    # two ways, depending on what it is:
-    #
-    #  ActiveRecord class/object - The all method will be used
-    #   to get data.
-    #  Enumerable object - each will be called to get data
-    attr_accessor :model
-
     # Assign a block to get data for the grid.
     #
-    # The block given should take two arguments, a hash and the model,
-    # in that order. It should return an enumerable object which will yield
-    # each row.
+    # The block given should take one arguments, a hash. It should
+    # return an enumerable object which will yield each row.
     #
     # The hash object passed in will be created when enumeration
     # starts and will be preserved until enumeration is done. It will
@@ -113,13 +102,13 @@ class DataGrid
       @get_data_fn = blk
     end
 
-    # Assign a block to get columns for each record in the model. This
+    # Assign a block to get columns for each record. This
     # will be called once for each record. The block should return an Enumerable
     # object which will yield key/value pairs. Those pairs will be used when
     # rendering each column.
     #
-    # The block given should take three arguments, which will be a
-    # hash object, the model, and the current record. 
+    # The block given should take two arguments, a
+    # hash object and the current record, in that order.
     #
     # The hash object passed in will be the same that was passed to
     # get_data above, and it will be passed to each invocation of
@@ -149,7 +138,7 @@ class DataGrid
     end
   end
 
-  # Configure overall grid - model, paging, etc.
+  # Configure overall grid - paging, etc.
   #
   # A Configurator object is yielded.
   def configure # :yields Configurator:
@@ -173,25 +162,14 @@ class DataGrid
   def render(render = nil)
     render ||= @renderer
     raise "No rendering configuration available" unless render
-
     raise "get_columns must be set on the configurator" unless @conf.get_columns_fn
+    raise "No data source provided" unless @conf.get_data_fn 
 
     # Create our state hash to thread through.
     state = Hash.new
 
     # Get ourselves an enumerable object
-    data =
-      if @conf.get_data_fn 
-        @conf.get_data_fn.call(state, @conf.model)
-      elsif @conf.model.nil?
-        raise "No model supplied with configuration"
-      elsif @conf.model.is_a?(Class) && @conf.model.ancestors.include?(ActiveRecord::Base) 
-        @conf.model.all
-      elsif @conf.model.is_a?(Enumerable)
-        @conf.model
-      else
-        raise "Can't enumerate model: #{@conf.model.inspect}"
-      end
+    data = @conf.get_data_fn.call(state)
 
     render.table.start_fn.call(state, data, render.accumulator) if render.table.start_fn
     last = 
@@ -222,7 +200,7 @@ class DataGrid
   def do_row(render, state, start_fn, data, record)
     start_fn.call(state, data, record, render.accumulator) if start_fn
     last = 
-      @conf.get_columns_fn.call(state, @conf.model, record).inject(nil) do |prev, a|
+      @conf.get_columns_fn.call(state, record).inject(nil) do |prev, a|
         do_column(render, state, render.cell.start_fn, record, prev[0], prev[1]) if prev
         a
       end 

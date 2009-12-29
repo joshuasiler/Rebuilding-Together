@@ -134,5 +134,9 @@ border-bottom: 1px solid #888;
 
 /* Styles pager row on manage contacts page. */
 .manage-contacts-pager {
-  text-align: right;
+    text-align: right;
+}
+
+.manage-contacts-header { 
+    width: 20%;
 }

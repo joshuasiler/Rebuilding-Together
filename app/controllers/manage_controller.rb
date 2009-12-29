@@ -107,18 +107,18 @@ private
     @grid.configure do |g|
       @per_page = 20
       @record_count = Contact.count(:conditions => cond.conditions)
-      g.model = Contact
-      g.get_data do |state, model|
-        model.find(:all, :conditions => cond.conditions, :include => [:skills, :houses],
+
+      g.get_data do |state|
+        Contact.find(:all, :conditions => cond.conditions, :include => [:skills, :houses],
                    :offset => (page * @per_page), :limit => @per_page, 
                    :order => cond.ordering)
       end
 
-      g.get_columns do |state, model, contact|
+      g.get_columns do |state, contact|
         @display_columns.collect do |col| 
           [col] << case col
                    when "last_name"
-                     " #{contact.last_name}, #{contact.first_name}".strip
+                     "#{contact.last_name}, #{contact.first_name}".strip
                    when "skills"
                      contact.skills.compact.collect { |skill| skill.description }.uniq.inject { |acc, skill| acc + ", " + skill }
                    when "company"
