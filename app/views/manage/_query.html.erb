@@ -15,6 +15,8 @@
     <br />
     Group/Company: <%= text_field_tag "query[group]", @cond.group %>
     <br />
+    Volunteer Name: <%= text_field_tag "query[name]", @cond.name %>
+    <br />
     <input type=submit name="query[filter]" value="Filter"></input>
     <input type=submit name="query[clear]" value="Clear"></input>
   <% end %>

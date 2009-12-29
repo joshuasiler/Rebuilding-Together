@@ -101,7 +101,7 @@ class DataGrid
     # Assign a block to get data for the grid.
     #
     # The block given should take two arguments, a hash and the model,
-    # in that order. It shoul return an enumerable object which will yield
+    # in that order. It should return an enumerable object which will yield
     # each row.
     #
     # The hash object passed in will be created when enumeration

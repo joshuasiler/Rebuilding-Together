@@ -19,6 +19,7 @@ class ManageController < ApplicationController
     render :partial => "grid.html.erb"
   end
 
+  # Page in-place
   def page_grid
     @cond = Conditions.new
     @cond = Conditions.from_param(request["cond"])
@@ -67,6 +68,7 @@ class ManageController < ApplicationController
       end
 
       @cond.group = @query["group"] unless @query["group"].blank?
+      @cond.name = @query["name"] unless @query["name"].blank?
       @cond.include_inactive = (@query["inactive"] == "1")
     end
 
@@ -99,6 +101,7 @@ class ManageController < ApplicationController
 
 private
 
+  # Create and configure grid displayed.
   def grid(cond, page)
     @grid = DataGrid.new :grid
     @grid.configure do |g|
@@ -106,23 +109,25 @@ private
       @record_count = Contact.count(:conditions => cond.conditions)
       g.model = Contact
       g.get_data do |state, model|
-        model.find(:all, :conditions => cond.conditions, :include => :skills,
+        model.find(:all, :conditions => cond.conditions, :include => [:skills, :houses],
                    :offset => (page * @per_page), :limit => @per_page, 
                    :order => cond.ordering)
       end
 
       g.get_columns do |state, model, contact|
         @display_columns.collect do |col| 
-          case col
-          when "last_name"
-            [col, " #{contact.last_name}, #{contact.first_name}".strip]
-          when "skills"
-            [col, contact.skills.compact.collect { |skill| skill.description }. inject { |acc, skill| acc + ", " + skill }]
-          when "company"
-            [col, contact.company_name]
-          else
-            [col, contact[col].to_s]
-          end
+          [col] << case col
+                   when "last_name"
+                     " #{contact.last_name}, #{contact.first_name}".strip
+                   when "skills"
+                     contact.skills.compact.collect { |skill| skill.description }.uniq.inject { |acc, skill| acc + ", " + skill }
+                   when "company"
+                     contact.company_name
+                   when "house"
+                     contact.current_house ? contact.current_house.house_number : ""
+                   else
+                     contact[col].to_s
+                   end
         end
       end
     end
@@ -151,6 +156,8 @@ private
     # Limits query to groups which match the name given. Ignored
     # if blank.
     attr_accessor :group
+    # Limits query to contacts with the name given. 
+    attr_accessor :name
     # Sort column
     attr_accessor :sort_by
     # True if ascending sort, false otherwise.
@@ -164,17 +171,22 @@ private
       @any_skills = false
       @no_skills = false
       @group = nil
+      @name = nil
       @sort_by, @sort_ascending = "last_name", true
     end
 
     def conditions
       cond = []
       if @no_skills
-        cond << "id not in (select contact_id from contact_skills)"
+        cond << "contacts.id not in (select contact_id from contact_skills)"
       elsif @any_skills
-        cond << "id in (select contact_id from contact_skills)"
+        cond << "contacts.id in (select contact_id from contact_skills)"
       elsif @skills && @skills.length > 0
-        cond << %(id in (select contact_id from contact_skills where skill_id in (#{@skills.collect { |s| "'#{quote_string((s || "").to_s)}'"}.join(",")})))
+        cond << <<-SQL
+contact.id in (select contact_id 
+                from contact_skills 
+                where skill_id in (#{@skills.collect { |s| "'#{quote_string((s || "").to_s)}'"}.join(",")}))
+SQL
       end
 
       assigned_contacts = <<-SQL
@@ -195,7 +207,16 @@ SQL
       end
 
       if ! @group.blank?
-        cond << "company_name LIKE '#{quote_string(@group)}%'"
+        cond << "company_name LIKE '#{quote_string(@group.strip)}%'"
+      end
+
+      if ! @name.blank?
+        cond << <<-SQL
+(last_name LIKE '%#{quote_string(@name.strip)}%' OR 
+ first_name LIKE '%#{quote_string(@name.strip)}%' OR
+ CONCAT(last_name, ", ", first_name) LIKE '%#{quote_string(@name.strip)}%' OR
+ CONCAT(last_name, ",", first_name) LIKE '%#{quote_string(@name.strip)}%')
+SQL
       end
 
       cond.join " AND "
@@ -225,13 +246,13 @@ SQL
       @any_skills = false
       @no_skills = false
       @group = nil
+      @name = nil
       @sort_by, @sort_ascending = "last_name", true
     end
 
     # A string containing all the query conditions which can be used
     # as the value for a URL parameter
     def to_param(p = {})
-      
       # split on newlines, join with ampersands, and escape
       CGI.escape(<<-QRY.split.join("&"))
 skills=#{p[:skills] || (@skills ? @skills.join(",") : "")}
@@ -240,6 +261,8 @@ assigned=#{p[:assigned] == nil ? (!! @assigned) : (!! p[:assigned])}
 include_inactive=#{p[:include_inactive] == nil ? (!! @include_inactive) : (!! p[:include_inactive])}
 any_skills=#{p[:any_skills] == nil ? (!! @any_skills) : (!! p[:any_skills])}
 no_skills=#{p[:no_skills] == nil ? (!! @no_skills) : (!! p[:no_skills])}
+group=#{p[:group] || (@group ? @group : "")}
+name=#{p[:name] || (@name ? @name : "")}
 sort_by=#{p[:sort_by] || @sort_by}
 sort_asc=#{p[:sort_ascending] == nil ? (!! @sort_ascending) : (!! p[:sort_ascending])}
 QRY
@@ -256,6 +279,8 @@ QRY
         c.include_inactive = c.for_key("include_inactive", false) { |v| v == "true" }
         c.any_skills = c.for_key("any_skills", false) { |v| v == "true" }
         c.no_skills = c.for_key("no_skills", false) { |v| v == "true" }
+        c.group = c.for_key("group", nil) { |v| v }
+        c.name = c.for_key("name", nil) { |v| v }
         c.sort_by = c.for_key("sort_by", "last_name") { |v| v }
         c.sort_ascending = c.for_key("sort_asc", true) { |v| v == "true" }
       end
