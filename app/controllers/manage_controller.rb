@@ -183,7 +183,7 @@ private
         cond << "contacts.id in (select contact_id from contact_skills)"
       elsif @skills && @skills.length > 0
         cond << <<-SQL
-contact.id in (select contact_id 
+contacts.id in (select contact_id 
                 from contact_skills 
                 where skill_id in (#{@skills.collect { |s| "'#{quote_string((s || "").to_s)}'"}.join(",")}))
 SQL
