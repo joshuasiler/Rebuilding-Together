@@ -1,24 +1,28 @@
-<div>
+<div style="clear:both;">
   <% form_tag :controller => 'manage' do %>
-    <%= radio_button_tag "query[assigned]", "3", ! @cond.assigned && ! @cond.unassigned %>Assigned & Unassigned
-    <%= radio_button_tag "query[assigned]", "1", @cond.assigned %>Assigned to a house
-    <%= radio_button_tag "query[assigned]", "2", @cond.unassigned %>Unassigned
-    <br />
+  <div style="float:left; width:200px;">
+    <strong><%= Project.latest.project_name %></strong><BR />
+    <%= radio_button_tag "query[assigned]", "3", ! @cond.assigned && ! @cond.unassigned %>Assigned & Unassigned<BR />
+    <%= radio_button_tag "query[assigned]", "1", @cond.assigned %>Assigned to a house<BR />
+    <%= radio_button_tag "query[assigned]", "2", @cond.unassigned %>Unassigned<BR />
     <%= check_box_tag "query[inactive]", "1", @cond.include_inactive %>Include inactive
-    <br />
-    <%= radio_button_tag "query[skill_sel]", "1", ! @cond.any_skills && ! @cond.no_skills %> Skilled & Unskilled
-    <%= radio_button_tag "query[skill_sel]", "2", @cond.no_skills %> Unskilled Only
-    <%= radio_button_tag "query[skill_sel]", "3", @cond.any_skills %> Skilled Only
-    <br />
-    <%= radio_button_tag "query[skill_sel]", "4", @cond.skills && ! @cond.skills.empty? %> Specific Skills:
-    <%= select_tag "query[skills]", options_for_select(Skill.all_skills, @cond.skills), :multiple => true, :size => 3 %>
-    <br />
+    </div><div style="float:left; width:400px; padding-left: 20px;">
+    <strong>Skills</strong><BR />
+    <%= radio_button_tag "query[skill_sel]", "1", ! @cond.any_skills && ! @cond.no_skills %> Skilled & Unskilled<BR />
+    <%= radio_button_tag "query[skill_sel]", "2", @cond.no_skills %> Unskilled Only<BR />
+    <%= radio_button_tag "query[skill_sel]", "3", @cond.any_skills %> Skilled Only<BR />
+   
+    <%= radio_button_tag "query[skill_sel]", "4", @cond.skills && ! @cond.skills.empty? %> Specific Skills:<BR />
+    <%= select_tag "query[skills]", options_for_select(Skill.all_skills, @cond.skills), :multiple => true, :size => 5 %>
+    </div>
+  <div style="width:600px;clear:left; padding-top:20px;">
     Group/Company: <%= text_field_tag "query[group]", @cond.group %>
-    <br />
     Volunteer Name: <%= text_field_tag "query[name]", @cond.name %>
-    <br />
+    </div><div style="clear:left;">
     <input type=submit name="query[filter]" value="Filter"></input>
     <input type=submit name="query[clear]" value="Clear"></input>
+    </div>
   <% end %>
   </form>
 </div>
+<div style="clear:both;">&nbsp;</div>
