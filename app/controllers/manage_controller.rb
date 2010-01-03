@@ -3,7 +3,7 @@ require 'cgi'
 require 'faster_csv'
 
 class ManageController < ApplicationController
-  layout "mainsite", :except => [:sort_grid, :page_grid]
+  layout "manage", :except => [:sort_grid, :page_grid]
 
   def initialize
     @display_columns = %w(last_name email company house skills)

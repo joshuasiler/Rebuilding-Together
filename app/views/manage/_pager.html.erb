@@ -6,10 +6,10 @@
   prevO = { :url => { :controller => :manage, :action => :page_grid, :page => @page - 1, :cond => @cond.to_param}, :success => success }
   firstO = { :url => { :controller => :manage, :action => :page_grid, :page => 0, :cond => @cond.to_param}, :success => success }
 
-  nextL = link_to_remote "&gt;", nextO 
-  lastL = link_to_remote "&gt;&gt;", lastO
-  prevL = link_to_remote "&lt;", prevO
-  firstL = link_to_remote "&lt;&lt;", firstO
+  nextL = link_to_remote "next >", nextO 
+  lastL = link_to_remote "last >>", lastO
+  prevL = link_to_remote "< prev", prevO
+  firstL = link_to_remote "<< first", firstO
 
   first = @page == 0
   last = @page == @record_count / @per_page
@@ -18,7 +18,7 @@
   when first && last 
     ""
   when first %>
-<%= "Page #{@page + 1} of #{(@record_count/ @per_page) + 1 } (#{@record_count} volunteers total)" %><%= nextL %> <%= lastL %><%
+<%= "Page #{@page + 1} of #{(@record_count/ @per_page) + 1 } (#{@record_count} volunteers total)" %> <%= nextL %> <%= lastL %><%
   when last %>
 <%=firstL%> <%=prevL%> <%= "Page #{@page + 1} of #{(@record_count/ @per_page) + 1 } (#{@record_count} volunteers total)"%><%
   else %> 
