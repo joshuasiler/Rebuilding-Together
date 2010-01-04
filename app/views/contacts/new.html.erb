@@ -63,17 +63,19 @@
 				<input maxlength="255" name="contact[country]" size="20" type="text" <%=ti()%>>
 			</li>
 			<li style="list-style: none">
-				<h2>About Your Group</h2>
-				If you are signing up as part of a group, please enter the company/group name here.<br>
+				<h2>About Your Group <i>(optional)</i></h2>
+				If you are signing up as part of a group, please enter your company or organization name:
 				<br>
 			</li>
 			<li>
-				<div class="label" style="width: 150px;">Company Name</div>
 				<input maxlength="255" name="contact[company_name]" size="50" type="text" <%=ti(13)%>>
 			</li>
+			<li style="list-style: none">
+				<br>
+				If you are the main contact person for your group, please enter the number of people you expect (best guess, including yourself):
+			</li>
 			<li>
-				<div class="label" style="width: 150px;">Group Name</div>
-				<input maxlength="255" name="groupname" size="50" type="text" <%=ti()%>>
+				<input maxlength="255" name="contact[est_group_size]" size="20" type="text" <%=ti()%>>
 			</li>
 			<li style="list-style: none">
 				<h2>Let's Rebuild</h2>
