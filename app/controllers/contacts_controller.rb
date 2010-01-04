@@ -4,7 +4,7 @@ class ContactsController < ApplicationController
   def new
     @contact = Contact.new(params[:contact])
     @skills = Skill.find(:all)
-    @ctypes = Contacttype.find(:all)
+    @ctypes = Contacttype.find(:all, :conditions => "signup_form_display_order > 0", :order => "signup_form_display_order ASC")
   end
   
   def create
