@@ -6,8 +6,11 @@
 <div class="contactform">
 	<form action="/contacts/create" id="new_contact" method="post" name="new_contact">
 		<%= token_tag %>
+		<input name="contact[is_active]" type="hidden" value="1">
+		
 		<h2>About Yourself</h2>
-		<em>Bold fields are required</em><br />
+		<em>Bold fields are required</em>
+		<br />
 		<div style="float:right; width:250px;">
 			<strong>Contact Information</strong><br />
 			<ol>
@@ -62,26 +65,32 @@
 				<div class="label">Country</div>
 				<input maxlength="255" name="contact[country]" size="20" type="text" <%=ti()%> />
 			</li>
-			<li style="list-style: none">
-				<h2>About Your Group <i>(optional)</i></h2>
-				If you are signing up as part of a group, please enter your company or organization name:
+		</ol>
+
+
+		<h2>About Your Group <i>(optional)</i></h2>
+		<ol>
+			<li>
+				If you are signing up as part of a group, please enter your company/organization name:
 				<br />
 			</li>
 			<li>
 				<input maxlength="255" name="contact[company_name]" size="50" type="text" <%=ti(13)%> />
 			</li>
-			<li style="list-style: none">
+			<li>
 				<br />
 				If you are the main contact person for your group, please enter the number of people you expect (best guess, including yourself):
 			</li>
 			<li>
 				<input maxlength="255" name="contact[est_group_size]" size="20" type="text" <%=ti()%> />
 			</li>
+		</ol>
+		
+		<h2>Let's Rebuild</h2>
+		Tell us a little bit about your skills, interests and let us know what you're thinking.
+		<ol>
 			<li style="list-style: none">
-				<h2>Let's Rebuild</h2>
-				Tell us a little bit about your skills, interests and let us know what you're thinking.<br />
-				<br />
-				<input name="contact[is_active]" type="hidden" value="1">
+				
 				<div class="label">Skills:</div>
 				<div style="width:350px; float:left;">
 					<% cnt = 0
@@ -119,6 +128,9 @@
 				</div>
 				<div style="clear:both;font-size:1em;">&nbsp;</div>
 			</li>
+		</ol>
+		<hr /><br>
+		<ol>
 			<li>
 				<div class="label">&nbsp;</div>
 				<!-- <input class="create" id="contact_submit" name="commit" type="submit" value="Sign Up" <%=ti()%> /> -->
