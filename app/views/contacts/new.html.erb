@@ -4,10 +4,12 @@
 </p>
 <div style="clear:both;font-size:0em;">&nbsp;</div>
 <div class="contactform">
-	<form action="/contacts/create" id="new_contact" method="post" name="new_contact">
-		<%= token_tag %>
-		<input name="contact[is_active]" type="hidden" value="1">
+    <% form_for :contact, @contact, :url => { :action => "create" }, :html => { :id => "new_contact", :name => "new_contact" } do |f| %>
 		
+		<%=error_messages_for :contact, :header_message => "Cannot Proceed" %>
+		
+		<%=f.hidden_field :is_active %>
+				
 		<h2>About Yourself</h2>
 		<em>Bold fields are required</em>
 		<br />
@@ -16,54 +18,54 @@
 			<ol>
 				<li>
 					<div class="label">Home phone</div>
-					<input type="text" id="contact_home_phone" maxlength="255" name="contact[home_phone]" size="12" <%=ti(10)%> />
+					<%=f.text_field :home_phone, :size => "12", :maxlength => "255", :tabindex => ti(10) %>
 				</li>
 				<li>
 					<div class="label">Work phone</div>
-					<input id="contact_work_phone" maxlength="255" name="contact[work_phone]" size="12" type="text" <%=ti()%> />
+					<%=f.text_field :work_phone, :size => "12", :maxlength => "255", :tabindex => ti() %>
 				</li>
 				<li>
 					<div class="label">Mobile phone</div>
-					<input id="contact_mobile_phone" maxlength="255" name="contact[mobile_phone]" size="12" type="text" <%=ti()%> />
+					<%=f.text_field :mobile_phone, :size => "12", :maxlength => "255", :tabindex => ti() %>
 				</li>
 			</ol>
 		</div>
 		<ol>
 			<li class="required">
 				<div class="label">First Name</div>
-				<input maxlength="255" name="contact[first_name]" size="20" type="text" <%=ti(1)%> />
+				<%=f.text_field :first_name, :size => "20", :maxlength => "255", :tabindex => ti(1) %>
 			</li>
 			<li class="required">
 				<div class="label">Last Name</div>
-				<input maxlength="255" name="contact[last_name]" size="20" type="text" <%=ti()%> />
+				<%=f.text_field :last_name, :size => "20", :maxlength => "255", :tabindex => ti() %>
 			</li>
 			<li class="required">
 				<div class="label">Email</div>
-				<input maxlength="255" name="contact[email]" size="40" type="text" <%=ti()%> />
+				<%=f.text_field :email, :size => "40", :maxlength => "255", :tabindex => ti() %>
 			</li>
 			<li>
 				<div class="label">Address 1</div>
-				<input maxlength="255" name="contact[address_1]" size="30" type="text" <%=ti()%> />
+				<%=f.text_field :address_1, :size => "30", :maxlength => "255", :tabindex => ti() %>
 			</li>
 			<li>
 				<div class="label">Address 2</div>
-				<input maxlength="255" name="contact[address_2]" size="30" type="text" <%=ti()%> />
+				<%=f.text_field :address_2, :size => "30", :maxlength => "255", :tabindex => ti() %>
 			</li>
 			<li>
 				<div class="label">City</div>
-				<input maxlength="255" name="contact[city]" size="20" type="text" <%=ti()%> />
+				<%=f.text_field :city, :size => "20", :maxlength => "255", :tabindex => ti() %>
 			</li>
 			<li>
 				<div class="label">State</div>
-				<input maxlength="2" name="contact[state]" size="5" type="text" <%=ti()%> />
+				<%=f.text_field :state, :size => "5", :maxlength => "2", :tabindex => ti() %>
 			</li>
 			<li>
 				<div class="label">Zip</div>
-				<input maxlength="10" name="contact[zip]" size="7" type="text" <%=ti()%> />
+				<%=f.text_field :zip, :size => "7", :maxlength => "10", :tabindex => ti() %>
 			</li>
 			<li>
 				<div class="label">Country</div>
-				<input maxlength="255" name="contact[country]" size="20" type="text" <%=ti()%> />
+				<%=f.text_field :country, :size => "20", :maxlength => "255", :tabindex => ti() %>
 			</li>
 		</ol>
 
@@ -75,14 +77,14 @@
 				<br />
 			</li>
 			<li>
-				<input maxlength="255" name="contact[company_name]" size="50" type="text" <%=ti(13)%> />
+				<%=f.text_field :company_name, :size => "50", :maxlength => "255", :tabindex => ti(13) %>
 			</li>
 			<li>
 				<br />
 				If you are the main contact person for your group, please enter the number of people you expect (best guess, including yourself):
 			</li>
 			<li>
-				<input maxlength="255" name="contact[est_group_size]" size="20" type="text" <%=ti()%> />
+				<%=f.text_field :est_group_size, :size => "20", :maxlength => "255", :tabindex => ti() %>
 			</li>
 		</ol>
 		
@@ -95,7 +97,7 @@
 				<div style="width:350px; float:left;">
 					<% cnt = 0
 					@skills.each do |skill| %>
-						<input type="checkbox" name="skills" value="<%=skill.id %>" id="skill_<%=skill.id %>" <%=ti()%> />
+						<input type="checkbox" name="skills[]" value="<%=skill.id %>" id="skill_<%=skill.id %>" tabindex="<%=ti()%>" <%= ((params[:skills] || {}).include?(skill.id.to_s)) ? 'checked="checked"' : "" %> />
 						<label for="skill_<%=skill.id %>"><%= skill.description %></label>
 						<br />
 						<% cnt+=1
@@ -110,18 +112,18 @@
 			</li>
 			<li id="contact_other_skills_input">
 				<div class="label">Other Skills:</div>
-				<textarea cols="40" id="contact_other_skills" name="contact[other_skills]" rows="20" <%=ti()%>></textarea>
+				<%= f.text_area :other_skills, :rows => "4", :cols => "40", :tabindex => ti() %>
 			</li>
 			<li id="contact_comments_input">
 				<div class="label">Comments:</div>
-				<textarea cols="40" id="contact_comments" name="contact[comments]" rows="20" <%=ti()%>></textarea>
+				<%= f.text_area :comments, :rows => "4", :cols => "40", :tabindex => ti() %>
 			</li>
-			<li style="list-style: none">
-				<div class="label">Interests:</div>
+			<li style="list-style: none; padding-top: 10px;">
+				<div class="label required">Volunteer<br />Interests:</div>
 				<div style="width:700px; float:left;">
 					<% @ctypes.each do |ctype| %>
 						<div style="padding-bottom: 4px;">
-							<input type="checkbox" name="ctypes" value="<%=ctype.id %>" id="interest_<%=ctype.id %>" <%=ti()%> />
+							<input type="checkbox" name="ctypes[]" value="<%=ctype.id %>" id="interest_<%=ctype.id %>" tabindex="<%=ti()%>" <%= ((params[:ctypes] || {}).include?(ctype.id.to_s)) ? 'checked="checked"' : "" %> />
 							<label for="interest_<%=ctype.id %>"><%= ctype.signup_form_description || ctype.description %></label>
 						</div>
 					<% end %>
@@ -133,9 +135,8 @@
 		<ol>
 			<li>
 				<div class="label">&nbsp;</div>
-				<!-- <input class="create" id="contact_submit" name="commit" type="submit" value="Sign Up" <%=ti()%> /> -->
-				<input type="image" src="/images/signup.jpg" id="contact_submit" name="commit" width="210" height="47" value="Sign Up" <%=ti()%> />
+				<%=image_submit_tag("signup.jpg", :width => "210", :height => "47", :tabindex => ti() ) %>
 			</li>
 		</ol>
-	</form>
+	<% end %>
 </div>

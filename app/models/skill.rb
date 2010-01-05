@@ -1,4 +1,3 @@
-
 class Skill < ActiveRecord::Base
   class << self
     include ERB::Util
@@ -7,10 +6,9 @@ class Skill < ActiveRecord::Base
   has_many :contact_skills
   has_many :contacts, :through => :contact_skills
 
-  # An array of arrays, where each element has
-  # the form:
+  # An array of arrays, where each element has the form:
   #
-  #  [descriptoin, id]
+  #  [description, id]
   #
   # The result is designed to be used with ActionView::Helpers::FormOptionsHelper#options_for_select
   def self.all_skills

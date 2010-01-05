@@ -3,10 +3,19 @@ class Contact < ActiveRecord::Base
 
   has_many :contact_skills
   has_many :skills, :through => :contact_skills
+  has_many :contact_contacttypes
+  has_many :contacttypes, :through => :contact_contacttypes
   has_many :volunteers
   has_many :projects, :through => :volunteers
   has_many :houses, :through => :volunteers
-
+  
+  validates_presence_of :first_name, :message => "is required"
+  validates_presence_of :last_name, :message => "is required"
+  validates_presence_of :email, :message => "is required"
+  validates_format_of   :email,
+                        :with       => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i,
+                        :message    => "is not valid"
+  
   # Get the currently assigned home for the latest
   # project, if any.
   def current_house

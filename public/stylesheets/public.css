@@ -140,3 +140,11 @@ border-bottom: 1px solid #888;
 .manage-contacts-header { 
     width: 20%;
 }
+
+.errorExplanation {
+	color: red;
+	border: 0;
+}
+.errorExplanation h2 {
+	border: 0;
+}
