@@ -13,54 +13,54 @@
 			<ol>
 				<li>
 					<div class="label">Home phone</div>
-					<input type="text" id="contact_home_phone" maxlength="255" name="contact[home_phone]" size="12" <%=ti(10)%>>
+					<input type="text" id="contact_home_phone" maxlength="255" name="contact[home_phone]" size="12" <%=ti(10)%> />
 				</li>
 				<li>
 					<div class="label">Work phone</div>
-					<input id="contact_work_phone" maxlength="255" name="contact[work_phone]" size="12" type="text" <%=ti()%>>
+					<input id="contact_work_phone" maxlength="255" name="contact[work_phone]" size="12" type="text" <%=ti()%> />
 				</li>
 				<li>
 					<div class="label">Mobile phone</div>
-					<input id="contact_mobile_phone" maxlength="255" name="contact[mobile_phone]" size="12" type="text" <%=ti()%>>
+					<input id="contact_mobile_phone" maxlength="255" name="contact[mobile_phone]" size="12" type="text" <%=ti()%> />
 				</li>
 			</ol>
 		</div>
 		<ol>
 			<li class="required">
 				<div class="label">First Name</div>
-				<input maxlength="255" name="contact[first_name]" size="20" type="text" <%=ti(1)%>>
+				<input maxlength="255" name="contact[first_name]" size="20" type="text" <%=ti(1)%> />
 			</li>
 			<li class="required">
 				<div class="label">Last Name</div>
-				<input maxlength="255" name="contact[last_name]" size="20" type="text" <%=ti()%>>
+				<input maxlength="255" name="contact[last_name]" size="20" type="text" <%=ti()%> />
 			</li>
 			<li class="required">
 				<div class="label">Email</div>
-				<input maxlength="255" name="contact[email]" size="40" type="text" <%=ti()%>>
+				<input maxlength="255" name="contact[email]" size="40" type="text" <%=ti()%> />
 			</li>
 			<li>
 				<div class="label">Address 1</div>
-				<input maxlength="255" name="contact[address_1]" size="30" type="text" <%=ti()%>>
+				<input maxlength="255" name="contact[address_1]" size="30" type="text" <%=ti()%> />
 			</li>
 			<li>
 				<div class="label">Address 2</div>
-				<input maxlength="255" name="contact[address_2]" size="30" type="text" <%=ti()%>>
+				<input maxlength="255" name="contact[address_2]" size="30" type="text" <%=ti()%> />
 			</li>
 			<li>
 				<div class="label">City</div>
-				<input maxlength="255" name="contact[city]" size="20" type="text" <%=ti()%>>
+				<input maxlength="255" name="contact[city]" size="20" type="text" <%=ti()%> />
 			</li>
 			<li>
 				<div class="label">State</div>
-				<input maxlength="2" name="contact[state]" size="5" type="text" <%=ti()%>>
+				<input maxlength="2" name="contact[state]" size="5" type="text" <%=ti()%> />
 			</li>
 			<li>
 				<div class="label">Zip</div>
-				<input maxlength="10" name="contact[zip]" size="7" type="text" <%=ti()%>>
+				<input maxlength="10" name="contact[zip]" size="7" type="text" <%=ti()%> />
 			</li>
 			<li>
 				<div class="label">Country</div>
-				<input maxlength="255" name="contact[country]" size="20" type="text" <%=ti()%>>
+				<input maxlength="255" name="contact[country]" size="20" type="text" <%=ti()%> />
 			</li>
 			<li style="list-style: none">
 				<h2>About Your Group <i>(optional)</i></h2>
@@ -68,14 +68,14 @@
 				<br />
 			</li>
 			<li>
-				<input maxlength="255" name="contact[company_name]" size="50" type="text" <%=ti(13)%>>
+				<input maxlength="255" name="contact[company_name]" size="50" type="text" <%=ti(13)%> />
 			</li>
 			<li style="list-style: none">
 				<br />
 				If you are the main contact person for your group, please enter the number of people you expect (best guess, including yourself):
 			</li>
 			<li>
-				<input maxlength="255" name="contact[est_group_size]" size="20" type="text" <%=ti()%>>
+				<input maxlength="255" name="contact[est_group_size]" size="20" type="text" <%=ti()%> />
 			</li>
 			<li style="list-style: none">
 				<h2>Let's Rebuild</h2>
@@ -120,7 +120,9 @@
 				<div style="clear:both;font-size:1em;">&nbsp;</div>
 			</li>
 			<li>
-				<input class="create" id="contact_submit" name="commit" type="submit" value="Sign Up" <%=ti()%>>
+				<div class="label">&nbsp;</div>
+				<!-- <input class="create" id="contact_submit" name="commit" type="submit" value="Sign Up" <%=ti()%> /> -->
+				<input type="image" src="/images/signup.jpg" id="contact_submit" name="commit" width="210" height="47" value="Sign Up" <%=ti()%> />
 			</li>
 		</ol>
 	</form>
