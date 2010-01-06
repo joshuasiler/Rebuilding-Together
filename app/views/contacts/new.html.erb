@@ -6,7 +6,7 @@
 <div class="contactform">
     <% form_for :contact, @contact, :url => { :action => "create" }, :html => { :id => "new_contact", :name => "new_contact" } do |f| %>
 		
-		<%=error_messages_for :contact, :header_message => "Cannot Proceed" %>
+		<%=error_messages_for :contact, :header_message => "Oops. We need a little more information." %>
 		
 		<%=f.hidden_field :is_active %>
 				
