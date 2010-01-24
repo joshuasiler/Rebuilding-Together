@@ -2,6 +2,9 @@ require 'data_grid'
 require 'cgi'
 require 'faster_csv'
 
+# "House assignment search" could be only volunteers in a particular year, only people who haven't been assigned yet, and presents the skills and company name and person name filters.
+# "customer support lookup" could be name, company, email, phone number
+# "house captain search" is just looking up all the people assigned to a house (so they can email the house captain with his people's names, emails, phone numbers)
 class ManageController < ApplicationController
   layout "manage", :except => [:sort_grid, :page_grid]
 
@@ -185,7 +188,7 @@ private
         cond << <<-SQL
 contacts.id in (select contact_id 
                 from contact_skills 
-                where skill_id in (#{@skills.collect { |s| "'#{quote_string((s || "").to_s)}'"}.join(",")}))
+                where skill_id in (#{@skills.collect { |s| "'#{mysql_escape((s || "").to_s)}'"}.join(",")}))
 SQL
       end
 
@@ -207,15 +210,15 @@ SQL
       end
 
       if ! @group.blank?
-        cond << "company_name LIKE '#{quote_string(@group.strip)}%'"
+        cond << "company_name LIKE '#{mysql_escape(@group.strip)}%'"
       end
 
       if ! @name.blank?
         cond << <<-SQL
-(last_name LIKE '%#{quote_string(@name.strip)}%' OR 
- first_name LIKE '%#{quote_string(@name.strip)}%' OR
- CONCAT(last_name, ", ", first_name) LIKE '%#{quote_string(@name.strip)}%' OR
- CONCAT(last_name, ",", first_name) LIKE '%#{quote_string(@name.strip)}%')
+(last_name LIKE '%#{mysql_escape(@name.strip)}%' OR 
+ first_name LIKE '%#{mysql_escape(@name.strip)}%' OR
+ CONCAT(last_name, ", ", first_name) LIKE '%#{mysql_escape(@name.strip)}%' OR
+ CONCAT(last_name, ",", first_name) LIKE '%#{mysql_escape(@name.strip)}%')
 SQL
       end
 
@@ -303,6 +306,11 @@ QRY
     # the default value given.
     def for_key(key, default)
       @vals.has_key?(key) ? yield(vals[key].first) : default
+    end
+
+    # Properly escape strings for MySQL. nil string becomes empty.
+    def mysql_escape(str)
+      str ? quote_string(str.strip.gsub('%', '\%').gsub('_', '\_')) : ""
     end
   end
 end

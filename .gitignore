@@ -5,3 +5,4 @@ tmp/
 tmp/*
 *~
 db/schema.rb
+\#*\#
