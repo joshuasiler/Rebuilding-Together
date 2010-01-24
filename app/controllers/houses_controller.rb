@@ -27,7 +27,8 @@ class HousesController < ApplicationController
         end
       end
     end
-
+  end
+  
   def view
     @house = House.find(params[:id])
   end
