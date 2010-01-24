@@ -1,0 +1,56 @@
+<%=
+@grid.render_with do |conf|
+  conf.accumulator = ""
+  conf.records do |table|
+    table.start do |state, records, acc|
+      acc << %(<div id="#{@grid.name}"><table class="manage-projects-table">\n)
+      if records.length == 0
+        acc << %(<tr><td>No result</td></tr>) 
+      else
+        acc << %(<tr>\n) << @display_columns.inject("") do |row, col|
+          row + %(\t\t<th class="manage-houses-header">) + 
+            case col 
+            when "project_name"
+              "Name"
+            when "starts_on"
+              "Begins"
+            when "ends_on"
+              "Ends"
+            when "number_of_volunteers_needed"
+              "# Volunteers"
+            end + %(</th>\n) 
+        end << %(</tr>)
+      end
+    end
+    
+    table.end do |state, records, acc|
+      acc << "</table></div>\n\n"
+    end
+  end
+
+  conf.record do |row|
+    row.start do |state, records, record, acc|
+      @which = ! @which
+      acc << %(\t<tr class="manage-projects-row-#{@which}">\n)
+    end
+    
+    row.last do |state, records, record, acc|
+      acc << %(\t<tr class="manage-projects-row-#{!@which} manage-projects-row-last">\n)
+    end
+    
+    row.end do |state, records, record, acc|
+      acc << "\t</tr>\n"
+    end
+  end
+  
+  conf.attribute do |cell|
+    cell.start do |state, record, name, value, acc|
+      acc << %(\t\t<td class="manage-projects-col-#{@which}">#{value.blank? ? "&nbsp;" : h(value)}</td>\n)
+    end
+    
+    cell.last do |state, record, name, value, acc|
+      acc << %(\t\t<td class="manage-projects-col-#{@which} manage-projects-col-last">#{value.blank? ? "&nbsp;" : h(value)}</td>\n)
+    end
+  end
+end
+%>
