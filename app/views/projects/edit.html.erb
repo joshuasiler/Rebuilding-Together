@@ -1,0 +1,14 @@
+<h1>Editing Project</h1>
+
+<% form_for(@project, :url => "/projects/update") do |f| %>
+  <%= f.error_messages %>
+  <%= f.hidden_field :id %>
+  Project Type: <%= f.text_field :project_type %><BR />
+  Project Name: <%= f.text_field :project_name %><BR />
+  Starts On: <%= f.date_select :starts_on %><BR />
+  End On: <%= f.date_select :ends_on %><BR />
+  Number of Volunteers Needed: <%= f.text_field :number_of_volunteers_needed %><BR />
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
