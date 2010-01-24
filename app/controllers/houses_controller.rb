@@ -1,5 +1,5 @@
 class HousesController < ApplicationController
-  layout "manage"
+  layout 'mainsite'
   
   def initialize
     @display_columns = %w(address homeowner house_captain_1 house_captain_2)
@@ -38,5 +38,10 @@ class HousesController < ApplicationController
 
   def edit
     @house = House.find(params[:id])
+  end
+
+  def update
+    @house = House.update(params[:house][:id], params[:house])
+    render :view
   end
 end
