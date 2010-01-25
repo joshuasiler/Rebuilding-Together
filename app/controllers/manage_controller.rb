@@ -150,9 +150,6 @@ class ManageController < ApplicationController
   end
 
   def index
-    @page = 0
-    @cond, @query = conditions
-    grid @cond, @page
   end
 
   def add
