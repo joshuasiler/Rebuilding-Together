@@ -8,7 +8,7 @@
 					<% cnt = 0
 					@skills.each do |skill| %>
 						<% checkbox_id = 'skill_' + skill.id.to_s %>
-						<%= check_box_tag "contact[skill_ids][]", skill.id, @skill_selections.include?(skill), { :id => checkbox_id, :tabindex => ti() } %>
+						<%= check_box_tag "contact[skill_ids][]", skill.id, @skills_checked_ids.include?(skill.id), { :id => checkbox_id, :tabindex => ti() } %>
 						<%= label_tag checkbox_id, skill.description %>
 						<br />
 						<% cnt+=1
@@ -35,7 +35,7 @@
 					<% @ctypes.each do |ctype| %>
 						<div style="padding-bottom: 4px;">
 							<% checkbox_id = 'ctype_' + ctype.id.to_s %>
-							<%= check_box_tag "contact[contacttype_ids][]", ctype.id, @ctype_selections.include?(ctype), { :id => checkbox_id, :tabindex => ti() } %>
+							<%= check_box_tag "contact[contacttype_ids][]", ctype.id, @ctypes_checked_ids.include?(ctype.id), { :id => checkbox_id, :tabindex => ti() } %>
 							<%= label_tag checkbox_id, (ctype.signup_form_description || ctype.description) %>
 						</div>
 					<% end %>
