@@ -1,0 +1,17 @@
+		<h2>About Your Group <i>(optional)</i></h2>
+		<ol>
+			<li>
+				If you are signing up as part of a group, please enter your company/organization name:
+				<br />
+			</li>
+			<li>
+				<%=form.text_field :company_name, :size => "50", :maxlength => "255", :tabindex => ti(13) %>
+			</li>
+			<li>
+				<br />
+				If you are the main contact person for your group, please enter the number of people you expect (best guess, including yourself):
+			</li>
+			<li>
+				<%=form.text_field :est_group_size, :size => "20", :maxlength => "255", :tabindex => ti() %>
+			</li>
+		</ol>

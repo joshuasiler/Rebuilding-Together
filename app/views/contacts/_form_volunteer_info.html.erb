@@ -1,0 +1,45 @@
+		<h2>Let's Rebuild</h2>
+		Tell us a little bit about your skills, interests and let us know what you're thinking.
+		<ol>
+			<li style="list-style: none">
+				
+				<div class="label">Skills:</div>
+				<div style="width:350px; float:left;">
+					<% cnt = 0
+					@skills.each do |skill| %>
+						<% checkbox_id = 'skill_' + skill.id.to_s %>
+						<%= check_box_tag "contact[skill_ids][]", skill.id, @skills_checked_ids.include?(skill.id), { :id => checkbox_id, :tabindex => ti() } %>
+						<%= label_tag checkbox_id, skill.description %>
+						<br />
+						<% cnt+=1
+						if cnt > @skills.length/2
+							cnt = -1000000 %>
+							</div>
+							<div style="width:350px; float:left;">
+						<% end %>
+					<% end %>
+				</div>
+				<div style="clear:both;font-size:0em;">&nbsp;</div><br />
+			</li>
+			<li id="contact_other_skills_input">
+				<div class="label">Other Skills:</div>
+				<%= form.text_area :other_skills, :rows => "4", :cols => "40", :tabindex => ti() %>
+			</li>
+			<li id="contact_comments_input">
+				<div class="label">Comments:</div>
+				<%= form.text_area :comments, :rows => "4", :cols => "40", :tabindex => ti() %>
+			</li>
+			<li style="list-style: none; padding-top: 10px;">
+				<div class="label required">Volunteer<br />Interests:</div>
+				<div style="width:700px; float:left;">
+					<% @ctypes.each do |ctype| %>
+						<div style="padding-bottom: 4px;">
+							<% checkbox_id = 'ctype_' + ctype.id.to_s %>
+							<%= check_box_tag "contact[contacttype_ids][]", ctype.id, @ctypes_checked_ids.include?(ctype.id), { :id => checkbox_id, :tabindex => ti() } %>
+							<%= label_tag checkbox_id, (ctype.signup_form_description || ctype.description) %>
+						</div>
+					<% end %>
+				</div>
+				<div style="clear:both;font-size:1em;">&nbsp;</div>
+			</li>
+		</ol>
