@@ -4,13 +4,13 @@
   end
 %>
 <div style="clear:both;">
-  <% form_tag :controller => 'manage' do %>
+  <% form_tag :controller => 'manage', :action => 'assign_volunteers' do %>
   <div style="float:left; width:300px;">
     <strong><%= Project.latest.project_name %></strong><BR />
     <%= radio_button_tag "query[assigned]", "3", ! @cond.assigned && ! @cond.unassigned %>Assigned & Unassigned<BR />
     <%= radio_button_tag "query[assigned]", "1", @cond.assigned %>Assigned to any house<BR />
-    <%= radio_button_tag "query[assigned]", "4", @cond.assigned %>Assigned to: 
-       <%= select_tag "query[assigned_house]", options_for_select(houses_for(Project.latest)) %><BR />
+    <%= radio_button_tag "query[assigned]", "4", !! @cond.house  %>Assigned to: 
+       <%= select_tag "query[house]", options_for_select(houses_for(Project.latest), @cond.house) %><BR />
     <%= radio_button_tag "query[assigned]", "2", @cond.unassigned %>Unassigned<BR />
     <%= check_box_tag "query[inactive]", "1", @cond.include_inactive %>Include inactive
     </div><div style="float:left; width:400px; padding-left: 20px;">

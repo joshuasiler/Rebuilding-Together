@@ -2,9 +2,7 @@ require 'data_grid'
 require 'cgi'
 require 'faster_csv'
 
-# "House assignment search" could be only volunteers in a particular year, only people who haven't been assigned yet, and presents the skills and company name and person name filters.
 # "customer support lookup" could be name, company, email, phone number
-# "house captain search" is just looking up all the people assigned to a house (so they can email the house captain with his people's names, emails, phone numbers)
 class ManageController < ApplicationController
   layout "manage", :except => [:sort_grid, :page_grid]
 
@@ -15,28 +13,96 @@ class ManageController < ApplicationController
 
   # Sort in-place 
   def sort_grid
-    @cond = Conditions.new
     @cond = Conditions.from_param(request["sort"])
     @page = request["curr_page"].to_i
+
     grid @cond, @page
     render :partial => "grid.html.erb"
   end
 
   # Page in-place
   def page_grid
-    @cond = Conditions.new
     @cond = Conditions.from_param(request["cond"])
     @page = request["page"].to_i
+
     grid @cond, @page
     render :partial => "grid.html.erb"
   end
 
-  def index
+  def house_captains
+    # "house captain search" is just looking up all the people
+    # assigned to a house (so they can email the house captain with
+    # his people's names, emails, phone numbers)
+    @page = 0
     # Restore query form state if "filter" button
     # pressed.
     @query = request["query"] || Hash.new
     @cond = Conditions.new
+
+    if @query["filter"]
+      unless @query["project"].blank? 
+        @cond.project = @query["project"].to_i
+      end
+
+      unless @query["house"].blank?
+        @cond.house = @query["house"].to_i
+      end
+
+      unless @query["house_captain"].blank?
+        @cond.house_captain = @query["house_captain"].to_i
+      end
+    elsif @query["clear"]
+      @query.clear
+    else
+      @cond.project = Project.latest.id
+    end
+
+    grid @cond, @page
+  end
+  
+  def volunteer_search 
     @page = 0
+    # Restore query form state if "filter" button
+    # pressed.
+    @query = request["query"] || Hash.new
+    @cond = Conditions.new
+
+    if @query["filter"]
+      if ! @query["name"].blank?
+        @cond.name = @query["name"]
+      end
+
+      if ! @query["group"].blank?
+        @cond.group = @query["group"]
+      end
+
+      if ! @query["phone"].blank?
+        @cond.phone = @query["phone"]
+      end
+
+      if ! @query["email"].blank?
+        @cond.email = @query["email"]
+      end
+
+      if ! @query["contact_type"].blank?
+        @cond.contact_type = @query["contact_type"].to_i
+      end
+    elsif @query["clear"]
+      @query.clear
+    end
+
+    grid @cond, @page
+  end
+
+  def assign_volunteers
+    # "House assignment search" could be only volunteers in a
+    # particular year, only people who haven't been assigned yet, and
+    # presents the skills and company name and person name filters.
+    @page = 0
+    # Restore query form state if "filter" button
+    # pressed.
+    @query = request["query"] || Hash.new
+    @cond = Conditions.new
 
     if @query["filter"]
       case @query["skill_sel"]
@@ -65,16 +131,27 @@ class ManageController < ApplicationController
       when "2"
         @cond.assigned = false
         @cond.unassigned = true
-      else
+      when "3"
         @cond.assigned = false
         @cond.unassigned = false
+      when "4"
+        @cond.assigned = false
+        @cond.unassigned = false
+        @cond.house = @query["house"].to_i
       end
 
       @cond.group = @query["group"] unless @query["group"].blank?
       @cond.name = @query["name"] unless @query["name"].blank?
       @cond.include_inactive = (@query["inactive"] == "1")
+    elsif @query["clear"]
+      @query.clear
     end
+    grid @cond, @page
+  end
 
+  def index
+    @page = 0
+    @cond, @query = conditions
     grid @cond, @page
   end
 
@@ -104,6 +181,10 @@ class ManageController < ApplicationController
 
 private
 
+  def conditions
+    return cond, query
+  end
+
   # Create and configure grid displayed.
   def grid(cond, page)
     @grid = DataGrid.new :grid
@@ -127,7 +208,7 @@ private
                    when "company"
                      contact.company_name
                    when "house"
-                     contact.current_house ? contact.current_house.house_number : ""
+                     contact.current_house ? contact.current_house.address : ""
                    else
                      contact[col].to_s
                    end
@@ -165,6 +246,21 @@ private
     attr_accessor :sort_by
     # True if ascending sort, false otherwise.
     attr_accessor :sort_ascending
+    # ID of the house that contacts are assigned to. Nil by default, means
+    # don't limit by house.
+    attr_accessor :house
+    # ID of project that contacts are associated with. Nil by default, means
+    # don't limit by project.
+    attr_accessor :project
+    # ID of house captain for project that volunteers are assigned to. Nil by default,
+    # means don't limit by house captain.
+    attr_accessor :house_captain
+    # Limits query to contacts with the email given. 
+    attr_accessor :email
+    # Limits query to contacts with the phone given. 
+    attr_accessor :phone
+    # Limits query to contacts of the specified type.
+    attr_accessor :contact_type
 
     def initialize
       @skills = []
@@ -176,6 +272,12 @@ private
       @group = nil
       @name = nil
       @sort_by, @sort_ascending = "last_name", true
+      @house = nil
+      @project = nil
+      @house_captain = nil
+      @email = nil
+      @phone = nil
+      @contact_type = nil
     end
 
     def conditions
@@ -222,6 +324,50 @@ SQL
 SQL
       end
 
+      if ! @house.blank?
+        cond << <<-SQL
+contacts.id in (select contact_id from volunteers where house_id = #{@house})
+SQL
+      end
+
+      if ! @project.blank?
+        cond << <<-SQL
+contacts.id in (select contact_id from volunteers where project_id = #{@project})
+SQL
+      end
+
+      if ! @house_captain.blank?
+        cond << <<-SQL
+contacts.id in (select contact_id from volunteers where house_id in 
+                       (select house_id from houses
+                        where house_captain_contact_id = #{@house_captain} or
+                              house_captain_2_contact_id = #{@house_captain}))
+SQL
+      end
+
+      if ! @email.blank?
+        cond << <<-SQL
+(email LIKE '%#{mysql_escape(@email.strip)}%')
+SQL
+      end
+
+      if ! @phone.blank?
+        cond << <<-SQL
+(home_phone LIKE '%#{mysql_escape(@phone.strip)}%' OR 
+mobile_phone LIKE '%#{mysql_escape(@phone.strip)}%' OR 
+fax LIKE '%#{mysql_escape(@phone.strip)}%' OR 
+pager LIKE '%#{mysql_escape(@phone.strip)}%') 
+SQL
+      end
+
+      if ! @contact_type.blank?
+        cond << <<-SQL
+contacts.id in (select contact_id 
+  from contact_contacttypes
+  where contact_type_id = #{@contact_type})
+SQL
+      end
+
       cond.join " AND "
     end
     
@@ -251,6 +397,12 @@ SQL
       @group = nil
       @name = nil
       @sort_by, @sort_ascending = "last_name", true
+      @house = nil
+      @project = nil
+      @house_captain = nil
+      @phone = nil
+      @email = nil
+      @contact_type = nil
     end
 
     # A string containing all the query conditions which can be used
@@ -268,6 +420,12 @@ group=#{p[:group] || (@group ? @group : "")}
 name=#{p[:name] || (@name ? @name : "")}
 sort_by=#{p[:sort_by] || @sort_by}
 sort_asc=#{p[:sort_ascending] == nil ? (!! @sort_ascending) : (!! p[:sort_ascending])}
+house=#{p[:house] || (@house || "")}
+project=#{p[:project] || (@project || "")}
+house_captain=#{p[:house_captain] || (@house_captain || "")}
+phone=#{p[:phone] || (@phone || "")}
+email=#{p[:email] || (@email || "")}
+contact_type=#{p[:contact_type] || (@contact_type || "")}
 QRY
     end
     
@@ -275,7 +433,6 @@ QRY
     # string must be one produced by to_param
     def self.from_param(val)
       make_from_params(val) do |c|
-        puts "Parsed to vals: #{c.vals.inspect}"
         c.skills = c.for_key("skills", nil) { |v| v.split(",") }
         c.unassigned = c.for_key("not_assigned", false) { |v| v == "true" }
         c.assigned = c.for_key("assigned", false) { |v| v == "true" }
@@ -286,6 +443,12 @@ QRY
         c.name = c.for_key("name", nil) { |v| v }
         c.sort_by = c.for_key("sort_by", "last_name") { |v| v }
         c.sort_ascending = c.for_key("sort_asc", true) { |v| v == "true" }
+        c.house = c.for_notblank("house", nil) { |v| v.to_i }
+        c.project = c.for_notblank("project", nil) { |v| v.to_i }
+        c.house_captain = c.for_notblank("house_captain", nil) { |v| v.to_i }
+        c.phone = c.for_key("phone", nil) { |v| v }
+        c.email = c.for_key("email", nil) { |v| v }
+        c.contact_type = c.for_notblank("contact_type", nil) { |v| v.to_i }
       end
     end
 
@@ -306,6 +469,14 @@ QRY
     # the default value given.
     def for_key(key, default)
       @vals.has_key?(key) ? yield(vals[key].first) : default
+    end
+
+    # Convenience method. If the key is found in the vals hash and its
+    # value is not blank, pass the first element of value array to the
+    # block given and return the result. Otherwise, return the default
+    # value given.
+    def for_notblank(key, default)
+      (@vals.has_key?(key) && (! @vals[key].first.blank?)) ? yield(vals[key].first) : default
     end
 
     # Properly escape strings for MySQL. nil string becomes empty.

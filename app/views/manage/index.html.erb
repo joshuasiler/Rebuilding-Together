@@ -1,6 +1,6 @@
-<h2>Filter Contacts</h2>
-<em>Use these optional selections to filter the contact list below</em><BR /><BR />
-<%= render(:partial => "query.html.erb") %>
-<h2>Contact List</h2>
-<%= render(:partial => "grid.html.erb") %>
-<a href="<%= url_for :action => "download", :cond => @cond.to_param%>">Download these contacts</a>
+<em>Select what you'd like to do
+<ul>
+  <li><%= link_to "Make Assignments", :action => 'assign_volunteers' %> &ndash; Assign volunteers to houses.</li>
+  <li><%= link_to "Volunteer Search", :action => 'volunteer_search' %> &ndash; Find volunteers by name, phone number, etc.</li>
+  <li><%= link_to "Assigned Volunteers", :action => 'house_captains' %> &ndash; Show volunteers assigned to particular homes or captains.</li>
+</ul>

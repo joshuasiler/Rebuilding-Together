@@ -1,4 +1,17 @@
+<%
+  def col_to_heading(col)
+    case col
+    when :address, :homeowner
+      col.to_s.capitalize
+    when :house_captain_1
+      "House Captain #1"
+    when :house_captain_2
+      "House Captain #2"
+    end
+  end
+%>
 <%=
+
 @grid.render_with do |conf|
   conf.accumulator = ""
   conf.records do |table|
@@ -7,7 +20,7 @@
       if records.length == 0
         acc << %(<tr><td>No result</td></tr>) 
       else
-        acc << %(<tr>\n) << @display_columns.inject("") { |row, col| row + %(\t\t<th class="manage-houses-header">) + h(col.capitalize) + %(</th>\n) } << %(</tr>)
+        acc << %(<tr>\n) << @display_columns.inject("") { |row, col| row + %(\t\t<th class="manage-houses-header">) + h(col_to_heading(col.first)) + %(</th>\n) } << %(</tr>)
       end
     end
     

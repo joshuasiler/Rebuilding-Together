@@ -1,0 +1,21 @@
+<%
+  def houses_for(project)
+    House.find(:all, :conditions => "project_id = #{project.id}", :include => [:contact]).collect { |h| [h.contact.address_1, h.id] }
+  end
+%>
+<div style="clear:both;">
+  <% form_tag :controller => 'manage', :action => 'volunteer_search' do %>
+  <div style="float:left; width:300px;">
+    Volunteer Name: <%= text_field_tag "query[name]", @cond.name %>
+    Group/Company: <%= text_field_tag "query[group]", @cond.group %>
+    Phone Number: <%= text_field_tag "query[phone]", @cond.phone %>
+    Email Address: <%= text_field_tag "query[email]", @cond.email %>
+    Contact type: <%= select_tag "query[contact_type]", options_for_select([["Any", ""]] + Contacttype.all_contacttypes, @cond.contact_type.to_s) %>
+  </div><div style="clear:left;">
+    <input type=submit name="query[filter]" value="Filter"></input>
+    <input type=submit name="query[clear]" value="Clear"></input>
+    </div>
+  <% end %>
+  </form>
+</div>
+<div style="clear:both;">&nbsp;</div>
