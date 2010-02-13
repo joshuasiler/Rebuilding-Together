@@ -11,7 +11,15 @@ class DataGrid
 
   # Configuration for rendering
   class Renderator
-    attr_accessor :table, :row, :cell, :accumulator
+    attr_accessor :accumulator
+    
+    # Hold the functions used to implement table, row and
+    # cell level rendering. Always Wrap objects.
+    attr_reader :table, :row, :cell
+
+    def initialize
+      @accumulator = "" # default to string
+    end
 
     # Yields a Wrap object which will hold the blocks for rendering at
     # the grid level. Wrap blocks should take the following arguments:

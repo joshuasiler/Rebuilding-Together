@@ -7,7 +7,8 @@ class ManageController < ApplicationController
   layout "manage", :except => [:sort_grid, :page_grid]
 
   def initialize
-    @display_columns = %w(last_name email company house skills)
+    @csv_columns = %w(company house skills)
+    @display_columns = %w(last_name email) + @csv_columns
     super
   end
 
@@ -53,6 +54,7 @@ class ManageController < ApplicationController
       end
     elsif @query["clear"]
       @query.clear
+      @cond.project = Project.latest.id
     else
       @cond.project = Project.latest.id
     end
@@ -159,23 +161,23 @@ class ManageController < ApplicationController
   end
   
   def download
-    cond = Conditions.from_param(request["cond"])
-    list = Contact.find(:all, :conditions => cond.conditions, :order => cond.ordering)
+    
+    list = contact_data(Conditions.from_param(request["cond"]))
 
     csv_string = FasterCSV.generate do |csv|
-      columns = Contact.column_names << "skills"
-      csv << columns
+      columns = Contact.content_columns.collect { |c| c.name } + @csv_columns
+      csv << Contact.content_columns.collect { |c| c.human_name } + @csv_columns
 
       list.each do |record|
-        csv << columns.collect { |col| record[col].to_s }
+        csv << columns.collect { |col| contact_column(record, col) }
       end
     end
 
     send_data(csv_string,
-      :type => 'text/csv; charset=utf-8; header=present',
-      :filename => "contacts.csv")
+              :type => 'text/csv; charset=utf-8; header=present',
+              :filename => "contacts.csv")
   end
-
+  
 private
 
   def conditions
@@ -190,30 +192,46 @@ private
       @record_count = Contact.count(:conditions => cond.conditions)
 
       g.get_data do |state|
-        Contact.find(:all, :conditions => cond.conditions, :include => [:skills, :houses],
-                   :offset => (page * @per_page), :limit => @per_page, 
-                   :order => cond.ordering)
+        contact_data(cond, page)
       end
 
       g.get_columns do |state, contact|
         @display_columns.collect do |col| 
-          [col] << case col
-                   when "last_name"
-                     "#{contact.last_name}, #{contact.first_name}".strip
-                   when "skills"
-                     contact.skills.compact.collect { |skill| skill.description }.uniq.inject { |acc, skill| acc + ", " + skill }
-                   when "company"
-                     contact.company_name
-                   when "house"
-                     contact.current_house ? contact.current_house.address : ""
-                   else
-                     contact[col].to_s
-                   end
+          [col] << contact_column(contact, col)
         end
       end
     end
   end
 
+  # Retrieve contact data based on the conditions given. Used for CSV and HTML. All
+  # data is returned if page is not given.
+  def contact_data(cond, page = nil)
+    opts = { :conditions => cond.conditions, :include => [:skills, :houses],
+      :order => cond.ordering }
+
+    unless page.nil?
+      opts.merge!(:offset => (page * @per_page), :limit => @per_page)
+    end
+
+    Contact.find(:all, opts)
+  end
+
+  # Retrieve one column from a contact record.
+  # Used for CSV and HTML display. 
+  def contact_column(contact, col)
+    case col
+    when "last_name"
+      "#{contact.last_name}, #{contact.first_name}".strip
+    when "skills"
+      contact.skills.compact.collect { |skill| skill.description }.uniq.inject { |acc, skill| acc + ", " + skill }
+    when "company"
+      contact.company_name
+    when "house"
+      contact.current_house ? contact.current_house.address : ""
+    else
+      contact[col].to_s
+    end
+  end
 
   # Helps build conditions statement for
   # contact query on this page.

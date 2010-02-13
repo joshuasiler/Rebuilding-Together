@@ -1,6 +1,9 @@
 <%= 
+   # render_with returns the string built
+   # using the acc arguments to blocks below.
+   # acc defaults to a string but can be any object.
+
    @grid.render_with do |conf|
-     conf.accumulator = ""
      conf.records do |table|
        table.start do |state, records, acc|
          acc << %(<div id="#{@grid.name}"><table class="manage-contacts-table">\n)
