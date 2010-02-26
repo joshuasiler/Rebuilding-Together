@@ -45,6 +45,18 @@ class ContactsController < ApplicationController
       render :edit
     end    
   end
+  
+  def process_optout
+    @contact = Contact.find_by_email(params[:email])
+    if @contact.nil?
+      flash[:message] = "That email is not found. Please reenter your address and try again."
+    else
+      @contact.optout = 1
+      @contact.save
+      flash[:message] = "You have been unsubscribed."
+    end
+    render :optout
+  end
 
 private
   def load_skills_and_types(params = nil)
