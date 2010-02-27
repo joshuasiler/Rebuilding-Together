@@ -15,6 +15,16 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(params[:contact])
     if @contact.save
+      v = Volunteer.new
+      v.contact_id = @contact.id
+      v.project_id = Project.latest.id
+      v.group_name = @contact.company_name
+      if @contact.est_group_size.blank?
+	v.number_of_people = 1
+      else
+	v.number_of_people = @contact.est_group_size
+      end
+      v.save
       #congrats registered
       redirect_to "/contacts/thanks/"+@contact.id.to_s
     else

@@ -94,6 +94,8 @@ class ManageController < ApplicationController
     end
 
     grid @cond, @page
+    
+    @project = Project.latest
   end
 
   def assign_volunteers
