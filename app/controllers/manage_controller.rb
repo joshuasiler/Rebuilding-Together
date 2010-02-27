@@ -5,49 +5,11 @@ require 'faster_csv'
 # "customer support lookup" could be name, company, email, phone number
 class ManageController < ApplicationController
   layout "manage"
-
-  def house_captains
-
-  end
-  
-  def volunteer_search 
-   
-  end
-
-  def assign_volunteers
-   
-  end
-
-  def index
-  end
-
-  def add
-  end
-
-  def update
-  end
-  
-  def download
-    
-    list = contact_data(Conditions.from_param(request["cond"]))
-
-    csv_string = FasterCSV.generate do |csv|
-      columns = Contact.content_columns.collect { |c| c.name } + @csv_columns
-      csv << Contact.content_columns.collect { |c| c.human_name } + @csv_columns
-
-      list.each do |record|
-        csv << columns.collect { |col| contact_column(record, col) }
-      end
-    end
-
-    send_data(csv_string,
-              :type => 'text/csv; charset=utf-8; header=present',
-              :filename => "contacts.csv")
-  end
   
   def add_edit_house
     if params[:id].blank?
       @house = House.new
+      @contact = Contact.new
     else
       @house = House.find(params[:id])
       @contact = Contact.find(@house.contact_id)
@@ -57,8 +19,15 @@ class ManageController < ApplicationController
   def save_update_house
     if params[:house][:id].blank?
       @house = House.new(params[:house])
-      @contact = Contact.new(params[:contact])
-      if @contact.save
+      dup = Contact.new(params[:contact]).find_duplicates
+      if dup.blank?
+	@contact = Contact.new(params[:contact])
+	test = @contact.save
+      else
+	test = Contact.update(dup,params[:contact])
+	@contact = Contact.find(dup)
+      end
+      if test
 	@house.contact_id = @contact.id
 	if @house.save
 	  flash[:message] = "House successfully added to project."
@@ -87,7 +56,16 @@ class ManageController < ApplicationController
   end
   
   def list_volunteers
-    @volunteers = Volunteer.find(:all, {:conditions => "project_id = #{Project.latest.id}", :include => [:contact,:house], :order => "created_at desc"})
+    myconditions = "volunteers.project_id = #{Project.latest.id}"
+    if params[:id] == "not_assigned"
+      myconditions += " and isnull(house_id)"
+    elsif params[:id] == "assigned"
+      myconditions += " and not isnull(house_id)"
+    elsif !params[:search].blank?
+      # not safe, but admins won't hack their own site (hopfeully)
+      myconditions += " and (contacts.first_name like '%#{params[:search]}%' or contacts.first_name like '%#{params[:search]}%' or contacts.email like '%#{params[:search]}%' or contacts.company_name like '%#{params[:search]}%' )"
+    end
+    @volunteers = Volunteer.find(:all, {:conditions => myconditions, :include => [:contact,:house], :order => "volunteers.created_at desc"})
   end
   
   def assign_volunteer

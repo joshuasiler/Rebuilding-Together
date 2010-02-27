@@ -15,8 +15,6 @@ class Contact < ActiveRecord::Base
   validates_format_of   :email,
                         :with       => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i,
                         :message    => "is not valid"
-  
-  before_create :deduplicate
 
   # Get the currently assigned home for the latest
   # project, if any.
@@ -49,12 +47,12 @@ class Contact < ActiveRecord::Base
     end
   end
 
-  def deduplicate
-    c = Contact.find_by_sql(["select * from contacts where substr(first_name,0,3) = ? and substr(last_name,0,3) = ? and email = ?",self.first_name[0,3],self.last_name[0,3],self.email])[0]
-    unless c.nil?
-      c = self
-      c.save
-      false
+  def find_duplicates
+    c = Contact.find_by_sql(["select * from contacts where substr(first_name,1,3) = ? and substr(last_name,1,3) = ? and email = ?",self.first_name[0,3],self.last_name[0,3],self.email])
+    unless c[0].nil?
+      c[0].id
+    else
+      nil
     end
   end
   

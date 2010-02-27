@@ -13,8 +13,15 @@ class ContactsController < ApplicationController
   end
   
   def create
-    @contact = Contact.new(params[:contact])
-    if @contact.save
+    dup = Contact.new(params[:contact]).find_duplicates
+    if dup.blank?
+      @contact = Contact.new(params[:contact])
+      test = @contact.save
+    else
+      test = Contact.update(dup,params[:contact])
+      @contact = Contact.find(dup)
+    end
+    if test
       v = Volunteer.new
       v.contact_id = @contact.id
       v.project_id = Project.latest.id
