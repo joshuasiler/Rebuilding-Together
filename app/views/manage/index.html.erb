@@ -1,8 +1,7 @@
 <span style="color:red; font-weight:bold;"><%= flash[:message] %></span><BR />
 <em>Select what you'd like to do
 <ul>
-  <li><%= link_to "Make Assignments", :action => 'assign_volunteers' %> &ndash; Assign volunteers to houses.</li>
-  <li><%= link_to "Contact Search", :action => 'volunteer_search' %> &ndash; Find volunteers by name, phone number, etc.</li>
-  <li><%= link_to "Assigned Volunteers", :action => 'house_captains' %> &ndash; Show volunteers assigned to particular homes or captains.</li>
   <li><%= link_to "Add a Project House", :action => 'add_edit_house' %> &ndash; Add a house to this year's project.</li>
+  <li><%= link_to "List Project Houses", :action => 'list_houses' %> &ndash; List project houses.</li>
+  <li><%= link_to "List Volunteers", :action => 'list_volunteers' %> &ndash; List volunteers for this year's project.</li>
 </ul>

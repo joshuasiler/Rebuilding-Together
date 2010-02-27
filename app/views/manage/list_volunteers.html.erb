@@ -1,0 +1,18 @@
+<h2>Volunteers for <%= Project.latest.project_name %></h2>
+<table class="grids">
+  <tr><th>Name</th><th>Email</th><th>Group</th><th>Est Group Size</th><th>Assigned To</th></tr>
+  
+<% @volunteers.each { |volunteer| %>
+<tr>
+  <td><%= volunteer.contact.first_name %> <%= volunteer.contact.last_name %></td>
+  <td><%= volunteer.contact.email %></td>
+  <td><%= volunteer.contact.company_name %></td>
+  <td><%= volunteer.contact.est_group_size %></td>
+  <td><div id="assigner<%= volunteer.id %>"<%= volunteer.house %>
+    <%= render :partial => "assign", :object => volunteer %>
+   </div>
+  </td>
+
+</tr>
+<% } %>
+</table>

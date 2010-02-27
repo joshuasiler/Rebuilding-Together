@@ -1,6 +1,0 @@
-<h2>Filter Contacts</h2>
-<em>Use the options below to assign volunteers to houses</em><BR /><BR />
-<%= render(:partial => "assign_query.html.erb") %>
-<h2>Contact List</h2>
-<%= render(:partial => "grid.html.erb") %>
-<a href="<%= url_for :action => "download", :cond => @cond.to_param%>">Download these contacts</a>

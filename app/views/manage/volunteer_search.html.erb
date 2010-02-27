@@ -1,6 +1,0 @@
-<h2>Find Volunteers - <%= @project.project_name %></h2>
-<em>Use the options below to build a list of this year's volunteers.</em><BR /><BR />
-<%= render(:partial => "search_query.html.erb") %>
-<h2>Matching Contacts</h2>
-<%= render(:partial => "grid.html.erb") %>
-<a href="<%= url_for :action => "download", :cond => @cond.to_param%>">Download these contacts</a>

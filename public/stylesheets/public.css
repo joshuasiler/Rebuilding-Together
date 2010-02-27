@@ -148,3 +148,15 @@ border-bottom: 1px solid #888;
 .errorExplanation h2 {
 	border: 0;
 }
+
+.grids
+{
+    font-size:12px;
+}
+
+.grids td
+{
+    font-size: 14px;
+    padding: 4px;
+    border: 1px solid #888;
+}

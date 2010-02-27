@@ -1,0 +1,13 @@
+<h2>Houses on <%= Project.latest.project_name %></h2>
+<table class="grids">
+  <tr><th>House Number</th><th>Homeowner</th><th>Volunteers Assigned</th><th>Location</th></tr>
+  
+<% @houses.each { |house| %>
+<tr>
+  <td><a href="/manage/add_edit_house/<%= house.id %>"><%= house.house_number %></a></td>
+  <td><%= house.contact.first_name %> <%= house.contact.last_name %></td>
+  <td><%= house.volunteers_assigned %></td>
+  <td><small><%= house.contact.address_1 %><BR /> <%= house.contact.city %>  <%= house.contact["zip"] %></td>
+</tr>
+<% } %>
+</table>

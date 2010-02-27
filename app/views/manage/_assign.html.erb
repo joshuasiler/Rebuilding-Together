@@ -1,0 +1,9 @@
+ <% unless assign.house.blank? %><%= assign.house.house_number %>    <a href="#" onclick="$('assign<%=assign.id%>').toggle();"><small>change</small></a><% end %>
+    <div id="assign<%= assign.id %>" <% unless assign.house.blank? %>style="display:none;"<% end %>>
+  
+    <% form_remote_tag :url => "/manage/assign_volunteer", :update => {:success => "assigner"+assign.id.to_s }do %>
+      <input type="hidden" name="id" value="<%= assign.id %>" />
+      <%= select("house", "id", House.find(:all,{:conditions => "project_id = #{Project.latest.id}"}).collect {|h| h.house_number} , {:prompt => "-- assign house --" } ) %>
+      <%= submit_tag 'Assign' %>
+      <% end %>
+    </div>

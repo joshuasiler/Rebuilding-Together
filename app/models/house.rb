@@ -2,10 +2,15 @@ class House < ActiveRecord::Base
   belongs_to :project
   belongs_to :contact
 
+  validates_presence_of :house_number, :message => "is required"
   # Return a list of houses that belong to the
   # particular project given
   def houses_for(project)
     
+  end
+  
+  def volunteers_assigned
+    Volunteer.count_by_sql("select count(*) from volunteers where house_id = #{self.id}")
   end
 
   def address

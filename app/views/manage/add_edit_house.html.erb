@@ -76,6 +76,7 @@
   <%= f.error_messages %>
   <%= f.hidden_field :id %>
   <ol>
+  <li><div class="label"><strong>House Number:</strong></div> <%= f.text_field :house_number %> (numbers only)</li>
   <li><div class="label">Project:</div><%= collection_select :house, :project_id, Project.all, :id, :project_name %></li>
   <li><div class="label">Ethnicity:</div> <%= f.text_field :ethnicity %></li>
   <li><div class="label">Disability:</div> <%= f.text_field :disability %></li>
@@ -95,7 +96,6 @@
   
   <li><div class="label">Referral Organization:</div> <%= f.text_field :referral_organization %></li>
   <li><div class="label">Referral Agent:</div> <%= f.text_field :referral_agent %></li>
-  <li><div class="label">House Number:</div> <%= f.text_field :house_number %> (numbers only)</li>
   <li><div class="label">Area of Town:</div> <%= f.text_field :area_of_town %></li>
   
   <li><div class="label">Repairs Needed:</div> <%= f.text_area :repairs_needed, :rows=>5 %></li>
