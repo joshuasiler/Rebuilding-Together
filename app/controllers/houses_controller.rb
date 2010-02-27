@@ -27,16 +27,4 @@ class HousesController < ApplicationController
     @house = House.find(params[:id])
     @contact = Contact.find(@house.contact_id)
   end
-  def new
-    @house = House.new
-  end
-  def edit
-    @house = House.find(params[:id])
-    @contact = Contact.find(@house.contact_id)
-  end
-  def update
-    @house = House.update(params[:house][:id], params[:house])
-    @contact = Contact.update(params[:contact][:id], params[:contact])
-    redirect_to "/houses/view/" + params[:house][:id].to_s
-  end
 end

@@ -178,6 +178,40 @@ class ManageController < ApplicationController
               :filename => "contacts.csv")
   end
   
+  def add_edit_house
+    if params[:id].blank?
+      @house = House.new
+    else
+      @house = House.find(params[:id])
+      @contact = Contact.find(@house.contact_id)
+    end
+  end
+  
+  def save_update_house
+    if params[:house][:id].blank?
+      @house = House.new(params[:house])
+      @contact = Contact.new(params[:contact])
+      if @contact.save
+	@house.contact_id = @contact.id
+	@house.save
+	flash[:message] = "House successfully added to project."
+	redirect_to "/manage/index"
+      else
+	render :add_edit_house
+      end
+    else
+      @house = House.update(params[:house][:id], params[:house])
+      @contact = Contact.update(params[:contact][:id], params[:contact])
+      @house.save
+      if @contact.save
+	flash[:message] = "House updated"
+	redirect_to "/manage/index"
+      else
+	render :add_edit_house
+      end
+    end
+  end
+  
 private
 
   def conditions

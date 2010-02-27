@@ -1,0 +1,113 @@
+
+<h1><% if @house.id.nil? %>Add<% else %>Edit<% end %> a Project House</h1>
+<form action="/manage/save_update_house" class="contactform" id="edit_house_1" method="post">
+  <%= token_tag %>
+ <% fields_for(@contact) do |f|  %>
+ <%= f.hidden_field :id %>
+<h2>The Homeowner</h2>
+	<%=error_messages_for :contact, :header_message => "Oops. We need a little more information." %>
+		<em>Bold fields are required</em>
+		<br />
+		<div style="float:right; width:250px;">
+			<strong>Contact Information</strong><br />
+			<ol>
+				<li>
+					<div class="label">Home phone</div>
+					<%=f.text_field :home_phone, :size => "12", :maxlength => "255", :tabindex => ti(10) %>
+				</li>
+				<li>
+					<div class="label">Work phone</div>
+					<%=f.text_field :work_phone, :size => "12", :maxlength => "255", :tabindex => ti() %>
+				</li>
+				<li>
+					<div class="label">Mobile phone</div>
+					<%=f.text_field :mobile_phone, :size => "12", :maxlength => "255", :tabindex => ti() %>
+				</li>
+			</ol>
+		</div>
+		<ol>
+			<li class="required">
+				<div class="label">First Name</div>
+				<%=f.text_field :first_name, :size => "20", :maxlength => "255", :tabindex => ti(1) %>
+			</li>
+			<li class="required">
+				<div class="label">Last Name</div>
+				<%=f.text_field :last_name, :size => "20", :maxlength => "255", :tabindex => ti() %>
+			</li>
+			<li class="required">
+				<div class="label">Email</div>
+				<%=f.text_field :email, :size => "40", :maxlength => "255", :tabindex => ti() %>
+			</li>
+			<li>
+				<div class="label">Address 1</div>
+				<%=f.text_field :address_1, :size => "30", :maxlength => "255", :tabindex => ti() %>
+			</li>
+			<li>
+				<div class="label">Address 2</div>
+				<%=f.text_field :address_2, :size => "30", :maxlength => "255", :tabindex => ti() %>
+			</li>
+			<li>
+				<div class="label">City</div>
+				<%=f.text_field :city, :size => "20", :maxlength => "255", :tabindex => ti() %>
+			</li>
+			<li>
+				<div class="label">State</div>
+				<%=f.text_field :state, :size => "5", :maxlength => "2", :tabindex => ti() %>
+			</li>
+			<li>
+				<div class="label">Zip</div>
+				<%=f.text_field :zip, :size => "7", :maxlength => "10", :tabindex => ti() %>
+			</li>
+			<li>
+				<div class="label">Country</div>
+				<%=f.text_field :country, :size => "20", :maxlength => "255", :tabindex => ti() %>
+			</li>
+		</ol>
+<% end %>
+<style>
+  .contactform .label
+    {
+      width:250px;
+    }
+</style>
+<h2>The House</h2>
+<% fields_for(@house) do |f| %>
+
+  <%= f.error_messages %>
+  <%= f.hidden_field :id %>
+  <ol>
+  <li><div class="label">Project:</div><%= collection_select :house, :project_id, Project.all, :id, :project_name %></li>
+  <li><div class="label">Ethnicity:</div> <%= f.text_field :ethnicity %></li>
+  <li><div class="label">Disability:</div> <%= f.text_field :disability %></li>
+  <li><div class="label">Years In Home:</div> <%= f.text_field :years_in_home %></li>
+  <li><div class="label">Is Homeowner?:</div> <%= f.check_box :is_homeowner %></li>
+  <li><div class="label">Annual Income:</div> <%= f.text_field :annual_income %></li>
+  <li><div class="label">Monthly Payments:</div> <%= f.text_field :monthly_payments %></li>
+  <li><div class="label">Number of People in House:</div> <%= f.text_field :number_of_people_in_house %></li>
+ <li><div class="label"> Number of Children:</div> <%= f.text_field :number_of_children %> (numbers only)</li>
+  
+  <li><div class="label">Children Names and Ages:</div> <%= f.text_area :children_names_and_ages, :rows=>5 %></li>
+  <li><div class="label">Application Submitted On:</div> <%= f.date_select :application_submitted_on %></li>
+  <li><div class="label">Is Application Complete?:</div> <%= f.check_box :is_application_complete %></li>
+  <li><div class="label">Is Application Signed?:</div> <%= f.check_box :is_application_signed %></li>
+  <li><div class="label">Is Proof of Ownership?:</div> <%= f.check_box :is_proof_of_ownership %></li>
+  <li><div class="label">Is Income Verified?:</div> <%= f.check_box :is_income_verification %></li>
+  
+  <li><div class="label">Referral Organization:</div> <%= f.text_field :referral_organization %></li>
+  <li><div class="label">Referral Agent:</div> <%= f.text_field :referral_agent %></li>
+  <li><div class="label">House Number:</div> <%= f.text_field :house_number %> (numbers only)</li>
+  <li><div class="label">Area of Town:</div> <%= f.text_field :area_of_town %></li>
+  
+  <li><div class="label">Repairs Needed:</div> <%= f.text_area :repairs_needed, :rows=>5 %></li>
+  <li><div class="label">Number of Volunteers Needed:</div> <%= f.text_field :number_of_volunteers_needed %></li>
+  <li><div class="label">Materials Needed:</div> <%= f.text_area :materials_needed, :rows=>5 %></li>
+  <li><div class="label">Estimated Cost:</div> <%= f.text_field :estimated_cost %></li>
+  <li><div class="label">Comments:</div> <%= f.text_area :comments, :rows=>5 %></li>
+  <li><div class="label">Is Accepted:</div> <%= f.check_box :is_accepted %></li>
+  <li><div class="label">End On:</div> <%= f.date_select :accept_letter_sent_on %></li>
+  
+  <% end %>
+  <p>
+    <input type="submit" value="Save" />
+</form>
+  </p>
