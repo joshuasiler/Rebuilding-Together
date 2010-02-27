@@ -16,6 +16,8 @@ class Contact < ActiveRecord::Base
                         :with       => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i,
                         :message    => "is not valid"
   
+  before_create :deduplicate
+
   # Get the currently assigned home for the latest
   # project, if any.
   def current_house
@@ -47,4 +49,13 @@ class Contact < ActiveRecord::Base
     end
   end
 
+  def deduplicate
+    c = Contact.find_by_sql(["select * from contacts where substr(first_name,0,3) = ? and substr(last_name,0,3) = ? and email = ?",self.first_name[0,3],self.last_name[0,3],self.email])[0]
+    unless c.nil?
+      c = self
+      c.save
+      false
+    end
+  end
+  
 end

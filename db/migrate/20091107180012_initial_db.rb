@@ -37,7 +37,7 @@ class InitialDb < ActiveRecord::Migration
       create_table :contact_contacttypes do |t|
         t.integer :id, :null => false
       t.integer :contact_id, :null => false
-      t.integer :contact_type_id, :null => false
+      t.integer :contacttype_id, :null => false
       t.datetime :created_at, :null => false
       t.datetime :updated_at, :null => false
       end

@@ -242,7 +242,7 @@ private
   # Retrieve contact data based on the conditions given. Used for CSV and HTML. All
   # data is returned if page is not given.
   def contact_data(cond, page = nil)
-    opts = { :conditions => cond.conditions, :include => [:skills, :houses],
+    opts = { :conditions => cond.conditions, :include => [:skills, :houses, :volunteers],
       :order => cond.ordering }
 
     unless page.nil?
