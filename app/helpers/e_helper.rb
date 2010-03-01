@@ -1,0 +1,2 @@
+module EHelper
+end

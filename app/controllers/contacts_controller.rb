@@ -22,7 +22,10 @@ class ContactsController < ApplicationController
       @contact = Contact.find(dup)
     end
     if test
-      v = Volunteer.new
+      v = Volunteer.find_by_sql(["select * from volunteers where contact_id = ? and project_id = ?", @contact.id, Project.latest.id])[0] 
+      if v.nil?
+	v = Volunteer.new
+      end
       v.contact_id = @contact.id
       v.project_id = Project.latest.id
       v.group_name = @contact.company_name
