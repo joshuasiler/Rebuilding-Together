@@ -11,10 +11,10 @@
   
 <% @volunteers.each { |volunteer| %>
 <tr>
-  <td><%= volunteer.contact.first_name %> <%= volunteer.contact.last_name %></td>
-  <td><%= volunteer.contact.email %></td>
-  <td><%= volunteer.contact.company_name %></td>
-  <td><%= volunteer.contact.est_group_size %></td>
+  <td><%=h volunteer.contact.first_name %> <%=h volunteer.contact.last_name %></td>
+  <td><%=h volunteer.contact.email %></td>
+  <td><%=h volunteer.contact.company_name %></td>
+  <td><%=h volunteer.contact.est_group_size %></td>
   <td><div id="assigner<%= volunteer.id %>"<%= volunteer.house %>
     <%= render :partial => "assign", :object => volunteer %>
    </div>
