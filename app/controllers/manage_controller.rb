@@ -63,7 +63,7 @@ class ManageController < ApplicationController
       myconditions += " and not isnull(house_id)"
     elsif !params[:search].blank?
       # not safe, but admins won't hack their own site (hopfeully)
-      myconditions += " and (contacts.first_name like '%#{params[:search]}%' or contacts.first_name like '%#{params[:search]}%' or contacts.email like '%#{params[:search]}%' or contacts.company_name like '%#{params[:search]}%' )"
+      myconditions += " and (contacts.first_name like '%#{params[:search]}%' or contacts.last_name like '%#{params[:search]}%' or contacts.email like '%#{params[:search]}%' or contacts.company_name like '%#{params[:search]}%' )"
     end
     @volunteers = Volunteer.find(:all, {:conditions => myconditions, :include => [:contact,:house], :order => "volunteers.created_at desc"})
   end
