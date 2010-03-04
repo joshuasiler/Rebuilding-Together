@@ -1,8 +1,8 @@
 class Notification < ActionMailer::Base
   
   def volunteer_notification(contact)
-    @from "donotreply@rebuildingtogetherportland.org"
-    @recipients contact.email
+    @from = "donotreply@rebuildingtogetherportland.org"
+    @recipients = contact.email
     @subject = "Call for Volunteers - Rebuilding Together 2010"
     
     @email = contact.email
