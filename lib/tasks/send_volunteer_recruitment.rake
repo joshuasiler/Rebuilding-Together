@@ -32,7 +32,7 @@ namespace :emailops do
 	    puts ""
 	    puts counter.to_s + " emails sent."
 	    puts dups.to_s + " dups found."
-  end
+  end 
 
     desc "TEST: Send emails out notifying contacts of upcoming day."
   task :test_send_volunteer_recruitment => :environment do
