@@ -1,22 +1,23 @@
 <html>
+<head>
+<title><%= @subject %></title>
   <style>
     body { background-color: white;
 	    font-family: arial;
 	  }
-    a,h1 { color: #60BB46; }
+    h1 { color: #60BB46; }
   </style>
+</head>
 <body>
-<h1>Call for Volunteers! April 25th is our big day!</h1>
-<p>
-Dear <%= @first %>,
-</p><p>  
+<h1>Call for Volunteers! April 24th is our big day!</h1>
 <img src="http://rebuildingtogetherportland.org/images/RT_2Clogo_stacked_small.jpg" alt="Rebuilding Together Portland" style="float:right;" />
+<p>
+Dear <%=h @first %>,
+</p><p>  
 This year, Rebuilding Together-Portland's goal is to repair and rehabilitate approximately 60
 homes and 4 non-profit community facilities on Saturday, April 24th — <strong>and we need your help to make it happen.</strong>
 </p><p>
-Let us know if you can volunteer this year by clicking this link:
-</p><p>
-<a href="http://rebuildingtogetherportland.org/e/<%= @pin%>"><span style="font-size: 14px;">Count Me In</style></a>
+Let us know if you can volunteer this year by clicking this link: <a href="http://rebuildingtogetherportland.org/e/<%= @pin%>"><span style="font-size: 16px;"><strong>Count Me In! I want to help.</strong></span></a>
 </p><p>
 Of course, if you have some friends that might be interested in a great volunteer experience, let us know and tell
 them to sign up at our website <a href="http://www.RebuildingTogetherPortland.org">www.RebuildingTogetherPortland.org</a>
@@ -25,7 +26,7 @@ Thank you very much for your support and volunteerism.  We hope you'll join us o
 Portland community on our April National Rebuild Day. 
 </p>
 <p style="color: #60BB46;">
-Mike Malone <BR />
+<strong>Mike Malone</strong><BR />
 Executive Director <BR />
 Rebuilding Together - Portland <BR />
 5000 N. Willamette Blvd. <BR />
@@ -35,5 +36,5 @@ Portland, OR 97203 <BR />
 MikeMalone@RebuildingTogetherPortland.org <BR />
 www.rebuildingtogetherportland.org<BR />
 </p>
-<small>This email sent to <%= @email %>. To opt out of all future communications from Rebuilding Together Portland, <a href="http://www.rebuildingtogetherportland.com/contact/optout">click here</a>.
+<small>This email sent to <%= @email %>. To opt out of all future communications from Rebuilding Together Portland, <a href="http://www.rebuildingtogetherportland.org/contacts/optout">click here</a>.
 </body></html>
