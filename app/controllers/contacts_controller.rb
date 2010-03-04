@@ -88,6 +88,9 @@ private
     else
       @skills_checked_ids = []
       @ctypes_checked_ids = []
+      #default "normal volunteer" contacttype for new records
+      #todo -- don't hardcode this value! Add "is_default_for_new_contacts" flag to database or something like that.
+      @ctypes_checked_ids.push 12
     end
   end
 

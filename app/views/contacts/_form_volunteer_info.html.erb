@@ -32,7 +32,6 @@
 			<li style="list-style: none; padding-top: 10px;">
 				<div class="label required">Volunteer<br />Interests:</div>
 				<div style="width:700px; float:left;">
-				  <input name="contact[contacttype_ids][]" type="hidden" value="12" />
 					<% @ctypes.each do |ctype| %>
 						<div style="padding-bottom: 4px;">
 							<% checkbox_id = 'ctype_' + ctype.id.to_s %>
