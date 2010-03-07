@@ -7,7 +7,7 @@
 <% unless params[:search].blank? %> > <% end %>search: <input type="textbox" name="search" value="<%= params[:search] %>" /><input type="submit" value="search" /></form>
 </small><BR /><BR />
 <table class="grids">
-  <tr><th>Name</th><th>Email</th><th>Group</th><th>Est Group Size</th><th>Assigned To</th></tr>
+  <tr><th>Name</th><th>Email</th><th>Group</th><th>Est Group Size</th><th>Assigned To</th><th>Skills</th></tr>
   
 <% @volunteers.each { |volunteer| %>
 <tr>
@@ -18,6 +18,10 @@
   <td><div id="assigner<%= volunteer.id %>"<%= volunteer.house %>
     <%= render :partial => "assign", :object => volunteer %>
    </div>
+  </td>
+  <td>
+	<% skills = volunteer.contact.skills.map { |skill| skill.is_trade_skill ? '<b>'+skill.description+'</b>' : skill.description } %>
+	<%= skills.join(", ") %>
   </td>
 
 </tr>

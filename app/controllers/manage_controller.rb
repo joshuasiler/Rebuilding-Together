@@ -65,7 +65,7 @@ class ManageController < ApplicationController
       # not safe, but admins won't hack their own site (hopfeully)
       myconditions += " and (contacts.first_name like '%#{params[:search]}%' or contacts.last_name like '%#{params[:search]}%' or contacts.email like '%#{params[:search]}%' or contacts.company_name like '%#{params[:search]}%' )"
     end
-    @volunteers = Volunteer.find(:all, {:conditions => myconditions, :include => [:contact,:house], :order => "volunteers.created_at desc"})
+    @volunteers = Volunteer.find(:all, {:conditions => myconditions, :include => [{:contact => :skills},:house], :order => "volunteers.created_at desc"})
   end
   
   def assign_volunteer
