@@ -24,7 +24,9 @@
    </div>
   </td>
   <td>
-	<% skills = volunteer.contact.skills.map { |skill| skill.is_trade_skill ? '<b>'+skill.description+'</b>' : skill.description } %>
+	<% skills = volunteer.contact.skills.map { |skill| if !skill.nil? 
+					skill.is_trade_skill ? '<b>'+skill.description+'</b>' : skill.description 
+				end} %>
 	<%= skills.join(", ") %>
   </td>
 </tr>

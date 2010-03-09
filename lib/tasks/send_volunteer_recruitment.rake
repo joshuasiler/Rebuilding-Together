@@ -21,6 +21,7 @@ namespace :emailops do
 		    s.pin = Sentemail.generate_pin(contact.id.to_s)
 		    s.sent_at = DateTime.now()
 		    s.save
+				print "("+contact.id.to_s+")"
 		    Notification.deliver_volunteer_notification(contact,s.pin)
 		    counter += 1
 		    puts ""
