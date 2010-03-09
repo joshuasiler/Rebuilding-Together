@@ -2,7 +2,8 @@ class ContactsController < ApplicationController
 
   USER_ID, PASSWORD_MD5 = "admin", "5528a49e2109b087566829ddd2c2e295"
   # Require authentication only for edit and delete operation
-  before_filter :authenticate, :only => [ :edit, :update ]
+# auth doesn't work with main admin auth. must be rewritten
+#  before_filter :authenticate, :only => [ :edit, :update ]
 
   layout 'mainsite'
 
