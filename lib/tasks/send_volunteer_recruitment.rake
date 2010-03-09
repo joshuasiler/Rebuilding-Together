@@ -21,7 +21,7 @@ namespace :emailops do
 		    s.pin = Sentemail.generate_pin(contact.id.to_s)
 		    s.sent_at = DateTime.now()
 		    s.save
-		    #Notification.deliver_volunteer_notification(contact,s.pin)
+		    Notification.deliver_volunteer_notification(contact,s.pin)
 		    counter += 1
 		    puts ""
 		else
@@ -34,7 +34,7 @@ namespace :emailops do
 	    puts dups.to_s + " dups found."
   end 
 
-    desc "TEST: Send emails out notifying contacts of upcoming day."
+  desc "TEST: Send emails out notifying contacts of upcoming day."
   task :test_send_volunteer_recruitment => :environment do
 	puts "start"
 	testcount = 0
@@ -57,8 +57,8 @@ namespace :emailops do
 		    s.sent_at = DateTime.now()
 		    s.save		    
 		    if contact.email == "joshua.siler@gmail.com" || contact.email == "joshuas@bnj.com"
-			Notification.deliver_volunteer_notification(contact,s.pin)
-			testcount += 1
+					Notification.deliver_volunteer_notification(contact,s.pin)
+					testcount += 1
 		    end
 		    counter += 1
 		    puts ""
