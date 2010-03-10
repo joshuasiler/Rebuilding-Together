@@ -12,15 +12,15 @@ class EController < ApplicationController
       
       v = Volunteer.find_by_sql(["select * from volunteers where contact_id = ? and project_id = ?", s.contact_id, Project.latest.id])[0] 
       if v.nil?
-	v = Volunteer.new
+				v = Volunteer.new
       end
       v.contact_id = @contact.id
       v.project_id = Project.latest.id
       v.group_name = @contact.company_name
       if @contact.est_group_size.blank?
-	v.number_of_people = 1
+				v.number_of_people = 1
       else
-	v.number_of_people = @contact.est_group_size
+				v.number_of_people = @contact.est_group_size
       end
       v.save
     end

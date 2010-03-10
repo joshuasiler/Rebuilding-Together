@@ -19,40 +19,42 @@ class ManageController < ApplicationController
   def save_update_house
     if params[:house][:id].blank?
       @house = House.new(params[:house])
+			params[:contact][:is_homecontact] = 1
       dup = Contact.new(params[:contact]).find_duplicates
       if dup.blank?
-	@contact = Contact.new(params[:contact])
-	test = @contact.save
+				@contact = Contact.new(params[:contact])
+				test = @contact.save
       else
-	test = Contact.update(dup,params[:contact])
-	@contact = Contact.find(dup)
+				test = Contact.update(dup,params[:contact])
+				@contact = Contact.find(dup)
       end
       if test
-	@house.contact_id = @contact.id
-	if @house.save
-	  flash[:message] = "House successfully added to project."
-	  redirect_to "/manage/index"
-	else
-	  render :add_edit_house
-	end
+				@house.contact_id = @contact.id
+				if @house.save
+					flash[:message] = "House successfully added to project."
+					redirect_to "/manage/index"
+				else
+					render :add_edit_house
+				end
       else
-	render :add_edit_house
+				render :add_edit_house
       end
     else
       @house = House.update(params[:house][:id], params[:house])
       @contact = Contact.update(params[:contact][:id], params[:contact])
       @house.save
       if @contact.save
-	flash[:message] = "House updated"
-	redirect_to "/manage/index"
+				flash[:message] = "House updated"
+				redirect_to "/manage/index"
       else
-	render :add_edit_house
+				puts @contact.inspect
+				render :add_edit_house
       end
     end
   end
   
   def list_houses
-    @houses = House.find(:all, {:conditions => "project_id = #{Project.latest.id}", :include => :contact, :order => "created_at desc"})
+    @houses = House.find(:all, {:conditions => "project_id = #{Project.latest.id}", :include => :contact, :order => "house_number asc"})
   end
   
   def list_volunteers
@@ -65,7 +67,7 @@ class ManageController < ApplicationController
       # not safe, but admins won't hack their own site (hopfeully)
       myconditions += " and (contacts.first_name like '%#{params[:search]}%' or contacts.last_name like '%#{params[:search]}%' or contacts.email like '%#{params[:search]}%' or contacts.company_name like '%#{params[:search]}%' )"
     end
-    @volunteers = Volunteer.find(:all, {:conditions => myconditions, :include => [{:contact => :skills},:house], :order => "volunteers.created_at desc"})
+    @volunteers = Volunteer.find(:all, {:conditions => myconditions, :include => [{:contact => :skills},:house], :order => "contacts.last_name asc"})
   end
   
   def assign_volunteer

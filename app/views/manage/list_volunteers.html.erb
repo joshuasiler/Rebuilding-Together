@@ -23,11 +23,12 @@
     <%= render :partial => "assign", :object => volunteer %>
    </div>
   </td>
-  <td>
+  <td><small>
 	<% skills = volunteer.contact.skills.map { |skill| if !skill.nil? 
 					skill.is_trade_skill ? '<b>'+skill.description+'</b>' : skill.description 
 				end} %>
 	<%= skills.join(", ") %>
+	</small>
   </td>
 </tr>
 <% } %>

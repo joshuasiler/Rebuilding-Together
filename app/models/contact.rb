@@ -11,10 +11,14 @@ class Contact < ActiveRecord::Base
   
   validates_presence_of :first_name, :message => "is required"
   validates_presence_of :last_name, :message => "is required"
-  validates_presence_of :email, :message => "is required"
+  validates_presence_of :email, :unless => :no_email_required?, :message => "is required"
   validates_format_of   :email,
                         :with       => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i,
+                        :unless => :no_email_required?,
                         :message    => "is not valid"
+                        
+	
+	before_destroy :clean_associations
 
   # Get the currently assigned home for the latest
   # project, if any.
@@ -48,12 +52,29 @@ class Contact < ActiveRecord::Base
   end
 
   def find_duplicates
-    c = Contact.find_by_sql(["select * from contacts where substr(first_name,1,3) = ? and substr(last_name,1,3) = ? and email = ?",self.first_name[0,3],self.last_name[0,3],self.email])
+    c = Contact.find_by_sql(["select * from contacts where substr(first_name,1,3) = ? and substr(last_name,1,3) = ? and email = ? and not TRIM(email)=''",self.first_name[0,3],self.last_name[0,3],self.email])
     unless c[0].nil?
       c[0].id
     else
       nil
     end
+  end
+  
+  def no_email_required?
+		if self.is_homecontact
+			true
+		else
+			false
+		end
+  end
+  
+  private
+  def clean_associations
+			Contact.connection.execute("delete from contact_contacttypes where contact_id = #{self.id}")
+			Contact.connection.execute("delete from contact_skills where contact_id = #{self.id}")
+			Contact.connection.execute("delete from houses where contact_id = #{self.id}")
+			Contact.connection.execute("delete from volunteers where contact_id = #{self.id}")
+			Contact.connection.execute("update sentemails set contact_id = 0 where contact_id = #{self.id}")
   end
   
 end

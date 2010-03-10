@@ -10,7 +10,7 @@ class House < ActiveRecord::Base
   end
   
   def volunteers_assigned
-    Volunteer.count_by_sql("select sum(number_of_people) from volunteers where house_id = #{self.id}")
+    Volunteer.count_by_sql("select count(*) from volunteers where house_id = #{self.id}")
   end
 
   def address
