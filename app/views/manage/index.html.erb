@@ -5,3 +5,11 @@
   <li><%= link_to "List Project Houses", :action => 'list_houses' %> &ndash; List project houses.</li>
   <li><%= link_to "List Volunteers", :action => 'list_volunteers' %> &ndash; List volunteers for this year's project.</li>
 </ul>
+<h2>Stats</h2>
+<span style="font-size:24px;color:#60BB46;"><%= @unassigned + @assigned %></span> volunteers, <span style="font-size:24px;color:#60BB46;"><%= House.count(:all, {:conditions => "project_id = #{Project.latest.id}"}) %></span> houses<BR />
+<h2>Registrations by Day</h2>
+<img src="http://chart.apis.google.com/chart?cht=bvs&chs=450x100&chxt=x,y&chbh=23,23&chxl=<%= "0:|" + @history.collect{|h| h.dd[6,10] }.join("|") + "|" %>
+  &chd=t:<%= @history.collect {|h| h.cnt.to_s }.join(",") %>" />
+<h2>Volunteer Status</h2>
+<img src="http://chart.apis.google.com/chart?cht=p3&chs=350x100&chd=t:<%= @assigned %>,<%= @unassigned %>&chl=Assigned|Unassigned" />
+<BR />

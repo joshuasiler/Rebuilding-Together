@@ -83,4 +83,10 @@ class ManageController < ApplicationController
     @volunteers = Volunteer.find(:all,{:conditions => "house_id = #{@house.id}",:include => :contact})
   end
   
+  def index
+    @unassigned = Volunteer.count_by_sql("select count(*) from volunteers where project_id = #{Project.latest.id} and isnull(house_id)")
+    @assigned = Volunteer.count_by_sql("select count(*) from volunteers where project_id = #{Project.latest.id} and not isnull(house_id)")
+    @history = Volunteer.find_by_sql("SELECT substring(created_at, 1,10) AS dd, COUNT(id) as cnt FROM Volunteers GROUP BY dd")
+  end
+  
 end
