@@ -77,4 +77,10 @@ class ManageController < ApplicationController
       render :partial => "assign", :object => v
   end
   
+  def view_house
+    @house = House.find(params[:id])
+    @contact = Contact.find(@house.contact_id)
+    @volunteers = Volunteer.find(:all,{:conditions => "house_id = #{@house.id}",:include => :contact})
+  end
+  
 end

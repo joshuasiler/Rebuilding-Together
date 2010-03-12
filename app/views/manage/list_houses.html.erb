@@ -4,7 +4,7 @@
   
 <% @houses.each { |house| %>
 <tr>
-  <td><a href="/manage/add_edit_house/<%= house.id %>"><%= house.house_number %></a></td>
+  <td><a href="/manage/view_house/<%= house.id %>"><span style="font-size:18px;"><%= house.house_number %></span></a></td>
   <td><%= house.contact.first_name %> <%= house.contact.last_name %></td>
   <td><%= house.volunteers_assigned %></td>
   <td><small><%= house.contact.address_1 %><BR /> <%= house.contact.city %>  <%= house.contact["zip"] %></td>

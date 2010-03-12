@@ -1,4 +1,4 @@
-<h2>Volunteers for <%= Project.latest.project_name %></h2>
+<h2>All Volunteers for <%= Project.latest.project_name %></h2>
 <small>
 <form action="/manage/list_volunteers">
 <% if params[:id].blank? and params[:search].blank? %> > <% end %><a href="/manage/list_volunteers">All</a> &nbsp; 
