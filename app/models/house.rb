@@ -1,7 +1,9 @@
 class House < ActiveRecord::Base
   belongs_to :project
   belongs_to :contact
-
+  
+  before_destroy :clear_associations
+  
   validates_presence_of :house_number, :message => "is required"
   # Return a list of houses that belong to the
   # particular project given
@@ -39,5 +41,10 @@ class House < ActiveRecord::Base
     else
       a + " " + contact[:zip]
     end
+  end
+  
+  def clear_associations
+    Volunteer.update_all("house_id = null","house_id = #{self.id}")
+    House.connection.execute("delete from house_skills where house_id = #{self.id}")
   end
 end

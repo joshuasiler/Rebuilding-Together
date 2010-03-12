@@ -88,6 +88,13 @@ class ManageController < ApplicationController
     @volunteers = Volunteer.find(:all,{:conditions => "house_id = #{@house.id}",:include => :contact})
   end
   
+  def remove_house
+    house = House.find(params[:id])
+    house.destroy
+    flash[:message] = "House removed from project."
+    redirect_to "/manage/index"
+  end
+  
   def index
     @unassigned = Volunteer.count_by_sql("select count(*) from volunteers where project_id = #{Project.latest.id} and isnull(house_id)")
     @assigned = Volunteer.count_by_sql("select count(*) from volunteers where project_id = #{Project.latest.id} and not isnull(house_id)")

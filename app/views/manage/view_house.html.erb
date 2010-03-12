@@ -45,6 +45,7 @@ House Number: <strong><span style="font-size:18px;"><%=h @house.house_number %><
     }
 </style>
 <a href="#" onclick="$('deets').toggle()">House Details</a> &nbsp; <a href="/manage/add_edit_house/<%= @house.id %>">Edit this House</a>
+ &nbsp; <a href="/manage/remove_house/<%= @house.id%>" onclick="return confirm('Are you sure? This cannot be undone.');">Delete this House</a>
 <div id="deets" style="border: 1px solid #000; padding:10px;display:none;">
   <ol>
   <li><div class="label"><strong>House Number:</strong></div> <%=h @house.house_number %><BR /></li>
