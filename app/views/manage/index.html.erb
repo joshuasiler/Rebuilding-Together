@@ -2,8 +2,8 @@
 <em>Select what you'd like to do
 <ul>
   <li><%= link_to "Add a Project House", :action => 'add_edit_house' %> &ndash; Add a house to this year's project.</li>
-  <li><%= link_to "List Project Houses", :action => 'list_houses' %> &ndash; List project houses.</li>
-  <li><%= link_to "List Volunteers", :action => 'list_volunteers' %> &ndash; List volunteers for this year's project.</li>
+  <li><%= link_to "View Project Houses", :action => 'list_houses' %> &ndash; View and edit project houses, see volunteers assigned to houses  .</li>
+  <li><%= link_to "List Volunteers", :action => 'list_volunteers' %> &ndash; View volunteers and assign for this year's project.</li>
 </ul>
 <h2>Stats</h2>
 <span style="font-size:24px;color:#60BB46;"><%= @unassigned + @assigned %></span> volunteers, <span style="font-size:24px;color:#60BB46;"><%= House.count(:all, {:conditions => "project_id = #{Project.latest.id}"}) %></span> houses<BR />

@@ -67,7 +67,12 @@ class ManageController < ApplicationController
       # not safe, but admins won't hack their own site (hopfeully)
       myconditions += " and (contacts.first_name like '%#{params[:search]}%' or contacts.last_name like '%#{params[:search]}%' or contacts.email like '%#{params[:search]}%' or contacts.company_name like '%#{params[:search]}%' )"
     end
-    @volunteers = Volunteer.find(:all, {:conditions => myconditions, :include => [{:contact => :skills},:house], :order => "contacts.last_name asc"})
+    offset = 0 
+    unless params[:page].blank?
+      offset = (params[:page].to_i-1) * 10
+    end
+    @volunteer_count = Volunteer.count(:conditions => myconditions, :include => [{:contact => :skills},:house])
+    @volunteers = Volunteer.find(:all, {:conditions => myconditions, :include => [{:contact => :skills},:house], :order => "contacts.last_name asc", :limit => 10, :offset => offset})
   end
   
   def assign_volunteer

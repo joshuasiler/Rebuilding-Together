@@ -4,27 +4,36 @@ House Number: <strong><span style="font-size:18px;"><%=h @house.house_number %><
 		<div style="float:right; width:250px;">
 			<strong>Contact Information</strong><br />
 			<ol>
+			  <% unless @contact.home_phone.blank? %>
 				<li>
 					<div class="label" style="width:200px;">Home phone:
 					<%=h @contact.home_phone %></div>
 				</li>
+			   <% end
+			  unless @contact.work_phone.blank? %>
 				<li>
 					<div class="label" style="width:200px;">Work phone: 
 					<%=h @contact.work_phone %></div>
 				</li>
+			   <% end
+			  unless @contact.mobile_phone.blank? %>
 				<li>
 					<div class="label" style="width:200px;">Mobile phone: 
 					<%=h @contact.mobile_phone %></div>
 				</li>
+			    <% end %>
 			</ol>
 		</div>
 		<BR /><BR />
 				<strong><%=h @contact.first_name %>
-				<%=h @contact.last_name %><BR /></strong>
-      
-				<%=h @contact.email %><BR />
+				<%=h @contact.last_name %></strong>
+				<% unless @contact.email.blank? %>(
+				  <a href="mailto:<%=h @contact.email %>"><%=h @contact.email %></a> )
+				<% end %><BR />
 				<%=h @contact.address_1 %><BR />
-				<%=h @contact.address_2 %><BR />
+				<% unless @contact.address_2.blank? %>
+				  <%=h @contact.address_2 %><BR />
+				<% end %>
 				<%=h @contact.city %>, 
 				<%=h @contact.state %> 
 				<%=h @contact['zip'] %><BR />
@@ -39,7 +48,7 @@ House Number: <strong><span style="font-size:18px;"><%=h @house.house_number %><
 <div id="deets" style="border: 1px solid #000; padding:10px;display:none;">
   <ol>
   <li><div class="label"><strong>House Number:</strong></div> <%=h @house.house_number %><BR /></li>
-  <li><div class="label">Project:</div><%=h @house.project_id %><BR /></li>
+  <li><div class="label">Project:</div><%=h Project.find(@house.project_id).project_name %><BR /></li>
   <li><div class="label">Ethnicity:</div> <%=h @house.ethnicity %><BR /></li>
   <li><div class="label">Disability:</div> <%=h @house.disability %><BR /></li>
   <li><div class="label">Years In Home:</div> <%=h @house.years_in_home %><BR /></li>

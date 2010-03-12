@@ -5,7 +5,15 @@
 <% if params[:id] == 'not_assigned' %> > <% end %><a href="/manage/list_volunteers/not_assigned">Unassigned Only</a> &nbsp; 
 <% if params[:id] == 'assigned' %> > <% end %><a href="/manage/list_volunteers/assigned">Assigned Only</a> &nbsp; 
 <% unless params[:search].blank? %> > <% end %>search: <input type="textbox" name="search" value="<%= params[:search] %>" /><input type="submit" value="search" /></form>
-</small><BR /><BR />
+</small><BR />
+Total: <%= @volunteer_count %><BR /><BR />Page: <% ((@volunteer_count/10)+1).times{ |i| %>
+						<% unless params[:page]==(i+1).to_s || (params[:page].blank? && (i+1)==1) %>
+						  <a href="/manage/list_volunteers?page=<%= (i+1).to_s %>">
+						   <%= (i+1).to_s %></a> &nbsp; 
+						<% else %>
+						  <span style="font-weight:bold;color:#60BB46;"><%= (i+1).to_s %></span> &nbsp;
+						<% end %>
+						 <% } %>
 <table class="grids">
   <tr><th>Name</th><th>Email</th><th>Group</th><th>Est Group Size</th><th>Edit</th><th>Assigned To</th><th>Skills</th></tr>
   
