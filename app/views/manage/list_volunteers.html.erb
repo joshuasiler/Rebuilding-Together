@@ -1,3 +1,4 @@
+    <a name="grid"></a>
 <h2>All Volunteers for <%= Project.latest.project_name %></h2>
 <small>
 <form action="/manage/list_volunteers">
@@ -6,9 +7,10 @@
 <% if params[:id] == 'assigned' %> > <% end %><a href="/manage/list_volunteers/assigned">Assigned Only</a> &nbsp; 
 <% unless params[:search].blank? %> > <% end %>search: <input type="textbox" name="search" value="<%= params[:search] %>" /><input type="submit" value="search" /></form>
 </small><BR />
-Total: <%= @volunteer_count %><BR /><BR />Page: <% ((@volunteer_count/10)+1).times{ |i| %>
+
+Total: <%= @volunteer_count %><BR /><BR />Page: <% ((@volunteer_count/20)+1).times{ |i| %>
 						<% unless params[:page]==(i+1).to_s || (params[:page].blank? && (i+1)==1) %>
-						  <a href="/manage/list_volunteers?page=<%= (i+1).to_s %>">
+						  <a href="/manage/list_volunteers?page=<%= (i+1).to_s %>#grid">
 						   <%= (i+1).to_s %></a> &nbsp; 
 						<% else %>
 						  <span style="font-weight:bold;color:#60BB46;"><%= (i+1).to_s %></span> &nbsp;
@@ -41,3 +43,11 @@ Total: <%= @volunteer_count %><BR /><BR />Page: <% ((@volunteer_count/10)+1).tim
 </tr>
 <% } %>
 </table>
+<BR />Page: <% ((@volunteer_count/20)+1).times{ |i| %>
+						<% unless params[:page]==(i+1).to_s || (params[:page].blank? && (i+1)==1) %>
+						  <a href="/manage/list_volunteers?page=<%= (i+1).to_s %>#grid">
+						   <%= (i+1).to_s %></a> &nbsp; 
+						<% else %>
+						  <span style="font-weight:bold;color:#60BB46;"><%= (i+1).to_s %></span> &nbsp;
+						<% end %>
+						 <% } %>

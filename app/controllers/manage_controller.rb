@@ -54,7 +54,12 @@ class ManageController < ApplicationController
   end
   
   def list_houses
-    @houses = House.find(:all, {:conditions => "project_id = #{Project.latest.id}", :include => :contact, :order => "house_number asc"})
+    offset = 0 
+    unless params[:page].blank?
+      offset = (params[:page].to_i-1) * 20
+    end
+    @houses_count = House.count(:conditions => "project_id = #{Project.latest.id}", :include => :contact)
+    @houses = House.find(:all, {:conditions => "project_id = #{Project.latest.id}", :include => :contact, :order => "house_number asc", :limit => 20, :offset => offset})
   end
   
   def list_volunteers
@@ -69,10 +74,10 @@ class ManageController < ApplicationController
     end
     offset = 0 
     unless params[:page].blank?
-      offset = (params[:page].to_i-1) * 10
+      offset = (params[:page].to_i-1) * 20
     end
     @volunteer_count = Volunteer.count(:conditions => myconditions, :include => [{:contact => :skills},:house])
-    @volunteers = Volunteer.find(:all, {:conditions => myconditions, :include => [{:contact => :skills},:house], :order => "contacts.last_name asc", :limit => 10, :offset => offset})
+    @volunteers = Volunteer.find(:all, {:conditions => myconditions, :include => [{:contact => :skills},:house], :order => "contacts.last_name asc", :limit => 20, :offset => offset})
   end
   
   def assign_volunteer
