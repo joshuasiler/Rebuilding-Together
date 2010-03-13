@@ -1,15 +1,51 @@
 <span style="color:red; font-weight:bold;"><%= flash[:message] %></span><BR />
+
 <em>Select what you'd like to do
 <ul>
   <li><%= link_to "Add a Project House", :action => 'add_edit_house' %> &ndash; Add a house to this year's project.</li>
   <li><%= link_to "View Project Houses", :action => 'list_houses' %> &ndash; View and edit project houses, see volunteers assigned to houses  .</li>
   <li><%= link_to "List Volunteers", :action => 'list_volunteers' %> &ndash; View volunteers and assign for this year's project.</li>
 </ul>
-<h2>Stats</h2><strong><%= Project.latest.project_name %></strong><BR />
+<div style="width:300px; float:right; margin-left:10px;">
+<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'search',
+  search: 'rebuilding together',
+  interval: 6000,
+  title: 'Twitter News',
+  subject: 'Rebuilding Across the US',
+  width: 250,
+  height: 300,
+  theme: {
+    shell: {
+      background: '#5fbb46',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#444444',
+      links: '#1985b5'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: true,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: true,
+    behavior: 'default'
+  }
+}).render().start();
+</script>
+</div>
+<h2 style="width:500px;">Stats</h2><strong><%= Project.latest.project_name %></strong><BR />
 <span style="font-size:24px;color:#60BB46;"><%= @unassigned + @assigned %></span> volunteers, <span style="font-size:24px;color:#60BB46;"><%= House.count(:all, {:conditions => "project_id = #{Project.latest.id}"}) %></span> houses<BR />
-<h2>Registrations by Day</h2>
+<h2 style="width:500px;">Registrations by Day</h2>
 <img src="http://chart.apis.google.com/chart?cht=bvs&chs=450x100&chxt=x,y&chbh=23,23&chxl=<%= "0:|" + @history.collect{|h| h.dd[6,10] }.join("|") + "|" %>
   &chd=t:<%= @history.collect {|h| h.cnt.to_s }.join(",") %>" />
-<h2>Volunteer Status</h2>
+<h2 style="width:500px;">Volunteer Status</h2>
 <img src="http://chart.apis.google.com/chart?cht=p3&chs=350x100&chd=t:<%= @assigned %>,<%= @unassigned %>&chl=Assigned|Unassigned" />
 <BR />
