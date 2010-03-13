@@ -1,10 +1,5 @@
 class ContactsController < ApplicationController
 
-  USER_ID, PASSWORD_MD5 = "admin", "5528a49e2109b087566829ddd2c2e295"
-  # Require authentication only for edit and delete operation
-# auth doesn't work with main admin auth. must be rewritten
-#  before_filter :authenticate, :only => [ :edit, :update ]
-
   layout 'mainsite'
 
   def new
@@ -48,13 +43,6 @@ class ContactsController < ApplicationController
   def thanks
     @contact = Contact.find(params[:id])
   end
-
-  def edit
-    @contact = Contact.find(params[:id], :include => [ :skills, :contacttypes ])
-    load_skills_and_types()
-    @skills_checked_ids = @contact.skills.map {|s| s.id}
-    @ctypes_checked_ids = @contact.contacttypes.map {|t| t.id }
-  end
   
   def update
     @contact = Contact.find(params[:id], :include => [ :skills, :contacttypes ])
@@ -92,13 +80,6 @@ private
       #default "normal volunteer" contacttype for new records
       #todo -- don't hardcode this value! Add "is_default_for_new_contacts" flag to database or something like that.
       @ctypes_checked_ids.push 12
-    end
-  end
-
-  def authenticate
-    require 'digest/md5'
-    authenticate_or_request_with_http_basic do |id, password| 
-      id == USER_ID && Digest::MD5.hexdigest(password) == PASSWORD_MD5
     end
   end
 

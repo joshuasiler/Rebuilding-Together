@@ -106,4 +106,26 @@ class ManageController < ApplicationController
     @history = Volunteer.find_by_sql("SELECT substring(created_at, 1,10) AS dd, COUNT(id) as cnt FROM volunteers GROUP BY dd")
   end
   
+  def edit_contact
+    @contact = Contact.find(params[:id], :include => [ :skills, :contacttypes ])
+    load_skills_and_types()
+    @skills_checked_ids = @contact.skills.map {|s| s.id}
+    @ctypes_checked_ids = @contact.contacttypes.map {|t| t.id }
+  end
+  
+  private
+  def load_skills_and_types(params = nil)
+    @skills = Skill.find(:all)
+    @ctypes = Contacttype.find(:all, :conditions => "signup_form_display_order > 0", :order => "signup_form_display_order ASC")
+    if (params)
+      @skills_checked_ids = (params[:contact][:skill_ids] || []).map {|i| i.to_i}
+      @ctypes_checked_ids = (params[:contact][:contacttype_ids] || []).map {|i| i.to_i}
+    else
+      @skills_checked_ids = []
+      @ctypes_checked_ids = []
+      #default "normal volunteer" contacttype for new records
+      #todo -- don't hardcode this value! Add "is_default_for_new_contacts" flag to database or something like that.
+      @ctypes_checked_ids.push 12
+    end
+  end
 end

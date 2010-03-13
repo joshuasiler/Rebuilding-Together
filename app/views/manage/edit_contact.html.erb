@@ -1,0 +1,21 @@
+<h1>Edit Contact</h1>
+<div class="contactform">
+    <% form_for :contact, @contact, :url => { :action => "update", :id => @contact.id }, :html => { :id => "edit_contact", :name => "edit_contact" } do |form| %>
+		
+		<%=error_messages_for :contact, :header_message => "Could not save because of the following problems:" %>
+		
+		<%=render :partial => 'contacts/form_contact_info', :locals => { :form => form } %>
+
+		<%=render :partial => 'contacts/form_group_info', :locals => { :form => form } %>
+
+		<%=render :partial => 'contacts/form_volunteer_info', :locals => { :form => form } %>
+
+		<hr /><br>
+		<ol>
+			<li>
+				<div class="label">&nbsp;</div>
+				<%= form.submit 'Save Changes' , :tabindex => ti() %>
+			</li>
+		</ol>
+	<% end %>
+</div>

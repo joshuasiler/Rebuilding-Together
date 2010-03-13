@@ -1,3 +1,4 @@
+  <script type="text/javascript" src="/javascripts/wz_tooltip.js"></script>
     <a name="grid"></a>
 <h2>All Volunteers for <%= Project.latest.project_name %></h2>
 <small>
@@ -21,13 +22,24 @@ Total: <%= @volunteer_count %><BR /><BR />Page: <% ((@volunteer_count/20)+1).tim
   
 <% @volunteers.each { |volunteer| %>
 <tr>
-  <td><%=h volunteer.contact.first_name %> <%=h volunteer.contact.last_name %></td>
+  <td><%=h volunteer.contact.first_name %> <%=h volunteer.contact.last_name %>
+    <% unless volunteer.contact.comments.blank? && volunteer.contact.other_skills.blank? %>
+    <a href="#" onmouseover="TagToTip('deet<%= volunteer.contact.id %>');" onmouseout="UnTip()" onclick="return false;"><NOBR>( ? )</NOBR></a>
+    <span id="deet<%= volunteer.contact.id %>" style="display:none;">
+      <div style="width:300px;">
+    	  <% unless volunteer.contact.comments.blank? %><strong>Comments:</strong> <%= volunteer.contact.comments %><% end %>
+	<% unless volunteer.contact.comments.blank? || volunteer.contact.other_skills.blank? %><BR /><BR /><% end %>  
+	  <% unless volunteer.contact.other_skills.blank? %><strong>Other Skills:</strong> <%= volunteer.contact.other_skills %><% end %>
+      </div>
+    </div>
+    <% end %>
+  </td>
   <td><%=h volunteer.contact.email %></td>
   <td><%=h volunteer.contact.company_name %></td>
   <td><%=h volunteer.contact.est_group_size %></td>
   <td>
     <a name="<%=volunteer.contact.id%>"></a>
-	<a href="<%= url_for(:controller => 'contacts', :action => 'edit', :id => volunteer.contact.id) %>">edit</a>
+	<a href="<%= url_for(:controller => 'manage', :action => 'edit_contact', :id => volunteer.contact.id) %>">edit</a>
   </td>
   <td><div id="assigner<%= volunteer.id %>"<%= volunteer.house %>
     <%= render :partial => "assign", :object => volunteer %>
