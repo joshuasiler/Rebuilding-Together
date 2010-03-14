@@ -2,9 +2,10 @@
 
 <em>Select what you'd like to do
 <ul>
-  <li><%= link_to "Add a Project House", :action => 'add_edit_house' %> &ndash; Add a house to this year's project.</li>
-  <li><%= link_to "View Project Houses", :action => 'list_houses' %> &ndash; View and edit project houses, see volunteers assigned to houses  .</li>
-  <li><%= link_to "List Volunteers", :action => 'list_volunteers' %> &ndash; View volunteers and assign for this year's project.</li>
+  <li style="list-style-image: url(/images/icons/house.png);"> <%= link_to "Add a Project House", :action => 'add_edit_house' %> Add a house to this year's project.</li>
+  <li style="list-style: none;"><%= link_to "View Project Houses", :action => 'list_houses' %> &ndash; View and edit project houses, see volunteers assigned to houses  .</li>
+  <li style="list-style: none;">&nbsp;</li>
+  <li style="list-style-image: url(/images/icons/user.png);"><%= link_to "List Volunteers", :action => 'list_volunteers' %> &ndash; View volunteers and assign for this year's project.</li>
 </ul>
 <div style="width:300px; float:right; margin-left:10px;">
 <script src="http://widgets.twimg.com/j/2/widget.js"></script>
