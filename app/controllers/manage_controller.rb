@@ -70,7 +70,8 @@ class ManageController < ApplicationController
       myconditions += " and not isnull(house_id)"
     elsif !params[:search].blank?
       # not safe, but admins won't hack their own site (hopfeully)
-      myconditions += " and (contacts.first_name like '%#{params[:search]}%' or contacts.last_name like '%#{params[:search]}%' or contacts.email like '%#{params[:search]}%' or contacts.company_name like '%#{params[:search]}%' )"
+      myconditions += " and (contacts.first_name like '%#{params[:search]}%' or contacts.last_name like '%#{params[:search]}%' or contacts.email like '%#{params[:search]}%' or contacts.company_name like '%#{params[:search]}%' "
+      myconditions += " or contacts.id in (select z.contact_id from contact_skills z inner join skills x on x.id = z.skill_id and x.description like '%#{params[:search]}%') )"
     end
     offset = 0 
     unless params[:page].blank?
