@@ -44,17 +44,6 @@ class ContactsController < ApplicationController
     @contact = Contact.find(params[:id])
   end
   
-  def update
-    @contact = Contact.find(params[:id], :include => [ :skills, :contacttypes ])
-    if @contact.update_attributes(params[:contact])
-      redirect_to '/manage/list_volunteers#'+@contact.id.to_s
-    else
-      # collect errors in flash and rerender
-      load_skills_and_types(params)
-      render :edit
-    end    
-  end
-  
   def process_optout
     @contact = Contact.find_by_email(params[:email])
     if @contact.nil?

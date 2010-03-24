@@ -11,7 +11,7 @@
 
 Total: <%= @volunteer_count %><BR /><BR />Page: <% ((@volunteer_count/20)+1).times{ |i| %>
 						<% unless params[:page]==(i+1).to_s || (params[:page].blank? && (i+1)==1) %>
-						  <a href="/manage/list_volunteers?page=<%= (i+1).to_s %>#grid">
+						  <a href="/manage/list_volunteers?page=<%= (i+1).to_s %><% if not params[:search].blank? %>&search=<%= params[:search] %><% end %>#grid">
 						   <%= (i+1).to_s %></a> &nbsp; 
 						<% else %>
 						  <span style="font-weight:bold;color:#60BB46;"><%= (i+1).to_s %></span> &nbsp;
@@ -57,7 +57,7 @@ Total: <%= @volunteer_count %><BR /><BR />Page: <% ((@volunteer_count/20)+1).tim
 </table>
 <BR />Page: <% ((@volunteer_count/20)+1).times{ |i| %>
 						<% unless params[:page]==(i+1).to_s || (params[:page].blank? && (i+1)==1) %>
-						  <a href="/manage/list_volunteers?page=<%= (i+1).to_s %>#grid">
+						  <a href="/manage/list_volunteers?page=<%= (i+1).to_s %><% if not params[:search].blank? %>&search=<%= params[:search] %><% end %>#grid">
 						   <%= (i+1).to_s %></a> &nbsp; 
 						<% else %>
 						  <span style="font-weight:bold;color:#60BB46;"><%= (i+1).to_s %></span> &nbsp;

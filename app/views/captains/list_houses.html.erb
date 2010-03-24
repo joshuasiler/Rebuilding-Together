@@ -1,0 +1,32 @@
+    <a name="grid"></a>
+Welcome House Captains! Please select your assigned project house below to view your house and volunteer information for Rebuilding Day.
+<h2>Houses on <%= Project.latest.project_name %></h2>
+Total: <%= @houses_count %><BR /><BR />Page: <% ((@houses_count/20)+1).times{ |i| %>
+						<% unless params[:page]==(i+1).to_s || (params[:page].blank? && (i+1)==1) %>
+						  <a href="/captains/list_houses?page=<%= (i+1).to_s %>#grid">
+						   <%= (i+1).to_s %></a> &nbsp; 
+						<% else %>
+						  <span style="font-weight:bold;color:#60BB46;"><%= (i+1).to_s %></span> &nbsp;
+						<% end %>
+						 <% } %>
+
+<table class="grids">
+  <tr><th>House Number</th><th>Homeowner</th><th>Volunteers Assigned</th><th>Location</th></tr>
+  
+<% @houses.each { |house| %>
+<tr>
+  <td><a href="/captains/view_house/<%= house.id %>"><span style="font-size:18px;"><%= house.house_number %></span></a></td>
+  <td><%= house.contact.first_name %> <%= house.contact.last_name %></td>
+  <td><%= house.volunteers_assigned %></td>
+  <td><small><%= house.contact.address_1 %><BR /> <%= house.contact.city %>  <%= house.contact["zip"] %></td>
+</tr>
+<% } %>
+</table>
+<BR />Page: <% ((@houses_count/20)+1).times{ |i| %>
+						<% unless params[:page]==(i+1).to_s || (params[:page].blank? && (i+1)==1) %>
+						  <a href="/captains/list_houses?page=<%= (i+1).to_s %>#grid">
+						   <%= (i+1).to_s %></a> &nbsp; 
+						<% else %>
+						  <span style="font-weight:bold;color:#60BB46;"><%= (i+1).to_s %></span> &nbsp;
+						<% end %>
+						 <% } %>

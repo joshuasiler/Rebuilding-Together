@@ -69,9 +69,7 @@ class ManageController < ApplicationController
     elsif params[:id] == "assigned"
       myconditions += " and not isnull(house_id)"
     elsif !params[:search].blank?
-      # not safe, but admins won't hack their own site (hopfeully)
-      myconditions += " and (contacts.first_name like '%#{params[:search]}%' or contacts.last_name like '%#{params[:search]}%' or contacts.email like '%#{params[:search]}%' or contacts.company_name like '%#{params[:search]}%' "
-      myconditions += " or contacts.id in (select z.contact_id from contact_skills z inner join skills x on x.id = z.skill_id and x.description like '%#{params[:search]}%') )"
+      myconditions += build_search_conditions(params[:search])  
     end
     offset = 0 
     unless params[:page].blank?
@@ -79,6 +77,22 @@ class ManageController < ApplicationController
     end
     @volunteer_count = Volunteer.count(:conditions => myconditions, :include => [{:contact => :skills},:house])
     @volunteers = Volunteer.find(:all, {:conditions => myconditions, :include => [{:contact => :skills},:house], :order => "contacts.last_name asc", :limit => 20, :offset => offset})
+  end
+
+  def list_contacts
+    myconditions = "not (first_name = '' and last_name = '' and email ='')"
+    if !params[:search].blank?
+      myconditions += build_search_conditions(params[:search])  
+    else
+      # do not pull up entire set
+      myconditions = "true = false"
+    end
+    offset = 0 
+    unless params[:page].blank?
+      offset = (params[:page].to_i-1) * 20
+    end
+    @contact_count = Contact.count(:conditions => myconditions, :include => [:skills])
+    @contacts = Contact.find(:all, {:conditions => myconditions, :include => [:skills], :order => "contacts.last_name asc", :limit => 20, :offset => offset})
   end
   
   def assign_volunteer
@@ -114,6 +128,38 @@ class ManageController < ApplicationController
     @ctypes_checked_ids = @contact.contacttypes.map {|t| t.id }
   end
   
+  def update_contact
+    @contact = Contact.find(params[:id], :include => [ :skills, :contacttypes ])
+    if @contact.update_attributes(params[:contact])
+      flash[:message] = "Contact successfully updated."
+      redirect_to '/manage'
+    else
+      # collect errors in flash and rerender
+      load_skills_and_types(params)
+      render :edit_contact
+    end    
+  end
+  
+  def volunteer_contact
+      @contact = Contact.find(params[:id])
+      unless @contact.nil?
+	v = Volunteer.find_by_sql(["select * from volunteers where contact_id = ? and project_id = ?", @contact.id, Project.latest.id])[0] 
+	if v.nil?
+	  v = Volunteer.new
+	end
+	v.contact_id = @contact.id
+	v.project_id = Project.latest.id
+	v.group_name = @contact.company_name
+	if @contact.est_group_size.blank?
+	  v.number_of_people = 1
+	else
+	  v.number_of_people = @contact.est_group_size
+	end
+	v.save
+	render :text => "assigned", :layout => false
+      end
+  end
+  
   private
   def load_skills_and_types(params = nil)
     @skills = Skill.find(:all)
@@ -128,5 +174,12 @@ class ManageController < ApplicationController
       #todo -- don't hardcode this value! Add "is_default_for_new_contacts" flag to database or something like that.
       @ctypes_checked_ids.push 12
     end
+  end
+  
+  def build_search_conditions(search)
+    # not safe, but admins won't hack their own site (hopfeully)
+      cond = ' and (concat(contacts.first_name, " ", contacts.last_name) like "%'+search+'%" or contacts.email like "%'+search+'%" or contacts.company_name like "%'+search+'%" '
+      cond += ' or contacts.id in (select z.contact_id from contact_skills z inner join skills x on x.id = z.skill_id and x.description like "%'+search+'%") )'
+      cond
   end
 end

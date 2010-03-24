@@ -1,6 +1,6 @@
 <h1>Edit Contact</h1>
 <div class="contactform">
-    <% form_for :contact, @contact, :url => { :action => "update", :id => @contact.id }, :html => { :id => "edit_contact", :name => "edit_contact" } do |form| %>
+    <% form_for :contact, @contact, :url => { :action => "update_contact", :id => @contact.id }, :html => { :id => "edit_contact", :name => "edit_contact" } do |form| %>
 		
 		<%=error_messages_for :contact, :header_message => "Could not save because of the following problems:" %>
 		
