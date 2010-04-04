@@ -1,42 +1,10 @@
 <h1>View a Project House</h1>
   <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAD08g2_Oq3J9d7H2sqFyveRSapxgfxvaUOx1n8B-8GndFDCgq9xTESvzPQM7K9v2lZdPBqd9aAgc4Dg" type="text/javascript"></script>
-<div id="map_canvas" style="width: 500px; height: 300px"></div>
-<script>
-window.onload = initmap();
-window.onunload = GUnload();
-var map = "";
-var geocoder = "";
-function initmap ()
-{
-  map = new GMap2(document.getElementById("map_canvas"));
-  map.setUIToDefault();
-//  map.setCenter(new GLatLng(37.4419, -122.1419), 13);
 
-  geocoder = new GClientGeocoder();
-  showAddress("<%= @contact.address_1 %> <%= @contact.city %> <%= @contact.state %> <%= @contact['zip'] %>",map);
-}
-
-  
-function showAddress(address,map) {
-  geocoder.getLatLng(
-    address,
-    function(point) {
-      if (!point) {
-        alert(address + " not found");
-      } else {
-        map.setCenter(point,13);
-        var marker = new GMarker(point);
-        map.addOverlay(marker);
-        marker.openInfoWindowHtml('<span style="color:#60BB46;">House ' + <%= @house.house_number %> + "</span><BR />" + address);
-      }
-    }
-  );
-}
-</script>
 <div class="contactform">
 <BR /><BR />
 House <strong><span style="font-size:28px;color:#60BB46;"><%=h @house.house_number %></span></strong>
-		<div style="float:right; width:250px;">
+		<div style="float:right; width:250px;margin-right: 200px;">
 			<strong>Contact Information</strong><br />
 			<ol>
 			  <% unless @contact.home_phone.blank? %>
@@ -139,7 +107,7 @@ House <strong><span style="font-size:28px;color:#60BB46;"><%=h @house.house_numb
   </td>
    <td>
     <a name="<%=volunteer.contact.id%>"></a>
-	<a href="<%= url_for(:controller => 'contacts', :action => 'edit', :id => volunteer.contact.id) %>">edit</a>
+	<a href="<%= url_for(:controller => 'manage', :action => 'edit_contact', :id => volunteer.contact.id) %>">edit</a>
   </td>
  
   </tr>
@@ -147,3 +115,37 @@ House <strong><span style="font-size:28px;color:#60BB46;"><%=h @house.house_numb
   end %>
 </table><BR />
 <a href="/manage/list_volunteers">Assign more volunteers</a><BR />
+<div id="map_canvas" style="width: 500px; height: 300px"></div>
+
+<script>
+window.onload = initmap();
+window.onunload = GUnload();
+var map = "";
+var geocoder = "";
+function initmap ()
+{
+  map = new GMap2(document.getElementById("map_canvas"));
+  map.setUIToDefault();
+//  map.setCenter(new GLatLng(37.4419, -122.1419), 13);
+
+  geocoder = new GClientGeocoder();
+  showAddress("<%= @contact.address_1 %> <%= @contact.city %> <%= @contact.state %> <%= @contact['zip'] %>",map);
+}
+
+  
+function showAddress(address,map) {
+  geocoder.getLatLng(
+    address,
+    function(point) {
+      if (!point) {
+        alert(address + " not found");
+      } else {
+        map.setCenter(point,13);
+        var marker = new GMarker(point);
+        map.addOverlay(marker);
+        marker.openInfoWindowHtml('<span style="color:#60BB46;">House ' + <%= @house.house_number %> + "</span><BR />" + address);
+      }
+    }
+  );
+}
+</script>
