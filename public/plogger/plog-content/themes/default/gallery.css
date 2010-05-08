@@ -1,0 +1,545 @@
+/* Default Plogger theme by Mike Johnson */
+
+/* Body and general styles */
+
+body { /* if embedding in your own template, you can remove these body style declarations to have the gallery inherit your website's preferences */
+	background-color: #fff;
+	font-family: Verdana, "Trebuchet MS", Geneva, Arial, Helvetica, SunSans-Regular, sans-serif;
+	font-size: 13px;
+}
+
+a, a:link, a:visited, a:active {
+	color: #38c;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #789;
+	text-decoration: underline;
+}
+
+form {
+	display: inline;
+}
+
+h1 {
+	font-size: 1.4em;
+}
+
+h2 {
+	font-size: 1.2em;
+}
+
+h3 {
+	font-size: 1.1em;
+}
+
+img {
+	border: 0;
+	display: inline;
+}
+
+input, select, textarea {
+	font-family: verdana, arial, sans-serif;
+	font-size: 13px;
+	color: #444;
+}
+
+input.submit {
+	background-color: #369;
+	background-image: url("images/blue-button-bg.gif");
+	background-repeat: repeat-x;
+	border: none;
+	color: #fff;
+	font-family: verdana, arial, sans-serif;
+	font-size: 85%;
+	font-weight: normal;
+	padding: 3px 5px;
+	cursor: pointer;
+	width: auto;
+	-moz-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	-khtml-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+table {
+	border: 0;
+	padding: 0;
+}
+
+/* Page Structure */
+
+#main-container {
+	margin: 0;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#plog-wrapper {
+	margin: 5px auto;
+	width: 90%;
+}
+
+#inner-wrapper {
+	/* padding: 10px;*/
+	width: 100%;
+}
+
+/* Header Structure/Elements */
+
+#header-table {
+	width: 100%;
+}
+
+#gallery-name h1 {
+	padding: 0;
+	margin: 0;
+}
+
+/* Menu Structure/Elements */
+
+#breadcrumbs {
+	margin: 0;
+	padding: 2px;
+	border-top: 1px solid #cdcdcd;
+	border-bottom: 1px solid #cdcdcd;
+}
+
+#breadcrumb-table {
+	width: 100%;
+}
+
+#breadcrumb-links {
+	margin: 2px; 
+}
+
+a.print {
+	background-image: url("images/printer.gif");
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 20px;
+}
+
+/* Content Structure/Elements */
+
+#thumbnail-container { /* this is the div that contains all the thumbnails in collection/album view */
+	margin: 5px auto;
+}
+
+#overlay { /* this is the blue box that shows the total comments when hovering on a thumbnail in album view */
+	position: absolute; 
+	visibility: hidden; 
+	background-color: #38c;
+	font-family: verdana, arial, sans-serif;
+	font-weight: bold;
+	font-size: 13px;
+	padding: 4px;
+	text-align: center;
+	width: 18px;
+	color: #fff;
+}
+
+ul.slides { /* this is the overall thumbnail container in collection/album view */
+	margin: 0 auto;
+	margin-top: 15px;
+	margin-left: 15px;
+	padding: 0;
+	list-style: none;
+	line-height: 1.4em;
+}
+
+.slides li { /* this is the individual thumbnail container in collection/album view */
+	display: block;
+	float: left;
+	margin: 0 10px 10px 0; /* 2nd number controls the distance between thumbnails */
+	padding: 0;
+}
+
+.tag { /* this controls the text under a thumbnail in collection/album view with caption/download checkbox */
+	text-align: center;
+	white-space: normal;
+}
+
+.meta-header { /* this controls the text under a thumbnail in collection view with total albums or pictures */
+	font-size: 85%;
+	padding: 0;
+	margin: 0;
+	color: #8b0000;
+	text-align: center;
+}
+
+#caption-date-table, #prev-next-table { /* containers for the caption, date and prev/next links above the large image in picture view */
+	width: 600px;
+	margin: auto;
+}
+
+#picture-caption, .date { /* this controls the caption and date above the large image in picture view */
+	font-size: 1.0em;
+	font-weight: normal;
+	line-height: 1.4;
+	background-repeat: no-repeat;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin-left: 4px;
+	padding-bottom: 2px;
+}
+
+#prev-link-container {
+	width: 50%; 
+	text-align: left;
+}
+
+#next-link-container {
+	width: 50%; 
+	text-align: right;
+}
+
+#prev-button, #next-button {
+
+}
+
+a.nav-link-img-prev {
+	background-image: url("images/rewind.gif");
+	background-repeat: no-repeat;
+	background-position: left 1px;
+	padding-left: 20px;
+	width: 40px;
+}
+
+a.nav-link-img-next {
+	background-image: url("images/fforward.gif");
+	background-repeat: no-repeat;
+	background-position: right 1px;
+	padding-right: 20px;
+	width: 40px;
+}
+
+#picture-holder {
+	text-align: center;
+}
+
+#picture-holder a:hover img{
+	border: 1px solid #38c;
+	background-color: #ededed;
+	margin: 4px;
+	-moz-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#picture-holder #description {
+	width: 625px;
+	margin: 15px auto;
+}
+
+.photos {
+	padding: 5px;
+	margin: 3px;
+	border: 1px solid #000;
+	-moz-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.photos-large {
+	border: 1px solid #789;
+	background-color: #efefef;
+	padding: 10px;
+	margin: 4px;
+	-moz-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.thumbnail img {
+	padding: 5px;
+	text-align: center;
+	margin: 3px;
+	background-color: #efefef;
+	border: 1px solid #789;
+	-moz-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.thumbnail a:hover img {
+	margin: 3px;
+	background-color: #ededed;
+	border: 1px solid #38c;
+}
+
+#error-404, #no-pictures-msg {
+	margin: 50px 75px;
+	text-align: justify;
+}
+
+/* Form Structure/Elements */
+
+#jump-menu {
+	text-align: right;
+}
+
+#download-selected {
+	float: right;
+	text-align: right;
+}
+
+#search-box {
+	text-align: right;
+}
+
+#jump-search-container {
+	text-align: right; 
+	vertical-align: middle;
+}
+
+#sortby-container {
+	text-align: right; 
+	white-space: nowrap;
+}
+
+.align-right {
+	text-align: right;
+}
+
+.nomargin {
+	margin: 0;
+}
+
+/* Footer Structure/Elements */
+
+#pagination {
+	padding: 2px;
+	margin: 0;
+	clear: both;
+	border-top: 1px solid #cdcdcd;
+	border-bottom: 1px solid #cdcdcd;
+	line-height: 2.5em;
+}
+
+#pagination-table {
+	width: 100%;
+}
+
+/*.page-link {
+	padding-right: 3px;
+	padding-left: 3px;
+	text-decoration: none;
+}*/
+
+span.page-link, a.page-link, a.pagPrev, a.pagNext {
+	border: 1px solid #bbb;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	padding: 1px 5px;
+	margin: 0 3px;
+	color: #bbb;
+	text-decoration: none;
+}
+
+.page-link:hover, .page-link a:hover, a.pagPrev:hover, a.pagNext:hover {
+	color: #777;
+	border: 1px solid #777;
+	background-color: #f9f9f9;
+}
+
+.page-link a:focus {
+	outline: none;
+	-moz-outline: none;
+}
+
+/*a.pagPrev, a.pagNext {
+	color: #bbb;
+	text-decoration: none;
+	margin: 0 2px;
+}
+
+a.pagPrev:hover, a.pagNext:hover {
+	color: #777;
+	text-decoration: none;
+}*/
+
+span.page-link-current {
+	border: 1px solid #274f77;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	padding: 1px 5px;
+	margin: 0 3px;
+	background-color: #274f77;
+	color: #fff;
+}
+
+#rss-tag-container {
+	text-align: right; 
+	white-space: nowrap;
+}
+
+#rss-image {
+	margin: 0;
+	padding: 0;
+	display: inline
+}
+
+#stats {
+	font-size: 85%;
+	text-align: center;
+	padding: 8px 5px 0 5px;
+	margin: 0;
+}
+
+#link-back {
+	font-size: 85%;
+	text-align: center;
+	padding: 8px 5px 5px 5px;
+	margin: 0;
+}
+
+/* Comment Structure/Elements */
+
+#comment-container {
+	width: 90%;
+	margin: auto;
+}
+
+.comment-heading h2 {
+	font-size: 1.2em;
+}
+
+.comment-heading h3 {
+	font-size: 1.1em;
+}
+
+.comments p {
+	padding: 0;
+	margin: 0;
+	padding-bottom: 15px;
+}
+
+.comments cite {
+	color: #000;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 0.8em;
+	background: url("images/comment.gif") no-repeat 0 3px;
+	padding: 5px;
+	padding-left: 23px;
+	margin-top: 8px;
+	height: 28px;
+}
+
+li.comment, li.comment-alt {
+	border-top: 1px solid #cdcdcd;
+	background-color: #ededed;
+	margin: 0;
+	padding: 15px;
+	list-style: none inside;
+}
+
+li.comment-alt {
+	background-color: #fff;
+}
+
+.comments-closed {
+	text-align: left;
+	margin-top: 25px;
+}
+
+/* Exif data container structure*/
+
+#exif-toggle {
+	width: 100%; 
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+#exif-data-container {
+	width: 550px;
+	margin: 10px auto;
+	text-align: center;
+	padding: 10px;
+}
+
+#exif-table {
+
+}
+
+#exif-data td.exif-label {
+	text-align: right;
+	padding-right: 10px;
+	font-weight: bold;
+	width: 50%;
+}
+
+#exif-data td.exif-info {
+	text-align: left;
+	padding-right: 10px;
+	width: 50%;
+}
+
+#exif-data {
+	margin: 10px auto;
+	padding: 20px;
+	text-align: left;
+	width: 70%;
+	border: 1px solid #ddd;
+	-moz-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #f7f7f7;
+}
+
+/* Slideshow Elements */
+
+.large-thumb-toolbar {
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	margin: auto;
+}
+
+/* Success/Error Messages */
+
+.actions, .errors {
+	width: 500px;
+	background-repeat: no-repeat;
+	background-position: 5px 8px;
+	margin-bottom: 15px;
+	padding: 8px 8px 8px 28px;
+	padding-left: 28px;
+	-moz-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.actions {
+	background-image: url("images/alert.gif");
+	border: 1px solid #bb0;
+	background-color: #ffffe0;
+}
+
+.errors {
+	background-image: url("images/x.gif");
+	border: 1px solid maroon;
+	background-color: #fcc;
+}
+
+.field-error {
+	border: 1px solid maroon;
+	background-color: #fcc;
+}
