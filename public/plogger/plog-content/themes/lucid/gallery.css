@@ -1,0 +1,507 @@
+/* Lucid theme by Mike Johnson */
+
+/* Body and general styles */
+
+body {
+	background: #efefef;
+}
+
+a:link, a:visited {
+	color: #8e9687;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #a0b7c9;
+}
+
+h1 {
+	color: #8e9687;
+	font-size: 1.6em;
+	font-weight: 700;
+	margin: 0;
+	padding: 0;
+}
+
+h2 {
+	color: #8e9687;
+	font-size: 1.4em;
+	font-weight: 700;
+	margin: 0;
+	padding: 0;
+}
+
+h3 {
+	color: #8e9687;
+	font-size: 1.2em;
+	font-weight: 700;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	border:0;
+}
+
+input, select, #jump-search-container select, #jump-search-container input, #jump-search-container form {
+	display: inline;
+}
+
+input.submit {
+	border: 3px double #999;
+	border-top-color: #ccc;
+	border-left-color: #ccc;
+	background-color: #f9f9f9;
+	background-image: url("images/button-bg.gif");
+	background-repeat: repeat-x;
+	color: #333;
+	font-size: 76%;
+	font-family: verdana, helvetica, arial, sans-serif;
+}
+
+/* Page Structure */
+
+#main-container {
+	clear: both;
+	width: 100%;
+}
+
+#plog-wrapper {
+	font-family: "Lucida Sans", Verdana, "Trebuchet MS", Geneva, Arial, Helvetica, SunSans-Regular, sans-serif;
+	font-size: 76%;
+	width: 750px;
+	text-align: left;
+	border: 4px solid #8e9687;
+	background: #fff;
+	margin: 0 auto;
+	padding: 25px;
+}
+
+* html #centering {
+	text-align: center;
+}
+
+/* Header Structure/Elements */
+
+#header {
+	width: 100%;
+}
+
+#gallery-name {
+	font-size: 2em;
+	font-weight: 700;
+	float: left;
+	color: #555;
+	margin: 0;
+	padding: 0;
+}
+
+/* Menu Structure/Elements */
+
+#breadcrumbs {
+	float: left;
+	width: 100%;
+	font-size: 1.1em;
+	margin: 10px 0 0;
+	padding: 5px;
+}
+
+#breadcrumb-links {
+	margin-bottom: 5px;
+	padding: 0;
+}
+
+.print {
+	background-image: url("images/printer.gif");
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 20px;
+	text-align: right;
+	float: right;
+}
+
+/* Content Structure/Elements */
+
+#thumbnail-container { /* this is the div that contains all the thumbnails in collection/album view */
+	clear: both;
+	width: 100%;
+	padding-top: 10px;
+}
+
+.collections { /* this is the overall thumbnail container in collection/albums view */
+
+}
+
+.collection { /* this is the individual thumbnail container in collection/albums view */
+	background: transparent url("images/grey-grad-bg.gif") 0 0 repeat-x;
+	clear: both;
+	border-top: 1px solid #efefef;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	float: left;
+	width: 100%;
+}
+
+.collection img {
+	display: inline;
+	background: #f0f0f0;
+	border: 1px solid #ccc;
+	float: left;
+	margin-right: 15px;
+	padding: 3px;
+}
+
+.collection p {
+	line-height: 1.5em;
+}
+
+.collection img:hover {
+	background: #a0b7c9;
+}
+
+#overlay { /* this is the blue box that shows the total comments when hovering on a thumbnail in album view */
+	position: absolute;
+	visibility: hidden;
+	background-color: #38c;
+	font-family: "Georgia","Verdana",serif;
+	font-weight: 700;
+	font-size: 14px;
+	text-align: center;
+	width: 18px;
+	color: #fff;
+	padding: 4px;
+}
+
+* html .slides li {
+	height: 1px;
+}
+
+ul.slides { /* this is the overall thumbnail container in individual album view */
+	list-style: none;
+	line-height: 1.4em;
+	margin: 15px 0 0;
+	padding: 0;
+}
+
+ul.slides li { /* this is the individual thumbnail container in individual album view */
+	position: relative;
+	float: left;
+	display: inline;
+	text-align: center;
+	margin: 5px;
+	padding: 10px;
+}
+
+ul.slides li a {
+	display: block;
+	border: 1px solid #789;
+}
+
+ul.slides li a img {
+	text-align: center;
+	background: #f0f0f0;
+	margin: 1px;
+	padding: 3px;
+}
+
+ul.slides li a:hover {
+	border: 1px solid #38c;
+	background: #a0b7c9;
+}
+
+* html .tag {
+	white-space: normal;
+	margin: 0;
+}
+
+.tag {
+	width: 110px;
+	height: 3em;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.meta-header {
+	font-size: 90%;
+	color: #aaa;
+	margin: 0;
+	padding: 0;
+}
+
+#nav-link-img-next a {
+	float: right;
+	border: 1px solid #fff;
+	margin-top: 5px;
+	padding: 5px 15px;
+}
+
+#nav-link-img-prev a {
+	float: left;
+	border: 1px solid #fff;
+	margin-top: 5px;
+	padding: 5px 15px;
+}
+
+#nav-link-img-prev a:hover, #nav-link-img-next a:hover {
+	background: #efefef;
+	border: 1px solid #bbb;
+	margin-top: 5px;
+}
+
+#next-link-container {
+	width: 50%;
+	text-align: right;
+}
+
+#prev-link-container {
+	width: 50%;
+	text-align: left;
+}
+
+#picture-holder {
+	text-align: center;
+	clear: both;
+}
+
+#picture-holder a img {
+	border: 1px solid #789;
+	background: #efefef;
+	margin: 4px;
+	padding: 3px;
+}
+
+#picture-holder a:hover {
+	white-space: normal;
+}
+
+#picture-caption {
+	font-size: 1.4em;
+	text-align: center;
+	color: #a0b7c9;
+}
+
+#picture-description {
+	width: 100%;
+	text-align: center;
+}
+
+.date {
+	font-size: 1.1em;
+	font-weight: 400;
+	text-transform: none;
+	letter-spacing: 1px;
+	text-align: center;
+	border-bottom: 1px solid #efefef;
+}
+
+#error-404, #no-pictures-msg {
+	margin: 50px;
+	text-align: justify;
+}
+
+/* Pagination Structure/Elements */
+
+#pagination {
+	clear: both;
+	width: 100%;
+	font-size: 1.2em;
+	padding-bottom: 3px;
+}
+
+span.page-link, a.page-link {
+	border: 1px solid #bbb;
+	padding: 1px 3px;
+	margin: 0 3px;
+	text-decoration: none;
+}
+
+span.page-link-current {
+	border: 1px solid #bbb;
+	background-color: #f0f0f0;
+	padding: 1px 3px;
+	margin: 0 3px;
+	text-decoration: none;
+}
+
+a.pagPrev, a.pagNext {
+	color: #bbb;
+	text-decoration: none;
+	margin: 0 3px;
+}
+
+.photos {
+	margin: 3px;
+	padding: 5px;
+}
+
+/* Form Structure/Elements */
+
+#download-selected {
+	float: right;
+	text-align: right;
+}
+
+#jump-search-container {
+	white-space: nowrap;
+	float: right;
+}
+
+#search-box {
+	margin-left: 2px;
+	float: right;
+}
+
+#sortby-container form {
+	float: left;
+	padding-right: 8px;
+}
+
+#sortby-container, #rss-tag-container {
+	float: right;
+	white-space: nowrap;
+	padding-left: 8px;
+}
+
+/* Footer Structure/Elements */
+
+#footer {
+	clear: both;
+	height: 40px;
+	border-top: 1px solid #efefef;
+	padding-top: 15px;
+}
+
+#slideshow-link {
+	clear: both;
+	float: left;
+	display: inline;
+	width: 120px;
+}
+
+#link-back {
+	font-size: 90%;
+	text-align: center;
+	padding: 8px 5px 0 5px;
+	margin: 0;
+}
+
+#link-back a:hover {
+	background: #ffc;
+}
+
+#stats {
+	font-size: 90%;
+	text-align: center;
+	padding: 8px 5px 0 5px;
+	margin: 0;
+}
+
+#rss-image {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
+/* Comment Structure/Elements */
+
+.comment, .comment-alt {
+	border-top: 1px solid #cdcdcd;
+	background-color: #e2e2e2;
+	list-style: none inside;
+	margin: 0;
+	padding: 15px;
+}
+
+.comment-alt {
+	background-color: #fff;
+}
+
+.comments cite {
+	color: #000;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 75%;
+	background: url("images/comment.gif") no-repeat 0 3px;
+	margin-top: 8px;
+	height: 28px;
+	padding: 5px 5px 5px 23px;
+}
+
+.comments p {
+	margin: 0;
+	padding: 0 0 15px;
+}
+
+.comments-closed {
+	text-align: left;
+	margin-top: 25px;
+}
+
+/* Exif Data Structure/Elements*/
+
+#exif-data {
+	margin: 10px auto;
+	padding: 20px;
+	text-align: left;
+	width: 70%;
+}
+
+#exif-data td.exif-label {
+	text-align: right;
+	padding-right: 10px;
+	font-weight: bold;
+	width: 50%;
+}
+
+#exif-data td.exif-info {
+	text-align: left;
+	padding-right: 10px;
+	width: 50%;
+}
+
+#exif-toggle-container {
+	width: 100%;
+	text-align: center;
+}
+
+#exif-toggle {
+	margin: 0;
+	padding: 0;
+}
+
+/* Slideshow Elements */
+
+div.large-thumb-toolbar {
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	margin: auto;
+}
+
+/* Success/Error Messages */
+
+.actions, .errors {
+	width: 500px;
+	background-repeat: no-repeat;
+	background-position: 5px 8px;
+	margin-bottom: 15px;
+	padding: 8px 8px 8px 28px;
+	padding-left: 28px;
+}
+
+.actions {
+	background-image: url("images/alert.gif");
+	border: 1px solid #bb0;
+	background-color: #ffffe0;
+}
+
+.errors {
+	background-image: url("images/x.gif");
+	border: 1px solid maroon;
+	background-color: #fcc;
+}
+
+.field-error {
+	border: 1px solid maroon;
+	background-color: #fcc;
+}

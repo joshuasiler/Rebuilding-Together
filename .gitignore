@@ -8,6 +8,10 @@ db/schema.rb
 \#*\#
 public/plogger/plog-content/uploads
 public/plogger/plog-content/uploads/*
+
+public/plogger/plog-content/tmpuploads
+public/plogger/plog-content/tmpuploads/*
+
 public/plogger/plog-content/images
 public/plogger/plog-content/images/*
 
