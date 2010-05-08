@@ -7,7 +7,7 @@
 		<div id="nav">
 		    <a href="/">Home</a>
 		    <a href="/r/about_page">About Us</a>
-		    <a href="<%= url_for :controller => :contacts, :action => :new%>">Volunteer</a>
+		    <a href="/contacts/new">Volunteer</a>
 				<a href="/r/house_captains">House Captains</a>
 		    <a href=/r/homeowners_page>Homeowners</a>
 		    <a href="/r/nonprofits_page">Non-Profits</a>
