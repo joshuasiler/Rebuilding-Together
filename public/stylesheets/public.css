@@ -3,7 +3,6 @@ body
     margin-top: 0px;
     color: #333;
     font-family: arial, sans-serif;
-    font-size: 1.0em;
 }
 
 h1
@@ -31,7 +30,6 @@ border-bottom: 1px solid #888;
     font-weight:bold;
     text-decoration: none;
     padding-left: 15px;
-    font-size: 13px;
 }
 #nav a:hover
 {
