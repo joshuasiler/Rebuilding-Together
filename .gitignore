@@ -6,6 +6,12 @@ tmp/*
 *~
 db/schema.rb
 \#*\#
-public/plogger/plog-content/
-public/plogger/plog-content/*
+public/plogger/plog-content/uploads
+public/plogger/plog-content/uploads/*
+public/plogger/plog-content/images
+public/plogger/plog-content/images/*
+
+public/plogger/plog-content/thumbs
+public/plogger/plog-content/thumbs/*
+
 public/plogger/plog-config.php
