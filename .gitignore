@@ -8,4 +8,4 @@ db/schema.rb
 \#*\#
 public/plogger/plog-content/
 public/plogger/plog-content/*
-
+public/plogger/plog-config.php
