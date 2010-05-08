@@ -22,7 +22,7 @@ class CaptainsController < ApplicationController
   def view_house
     @house = House.find(params[:id])
     @contact = Contact.find(@house.contact_id)
-    @volunteers = Volunteer.find(:all,{:conditions => "house_id = #{@house.id}",:include => :contact})
+    @volunteers = Volunteer.find(:all,{:conditions => "house_id = #{@house.id}",:include => :contact, :order => "is_housecaptain desc"})
   end
   
   private

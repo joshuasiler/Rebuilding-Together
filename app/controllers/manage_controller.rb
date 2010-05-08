@@ -68,6 +68,8 @@ class ManageController < ApplicationController
       myconditions += " and isnull(house_id)"
     elsif params[:id] == "assigned"
       myconditions += " and not isnull(house_id)"
+    elsif params[:id] == "house_captains"
+      myconditions += " and is_housecaptain =1"
     elsif !params[:search].blank?
       myconditions += build_search_conditions(params[:search])  
     end
@@ -102,10 +104,17 @@ class ManageController < ApplicationController
       render :partial => "assign", :object => v
   end
   
+  def unassign_volunteer
+     v = Volunteer.find(params[:id])
+      v.house_id = nil
+      v.save
+      redirect_to :back
+  end
+  
   def view_house
     @house = House.find(params[:id])
     @contact = Contact.find(@house.contact_id)
-    @volunteers = Volunteer.find(:all,{:conditions => "house_id = #{@house.id}",:include => :contact})
+    @volunteers = Volunteer.find(:all,{:conditions => "house_id = #{@house.id}",:include => :contact, :order => "is_housecaptain desc"})
   end
   
   def remove_house
