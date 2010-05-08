@@ -6,8 +6,14 @@ tmp/*
 *~
 db/schema.rb
 \#*\#
+<<<<<<< HEAD
 public/plogger/plog-content/uploads
 public/plogger/plog-content/uploads/*
 public/plogger/plog-content/images
 public/plogger/plog-content/images/*
 public/plogger/plog-config.php
+=======
+public/plogger/plog-content/
+public/plogger/plog-content/*
+
+>>>>>>> 5476daa... updates
