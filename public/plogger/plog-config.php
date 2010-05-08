@@ -3,7 +3,7 @@
  * (run plog-admin/_install.php in your browser).
  * If you want to change the database connection information, you may also edit this file manually
  * after Plogger has been installed. */ /* MySQL hostname */ define('PLOGGER_DB_HOST', 'localhost'); /* MySQL database username */ define('PLOGGER_DB_USER', 'root'); /* MySQL database 
-password */ define('PLOGGER_DB_PW', 'FSiZDyl0Kfd0h3KM7gTS'); /* The name of the database for Plogger */ define('PLOGGER_DB_NAME', 'rebuilding'); /* Define the Plogger database table prefix. You can have 
+password */ define('PLOGGER_DB_PW', 'sillier2'); /* The name of the database for Plogger */ define('PLOGGER_DB_NAME', 'rebuilding'); /* Define the Plogger database table prefix. You can have 
 multiple installations in one database if you give
  * each a unique prefix. Only numbers, letters, and underscores are permitted (i.e., plogger_). */ define('PLOGGER_TABLE_PREFIX', 'plogger_'); /* Define the Plogger directory permissions. 
 Change permissions if you are having issues with images or
