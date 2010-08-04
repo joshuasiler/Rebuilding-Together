@@ -19,14 +19,14 @@ Total: <%= @volunteer_count %> <Small>(<img src="/images/icons/award_star_gold_1
 						<% end %>
 						 <% } %>
 <table class="grids">
-  <tr><th>Name</th><th>Email</th><th>Group</th><th>Est Group Size</th><th>Edit</th><th>Assigned To</th><th>Skills</th></tr>
+  <tr><th>Name & Email</th><th>Group</th><th>Est Group Size</th><th>Edit</th><th>Assigned To</th><th>Skills</th></tr>
   
 <% @volunteers.each { |volunteer| %>
 <tr>
   <td><% if volunteer.is_housecaptain %>
       <img src="/images/icons/award_star_gold_1.png" >
       <% end %>
-  <%=h volunteer.contact.first_name %> <%=h volunteer.contact.last_name %>
+  <NOBR><%=h volunteer.contact.first_name %> <%=h volunteer.contact.last_name %></NOBR>
     <% unless volunteer.contact.comments.blank? && volunteer.contact.other_skills.blank? %>
     <a href="#" onmouseover="TagToTip('deet<%= volunteer.contact.id %>');" onmouseout="UnTip()" onclick="return false;"><NOBR>( ? )</NOBR></a>
     <span id="deet<%= volunteer.contact.id %>" style="display:none;">
@@ -35,17 +35,17 @@ Total: <%= @volunteer_count %> <Small>(<img src="/images/icons/award_star_gold_1
 	<% unless volunteer.contact.comments.blank? || volunteer.contact.other_skills.blank? %><BR /><BR /><% end %>  
 	  <% unless volunteer.contact.other_skills.blank? %><strong>Other Skills:</strong> <%= volunteer.contact.other_skills %><% end %>
       </div>
-    </div>
+    </span>
     <% end %>
-  </td>
-  <td><%=h volunteer.contact.email %></td>
+    <BR /> <%=h volunteer.contact.email %><BR />
+    <small>volunteered: <%= volunteer.created_at.strftime "%m/%d/%Y" %></small></td>
   <td><%=h volunteer.contact.company_name %></td>
   <td><%=h volunteer.contact.est_group_size %></td>
   <td>
     <a name="<%=volunteer.contact.id%>"></a>
 	<a href="<%= url_for(:controller => 'manage', :action => 'edit_contact', :id => volunteer.contact.id) %>">edit</a>
   </td>
-  <td><div id="assigner<%= volunteer.id %>"<%= volunteer.house %>
+  <td><div id="assigner<%= volunteer.id %>">
     <%= render :partial => "assign", :object => volunteer %>
    </div>
   </td>
