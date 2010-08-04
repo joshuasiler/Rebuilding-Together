@@ -78,7 +78,7 @@ class ManageController < ApplicationController
       offset = (params[:page].to_i-1) * 20
     end
     @volunteer_count = Volunteer.count(:conditions => myconditions, :include => [{:contact => :skills},:house])
-    @volunteers = Volunteer.find(:all, {:conditions => myconditions, :include => [{:contact => :skills},:house], :order => "contacts.last_name asc", :limit => 20, :offset => offset})
+    @volunteers = Volunteer.find(:all, {:conditions => myconditions, :include => [{:contact => :skills},:house], :order => "contacts.created_at desc", :limit => 20, :offset => offset})
   end
 
   def list_contacts
