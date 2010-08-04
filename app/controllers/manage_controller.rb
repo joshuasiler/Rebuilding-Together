@@ -81,6 +81,12 @@ class ManageController < ApplicationController
     @volunteers = Volunteer.find(:all, {:conditions => myconditions, :include => [{:contact => :skills},:house], :order => "contacts.created_at desc", :limit => 20, :offset => offset})
   end
 
+  def del_contact
+    Contact.find(params[:id]).destroy
+    flash[:notice] = "Contact deleted."
+    redirect_to "/manage/list_volunteers"
+  end
+
   def list_contacts
     myconditions = "not (first_name = '' and last_name = '' and email ='')"
     if !params[:search].blank?

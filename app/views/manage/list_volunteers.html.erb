@@ -1,3 +1,7 @@
+ <% unless flash[:notice].blank? %>
+ <font color="red"><%= flash[:notice] %></font>
+ <BR /><BR/>
+ <% end %>
   <script type="text/javascript" src="/javascripts/wz_tooltip.js"></script>
     <a name="grid"></a>
 <h2>All Volunteers for <%= Project.latest.project_name %></h2>
@@ -43,7 +47,8 @@ Total: <%= @volunteer_count %> <Small>(<img src="/images/icons/award_star_gold_1
   <td><%=h volunteer.contact.est_group_size %></td>
   <td>
     <a name="<%=volunteer.contact.id%>"></a>
-	<a href="<%= url_for(:controller => 'manage', :action => 'edit_contact', :id => volunteer.contact.id) %>">edit</a>
+	<a href="<%= url_for(:controller => 'manage', :action => 'edit_contact', :id => volunteer.contact.id) %>">edit</a><BR/>
+	<a href="/manage/del_contact/<%= volunteer.contact.id %>" onclick="confirm('Are you sure? Deletion cannot be undone.');">del</a>
   </td>
   <td><div id="assigner<%= volunteer.id %>">
     <%= render :partial => "assign", :object => volunteer %>
