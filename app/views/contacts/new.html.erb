@@ -18,6 +18,12 @@
 		<%=render :partial => 'form_volunteer_info', :locals => { :form => form } %>
 		<ol>
 			<li>
+				<div class="label" style="margin-top:30px;margin-bottom:30px;font-weight:bold;">Verify</div>
+				Help us stop spam by verifying that you are a human. Please retype the words shown below.<BR />
+				  <%= recaptcha_tags %>
+			</li>
+		
+			<li>
 				<div class="label">&nbsp;</div>
 				<%=image_submit_tag("signup.jpg", :width => "210", :height => "47", :tabindex => ti() ) %>
 			</li>

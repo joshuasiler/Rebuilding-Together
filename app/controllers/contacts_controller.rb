@@ -17,7 +17,7 @@ class ContactsController < ApplicationController
       test = Contact.update(dup,params[:contact])
       @contact = Contact.find(dup)
     end
-    if test
+    if test and verify_recaptcha(:model => @contact, :message => "Verfication failed. Words do not match. Please try again.")
       v = Volunteer.find_by_sql(["select * from volunteers where contact_id = ? and project_id = ?", @contact.id, Project.latest.id])[0] 
       if v.nil?
 	v = Volunteer.new
