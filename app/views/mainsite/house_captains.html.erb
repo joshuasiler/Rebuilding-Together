@@ -9,6 +9,7 @@ For more information, start here: <a href="/files/2011hcltter.doc">Letter to Hou
 </p>
 <h2>Resources for House Captains</h2>
 <ul>
+<li style="list-style-image: url(/images/icons/new.png);margin-bottom: 20px;"><em>Updated for 2011</em></li>
 <% ["2011_campus_map.pdf",
 "2011_guidelines_for_house_liaisons.doc",
 "2011_hc_handbook_planning_ahead.doc.doc",
@@ -31,8 +32,22 @@ For more information, start here: <a href="/files/2011hcltter.doc">Letter to Hou
 "2011_volunteer_estimate_form.doc",
 "2011_volunteer_opportunities_form.doc",
 "lowes_material_procedures_2011.doc",
-"xmas_2011_hc_lttr.doc"].each { |item| %>
-<li style="list-style-image: url(/images/icons/page_white_acrobat.png);"><a href="files/2011/<%= item %>"><%=item.gsub("_"," ").camelize %></a></li>
+"xmas_2011_hc_lttr.doc"].each { |item| 
+	icon = "page_white"	
+	if !item.index(".doc").nil?
+		icon = "page_word"
+	elsif !item.index(".xls").nil?
+		icon = "page_excel"
+	elsif !item.index(".pdf").nil?
+		icon = "page_white_acrobat"
+	end
+		
+%>
+
+<li style="list-style-image: url(/images/icons/<%= icon %>.png);"><a href="/files/2011/<%= item %>">
+	<% item.gsub("_"," ").gsub(".doc","").gsub(".pdf","").gsub(".xls","").gsub("2011","").split(" ").each { |word| %>
+		<%= word.capitalize %>
+<% } %></a></li>
 <% } %>
 </ul>
 
