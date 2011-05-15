@@ -9,7 +9,7 @@
 	$thumb_width = $thumb_info['width']; // The width of the image. It is integer data type.
 	$thumb_height = $thumb_info['height']; // The height of the image. It is an integer data type.
 	$div_width = $thumb_width + 30; // Account for padding/border width
-	$div_height = $thumb_height + 75; // Account for padding/border width
+	$div_height = $thumb_height + 125; // Account for padding/border width
 ?>
 				<li class="thumbnail">
 					<div class="tag" style="width: <?php echo $div_width; ?>px; height: <?php echo $div_height; ?>px;">

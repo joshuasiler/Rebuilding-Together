@@ -12,7 +12,7 @@
 		    <a href=/r/homeowners_page>Homeowners</a>
 		    <a href="/r/nonprofits_page">Non-Profits</a>
 		    <a href="/r/board_page">Board of Directors</a>
-		    <a href="/plogger/index.php">April 2010 Photos (new!)</a>
+		    <a href="/plogger/index.php">Project Photos</a>
 		</div>
 		<div id="content">
 		    
