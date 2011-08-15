@@ -1,8 +1,8 @@
-
-	<div id="containerOuter">
+<div id="containerOuter">
 	    <div id="container">
 		<img src="/images/painter.jpg" alt="House painter on ladder." style="float:left;" />
-		<img src="/images/big-logo.png" alt="Rebuilding Together Portland logo." style="margin-left: 125px; margin-top: 35px;" />
+		<img src="/images/big-logo.png" alt="Rebuilding Together Portland logo." style="margin-left: 125px; margin-top: 5px;" />
+<iframe src="http://www.facebook.com/plugins/like.php?app_id=272196989461434&amp;href=http%3A%2F%2Fwww.rebuildingtogetherportland.org&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px; float:right;" allowTransparency="true"></iframe>
 		<div style="clear:both;font-size:0em;">&nbsp;</div>
 		<div id="nav">
 		    <a href="/">Home</a>
