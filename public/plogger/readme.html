@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Plogger &raquo; Version 1.0-RC1 Read Me</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="plog-admin/css/admin.css" type="text/css" media="all" />
+	<style type="text/css">
+		body, p {
+			font-family: verdana, arial, sans-serif;
+			text-align: justify;
+		}
+		a, a:link, a:visited, a:active, a:hover {
+			font-weight: bold;
+		}
+		hr {
+			color: #ccc;
+			border: 1px dotted #bbb;
+		}
+		.readme {
+			margin: 0 auto;
+		}
+		#header-readme {
+			margin: auto auto;
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+
+<div id="header-readme">
+
+	<div class="width-700 readme">
+		<img src="plog-admin/images/plogger.gif" width="393" height="90" alt="Plogger" />
+		<p class="margin-5 strong" style="text-align: center; color: #264b71; font-size: 18px;">Version 1.0-RC1</p>
+		<hr />
+	</div><!-- /width-700 readme -->
+
+	<div style="clear: both; height: 1px;">&nbsp;</div>
+
+</div><!-- /header-readme -->
+
+<div id="content" class="width-700 readme">
+
+	<h1>Requirements</h1>
+
+		<p>Plogger is designed to run in a <abbr title="Linux/Apache/MySQL/PHP">LAMP</abbr> server environment, and has the following minimum requirements to function properly:</p>
+
+			<ul>
+				<li class="margin-5">PHP version <strong>4</strong> or higher.</li>
+				<li class="margin-5">MySQL version <strong>3.23</strong> or higher.</li>
+				<li class="margin-5">GD library version <strong>2</strong> or later.</li>
+			</ul>
+
+	<h1>Installation</h1>
+
+		<p>Due to an infinite number of web server configurations, we cannot guarantee that Plogger will work perfectly on your setup.</p>
+
+		<p>If you run into any issues during installation, please post them in our <a title="support forum" href="http://www.plogger.org/forum/">support forum</a> and we'll do our best to help you get them resolved. Post as much detail as possible, including any error messages you receive.</p>
+
+		<p>Follow these steps to get started.</p>
+
+			<ol>
+				<li class="margin-5">Unzip the files to a local folder on your computer.</li>
+				<li class="margin-5">Upload the files via FTP to a folder on your website.</li>
+				<li class="margin-5">Create a MySQL database and user from your web hosting control panel.</li>
+				<li class="margin-5">Open your web browser and run the installation script located at:<br />
+					<span style="color: #c00;">http://www.yoursite.com/plogger-folder/plog-admin/_install.php</span></li>
+				<li class="margin-5">Log in to your gallery admin and begin configuring your gallery and uploading your images.</li>
+			</ol>
+
+		<p>That's all there is to it!</p>
+
+	<h1>Before You Upgrade</h1>
+
+		<p>Before you upgrade your existing Plogger gallery to version 1.0-RC1, be sure you make a backup of all of your existing files via FTP and your MySQL database via phpMyAdmin, and save them in a folder on your computer.</p>
+
+		<p>If you have custom themes, translations, or third-party script files, make sure you back those up as well.</p>
+
+	<h1>Upgrading from any previous version of Plogger to 1.0-RC1:</h1>
+
+		<ol>
+			<li class="margin-5">Make a backup of all of your files via FTP and your database from your web hosting control panel and save them to your computer.</li>
+			<li class="margin-5">Upload and overwrite ALL FILES <strong>except for plog-config.php</strong>.</li>
+			<ul>
+				<li class="margin-5">Your old plog-config.php file should continue to work, but there are new options available. See plog-config-sample.php for an example.</li>
+				<li class="margin-5">If previously using Cruft-Free URLs, do not overwrite the .htaccess file. If you do, just login to Admin -> Options and save the options to recreate the .htaccess file.</li>
+				<li class="margin-5">If you have modified one of the 3 themes included in the download, either rename the modified theme folder or do not upload the new theme folder.</li>
+			</ul>
+			<li class="margin-5">Open your web browser and run the upgrade script located at:<br /><span style="color: #c00;">http://www.yoursite.com/plogger-folder/plog-admin/_upgrade.php</span></li>
+			<li class="margin-5">The upgrade process is automated, and consists of 5 steps. Follow the instructions for each step, and fix any problems listed before proceeding to the next step.</li>
+		</ol>
+
+	<h1>Resources</h1>
+
+		<p>If you have any questions that aren't addressed here, please check Plogger's online resources:</p>
+
+			<ul>
+				<li class="margin-5"><a title="Codex" href="http://codex.plogger.org/">Codex</a><br />Documentation resource for Plogger.</li>
+				<li class="margin-5"><a title="Support Forum" href="http://www.plogger.org/forum/">Support Forum</a><br />If you've checked the documentation and still can't find your answer, post your question on the support forum. Be sure to use a descriptive thread title, provide the version number of your Plogger gallery, and describe your question in as much detail as possible, including a link to your gallery so others can see the problem.</li>
+			</ul>
+
+	<h1>Other Notes</h1>
+
+		<ul>
+			<li class="margin-5">If you have suggestions, ideas, or comments, please post them in the <a title="Support Forum" href="http://www.plogger.org/forum/">Support Forum</a>.</li>
+			<li class="margin-5">If you have found what you believe to be a bug, please follow the directions in <a title="How to report bugs and/or create tickets" href="http://www.plogger.org/forum/discussion/1807/how-to-report-bugs-andor-create-tickets-please-read/">this forum post</a> to report it.</li>
+			<li class="margin-5">If you have discovered a possible security vulnerability in the code, please send an email to <a title="security@plogger.org" href="mailto:security@plogger.org?subject=[Plogger] Security Vulnerability">security@plogger.org</a> with a detailed explanation of the vulnerability. We ask you not to release the information publicly before reporting it to us, as we would like to get the necessary corrections made to the code and a patch released to our users in order to protect them.</li>
+		</ul>
+
+	<h1>License</h1>
+
+		<p>Plogger is released under the <abbr title="GNU Public License Version 2">GPL2</abbr> license. See <a title="license.txt" href="LICENSE.txt">license.txt</a> for more information.</p>
+
+</div><!-- /content -->
+
+</body>
+</html>

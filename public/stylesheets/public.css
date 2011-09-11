@@ -1,0 +1,165 @@
+body
+{
+    margin-top: 0px;
+    color: #333;
+    font-family: arial, sans-serif;
+    font-size: 1.0em;
+}
+
+h1
+{
+font-size: 1.6em;
+margin-top: 0px;
+color: #60bb46;
+}
+h2
+{
+margin-top: 20px;
+font-size: 1.2em;
+border-bottom: 1px solid #888;
+}
+
+#nav
+{
+    background-color: #000;
+    padding: 5px;
+    padding-left: 30px;
+}
+#nav a
+{
+    color: #FFF;
+    font-weight:bold;
+    text-decoration: none;
+    padding-left: 15px;
+    font-size: 13px;
+}
+#nav a:hover
+{
+    text-decoration: underline;
+ 
+}
+#content
+{
+    padding: 20px;
+		background-color:white;
+}
+#containerOuter {
+	width: 960px;
+	padding: 0 10px 0 0;
+	background: #fff url(/images/container_bg_right.gif) top right repeat-y;
+	margin: 0 auto;
+	text-align: left;
+}
+
+#container {
+	width: 950px;
+	padding: 0 0 0 10px;
+	background: url(/images/container_bg_left.gif) top left repeat-y;
+	position: relative;
+}
+#footer
+{
+    background-color: #000;
+    padding: 5px;
+    padding-left: 30px;
+    color: #FFF;
+}
+.boardnames td
+{
+    padding:4px;
+    padding-left: 15px;
+}
+
+.boardnames .name
+{
+    font-weight: bold;
+}
+
+.contactform ol
+{
+    list-style: none;
+    padding-left: 0px;
+    margin-left: 0px;
+}
+.contactform li
+{
+    margin-bottom: 5px;
+}
+.contactform label
+{
+    padding-right:7px;
+}
+.contactform .required
+{
+    font-weight: bold;
+}
+.contactform .label
+{
+    float:left;
+    width: 100px;
+}
+
+/* Placeholder, used on manage/ page */
+.manage-contacts-table  {
+    margin: 0; padding: 0; 
+    width: 100%;
+}
+
+/* Placeholder, used on manage/ page */
+.manage-contacts-row-true {
+    margin: 0; padding: 0;
+}
+
+/* Placeholder, used on manage/ page */
+.manage-contacts-row-false {
+    margin: 0; padding: 0;
+}
+
+/* Placeholder for manage/ page. Used in conjunction with manage-contacts-row-[true|false] */
+.manage-contacts-row-last {
+    padding: 0; margin: 0;
+}
+
+/* Placeholder, used on manage/ page */
+.manage-contacts-col-true {
+    padding: 0; margin: 0;
+}
+
+/* Placeholder, used on manage/ page */
+.manage-contacts-col-false {
+    padding: 0; margin: 0;
+}
+
+/* Placeholder for manage/ page. Used in conjunction with manage-contacts-col-[true|false] */
+.manage-contacts-col-last {
+    padding: 0; margin: 0;
+}
+
+/* Styles pager row on manage contacts page. */
+.manage-contacts-pager {
+    text-align: right;
+}
+
+.manage-contacts-header { 
+    width: 20%;
+}
+
+.errorExplanation {
+	color: red;
+	border: 0;
+}
+.errorExplanation h2 {
+	border: 0;
+}
+
+.grids
+{
+    font-size:12px;
+}
+
+.grids td
+{
+    font-size: 14px;
+    padding: 4px;
+    border: 1px solid #888;
+}

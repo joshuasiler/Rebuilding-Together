@@ -1,0 +1,65 @@
+#breadcrumbs {
+	height: 24px; /* IE 6 */
+}
+
+a:visited {
+	color: #01b4e2;
+}
+
+.collection a {
+	display: inline;
+	background: #fff;
+}
+
+.collection h2 {
+	display: block;
+	height: 20px;
+}
+
+.collection h2 a, .collection h2 a:visited {
+	border: none;
+	color: #01b4e2;
+	display: block;
+}
+
+.collection h2 a:hover {
+	border: none;
+}
+
+.collection input {
+	float: left;
+	display: block;
+}
+
+.meta-header {
+	display: block;
+	height: 20px;
+	padding: 4px 0 0 0;
+}
+
+.collection img, ul.slides li img, #thumb-nav li img {
+	margin: 0;
+	border: none;
+}
+
+#thumb-nav li img {
+	margin: 4px 0 0 0;
+}
+
+li.thumbnail a, .collection a, #picture-holder a, #thumb-nav a {
+/*	border: 1px solid #dfded6; */
+	border: 1px solid #01b4e2;
+}
+
+li.thumbnail a:hover, .collection a:hover, #picture-holder a:hover, #thumb-nav a:hover {
+/*	border: 1px solid #b3b6b0; */
+	border: 1px solid #f60;
+}
+
+#sort-control {
+	width: 330px;
+}
+
+#download-selected input.submit {
+	background: #fff url("images/carrot_sel3.gif") no-repeat 0 50%;
+}
