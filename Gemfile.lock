@@ -45,6 +45,7 @@ GEM
     erubis (2.6.6)
       abstract (>= 1.0.0)
     eventmachine (0.12.10)
+    filters_spam (0.3)
     friendly_id_globalize3 (3.2.1.5)
       babosa (~> 0.3.0)
     globalize3 (0.1.0)
@@ -123,6 +124,8 @@ GEM
       dragonfly (~> 0.9.0)
       rack-cache (>= 0.5.3)
       refinerycms-core (= 1.0.9)
+    refinerycms-inquiries (1.0.1)
+      filters_spam (~> 0.2)
     refinerycms-pages (1.0.9)
       activerecord (~> 3.0.10)
       awesome_nested_set (~> 2.0)
@@ -165,5 +168,6 @@ DEPENDENCIES
   rails (= 3.0.11)
   refinerycms (~> 1.0.9)
   refinerycms-i18n (~> 1.0.0)
+  refinerycms-inquiries (~> 1.0.1)
   thin
   yaml_db

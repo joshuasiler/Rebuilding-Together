@@ -163,3 +163,8 @@ border-bottom: 1px solid #888;
     padding: 4px;
     border: 1px solid #888;
 }
+
+.field label { display: block; width: 130px; float:left;}
+.actions input {    
+    margin-left: 135px;
+    font-size: 18px;}

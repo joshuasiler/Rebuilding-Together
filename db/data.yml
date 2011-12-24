@@ -12,31 +12,28 @@ page_part_translations:
   - - 1
     - 1
     - en
-    - |-
-      
-       Rebuilding Together * Portland is a non-profit organization supported entirely by contributions of time, labor, materials, and money.
-      		    We are dedicated to repairing the homes of those who, due to financial hardship, age, and/or disability cannot do the work themselves.
-      		    Skilled and unskilled volunteers, along with able-bodied members of the recipients' family and friends, complete repairs  at no cost to the homeowner.
-      		    <br /><br />
-      		    <strong>Free home repairs</strong> are available for low-income homeowners. <a href="&lt;%= url_for :controller =&gt; :mainsite, :action =&gt; :homeowners_page %&gt;">Learn more</a>
-      		    <br /><br />
-      		    We will be celebrating our 20th year on April 24, 2010.  Our goal is to repair and rehabilitate over 50 homes and non-profit community facilities.
-      		    <br /><br />
-      		    <a href="&lt;%= url_for :controller =&gt; :contacts, :action =&gt; :new%&gt;">Sign up today</a> and join our 1500 strong volunteer workforce on <strong>Rebuilding Day 2010</strong>!
-      		    <br /><br />
-      		    
-      		    <img src="/images/photos/_DSC0393.JPG" />
-      		    <img src="/images/photos/128group.JPG" />
-      		    <br /><br />
-      		    A few of our sponsors:<br /><br />
-      		    <img src="/images/logo-sample.gif" alt="Sponsor logos" style="margin-left:150px;" />
-      		    <img alt="Cricket Wireless" src="/images/cricketwireless.gif" />
-      <h2>Recent Projects</h2>
-      <a href="http://www.mtscottlearningcenters.org/CultivatingMinds.htm">Cultivating Minds</a> <small>with
-        <a href="http://www.handsonportland.org/">Hands On Portland</a> and <a href="http://www.mycricket.com/portland">Cricket Wireless</a>
-      </small>
+    - " Rebuilding Together * Portland is a non-profit organization supported entirely by contributions of time, labor, materials, and money.\r\n\
+      \t\t    We are dedicated to repairing the homes of those who, due to financial hardship, age, and/or disability cannot do the work themselves.\r\n\
+      \t\t    Skilled and unskilled volunteers, along with able-bodied members of the recipients' family and friends, complete repairs  at no cost to the homeowner.\r\n\
+      \t\t    <br /><br />\r\n\
+      \t\t    <strong>Free home repairs</strong> are available for low-income homeowners. <a href=\"/homeowners\">Learn more</a>\r\n\
+      \t\t    <br /><br />\r\n\
+      \t\t    We will be celebrating our 20th year on April 24, 2010.  Our goal is to repair and rehabilitate over 50 homes and non-profit community facilities.\r\n\
+      \t\t    <br /><br />\r\n\
+      \t\t    <a href=\"/contact;\">Sign up today</a> and join our 1500 strong volunteer workforce on <strong>Rebuilding Day 2010</strong>!\r\n\
+      \t\t    <br /><br />\r\n\
+      \t\t    \r\n\
+      \t\t    <img src=\"/images/photos/_DSC0393.JPG\" />\r\n\
+      \t\t    <img src=\"/images/photos/128group.JPG\" />\r\n\
+      \t\t    <br /><br />\r\n\
+      \t\t    A few of our sponsors:<br /><br />\r\n\
+      \t\t    <img src=\"/images/logo-sample.gif\" alt=\"Sponsor logos\" style=\"margin-left:150px;\" />\r\n\
+      \t\t    <img alt=\"Cricket Wireless\" src=\"/images/cricketwireless.gif\" />\r\n\
+      <h2>Recent Projects</h2>\r\n\
+      <a href=\"http://www.mtscottlearningcenters.org/CultivatingMinds.htm\">Cultivating Minds</a> <small>with\r\n  <a href=\"http://www.handsonportland.org/\">Hands On Portland</a> and <a href=\"http://www.mycricket.com/portland\">Cricket Wireless</a>\r\n\
+      </small>"
     - 2011-12-24 20:46:03 Z
-    - 2011-12-24 21:05:01 Z
+    - 2011-12-24 21:42:42 Z
   - - 2
     - 2
     - en
@@ -52,13 +49,14 @@ page_part_translations:
   - - 4
     - 4
     - en
-    - |-
+    - |
+      
       <p>
       Rebuilding Together * Portland is a non-profit organization supported entirely by contributions of time, labor, materials, and money.  We are dedicated to repairing the homes of those who, due to financial hardship, age, and/or disability cannot do the work themselves.  Skilled and unskilled volunteers along with able-bodied members of the recipients' family and friends complete repairs  at
       <strong>no cost to the homeowner.</strong>
       </p>
       <p>
-      To be eligible for consideration for 2010 the applicant must:
+      To be eligible for consideration for 2012 the applicant must:
       </p>
       <ul>
         <li>Be the owner and occupant of the property
@@ -85,7 +83,7 @@ page_part_translations:
       Our skilled and unskilled volunteers do all types of work including painting, plumbing, electrical, carpentry,
       roofing, weatherization, yard cleaning, debris removal, and much more!  We do need the homeowners to understand
       that time and weather may prevent these volunteers from accomplishing everything that the applicant would like done
-      to their home on <strong>our next workday, Saturday, April 24, 2010.</strong>
+      to their home on <strong>our next workday, Saturday, April 28th, 2012.</strong>
       </p>
       <p>
       This is an annual "barn-raising" event designed to repair and rehabilitate the homes of low-income, elderly, and
@@ -117,10 +115,11 @@ page_part_translations:
       MikeMalone@rebuildingtogetherportland.org<br />
       
       <p>
-      <a href="/official-logos">Official Logos available for download</a>
+      <a href="/r/logos_page">Official Logos available for download</a>
       </p>
+
     - 2011-12-24 20:46:03 Z
-    - 2011-12-24 21:03:42 Z
+    - 2011-12-24 21:19:15 Z
   - - 5
     - 5
     - en
@@ -131,15 +130,16 @@ page_part_translations:
     - 6
     - en
     - |
+      
       <h2>Board Officers</h2>
       <table class="boardnames">
-      <tbody><tr><td class="name">Scott Williams	</td>
+      <tbody><tr><td class="name">Paul Luty 	</td>
       <td>President 	</td>
-      <td>	Accenture</td>
-      </tr>
-      <tr><td class="name">Paul Luty 	</td>
-      <td>Vice President 	</td>
       <td>	University of Portland - Physical Plant</td>
+      </tr>
+      <tr><td class="name">Michael Desimone 	</td>
+      <td>Vice President 	</td>
+      <td>Key Bank</td>
       </tr>
       <tr><td class="name">Brian Vetrone 	</td>
       <td>Treasurer 	</td>
@@ -155,60 +155,63 @@ page_part_translations:
       </tr>
       <tr><td class="name">Kate Chavez 	</td>
       <td>Secretary</td>
-      <td>The Richman Group Affordable Housing Corporation</td>
-      </tr>
+      <td><a href="http://www.enterprisecommunity.com">Enterprise Community Investment, Inc.</a>
+      </td></tr>
       </tbody>
       </table>
       
       <h2>Board of Directors</h2>
       <table class="boardnames">
-      <tbody><tr><td class="name">Michael Desimone       </td>
-      <td>Key Bank</td>
-      </tr>
-      <tr><td class="name">Mark Easley 	</td>
+      <tbody><tr><td class="name">Mark Easley 	</td>
       <td>KEMA Consulting</td>
       </tr>
       <tr><td class="name">Valerie Ebinger</td>
       <td><a href="http://corsource.net">CorSource Technology Group, Inc.</a>
-      </td>
-      </tr>
+      </td></tr>
       
       <tr><td class="name">Mitch Falkenstein</td>
-      <td>&#160;</td>
+      <td><a href="http://www.paramountequity.com">Paramount Equity Mortgage</a>
+      </td></tr>
+      <tr><td class="name">Amanda Kilmartin 	</td>
+      <td>Shorestein Co, LCC</td>
       </tr>
       
-      <tr><td class="name">Dan Gemme       </td>
-      <td><a href="http://turnerconstruction.com/portland/default.asp">Turner Construction</a>
-      </td>
-      </tr>
+      <tr><td class="name">Nic Levesque 	</td>
+      <td><a href="http://www.turnerconstruction.com">Turner Construction</a>
+      </td></tr>
       <tr><td class="name">Dave Lyons 	</td>
-      <td>JDL Development</td>
-      </tr>
-      <tr><td class="name">Ella Mills 	</td>
-      <td><a href="http://biellalighting.com">Biella Lighting Design</a>
-      </td>
-      </tr>
+      <td><a href="http://www.jdldev.com">JDL Development</a>
+      </td></tr>
+      <tr><td class="name">Thomas Moore</td>
+      <td><a href="http://www.turnerconstruction.com">Turner Construction</a>
+      </td></tr>
+      
       <tr><td class="name">Pat Olson 	</td>
       <td>Standard Supply Company</td>
       </tr>
       <tr><td class="name">Deacon John Ries 	</td>
       <td>St. Mary's Cathedral</td>
       </tr>
+      
       <tr><td class="name">Joshua Siler</td>
-      <td><a href="http://www.bnj.com">Babcock &amp; Jenkins</a>
-      </td>
+      <td><a href="http://www.hiringthing.com">HiringThing, Inc.</a>
+      </td></tr>
+      <tr><td class="name">Whitney True 	</td>
+      <td>Lane PR</td>
       </tr>
-      <tr><td class="name">Emily Watson 	</td>
-      <td>Mediamerica</td>
-      </tr>
+      
+      <tr><td class="name">Sarah Williams</td>
+      <td><a href="http://www.hollandresidential.com">Holland Residential</a>
+      </td></tr>
       <tr><td class="name">Brandon Zabrocki 	</td>
-      <td>US Bank</td>
-      </tr>
+      <td><a href="http://www.usbank.com">US Bank</a>
+      </td></tr>
+      
       </tbody>
       </table>
 
     - 2011-12-24 20:58:11 Z
-    - 2011-12-24 20:58:11 Z
+    - 2011-12-24 21:18:58 Z
   - - 7
     - 7
     - en
@@ -218,7 +221,7 @@ page_part_translations:
   - - 8
     - 8
     - en
-    - "<h1>Homeowners</h1>\r\n <p>\r\n We rely on social service agencies, town offices, service organizations, churches, community groups, and individuals\r\n to help us identify homeowners in Portland in need of our assistance. <strong>Do you know an elderly person, somebody with a disability,\r\n or a working family who could use our help?</strong>\r\n Please review the information on this site and contact us with a completed Home Referral Form.\r\n </p>\r\n\
+    - "\r\n <p>\r\n We rely on social service agencies, town offices, service organizations, churches, community groups, and individuals\r\n to help us identify homeowners in Portland in need of our assistance. <strong>Do you know an elderly person, somebody with a disability,\r\n or a working family who could use our help?</strong>\r\n Please review the information on this site and contact us with a completed Home Referral Form.\r\n </p>\r\n\
       <p>\r\n\
       <strong>All repairs are free for homeowners. </strong>Labor and many supplies are typically donated. Homeowners and family members are asked to welcome the volunteers into their homes and work alongside them to the extent possible. Our work is done with families and neighborhoods, not for them. A homeowner brochure is provided to clarify our process and partnership.\r\n\
       </p>\r\n\
@@ -254,7 +257,7 @@ page_part_translations:
       will champion and set up a detailed plan of work to be done at the home and is the primary contact for the homeowner\r\n\
       through completion of the work.\r\n </p>\r\n <p>\r\n\
       There are no promises that the work planned will actually be done. Weather, volunteer availability and other factors may affect the actual work completed. The House Captain will decide what work can and cannot be done on the day of work. If your home is chosen for the rehabilitation work, there will be NO charge for our service.\r\n\
-      </p>\r\n <p>\r\n  <a href=\"/forms/Homeowner Referral Form.pdf\" style=\"font-size:1.4em;\">Click Here to Download an Application</a>\r\n </p>\r\n <h2>Contact Information</h2>\r\n\
+      </p>\r\n <p>\r\n  <a href=\"/forms/2011/HomeownerReferralForm.docx\" style=\"font-size:1.4em;\">Click Here to Download an Application</a>\r\n </p>\r\n <h2>Contact Information</h2>\r\n\
       <strong>Rebuilding Together * Portland</strong>\r\n\
       <br />\r\n\
       5000 N. Willamette Blvd. Portland, OR 97203-5798<br />\r\n\
@@ -264,160 +267,332 @@ page_part_translations:
       <br />\r\n\
       \r\n"
     - 2011-12-24 20:59:29 Z
-    - 2011-12-24 20:59:29 Z
+    - 2011-12-24 21:22:35 Z
   - - 9
     - 9
     - en
-    - |
-      
-       <p>House Captains are our project leaders, and help ensure that each and every project is a success on rebuilding day.
-       If you are interested in becoming a House Captain, please contact <a href="mailto:MikeMalone@RebuildingTogetherPortland.org">Mike Malone at MikeMalone@RebuildingTogetherPortland.org</a>
-      </p>
-       
-       <p>If you've already signed up, <strong>thank you!</strong> The House Captain's role is a crucial element in making our program a success.  It is your skills, hard work and dedication that get our repair and rehabilitation work completed effectively and efficiently.  This role will be challenging and at the same time very rewarding.  Please note the following important dates for your calendar.
-       </p>
-      
-      <p>This year's House Captain's meeting is mandatory attendance.  We are tightening up the time line in an effort to
-      increase efficiency within the organization and to minimize your time requirements.  For these goals to be
-      obtained we need you at the meeting.</p>
-      <p>The role of House Captain is old hat to some of you and we appreciate your continued participation.
-      And we still want you at this meeting, to meet the other House Captains and to learn of the new procedures.</p>
-      <style>
-      table
-      {
-      
-      	border-collapse: collapse;
-      	padding: 0px;
-      	margin: 0px;
-      	border: 2px solid #888;
-      	width: 650px;
-      }
-      table td
-      { 
-      	padding: 6px;
-      	margin: 0px;
-      	font-size: 12px;
-      	vertical-align:top;
-       	border-bottom: 1px solid #000;
-       }
-      
-      </style>
-      <table>
-      <tbody><tr><td><strong>March 3	5:30pm</strong>
-      </td>
-       <td>Room 319, Shiley Hall on the University of Portland campus (look fo r the signs).  This will be our only House Captain meeting.
-       We will be explaining the new procedures regarding material lists and time lines.  <strong>House selection will take place at this meeting.</strong>
-      </td>
-      </tr>
-      <tr><td><strong>March 22</strong>
-      </td>
-       <td>	Have house inspection completed.
-      </td>
-      </tr>
-      <tr><td><strong>April 2</strong>
-      </td>
-       <td>	Notify Rebuilding Together * Portland with the number of volunteers that you have, or the number of skilled and unskilled volunteers that you need.
-      </td>
-      </tr>
-      <tr><td><strong>April 2</strong>
-      </td>
-       <td>	Material list must be in by this date.  It's extremely important to the process of material gathering that the lists get back to us on time.
-      </td>
-      </tr>
-      <tr><td><strong>April 17</strong>
-      </td>
-       <td>	Skilled labor and prep day.  This day has been scheduled to accommodate large jobs where more than one stage of work needs to take place, or where power washing and prepping need to be done prior to the 24th.
-      </td>
-      </tr>
-      <tr><td><strong>April 24</strong>
-      </td>
-       <td>	It's ShowTime!  Rebuilding Together * Portland workday!
-      </td>
-      </tr>
-      <tr><td><strong>April 30</strong>
-      </td>
-       <td>	Evaluations are due back at head quarters.  House Captains must communicate whether or not all of the work started was completed.  If it has not, please confirm what arrangements have been made for completion.
-      </td>
-      </tr>
-      </tbody>
-      </table>
-      
-      <p>If you have any questions please feel free to call the numbers listed below or call our Rebuilding Together * Portland office at 943-7515.
-      </p>
-      <p>We continue to look for additional people to fill the role of House Captain, if you know of someone qualified and interested please ask them to call our office to get involved this year.
-      </p>
-      <p>Thank you again for your interest and willingness to participate in this important endeavor.  As a Rebuilding Together * Portland House Captain this year, you will be joining over 1,500 other individuals around the Portland area, helping make this local and national program a success.  We simply could not accomplish this work without the support and volunteerism of organizers like you.
-      </p>
-      <h2>Resources for House Captains</h2>
-      <ul>
-      <li style="list-style-image: url(/images/icons/page_white_acrobat.png);"><a href="/files/2010 campus map.pdf"> Campus Map</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 HC Volunteer List Work Sheet.doc">HC Volunteer List Work Sheet</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 HC Handbook - Planning ahead.doc.doc"> HC Handbook - Planning ahead</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 HC Handbook - The Work Day.doc.doc"> HC Handbook - The Work Day</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 HC Role &amp; Responsibilities.doc"> HC Role &amp; Responsibilities</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 House Captain Evaluation.doc"> House Captain Evaluation</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_white_acrobat.png);"><a href="/files/2010 Lowe's Order Form.pdf">Lowe's Order Form</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Lowe's material procedures.doc"> Lowe's material procedures</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_excel.png);"><a href="/files/2010 Material Help.xls"> Material Help</a>
-      </li>
-      
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Updated Volunteer Agreement and Release.doc"> Updated Volunteer Agreement and Release</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Guidelines for House Liaisons.doc">Guidelines for House Liaisons</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Homeowner Agreement.doc"> 2010 Homeowner Agreement</a>
-      </li>
-      
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Volunteer Estimate Form.doc"> Volunteer Estimate Form</a>
-      </li>
-      
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Med Treatment Authorization for Minor.doc"> Med Treatment Authorization for Minor</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Volunteer Opportunities Form.doc"> Volunteer Opportunities Form</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Lead-safe remodeling Procedures.doc"> Lead-safe remodeling Procedures</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_white_acrobat.png);"><a href="/files/leadpdfe.pdf">Lead Information</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Safety Tool box talk guidelines.doc"> Safety Tool box talk guidelines</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 WARNING SIGN.doc"> WARNING SIGN</a>
-      </li>
-      
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Scope of Work.doc"> Scope of Work</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_white_acrobat.png);"><a href="/files/homeowner_brochure.pdf">Homeowner Brochure</a>
-      </li>
-      </ul>
-       <h2>Contact Information</h2>
-      <strong>Dave Lyons, Committee Chairman</strong>
-      <br />
-      Days - 503-248-2030 and evenings - 503-287-9915<br />
-      Please confirm your attendance: <a href="dave@jdldev.com">Dave Lyons - dave@jdldev.com</a> or <a href="mailto:MikeMalone@RebuildingTogetherPortland.org">Mike Malone - MikeMalone@RebuildingTogetherPortland.org</a>
-      <br /><br />
-      <strong>Rebuilding Together * Portland</strong>
-      <br />
-      5000 N. Willamette Blvd. Portland, OR 97203-5798<br />
-      Phone: 503-943-7515<br />
-      Fax: 503-943-7322<br />
-      <a href="mailto:MikeMalone@rebuildingtogetherportland.org">MikeMalone@rebuildingtogetherportland.org</a>
-      <br />
-      
-
+    - " \r\n <p>House Captains are our project leaders, and help ensure that each and every project is a success on rebuilding day.\r\n If you are interested in becoming a House Captain, please contact <a href=\"mailto:MikeMalone@RebuildingTogetherPortland.org\">Mike Malone at MikeMalone@RebuildingTogetherPortland.org</a>\r\n\
+      </p>\r\n\
+      \r\n <p>If you've already signed up, <strong>thank you!</strong> The House Captain's role is a crucial element in making our program a success.  It is your skills, hard work and dedication that get our repair and rehabilitation work completed effectively and efficiently.  This role will be challenging and at the same time very rewarding.\r\n </p>\r\n\
+      <p>\r\n\
+      For more information, start here: <a href=\"/files/RT2011hcltter.doc\">Letter to House Captains</a> (with 2011 schedule)\r\n\
+      </p>\r\n\
+      <h2>Resources for House Captains</h2>\r\n\
+      <ul>\r\n\
+      <li style=\"list-style-image: url(/images/icons/new.png);margin-bottom: 20px;\"><em>Updated for 2011</em>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_white_acrobat.png);\"><a href=\"/files/2011/2011_campus_map.pdf\">\r\n\
+      \t\r\n\
+      \t\tCampus\r\n\
+      \r\n\
+      \t\tMap\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_guidelines_for_house_liaisons.doc\">\r\n\
+      \t\r\n\
+      \t\tGuidelines\r\n\
+      \r\n\
+      \t\tFor\r\n\
+      \r\n\
+      \t\tHouse\r\n\
+      \r\n\
+      \t\tLiaisons\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_hc_handbook_planning_ahead.doc.doc\">\r\n\
+      \t\r\n\
+      \t\tHc\r\n\
+      \r\n\
+      \t\tHandbook\r\n\
+      \r\n\
+      \t\tPlanning\r\n\
+      \r\n\
+      \t\tAhead\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_hc_handbook_the_work_day.doc.doc\">\r\n\
+      \t\r\n\
+      \t\tHc\r\n\
+      \r\n\
+      \t\tHandbook\r\n\
+      \r\n\
+      \t\tThe\r\n\
+      \r\n\
+      \t\tWork\r\n\
+      \r\n\
+      \t\tDay\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_hc_orientation_agenda.doc\">\r\n\
+      \t\r\n\
+      \t\tHc\r\n\
+      \r\n\
+      \t\tOrientation\r\n\
+      \r\n\
+      \t\tAgenda\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_hc_role_&amp;_responsibilities.doc\">\r\n\
+      \t\r\n\
+      \t\tHc\r\n\
+      \r\n\
+      \t\tRole\r\n\
+      \r\n\
+      \t\t&amp;\r\n\
+      \r\n\
+      \t\tResponsibilities\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_hc_volunteer_list_work_sheet.doc\">\r\n\
+      \t\r\n\
+      \t\tHc\r\n\
+      \r\n\
+      \t\tVolunteer\r\n\
+      \r\n\
+      \t\tList\r\n\
+      \r\n\
+      \t\tWork\r\n\
+      \r\n\
+      \t\tSheet\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_homeowner_agreement.doc\">\r\n\
+      \t\r\n\
+      \t\tHomeowner\r\n\
+      \r\n\
+      \t\tAgreement\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_homeowner_interview-house_inspection_sign_up.doc\">\r\n\
+      \t\r\n\
+      \t\tHomeowner\r\n\
+      \r\n\
+      \t\tInterview-house\r\n\
+      \r\n\
+      \t\tInspection\r\n\
+      \r\n\
+      \t\tSign\r\n\
+      \r\n\
+      \t\tUp\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_house_captain_evaluation.doc\">\r\n\
+      \t\r\n\
+      \t\tHouse\r\n\
+      \r\n\
+      \t\tCaptain\r\n\
+      \r\n\
+      \t\tEvaluation\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_house_captains_reminder_lttr.doc\">\r\n\
+      \t\r\n\
+      \t\tHouse\r\n\
+      \r\n\
+      \t\tCaptains\r\n\
+      \r\n\
+      \t\tReminder\r\n\
+      \r\n\
+      \t\tLttr\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_house_caption_flow_chart_for_recruiting_volunteers.doc\">\r\n\
+      \t\r\n\
+      \t\tHouse\r\n\
+      \r\n\
+      \t\tCaption\r\n\
+      \r\n\
+      \t\tFlow\r\n\
+      \r\n\
+      \t\tChart\r\n\
+      \r\n\
+      \t\tFor\r\n\
+      \r\n\
+      \t\tRecruiting\r\n\
+      \r\n\
+      \t\tVolunteers\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_lead-safe_remodeling_procedures.doc\">\r\n\
+      \t\r\n\
+      \t\tLead-safe\r\n\
+      \r\n\
+      \t\tRemodeling\r\n\
+      \r\n\
+      \t\tProcedures\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_white_acrobat.png);\"><a href=\"/files/2011/2011_lowes_order_form.pdf\">\r\n\
+      \t\r\n\
+      \t\tLowes\r\n\
+      \r\n\
+      \t\tOrder\r\n\
+      \r\n\
+      \t\tForm\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_excel.png);\"><a href=\"/files/2011/2011_material_help.xls\">\r\n\
+      \t\r\n\
+      \t\tMaterial\r\n\
+      \r\n\
+      \t\tHelp\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_med_treatment_authorization_for_minor.doc\">\r\n\
+      \t\r\n\
+      \t\tMed\r\n\
+      \r\n\
+      \t\tTreatment\r\n\
+      \r\n\
+      \t\tAuthorization\r\n\
+      \r\n\
+      \t\tFor\r\n\
+      \r\n\
+      \t\tMinor\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_safety_tool_box_talk_guidelines.doc\">\r\n\
+      \t\r\n\
+      \t\tSafety\r\n\
+      \r\n\
+      \t\tTool\r\n\
+      \r\n\
+      \t\tBox\r\n\
+      \r\n\
+      \t\tTalk\r\n\
+      \r\n\
+      \t\tGuidelines\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_scope_of_work.doc\">\r\n\
+      \t\r\n\
+      \t\tScope\r\n\
+      \r\n\
+      \t\tOf\r\n\
+      \r\n\
+      \t\tWork\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_updated_volunteer_agreement_and_release.doc\">\r\n\
+      \t\r\n\
+      \t\tUpdated\r\n\
+      \r\n\
+      \t\tVolunteer\r\n\
+      \r\n\
+      \t\tAgreement\r\n\
+      \r\n\
+      \t\tAnd\r\n\
+      \r\n\
+      \t\tRelease\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_volunteer_estimate_form.doc\">\r\n\
+      \t\r\n\
+      \t\tVolunteer\r\n\
+      \r\n\
+      \t\tEstimate\r\n\
+      \r\n\
+      \t\tForm\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_volunteer_opportunities_form.doc\">\r\n\
+      \t\r\n\
+      \t\tVolunteer\r\n\
+      \r\n\
+      \t\tOpportunities\r\n\
+      \r\n\
+      \t\tForm\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/lowes_material_procedures_2011.doc\">\r\n\
+      \t\r\n\
+      \t\tLowes\r\n\
+      \r\n\
+      \t\tMaterial\r\n\
+      \r\n\
+      \t\tProcedures\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/xmas_2011_hc_lttr.doc\">\r\n\
+      \t\r\n\
+      \t\tXmas\r\n\
+      \r\n\
+      \t\tHc\r\n\
+      \r\n\
+      \t\tLttr\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      </ul>\r\n\
+      \r\n <h2>Contact Information</h2>\r\n\
+      <strong>Dave Lyons, Committee Chairman</strong>\r\n\
+      <br />\r\n\
+      Days - 503-248-2030 and evenings - 503-287-9915<br />\r\n\
+      Please confirm your attendance: <a href=\"dave@jdldev.com\">Dave Lyons - dave@jdldev.com</a> or <a href=\"mailto:MikeMalone@RebuildingTogetherPortland.org\">Mike Malone - MikeMalone@RebuildingTogetherPortland.org</a>\r\n\
+      <br /><br />\r\n\
+      <strong>Rebuilding Together * Portland</strong>\r\n\
+      <br />\r\n\
+      5000 N. Willamette Blvd. Portland, OR 97203-5798<br />\r\n\
+      Phone: 503-943-7515<br />\r\n\
+      Fax: 503-943-7322<br />\r\n\
+      <a href=\"mailto:MikeMalone@rebuildingtogetherportland.org\">MikeMalone@rebuildingtogetherportland.org</a>\r\n\
+      <br />\r\n\
+      \r\n\
+      \r\n\
+      \t\t\r\n"
     - 2011-12-24 20:59:55 Z
-    - 2011-12-24 20:59:55 Z
+    - 2011-12-24 21:21:15 Z
   - - 10
     - 10
     - en
     - |
+      
       <p>
       <strong>Free facility repairs available for Non-Profits.</strong> It's Rebuilding Together Portland to the rescue!
       </p>
@@ -454,7 +629,7 @@ page_part_translations:
       To become eligible for assistance, fill out our Non-profit Referral Form.
       </p>
        <p>
-        <a href="/forms/Non-ProfitReferralForm.pdf" style="font-size:1.4em;">Click Here to Download an Application</a>
+        <a href="/forms/2012/Non-ProfitReferralForm12.doc" style="font-size:1.4em;">Click Here to Download an Application</a>
        </p>
        <h2>Contact Information</h2>
       <strong>Rebuilding Together * Portland</strong>
@@ -464,9 +639,10 @@ page_part_translations:
       Fax: 503-943-7322<br />
       <a href="mailto:MikeMalone@rebuildingtogetherportland.org">MikeMalone@rebuildingtogetherportland.org</a>
       <br />
+      
 
     - 2011-12-24 21:00:43 Z
-    - 2011-12-24 21:00:43 Z
+    - 2011-12-24 21:22:58 Z
   - - 11
     - 11
     - en
@@ -719,6 +895,49 @@ page_part_translations:
       </table>"
     - 2011-12-24 21:02:35 Z
     - 2011-12-24 21:03:14 Z
+  - - 12
+    - 12
+    - en
+    - |
+      <p>
+      	<strong>You can make a difference.</strong> Experience the great feeling that comes with helping out your community. Our volunteers come to us with all different levels of skills, and every helping hand makes a difference.
+      	Whether you're a skilled tradesman or simply looking to help out any way you can, please fill out the form below to get started. Also, we'll need these forms completed before the work day:
+      <br /><br />
+      
+      <a href="/files/2011/2011_med_treatment_authorization_for_minor.doc">Medical Treatment Authorization (for minors)</a>
+      <br />
+      <a href="/files/2011/2011_updated_volunteer_agreement_and_release.doc">Volunteer's Agreement</a>
+      </p>
+
+    - 2011-12-24 21:27:22 Z
+    - 2011-12-24 21:31:00 Z
+  - - 13
+    - 13
+    - en
+    - |
+      <p><strong>Rebuilding Together * Portland</strong>
+      <br />
+      5000 N. Willamette Blvd. Portland, OR 97203-5798<br />
+      Phone: 503-943-7515<br />
+      Fax: 503-943-7322<br />
+      <a href="mailto:MikeMalone@rebuildingtogetherportland.org">MikeMalone@rebuildingtogetherportland.org</a>
+      <br />
+      </p>
+
+    - 2011-12-24 21:27:22 Z
+    - 2011-12-24 21:33:50 Z
+  - - 14
+    - 14
+    - en
+    - <p>We've received your inquiry and will get back to you with a response shortly.</p><p><a href='/'>Return to the home page</a></p>
+    - 2011-12-24 21:27:22 Z
+    - 2011-12-24 21:27:22 Z
+  - - 15
+    - 15
+    - en
+    - <p>We respect your privacy. We do not market, rent or sell our email list to any outside parties.</p><p>We need your e-mail address so that we can ensure that the people using our forms are bona fide. It also allows us to send you e-mail newsletters and other communications, if you opt-in. Your postal address is required in order to send you information and pricing, if you request it.</p><p>Please call us at 123 456 7890 if you have any questions or concerns.</p>
+    - 2011-12-24 21:27:22 Z
+    - 2011-12-24 21:27:22 Z
 
 --- 
 page_parts: 
@@ -734,32 +953,29 @@ page_parts:
   - - 1
     - 1
     - Body
-    - |-
-      
-       Rebuilding Together * Portland is a non-profit organization supported entirely by contributions of time, labor, materials, and money.
-      		    We are dedicated to repairing the homes of those who, due to financial hardship, age, and/or disability cannot do the work themselves.
-      		    Skilled and unskilled volunteers, along with able-bodied members of the recipients' family and friends, complete repairs  at no cost to the homeowner.
-      		    <br /><br />
-      		    <strong>Free home repairs</strong> are available for low-income homeowners. <a href="&lt;%= url_for :controller =&gt; :mainsite, :action =&gt; :homeowners_page %&gt;">Learn more</a>
-      		    <br /><br />
-      		    We will be celebrating our 20th year on April 24, 2010.  Our goal is to repair and rehabilitate over 50 homes and non-profit community facilities.
-      		    <br /><br />
-      		    <a href="&lt;%= url_for :controller =&gt; :contacts, :action =&gt; :new%&gt;">Sign up today</a> and join our 1500 strong volunteer workforce on <strong>Rebuilding Day 2010</strong>!
-      		    <br /><br />
-      		    
-      		    <img src="/images/photos/_DSC0393.JPG" />
-      		    <img src="/images/photos/128group.JPG" />
-      		    <br /><br />
-      		    A few of our sponsors:<br /><br />
-      		    <img src="/images/logo-sample.gif" alt="Sponsor logos" style="margin-left:150px;" />
-      		    <img alt="Cricket Wireless" src="/images/cricketwireless.gif" />
-      <h2>Recent Projects</h2>
-      <a href="http://www.mtscottlearningcenters.org/CultivatingMinds.htm">Cultivating Minds</a> <small>with
-        <a href="http://www.handsonportland.org/">Hands On Portland</a> and <a href="http://www.mycricket.com/portland">Cricket Wireless</a>
-      </small>
+    - " Rebuilding Together * Portland is a non-profit organization supported entirely by contributions of time, labor, materials, and money.\r\n\
+      \t\t    We are dedicated to repairing the homes of those who, due to financial hardship, age, and/or disability cannot do the work themselves.\r\n\
+      \t\t    Skilled and unskilled volunteers, along with able-bodied members of the recipients' family and friends, complete repairs  at no cost to the homeowner.\r\n\
+      \t\t    <br /><br />\r\n\
+      \t\t    <strong>Free home repairs</strong> are available for low-income homeowners. <a href=\"/homeowners\">Learn more</a>\r\n\
+      \t\t    <br /><br />\r\n\
+      \t\t    We will be celebrating our 20th year on April 24, 2010.  Our goal is to repair and rehabilitate over 50 homes and non-profit community facilities.\r\n\
+      \t\t    <br /><br />\r\n\
+      \t\t    <a href=\"/contact;\">Sign up today</a> and join our 1500 strong volunteer workforce on <strong>Rebuilding Day 2010</strong>!\r\n\
+      \t\t    <br /><br />\r\n\
+      \t\t    \r\n\
+      \t\t    <img src=\"/images/photos/_DSC0393.JPG\" />\r\n\
+      \t\t    <img src=\"/images/photos/128group.JPG\" />\r\n\
+      \t\t    <br /><br />\r\n\
+      \t\t    A few of our sponsors:<br /><br />\r\n\
+      \t\t    <img src=\"/images/logo-sample.gif\" alt=\"Sponsor logos\" style=\"margin-left:150px;\" />\r\n\
+      \t\t    <img alt=\"Cricket Wireless\" src=\"/images/cricketwireless.gif\" />\r\n\
+      <h2>Recent Projects</h2>\r\n\
+      <a href=\"http://www.mtscottlearningcenters.org/CultivatingMinds.htm\">Cultivating Minds</a> <small>with\r\n  <a href=\"http://www.handsonportland.org/\">Hands On Portland</a> and <a href=\"http://www.mycricket.com/portland\">Cricket Wireless</a>\r\n\
+      </small>"
     - 0
     - 2011-12-24 20:46:03 Z
-    - 2011-12-24 21:05:01 Z
+    - 2011-12-24 21:42:42 Z
   - - 3
     - 2
     - Body
@@ -770,13 +986,14 @@ page_parts:
   - - 4
     - 3
     - Body
-    - |-
+    - |
+      
       <p>
       Rebuilding Together * Portland is a non-profit organization supported entirely by contributions of time, labor, materials, and money.  We are dedicated to repairing the homes of those who, due to financial hardship, age, and/or disability cannot do the work themselves.  Skilled and unskilled volunteers along with able-bodied members of the recipients' family and friends complete repairs  at
       <strong>no cost to the homeowner.</strong>
       </p>
       <p>
-      To be eligible for consideration for 2010 the applicant must:
+      To be eligible for consideration for 2012 the applicant must:
       </p>
       <ul>
         <li>Be the owner and occupant of the property
@@ -803,7 +1020,7 @@ page_parts:
       Our skilled and unskilled volunteers do all types of work including painting, plumbing, electrical, carpentry,
       roofing, weatherization, yard cleaning, debris removal, and much more!  We do need the homeowners to understand
       that time and weather may prevent these volunteers from accomplishing everything that the applicant would like done
-      to their home on <strong>our next workday, Saturday, April 24, 2010.</strong>
+      to their home on <strong>our next workday, Saturday, April 28th, 2012.</strong>
       </p>
       <p>
       This is an annual "barn-raising" event designed to repair and rehabilitate the homes of low-income, elderly, and
@@ -835,24 +1052,26 @@ page_parts:
       MikeMalone@rebuildingtogetherportland.org<br />
       
       <p>
-      <a href="/official-logos">Official Logos available for download</a>
+      <a href="/r/logos_page">Official Logos available for download</a>
       </p>
+
     - 0
     - 2011-12-24 20:46:03 Z
-    - 2011-12-24 21:03:42 Z
+    - 2011-12-24 21:19:14 Z
   - - 6
     - 4
     - Body
     - |
+      
       <h2>Board Officers</h2>
       <table class="boardnames">
-      <tbody><tr><td class="name">Scott Williams	</td>
+      <tbody><tr><td class="name">Paul Luty 	</td>
       <td>President 	</td>
-      <td>	Accenture</td>
-      </tr>
-      <tr><td class="name">Paul Luty 	</td>
-      <td>Vice President 	</td>
       <td>	University of Portland - Physical Plant</td>
+      </tr>
+      <tr><td class="name">Michael Desimone 	</td>
+      <td>Vice President 	</td>
+      <td>Key Bank</td>
       </tr>
       <tr><td class="name">Brian Vetrone 	</td>
       <td>Treasurer 	</td>
@@ -868,65 +1087,68 @@ page_parts:
       </tr>
       <tr><td class="name">Kate Chavez 	</td>
       <td>Secretary</td>
-      <td>The Richman Group Affordable Housing Corporation</td>
-      </tr>
+      <td><a href="http://www.enterprisecommunity.com">Enterprise Community Investment, Inc.</a>
+      </td></tr>
       </tbody>
       </table>
       
       <h2>Board of Directors</h2>
       <table class="boardnames">
-      <tbody><tr><td class="name">Michael Desimone       </td>
-      <td>Key Bank</td>
-      </tr>
-      <tr><td class="name">Mark Easley 	</td>
+      <tbody><tr><td class="name">Mark Easley 	</td>
       <td>KEMA Consulting</td>
       </tr>
       <tr><td class="name">Valerie Ebinger</td>
       <td><a href="http://corsource.net">CorSource Technology Group, Inc.</a>
-      </td>
-      </tr>
+      </td></tr>
       
       <tr><td class="name">Mitch Falkenstein</td>
-      <td>&#160;</td>
+      <td><a href="http://www.paramountequity.com">Paramount Equity Mortgage</a>
+      </td></tr>
+      <tr><td class="name">Amanda Kilmartin 	</td>
+      <td>Shorestein Co, LCC</td>
       </tr>
       
-      <tr><td class="name">Dan Gemme       </td>
-      <td><a href="http://turnerconstruction.com/portland/default.asp">Turner Construction</a>
-      </td>
-      </tr>
+      <tr><td class="name">Nic Levesque 	</td>
+      <td><a href="http://www.turnerconstruction.com">Turner Construction</a>
+      </td></tr>
       <tr><td class="name">Dave Lyons 	</td>
-      <td>JDL Development</td>
-      </tr>
-      <tr><td class="name">Ella Mills 	</td>
-      <td><a href="http://biellalighting.com">Biella Lighting Design</a>
-      </td>
-      </tr>
+      <td><a href="http://www.jdldev.com">JDL Development</a>
+      </td></tr>
+      <tr><td class="name">Thomas Moore</td>
+      <td><a href="http://www.turnerconstruction.com">Turner Construction</a>
+      </td></tr>
+      
       <tr><td class="name">Pat Olson 	</td>
       <td>Standard Supply Company</td>
       </tr>
       <tr><td class="name">Deacon John Ries 	</td>
       <td>St. Mary's Cathedral</td>
       </tr>
+      
       <tr><td class="name">Joshua Siler</td>
-      <td><a href="http://www.bnj.com">Babcock &amp; Jenkins</a>
-      </td>
+      <td><a href="http://www.hiringthing.com">HiringThing, Inc.</a>
+      </td></tr>
+      <tr><td class="name">Whitney True 	</td>
+      <td>Lane PR</td>
       </tr>
-      <tr><td class="name">Emily Watson 	</td>
-      <td>Mediamerica</td>
-      </tr>
+      
+      <tr><td class="name">Sarah Williams</td>
+      <td><a href="http://www.hollandresidential.com">Holland Residential</a>
+      </td></tr>
       <tr><td class="name">Brandon Zabrocki 	</td>
-      <td>US Bank</td>
-      </tr>
+      <td><a href="http://www.usbank.com">US Bank</a>
+      </td></tr>
+      
       </tbody>
       </table>
 
     - 0
     - 2011-12-24 20:58:11 Z
-    - 2011-12-24 20:58:11 Z
+    - 2011-12-24 21:18:58 Z
   - - 8
     - 5
     - Body
-    - "<h1>Homeowners</h1>\r\n <p>\r\n We rely on social service agencies, town offices, service organizations, churches, community groups, and individuals\r\n to help us identify homeowners in Portland in need of our assistance. <strong>Do you know an elderly person, somebody with a disability,\r\n or a working family who could use our help?</strong>\r\n Please review the information on this site and contact us with a completed Home Referral Form.\r\n </p>\r\n\
+    - "\r\n <p>\r\n We rely on social service agencies, town offices, service organizations, churches, community groups, and individuals\r\n to help us identify homeowners in Portland in need of our assistance. <strong>Do you know an elderly person, somebody with a disability,\r\n or a working family who could use our help?</strong>\r\n Please review the information on this site and contact us with a completed Home Referral Form.\r\n </p>\r\n\
       <p>\r\n\
       <strong>All repairs are free for homeowners. </strong>Labor and many supplies are typically donated. Homeowners and family members are asked to welcome the volunteers into their homes and work alongside them to the extent possible. Our work is done with families and neighborhoods, not for them. A homeowner brochure is provided to clarify our process and partnership.\r\n\
       </p>\r\n\
@@ -962,7 +1184,7 @@ page_parts:
       will champion and set up a detailed plan of work to be done at the home and is the primary contact for the homeowner\r\n\
       through completion of the work.\r\n </p>\r\n <p>\r\n\
       There are no promises that the work planned will actually be done. Weather, volunteer availability and other factors may affect the actual work completed. The House Captain will decide what work can and cannot be done on the day of work. If your home is chosen for the rehabilitation work, there will be NO charge for our service.\r\n\
-      </p>\r\n <p>\r\n  <a href=\"/forms/Homeowner Referral Form.pdf\" style=\"font-size:1.4em;\">Click Here to Download an Application</a>\r\n </p>\r\n <h2>Contact Information</h2>\r\n\
+      </p>\r\n <p>\r\n  <a href=\"/forms/2011/HomeownerReferralForm.docx\" style=\"font-size:1.4em;\">Click Here to Download an Application</a>\r\n </p>\r\n <h2>Contact Information</h2>\r\n\
       <strong>Rebuilding Together * Portland</strong>\r\n\
       <br />\r\n\
       5000 N. Willamette Blvd. Portland, OR 97203-5798<br />\r\n\
@@ -973,161 +1195,333 @@ page_parts:
       \r\n"
     - 0
     - 2011-12-24 20:59:29 Z
-    - 2011-12-24 20:59:29 Z
+    - 2011-12-24 21:22:35 Z
   - - 9
     - 6
     - Body
-    - |
-      
-       <p>House Captains are our project leaders, and help ensure that each and every project is a success on rebuilding day.
-       If you are interested in becoming a House Captain, please contact <a href="mailto:MikeMalone@RebuildingTogetherPortland.org">Mike Malone at MikeMalone@RebuildingTogetherPortland.org</a>
-      </p>
-       
-       <p>If you've already signed up, <strong>thank you!</strong> The House Captain's role is a crucial element in making our program a success.  It is your skills, hard work and dedication that get our repair and rehabilitation work completed effectively and efficiently.  This role will be challenging and at the same time very rewarding.  Please note the following important dates for your calendar.
-       </p>
-      
-      <p>This year's House Captain's meeting is mandatory attendance.  We are tightening up the time line in an effort to
-      increase efficiency within the organization and to minimize your time requirements.  For these goals to be
-      obtained we need you at the meeting.</p>
-      <p>The role of House Captain is old hat to some of you and we appreciate your continued participation.
-      And we still want you at this meeting, to meet the other House Captains and to learn of the new procedures.</p>
-      <style>
-      table
-      {
-      
-      	border-collapse: collapse;
-      	padding: 0px;
-      	margin: 0px;
-      	border: 2px solid #888;
-      	width: 650px;
-      }
-      table td
-      { 
-      	padding: 6px;
-      	margin: 0px;
-      	font-size: 12px;
-      	vertical-align:top;
-       	border-bottom: 1px solid #000;
-       }
-      
-      </style>
-      <table>
-      <tbody><tr><td><strong>March 3	5:30pm</strong>
-      </td>
-       <td>Room 319, Shiley Hall on the University of Portland campus (look fo r the signs).  This will be our only House Captain meeting.
-       We will be explaining the new procedures regarding material lists and time lines.  <strong>House selection will take place at this meeting.</strong>
-      </td>
-      </tr>
-      <tr><td><strong>March 22</strong>
-      </td>
-       <td>	Have house inspection completed.
-      </td>
-      </tr>
-      <tr><td><strong>April 2</strong>
-      </td>
-       <td>	Notify Rebuilding Together * Portland with the number of volunteers that you have, or the number of skilled and unskilled volunteers that you need.
-      </td>
-      </tr>
-      <tr><td><strong>April 2</strong>
-      </td>
-       <td>	Material list must be in by this date.  It's extremely important to the process of material gathering that the lists get back to us on time.
-      </td>
-      </tr>
-      <tr><td><strong>April 17</strong>
-      </td>
-       <td>	Skilled labor and prep day.  This day has been scheduled to accommodate large jobs where more than one stage of work needs to take place, or where power washing and prepping need to be done prior to the 24th.
-      </td>
-      </tr>
-      <tr><td><strong>April 24</strong>
-      </td>
-       <td>	It's ShowTime!  Rebuilding Together * Portland workday!
-      </td>
-      </tr>
-      <tr><td><strong>April 30</strong>
-      </td>
-       <td>	Evaluations are due back at head quarters.  House Captains must communicate whether or not all of the work started was completed.  If it has not, please confirm what arrangements have been made for completion.
-      </td>
-      </tr>
-      </tbody>
-      </table>
-      
-      <p>If you have any questions please feel free to call the numbers listed below or call our Rebuilding Together * Portland office at 943-7515.
-      </p>
-      <p>We continue to look for additional people to fill the role of House Captain, if you know of someone qualified and interested please ask them to call our office to get involved this year.
-      </p>
-      <p>Thank you again for your interest and willingness to participate in this important endeavor.  As a Rebuilding Together * Portland House Captain this year, you will be joining over 1,500 other individuals around the Portland area, helping make this local and national program a success.  We simply could not accomplish this work without the support and volunteerism of organizers like you.
-      </p>
-      <h2>Resources for House Captains</h2>
-      <ul>
-      <li style="list-style-image: url(/images/icons/page_white_acrobat.png);"><a href="/files/2010 campus map.pdf"> Campus Map</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 HC Volunteer List Work Sheet.doc">HC Volunteer List Work Sheet</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 HC Handbook - Planning ahead.doc.doc"> HC Handbook - Planning ahead</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 HC Handbook - The Work Day.doc.doc"> HC Handbook - The Work Day</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 HC Role &amp; Responsibilities.doc"> HC Role &amp; Responsibilities</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 House Captain Evaluation.doc"> House Captain Evaluation</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_white_acrobat.png);"><a href="/files/2010 Lowe's Order Form.pdf">Lowe's Order Form</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Lowe's material procedures.doc"> Lowe's material procedures</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_excel.png);"><a href="/files/2010 Material Help.xls"> Material Help</a>
-      </li>
-      
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Updated Volunteer Agreement and Release.doc"> Updated Volunteer Agreement and Release</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Guidelines for House Liaisons.doc">Guidelines for House Liaisons</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Homeowner Agreement.doc"> 2010 Homeowner Agreement</a>
-      </li>
-      
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Volunteer Estimate Form.doc"> Volunteer Estimate Form</a>
-      </li>
-      
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Med Treatment Authorization for Minor.doc"> Med Treatment Authorization for Minor</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Volunteer Opportunities Form.doc"> Volunteer Opportunities Form</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Lead-safe remodeling Procedures.doc"> Lead-safe remodeling Procedures</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_white_acrobat.png);"><a href="/files/leadpdfe.pdf">Lead Information</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Safety Tool box talk guidelines.doc"> Safety Tool box talk guidelines</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 WARNING SIGN.doc"> WARNING SIGN</a>
-      </li>
-      
-      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Scope of Work.doc"> Scope of Work</a>
-      </li>
-      <li style="list-style-image: url(/images/icons/page_white_acrobat.png);"><a href="/files/homeowner_brochure.pdf">Homeowner Brochure</a>
-      </li>
-      </ul>
-       <h2>Contact Information</h2>
-      <strong>Dave Lyons, Committee Chairman</strong>
-      <br />
-      Days - 503-248-2030 and evenings - 503-287-9915<br />
-      Please confirm your attendance: <a href="dave@jdldev.com">Dave Lyons - dave@jdldev.com</a> or <a href="mailto:MikeMalone@RebuildingTogetherPortland.org">Mike Malone - MikeMalone@RebuildingTogetherPortland.org</a>
-      <br /><br />
-      <strong>Rebuilding Together * Portland</strong>
-      <br />
-      5000 N. Willamette Blvd. Portland, OR 97203-5798<br />
-      Phone: 503-943-7515<br />
-      Fax: 503-943-7322<br />
-      <a href="mailto:MikeMalone@rebuildingtogetherportland.org">MikeMalone@rebuildingtogetherportland.org</a>
-      <br />
-      
-
+    - " \r\n <p>House Captains are our project leaders, and help ensure that each and every project is a success on rebuilding day.\r\n If you are interested in becoming a House Captain, please contact <a href=\"mailto:MikeMalone@RebuildingTogetherPortland.org\">Mike Malone at MikeMalone@RebuildingTogetherPortland.org</a>\r\n\
+      </p>\r\n\
+      \r\n <p>If you've already signed up, <strong>thank you!</strong> The House Captain's role is a crucial element in making our program a success.  It is your skills, hard work and dedication that get our repair and rehabilitation work completed effectively and efficiently.  This role will be challenging and at the same time very rewarding.\r\n </p>\r\n\
+      <p>\r\n\
+      For more information, start here: <a href=\"/files/RT2011hcltter.doc\">Letter to House Captains</a> (with 2011 schedule)\r\n\
+      </p>\r\n\
+      <h2>Resources for House Captains</h2>\r\n\
+      <ul>\r\n\
+      <li style=\"list-style-image: url(/images/icons/new.png);margin-bottom: 20px;\"><em>Updated for 2011</em>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_white_acrobat.png);\"><a href=\"/files/2011/2011_campus_map.pdf\">\r\n\
+      \t\r\n\
+      \t\tCampus\r\n\
+      \r\n\
+      \t\tMap\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_guidelines_for_house_liaisons.doc\">\r\n\
+      \t\r\n\
+      \t\tGuidelines\r\n\
+      \r\n\
+      \t\tFor\r\n\
+      \r\n\
+      \t\tHouse\r\n\
+      \r\n\
+      \t\tLiaisons\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_hc_handbook_planning_ahead.doc.doc\">\r\n\
+      \t\r\n\
+      \t\tHc\r\n\
+      \r\n\
+      \t\tHandbook\r\n\
+      \r\n\
+      \t\tPlanning\r\n\
+      \r\n\
+      \t\tAhead\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_hc_handbook_the_work_day.doc.doc\">\r\n\
+      \t\r\n\
+      \t\tHc\r\n\
+      \r\n\
+      \t\tHandbook\r\n\
+      \r\n\
+      \t\tThe\r\n\
+      \r\n\
+      \t\tWork\r\n\
+      \r\n\
+      \t\tDay\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_hc_orientation_agenda.doc\">\r\n\
+      \t\r\n\
+      \t\tHc\r\n\
+      \r\n\
+      \t\tOrientation\r\n\
+      \r\n\
+      \t\tAgenda\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_hc_role_&amp;_responsibilities.doc\">\r\n\
+      \t\r\n\
+      \t\tHc\r\n\
+      \r\n\
+      \t\tRole\r\n\
+      \r\n\
+      \t\t&amp;\r\n\
+      \r\n\
+      \t\tResponsibilities\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_hc_volunteer_list_work_sheet.doc\">\r\n\
+      \t\r\n\
+      \t\tHc\r\n\
+      \r\n\
+      \t\tVolunteer\r\n\
+      \r\n\
+      \t\tList\r\n\
+      \r\n\
+      \t\tWork\r\n\
+      \r\n\
+      \t\tSheet\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_homeowner_agreement.doc\">\r\n\
+      \t\r\n\
+      \t\tHomeowner\r\n\
+      \r\n\
+      \t\tAgreement\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_homeowner_interview-house_inspection_sign_up.doc\">\r\n\
+      \t\r\n\
+      \t\tHomeowner\r\n\
+      \r\n\
+      \t\tInterview-house\r\n\
+      \r\n\
+      \t\tInspection\r\n\
+      \r\n\
+      \t\tSign\r\n\
+      \r\n\
+      \t\tUp\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_house_captain_evaluation.doc\">\r\n\
+      \t\r\n\
+      \t\tHouse\r\n\
+      \r\n\
+      \t\tCaptain\r\n\
+      \r\n\
+      \t\tEvaluation\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_house_captains_reminder_lttr.doc\">\r\n\
+      \t\r\n\
+      \t\tHouse\r\n\
+      \r\n\
+      \t\tCaptains\r\n\
+      \r\n\
+      \t\tReminder\r\n\
+      \r\n\
+      \t\tLttr\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_house_caption_flow_chart_for_recruiting_volunteers.doc\">\r\n\
+      \t\r\n\
+      \t\tHouse\r\n\
+      \r\n\
+      \t\tCaption\r\n\
+      \r\n\
+      \t\tFlow\r\n\
+      \r\n\
+      \t\tChart\r\n\
+      \r\n\
+      \t\tFor\r\n\
+      \r\n\
+      \t\tRecruiting\r\n\
+      \r\n\
+      \t\tVolunteers\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_lead-safe_remodeling_procedures.doc\">\r\n\
+      \t\r\n\
+      \t\tLead-safe\r\n\
+      \r\n\
+      \t\tRemodeling\r\n\
+      \r\n\
+      \t\tProcedures\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_white_acrobat.png);\"><a href=\"/files/2011/2011_lowes_order_form.pdf\">\r\n\
+      \t\r\n\
+      \t\tLowes\r\n\
+      \r\n\
+      \t\tOrder\r\n\
+      \r\n\
+      \t\tForm\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_excel.png);\"><a href=\"/files/2011/2011_material_help.xls\">\r\n\
+      \t\r\n\
+      \t\tMaterial\r\n\
+      \r\n\
+      \t\tHelp\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_med_treatment_authorization_for_minor.doc\">\r\n\
+      \t\r\n\
+      \t\tMed\r\n\
+      \r\n\
+      \t\tTreatment\r\n\
+      \r\n\
+      \t\tAuthorization\r\n\
+      \r\n\
+      \t\tFor\r\n\
+      \r\n\
+      \t\tMinor\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_safety_tool_box_talk_guidelines.doc\">\r\n\
+      \t\r\n\
+      \t\tSafety\r\n\
+      \r\n\
+      \t\tTool\r\n\
+      \r\n\
+      \t\tBox\r\n\
+      \r\n\
+      \t\tTalk\r\n\
+      \r\n\
+      \t\tGuidelines\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_scope_of_work.doc\">\r\n\
+      \t\r\n\
+      \t\tScope\r\n\
+      \r\n\
+      \t\tOf\r\n\
+      \r\n\
+      \t\tWork\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_updated_volunteer_agreement_and_release.doc\">\r\n\
+      \t\r\n\
+      \t\tUpdated\r\n\
+      \r\n\
+      \t\tVolunteer\r\n\
+      \r\n\
+      \t\tAgreement\r\n\
+      \r\n\
+      \t\tAnd\r\n\
+      \r\n\
+      \t\tRelease\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_volunteer_estimate_form.doc\">\r\n\
+      \t\r\n\
+      \t\tVolunteer\r\n\
+      \r\n\
+      \t\tEstimate\r\n\
+      \r\n\
+      \t\tForm\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_volunteer_opportunities_form.doc\">\r\n\
+      \t\r\n\
+      \t\tVolunteer\r\n\
+      \r\n\
+      \t\tOpportunities\r\n\
+      \r\n\
+      \t\tForm\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/lowes_material_procedures_2011.doc\">\r\n\
+      \t\r\n\
+      \t\tLowes\r\n\
+      \r\n\
+      \t\tMaterial\r\n\
+      \r\n\
+      \t\tProcedures\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      \r\n\
+      <li style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/xmas_2011_hc_lttr.doc\">\r\n\
+      \t\r\n\
+      \t\tXmas\r\n\
+      \r\n\
+      \t\tHc\r\n\
+      \r\n\
+      \t\tLttr\r\n\
+      </a>\r\n\
+      </li>\r\n\
+      \r\n\
+      </ul>\r\n\
+      \r\n <h2>Contact Information</h2>\r\n\
+      <strong>Dave Lyons, Committee Chairman</strong>\r\n\
+      <br />\r\n\
+      Days - 503-248-2030 and evenings - 503-287-9915<br />\r\n\
+      Please confirm your attendance: <a href=\"dave@jdldev.com\">Dave Lyons - dave@jdldev.com</a> or <a href=\"mailto:MikeMalone@RebuildingTogetherPortland.org\">Mike Malone - MikeMalone@RebuildingTogetherPortland.org</a>\r\n\
+      <br /><br />\r\n\
+      <strong>Rebuilding Together * Portland</strong>\r\n\
+      <br />\r\n\
+      5000 N. Willamette Blvd. Portland, OR 97203-5798<br />\r\n\
+      Phone: 503-943-7515<br />\r\n\
+      Fax: 503-943-7322<br />\r\n\
+      <a href=\"mailto:MikeMalone@rebuildingtogetherportland.org\">MikeMalone@rebuildingtogetherportland.org</a>\r\n\
+      <br />\r\n\
+      \r\n\
+      \r\n\
+      \t\t\r\n"
     - 0
     - 2011-12-24 20:59:55 Z
-    - 2011-12-24 20:59:55 Z
+    - 2011-12-24 21:21:15 Z
   - - 10
     - 7
     - Body
     - |
+      
       <p>
       <strong>Free facility repairs available for Non-Profits.</strong> It's Rebuilding Together Portland to the rescue!
       </p>
@@ -1164,7 +1558,7 @@ page_parts:
       To become eligible for assistance, fill out our Non-profit Referral Form.
       </p>
        <p>
-        <a href="/forms/Non-ProfitReferralForm.pdf" style="font-size:1.4em;">Click Here to Download an Application</a>
+        <a href="/forms/2012/Non-ProfitReferralForm12.doc" style="font-size:1.4em;">Click Here to Download an Application</a>
        </p>
        <h2>Contact Information</h2>
       <strong>Rebuilding Together * Portland</strong>
@@ -1174,10 +1568,11 @@ page_parts:
       Fax: 503-943-7322<br />
       <a href="mailto:MikeMalone@rebuildingtogetherportland.org">MikeMalone@rebuildingtogetherportland.org</a>
       <br />
+      
 
     - 0
     - 2011-12-24 21:00:43 Z
-    - 2011-12-24 21:00:43 Z
+    - 2011-12-24 21:22:58 Z
   - - 11
     - 8
     - Body
@@ -1431,6 +1826,53 @@ page_parts:
     - 0
     - 2011-12-24 21:02:35 Z
     - 2011-12-24 21:03:14 Z
+  - - 12
+    - 9
+    - Body
+    - |
+      <p>
+      	<strong>You can make a difference.</strong> Experience the great feeling that comes with helping out your community. Our volunteers come to us with all different levels of skills, and every helping hand makes a difference.
+      	Whether you're a skilled tradesman or simply looking to help out any way you can, please fill out the form below to get started. Also, we'll need these forms completed before the work day:
+      <br /><br />
+      
+      <a href="/files/2011/2011_med_treatment_authorization_for_minor.doc">Medical Treatment Authorization (for minors)</a>
+      <br />
+      <a href="/files/2011/2011_updated_volunteer_agreement_and_release.doc">Volunteer's Agreement</a>
+      </p>
+
+    - 0
+    - 2011-12-24 21:27:22 Z
+    - 2011-12-24 21:33:50 Z
+  - - 13
+    - 9
+    - Side Body
+    - |
+      <p><strong>Rebuilding Together * Portland</strong>
+      <br />
+      5000 N. Willamette Blvd. Portland, OR 97203-5798<br />
+      Phone: 503-943-7515<br />
+      Fax: 503-943-7322<br />
+      <a href="mailto:MikeMalone@rebuildingtogetherportland.org">MikeMalone@rebuildingtogetherportland.org</a>
+      <br />
+      </p>
+
+    - 1
+    - 2011-12-24 21:27:22 Z
+    - 2011-12-24 21:33:50 Z
+  - - 14
+    - 10
+    - Body
+    - <p>We've received your inquiry and will get back to you with a response shortly.</p><p><a href='/'>Return to the home page</a></p>
+    - 0
+    - 2011-12-24 21:27:22 Z
+    - 2011-12-24 21:27:22 Z
+  - - 15
+    - 11
+    - Body
+    - <p>We respect your privacy. We do not market, rent or sell our email list to any outside parties.</p><p>We need your e-mail address so that we can ensure that the people using our forms are bona fide. It also allows us to send you e-mail newsletters and other communications, if you opt-in. Your postal address is required in order to send you information and pricing, if you request it.</p><p>Please call us at 123 456 7890 if you have any questions or concerns.</p>
+    - 0
+    - 2011-12-24 21:27:22 Z
+    - 2011-12-24 21:27:22 Z
 
 --- 
 page_translations: 
@@ -1499,6 +1941,27 @@ page_translations:
     - ""
     - 2011-12-24 21:02:35 Z
     - 2011-12-24 21:03:14 Z
+  - - 9
+    - 9
+    - en
+    - Volunteer
+    - ""
+    - 2011-12-24 21:27:22 Z
+    - 2011-12-24 21:31:00 Z
+  - - 10
+    - 10
+    - en
+    - Thank You
+    - 
+    - 2011-12-24 21:27:22 Z
+    - 2011-12-24 21:27:22 Z
+  - - 11
+    - 11
+    - en
+    - Privacy Policy
+    - 
+    - 2011-12-24 21:27:22 Z
+    - 2011-12-24 21:27:22 Z
 
 --- 
 pages: 
@@ -1525,7 +1988,7 @@ pages:
     - 0
     - 
     - 2011-12-24 20:46:03 Z
-    - 2011-12-24 21:05:01 Z
+    - 2011-12-24 21:42:42 Z
     - true
     - /
     - 
@@ -1557,7 +2020,7 @@ pages:
     - 1
     - 
     - 2011-12-24 20:46:03 Z
-    - 2011-12-24 21:03:42 Z
+    - 2011-12-24 21:19:14 Z
     - true
     - ""
     - 
@@ -1573,7 +2036,7 @@ pages:
     - 2
     - 
     - 2011-12-24 20:58:11 Z
-    - 2011-12-24 20:58:11 Z
+    - 2011-12-24 21:18:58 Z
     - true
     - ""
     - 
@@ -1589,7 +2052,7 @@ pages:
     - 3
     - 
     - 2011-12-24 20:59:29 Z
-    - 2011-12-24 20:59:29 Z
+    - 2011-12-24 21:22:35 Z
     - true
     - ""
     - 
@@ -1605,7 +2068,7 @@ pages:
     - 4
     - 
     - 2011-12-24 20:59:55 Z
-    - 2011-12-24 20:59:55 Z
+    - 2011-12-24 21:21:15 Z
     - true
     - ""
     - 
@@ -1621,7 +2084,7 @@ pages:
     - 5
     - 
     - 2011-12-24 21:00:43 Z
-    - 2011-12-24 21:00:43 Z
+    - 2011-12-24 21:22:58 Z
     - true
     - ""
     - 
@@ -1647,6 +2110,54 @@ pages:
     - false
     - 15
     - 16
+    - 
+  - - 9
+    - 
+    - 7
+    - 
+    - 2011-12-24 21:27:22 Z
+    - 2011-12-24 21:33:50 Z
+    - true
+    - /contact
+    - ^/(inquiries|contact).*$
+    - false
+    - none
+    - false
+    - false
+    - 17
+    - 22
+    - 
+  - - 10
+    - 9
+    - 0
+    - 
+    - 2011-12-24 21:27:22 Z
+    - 2011-12-24 21:27:22 Z
+    - false
+    - /contact/thank_you
+    - ^/(inquiries|contact)/thank_you$
+    - false
+    - none
+    - false
+    - false
+    - 18
+    - 19
+    - 
+  - - 11
+    - 9
+    - 1
+    - 
+    - 2011-12-24 21:27:22 Z
+    - 2011-12-24 21:27:22 Z
+    - false
+    - 
+    - 
+    - true
+    - none
+    - false
+    - false
+    - 20
+    - 21
     - 
 
 --- 
@@ -1919,6 +2430,44 @@ refinery_settings:
     - false
     - 
     - text_area
+  - - 19
+    - show_contact_privacy_link
+    - |
+      --- "false"
+
+    - true
+    - 2011-12-24 21:28:53 Z
+    - 2011-12-24 21:28:53 Z
+    - 
+    - false
+    - 
+    - text_area
+  - - 20
+    - image_views
+    - |
+      --- 
+      - :grid
+      - :list
+
+    - true
+    - 2011-12-24 21:33:57 Z
+    - 2011-12-24 21:33:57 Z
+    - 
+    - false
+    - 
+    - text_area
+  - - 21
+    - preferred_image_view
+    - |
+      --- :grid
+
+    - true
+    - 2011-12-24 21:33:57 Z
+    - 2011-12-24 21:33:57 Z
+    - 
+    - false
+    - 
+    - text_area
 
 --- 
 roles: 
@@ -2018,6 +2567,30 @@ seo_meta:
     - ""
     - 2011-12-24 21:02:35 Z
     - 2011-12-24 21:02:35 Z
+  - - 9
+    - 9
+    - Page::Translation
+    - ""
+    - ""
+    - ""
+    - 2011-12-24 21:27:22 Z
+    - 2011-12-24 21:31:00 Z
+  - - 10
+    - 10
+    - Page::Translation
+    - 
+    - 
+    - 
+    - 2011-12-24 21:27:22 Z
+    - 2011-12-24 21:27:22 Z
+  - - 11
+    - 11
+    - Page::Translation
+    - 
+    - 
+    - 
+    - 2011-12-24 21:27:22 Z
+    - 2011-12-24 21:27:22 Z
 
 --- 
 slugs: 
@@ -2127,6 +2700,38 @@ slugs:
     - 
     - 2011-12-24 21:04:29 Z
     - en
+  - - 13
+    - contact-page
+    - 9
+    - 1
+    - Page
+    - 
+    - 2011-12-24 21:27:22 Z
+    - en
+  - - 14
+    - thank-you
+    - 10
+    - 1
+    - Page
+    - 
+    - 2011-12-24 21:27:22 Z
+    - en
+  - - 15
+    - privacy-policy
+    - 11
+    - 1
+    - Page
+    - 
+    - 2011-12-24 21:27:22 Z
+    - en
+  - - 16
+    - volunteer
+    - 9
+    - 1
+    - Page
+    - 
+    - 2011-12-24 21:31:00 Z
+    - en
 
 --- 
 user_plugins: 
@@ -2180,6 +2785,10 @@ user_plugins:
     - 1
     - refinery_generators
     - 10
+  - - 18
+    - 1
+    - refinery_inquiries
+    - 11
 
 --- 
 users: 
