@@ -1,7 +1,7 @@
 
----
-page_part_translations:
-  columns:
+--- 
+page_part_translations: 
+  columns: 
   - id
   - page_part_id
   - locale
@@ -9,387 +9,720 @@ page_part_translations:
   - created_at
   - updated_at
   records: 
----
-  - - '5'
-    - '5'
+  - - 1
+    - 1
     - en
-    - ! "<h2>Board Officers</h2>\r\n<table class=\"boardnames\">\r\n<tbody><tr><td
-      class=\"name\">Paul Luty \t</td>\r\n<td>President \t</td>\r\n<td>\tUniversity
-      of Portland - Physical Plant</td>\r\n</tr>\r\n<tr><td class=\"name\">Michael
-      Desimone \t</td>\r\n<td>Vice President \t</td>\r\n<td>Key Bank</td>\r\n</tr>\r\n<tr><td
-      class=\"name\">Brian Vetrone \t</td>\r\n<td>Treasurer \t</td>\r\n<td>\tHampton
-      Affiliates</td>\r\n</tr>\r\n<tr><td class=\"name\">Mike Malone \t</td>\r\n<td>Executive
-      Director \t</td>\r\n<td>\tRebuilding Together*Portland</td>\r\n</tr>\r\n<tr><td
-      class=\"name\">Brian Thompson \t</td>\r\n<td>Legal \t</td>\r\n<td> \tMiller
-      Nash LLP</td>\r\n</tr>\r\n<tr><td class=\"name\">Kate Chavez \t</td>\r\n<td>Secretary</td>\r\n<td><a
-      href=\"http://www.enterprisecommunity.com\">Enterprise Community Investment,
-      Inc.</a>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n\r\n<h2>Board of Directors</h2>\r\n<table
-      class=\"boardnames\">\r\n<tbody><tr><td class=\"name\">Mark Easley \t</td>\r\n<td>KEMA
-      Consulting</td>\r\n</tr>\r\n<tr><td class=\"name\">Valerie Ebinger</td>\r\n<td><a
-      href=\"http://corsource.net\">CorSource Technology Group, Inc.</a>\r\n</td>\r\n</tr>\r\n\r\n<tr><td
-      class=\"name\">Mitch Falkenstein</td>\r\n<td><a href=\"http://www.paramountequity.com\">Paramount
-      Equity Mortgage</a>\r\n</td>\r\n</tr>\r\n\r\n<tr><td class=\"name\">Dave Lyons
-      \t</td>\r\n<td><a href=\"http://www.jdldev.com\">JDL Development</a>\r\n</td>\r\n</tr>\r\n<tr><td
-      class=\"name\">Thomas Moore</td>\r\n<td><a href=\"http://www.turnerconstruction.com\">Turner
-      Construction</a>\r\n</td>\r\n</tr>\r\n<tr><td class=\"name\">Pat Olson \t</td>\r\n<td>Standard
-      Supply Company</td>\r\n</tr>\r\n<tr><td class=\"name\">Deacon John Ries \t</td>\r\n<td>St.
-      Mary's Cathedral</td>\r\n</tr>\r\n\r\n<tr><td class=\"name\">Joshua Siler</td>\r\n<td><a
-      href=\"http://www.bnj.com\">Babcock &amp; Jenkins</a>\r\n</td>\r\n</tr>\r\n<tr><td
-      class=\"name\">Sarah Williams</td>\r\n<td><a href=\"http://www.hollandresidential.com\">Holland
-      Residential</a>\r\n</td>\r\n</tr>\r\n<tr><td class=\"name\">Brandon Zabrocki
-      \t</td>\r\n<td><a href=\"http://www.usbank.com\">US Bank</a>\r\n</td>\r\n</tr>\r\n\r\n</tbody>\r\n</table>\r\n"
-    - '2011-09-10 19:22:19'
-    - '2011-09-11 22:40:42'
-  - - '6'
-    - '6'
+    - |-
+      
+       Rebuilding Together * Portland is a non-profit organization supported entirely by contributions of time, labor, materials, and money.
+      		    We are dedicated to repairing the homes of those who, due to financial hardship, age, and/or disability cannot do the work themselves.
+      		    Skilled and unskilled volunteers, along with able-bodied members of the recipients' family and friends, complete repairs  at no cost to the homeowner.
+      		    <br /><br />
+      		    <strong>Free home repairs</strong> are available for low-income homeowners. <a href="&lt;%= url_for :controller =&gt; :mainsite, :action =&gt; :homeowners_page %&gt;">Learn more</a>
+      		    <br /><br />
+      		    We will be celebrating our 20th year on April 24, 2010.  Our goal is to repair and rehabilitate over 50 homes and non-profit community facilities.
+      		    <br /><br />
+      		    <a href="&lt;%= url_for :controller =&gt; :contacts, :action =&gt; :new%&gt;">Sign up today</a> and join our 1500 strong volunteer workforce on <strong>Rebuilding Day 2010</strong>!
+      		    <br /><br />
+      		    
+      		    <img src="/images/photos/_DSC0393.JPG" />
+      		    <img src="/images/photos/128group.JPG" />
+      		    <br /><br />
+      		    A few of our sponsors:<br /><br />
+      		    <img src="/images/logo-sample.gif" alt="Sponsor logos" style="margin-left:150px;" />
+      		    <img alt="Cricket Wireless" src="/images/cricketwireless.gif" />
+      <h2>Recent Projects</h2>
+      <a href="http://www.mtscottlearningcenters.org/CultivatingMinds.htm">Cultivating Minds</a> <small>with
+        <a href="http://www.handsonportland.org/">Hands On Portland</a> and <a href="http://www.mycricket.com/portland">Cricket Wireless</a>
+      </small>
+    - 2011-12-24 20:46:03 Z
+    - 2011-12-24 21:05:01 Z
+  - - 2
+    - 2
     - en
-    - ! "<p>\r\n<strong>Free facility repairs available for Non-Profits.</strong>
-      It's Rebuilding Together Portland to the rescue!\r\n</p>\r\n<p>\r\nSince 1990
-      Rebuilding Together Portland has been realizing ambitious annual goals to repair
-      and rehabilitate both homes and non-profit community facilities. While more
-      than 50 homes are worked on each year, Rebuilding Together Portland also helps
-      five or six non-profits each year with free facility repairs. Rebuilding Together
-      Portland matches coordinates projects year-round, but most of the work is done
-      on the last Saturday in April each year by more than a thousand volunteers on
-      that one day.\r\n</p>\r\n<p>\r\nRebuilding Together is a non-profit organization
-      supported entirely by contributions of time, labor, materials, and money. Our
-      core competencies include identifying worthy homeowners and non-profits in need
-      and matching them with volunteers, supplies and materials. Rebuilding Together
-      Portland coordinates skilled and unskilled volunteers and materials needed to
-      complete the work in a day or two. We are always looking for good projects at
-      non-profit properties where volunteers will enjoy and appreciate their contribution.\r\n</p>\r\n<p>\r\nTo
-      be eligible for consideration, the applicant's property must:\r\n</p>\r\n<ul>\r\n
-      \   <li>Be the owner and occupant of the property\r\n    </li>\r\n<li>Assist
-      low income individuals whom are also elderly or disabled or with children\r\n
-      \   </li>\r\n<li>Be unable both financially and physically to effect repairs
-      themselves\r\n    </li>\r\n<li>Be located on a property in the city of Portland.\r\n</li>\r\n</ul>\r\n<p>\r\nSafety
-      and security are the first priorities of Rebuilding Together. Our skilled and
-      unskilled volunteers do all\r\ntypes of work including painting, plumbing, electrical,
-      carpentry, weatherization, yard cleaning,\r\ndebris removal, and much more!\r\n</p>\r\n<p>\r\nWhen
-      a project is accepted, a scope of work is defined in advance, but the non-profit
-      organization and homeowners\r\nneed to understand these are volunteers and that
-      time and weather may prevent them from\r\naccomplishing everything planned to
-      be completed.\r\n</p>\r\n<p>\r\nTo become eligible for assistance, fill out
-      our Non-profit Referral Form.\r\n</p>\r\n <p>\r\n  <a href=\"/forms/2012/Non-ProfitReferralForm12.doc\"
-      style=\"font-size:1.4em;\">Click Here to Download an Application</a>\r\n </p>\r\n
-      <h2>Contact Information</h2>\r\n<strong>Rebuilding Together * Portland</strong>\r\n<br
-      />\r\n5000 N. Willamette Blvd. Portland, OR 97203-5798<br />\r\nPhone: 503-943-7515<br
-      />\r\nFax: 503-943-7322<br />\r\n<a href=\"mailto:MikeMalone@rebuildingtogetherportland.org\">MikeMalone@rebuildingtogetherportland.org</a>\r\n<br
-      />\r\n\r\n"
-    - '2011-09-11 22:24:21'
-    - '2011-09-11 22:40:17'
-  - - '7'
-    - '7'
+    - <p>This is another block of content over here.</p>
+    - 2011-12-24 20:46:03 Z
+    - 2011-12-24 20:46:03 Z
+  - - 3
+    - 3
     - en
-    - ! "<h1>Official Logos</h1>\r\nThe elements of the \r\n\t\t\t\t\t\t\t\t\tnational
-      logo consist of the artwork (\"the \r\n\t\t\t\t\t\t\t\t\tsymbol\") and the words
-      Rebuilding Together. \r\n\t\t\t\t\t\t\t\t\tIt is a unique mark and may not be
-      altered. \r\n\t\t\t\t\t\t\t\t\tThe logo must not be redrawn and cannot \r\n\t\t\t\t\t\t\t\t\tinclude
-      any additional graphic \r\n\t\t\t\t\t\t\t\t\tembellishments. The position and
-      size \r\n\t\t\t\t\t\t\t\t\trelationship of the elements should not be \r\n\t\t\t\t\t\t\t\t\tchanged.
-      It should be reproduced from the \r\n\t\t\t\t\t\t\t\t\tartwork provided by the
-      national \r\n\t\t\t\t\t\t\t\t\torganization or from a digital version, \r\n\t\t\t\t\t\t\t\t\tavailable
-      on the CD accompanying this manual \r\n\t\t\t\t\t\t\t\t\tor downloadable from
-      the members-only \r\n\t\t\t\t\t\t\t\t\tsection of www.rebuildingtogether.org
-      in a \r\n\t\t\t\t\t\t\t\t\tnumber of formats and versions. The national \r\n\t\t\t\t\t\t\t\t\toffice
-      has trademark protection for the \r\n\t\t\t\t\t\t\t\t\tRebuilding Together logo.
-      Always use the ® \r\n\t\t\t\t\t\t\t\t\tthat appears at the base of the \"r\"
-      in \r\n\t\t\t\t\t\t\t\t\t\"Together.\" Do not use the logo as a part of \r\n\t\t\t\t\t\t\t\t\tanother
-      corporate name.<br />\r\n\t\t\t\t\t\t\t\t\tBy downloading any logos from this
-      site, you \r\n\t\t\t\t\t\t\t\t\tare agreeing to adhere to these guidelines.\r\n\r\n<h2>Downloads</h2>\r\n<style>\r\n
-      \ img\r\n  {\r\n    border: none;\r\n  }\r\n</style>\r\n<table style=\"width:
-      100%\">\r\n\t\t\t\t\t\t\t\t\t<tbody><tr>\r\n\t\t\t\t\t\t\t\t\t\t<td class=\"style20\">\r\n\t\t\t\t\t\t\t\t\t\t<span
-      class=\"style19\">&#160;<a href=\"/logos/RT_2Clogo_horiz.jpg\" class=\"style14\"><img
-      src=\"/images/RT_2Clogo_horiz_small.jpg\" width=\"344\" height=\"100\" class=\"style17\"
-      /></a>\r\n<br />\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_2Clogo_horiz.eps\">\r\n\t\t\t\t\t\t\t\t\t\tRT_2Clogo_horiz.eps</a>\r\n<br
-      />\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_2Clogo_horiz.jpg\">\r\n\t\t\t\t\t\t\t\t\t\tRT_2Clogo_horiz.jpg</a>\r\n<br
-      />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n</td>\r\n\t\t\t\t\t\t\t\t\t\t<td class=\"style23\">&#160;<a
-      href=\"/logos/RT_2Clogo_stacked.jpg\"><span class=\"style22\"><img src=\"/images/RT_2Clogo_stacked_small.jpg\"
-      width=\"204\" height=\"100\" class=\"style21\" /></span>\r\n</a><span class=\"style22\"><br
-      />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_2Clogo_stacked.jpg\">\r\n\t\t\t\t\t\t\t\t\t\t<span
-      class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_2Clogo_stacked.jpg</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_2Clogo_stacked.eps\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_2Clogo_stacked.eps</span>\r\n</a></td>\r\n\t\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t\t\t<tr
-      class=\"style19\">\r\n\t\t\t\t\t\t\t\t\t\t<td class=\"style23\">\r\n\t\t\t\t\t\t\t\t\t\t<span
-      class=\"style22\">&#160;</span>\r\n<a href=\"/logos/RT_Blacklogo_horiz.jpg\"><span
-      class=\"style22\"><img src=\"/images/RT_Blacklogo_horiz_small.jpg\" width=\"344\"
-      height=\"100\" class=\"style21\" /></span>\r\n</a><span class=\"style22\"><br
-      />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_Blacklogo_horiz.jpg\">\r\n\t\t\t\t\t\t\t\t\t\t<span
-      class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_Blacklogo_horiz.jpg</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_Blacklogo_horiz.eps\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_Blacklogo_horiz.eps</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n</td>\r\n\t\t\t\t\t\t\t\t\t\t<td
-      class=\"style23\">&#160;<a href=\"/logos/RT_Blacklogo_stacked.jpg\"><span class=\"style22\"><img
-      src=\"/images/RT_Blacklogo_stacked_small.jpg\" width=\"204\" height=\"100\"
-      class=\"style21\" /></span>\r\n</a><span class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_Blacklogo_stacked.jpg\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_Blacklogo_stacked.jpg</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_Blacklogo_stacked.eps\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_Blacklogo_stacked.eps</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n</td>\r\n\t\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t\t\t<tr
-      class=\"style19\">\r\n\t\t\t\t\t\t\t\t\t\t<td class=\"style23\">\r\n\t\t\t\t\t\t\t\t\t\t<span
-      class=\"style22\">&#160;</span>\r\n<a href=\"/logos/RT_GSlogo_horiz.jpg\"><span
-      class=\"style22\"><img src=\"/images/RT_GSlogo_horiz_small.jpg\" width=\"344\"
-      height=\"100\" class=\"style21\" /></span>\r\n</a><span class=\"style22\"><br
-      />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_GSlogo_horiz.jpg\">\r\n\t\t\t\t\t\t\t\t\t\t<span
-      class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_GSlogo_horiz.jpg</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_GSlogo_horiz.eps\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_GSlogo_horiz.eps</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n</td>\r\n\t\t\t\t\t\t\t\t\t\t<td
-      class=\"style23\">&#160;<a href=\"/logos/RT_GSlogo_stacked.jpg\"><span class=\"style22\"><img
-      src=\"/images/RT_GSlogo_stacked_small.jpg\" width=\"204\" height=\"100\" class=\"style21\"
-      /></span>\r\n</a><span class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_GSlogo_stacked.jpg\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_GSlogo_stacked.jpg</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_GSlogo_stacked.eps\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_GSlogo_stacked.eps</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n</td>\r\n\t\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t\t\t<tr
-      class=\"style19\">\r\n\t\t\t\t\t\t\t\t\t\t<td class=\"style23\">\r\n\t\t\t\t\t\t\t\t\t\t<span
-      class=\"style22\">&#160;</span>\r\n<a href=\"/logos/RT_PMS368logo_horiz.jpg\"><span
-      class=\"style22\"><img src=\"/images/RT_PMS368logo_horiz_small.jpg\" width=\"344\"
-      height=\"100\" class=\"style21\" /></span>\r\n</a><span class=\"style22\"><br
-      />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_PMS368logo_horiz.jpg\">\r\n\t\t\t\t\t\t\t\t\t\t<span
-      class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_PMS368logo_horiz.jpg</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_PMS368logo_horiz.eps\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_PMS368logo_horiz.eps</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n</td>\r\n\t\t\t\t\t\t\t\t\t\t<td
-      class=\"style23\">&#160;<a href=\"/logos/RT_PMS368logo_stacked.jpg\"><span class=\"style22\"><img
-      src=\"/images/RT_PMS368logo_stacked_small.jpg\" width=\"204\" height=\"100\"
-      class=\"style21\" /></span>\r\n</a><span class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_PMS368logo_stacked.jpg\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_PMS368logo_stacked.jpg</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_PMS368logo_stacked.eps\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_PMS368logo_stacked.eps</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n</td>\r\n\t\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t\t\t<tr
-      class=\"style19\">\r\n\t\t\t\t\t\t\t\t\t\t<td class=\"style23\">\r\n\t\t\t\t\t\t\t\t\t\t<span
-      class=\"style22\">&#160;</span>\r\n<a href=\"/logos/RT_KOlogo_horiz.jpg\"><span
-      class=\"style22\"><img src=\"/images/RT_KOlogo_horiz_small.jpg\" width=\"291\"
-      height=\"100\" class=\"style21\" /></span>\r\n</a><span class=\"style22\"><br
-      />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_KOlogo_horiz.jpg\">\r\n\t\t\t\t\t\t\t\t\t\t<span
-      class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_KOlogo_horiz.jpg</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_KOlogo_horiz.eps\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_KOlogo_horiz.eps</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n</td>\r\n\t\t\t\t\t\t\t\t\t\t<td
-      class=\"style23\">&#160;<a href=\"/logos/RT_KOlogo_stacked.jpg\"><span class=\"style22\"><img
-      src=\"/images/RT_KOlogo_stacked_small.jpg\" width=\"192\" height=\"100\" class=\"style21\"
-      /></span>\r\n</a><span class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_KOlogo_stacked.jpg\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_KOlogo_stacked.jpg</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_KOlogo_stacked.eps\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_KOlogo_stacked.eps</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n</td>\r\n\t\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t\t\t<tr
-      class=\"style19\">\r\n\t\t\t\t\t\t\t\t\t\t<td class=\"style23\">\r\n\t\t\t\t\t\t\t\t\t\t<span
-      class=\"style22\">&#160;</span>\r\n<a href=\"/logos/RT_KOlogo_horizWHT.jpg\"><span
-      class=\"style22\"><img src=\"/images/RT_KOlogo_horizWHT_small.jpg\" width=\"282\"
-      height=\"100\" class=\"style21\" /></span>\r\n</a><span class=\"style22\"><br
-      />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_KOlogo_horizWHT.jpg\">\r\n\t\t\t\t\t\t\t\t\t\t<span
-      class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_KOlogo_horizWHT.jpg</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_KOlogo_horizWHT.eps\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_KOlogo_horizWHT.eps</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n</td>\r\n\t\t\t\t\t\t\t\t\t\t<td
-      class=\"style23\">&#160;<a href=\"/logos/RT_KOlogo_stackedWHT.jpg\"><span class=\"style22\"><img
-      src=\"/images/RT_KOlogo_stackedWHT_small.jpg\" width=\"184\" height=\"100\"
-      class=\"style21\" /></span>\r\n</a><span class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_KOlogo_stackedWHT.jpg\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_KOlogo_stackedWHT.jpg</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_KOlogo_stackedWHT.eps\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_KOlogo_stackedWHT.eps</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n</td>\r\n\t\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t\t</tbody>\r\n</table>"
-    - '2011-09-11 22:24:39'
-    - '2011-09-11 22:24:39'
-  - - '8'
-    - '8'
+    - <h2>Sorry, there was a problem...</h2><p>The page you requested was not found.</p><p><a href='/'>Return to the home page</a></p>
+    - 2011-12-24 20:46:03 Z
+    - 2011-12-24 20:46:03 Z
+  - - 4
+    - 4
     - en
-    - ! "\t\t    <div style=\"width:280px;float:right;\"><div id=\"fb-root\"></div>\r\n<br
-      />\r\n<div style=\"width:200px;border: 1px solid #555;padding:10px; margin:
-      10px;font-size:12px;text-align:center;\">\r\n<strong>Interested in making a
-      donation?</strong> You can make a real difference for homeowners in need. Click
-      the button below to donate via Paypal.<br />\r\n<br />\r\n<form action=\"https://www.paypal.com/cgi-bin/webscr\"
-      method=\"post\">\r\n<input type=\"hidden\" name=\"cmd\" value=\"_s-xclick\"
-      />\r\n<input type=\"hidden\" name=\"hosted_button_id\" value=\"NXLK47HQCDWMY\"
-      />\r\n<input type=\"image\" src=\"https://www.paypalobjects.com/WEBSCR-640-20110306-1/en_US/i/btn/btn_donateCC_LG.gif\"
-      name=\"submit\" alt=\"PayPal - The safer, easier way to pay online!\" />\r\n<img
-      src=\"https://www.paypalobjects.com/WEBSCR-640-20110306-1/en_US/i/scr/pixel.gif\"
-      width=\"1\" height=\"1\" />\r\n</form> </div>\r\n</div>\r\n\r\n Rebuilding Together
-      * Portland is a non-profit organization supported entirely by contributions
-      of time, labor, materials, and money.\r\n\t\t    We are dedicated to repairing
-      the homes of those who, due to financial hardship, age, and/or disability cannot
-      do the work themselves.\r\n\t\t    Skilled and unskilled volunteers, along with
-      able-bodied members of the recipients' family and friends, complete repairs
-      \ at no cost to the homeowner.\r\n<br /><br />\r\n\r\nCheck out the new <a href=\"http://www.rebuildingtogether.org/content/multimedia/detail/7788/\">Rebuilding
-      Together PSA</a> with Morgan Freeman.\r\n\t\t    <br /><br />\r\n\t\t    <strong>Free
-      home repairs</strong> are available for low-income homeowners. <a href=\"&lt;%=
-      url_for :controller =&gt; :mainsite, :action =&gt; :homeowners_page %&gt;\">Learn
-      more</a>\r\n\t\t    <br /><br />\r\n\t\t    We celebrated our 21st year on April
-      30, 2011.  Our goal was to repair and rehabilitate over 50 homes and non-profit
-      community facilities, and by every measure the day was a success!\r\n\t\t    <br
-      /><br />\r\n\t\t    <a href=\"/plogger/index.php\">We have some great photos</a>
-      from last year's project day. Thanks to the photographers that volunteered their
-      time to help us show off. \r\n<br /><br />\r\nAlso, a great quote from one of
-      our project homeowner's family:<br /><br />\r\n<em>\"I don't know how to put
-      into words how much I want to thank everyone that helped on the house. It was
-      a great experience for all of us, I think, and it definitely inspired me to
-      go out and help others.\" </em>\r\n<br /><br /> \r\n<a href=\"http://4-24-10.blogspot.com/2010/05/dear-portland-rebuilding-together.html\">Check
-      out the full blog post</a> and a big thank you from one of the homeowners we
-      helped out April 2010!.<br />\r\n<br /><br />\r\n\t\t    <img src=\"/images/photos/_DSC0393.JPG\"
-      />\r\n\t\t    <img src=\"/images/photos/128group.JPG\" />\r\n\t\t    <br /><br
-      />\r\n\t\t    A few of our sponsors:<br /><br />\r\n\t\t    <img src=\"/images/logo-sample.gif\"
-      alt=\"Sponsor logos\" style=\"margin-left:150px;\" />\r\n\t\t    <img alt=\"Cricket
-      Wireless\" src=\"/images/cricketwireless.gif\" />\r\n<h2>Recent Projects</h2>\r\n<a
-      href=\"http://www.mtscottlearningcenters.org/CultivatingMinds.htm\">Cultivating
-      Minds</a> <small>with\r\n  <a href=\"http://www.handsonportland.org/\">Hands
-      On Portland</a> and <a href=\"http://www.mycricket.com/portland\">Cricket Wireless</a>\r\n</small>\r\n
-      \r\n"
-    - '2011-09-11 22:25:33'
-    - '2011-09-11 22:25:33'
-  - - '9'
-    - '9'
+    - |-
+      <p>
+      Rebuilding Together * Portland is a non-profit organization supported entirely by contributions of time, labor, materials, and money.  We are dedicated to repairing the homes of those who, due to financial hardship, age, and/or disability cannot do the work themselves.  Skilled and unskilled volunteers along with able-bodied members of the recipients' family and friends complete repairs  at
+      <strong>no cost to the homeowner.</strong>
+      </p>
+      <p>
+      To be eligible for consideration for 2010 the applicant must:
+      </p>
+      <ul>
+        <li>Be the owner and occupant of the property
+        </li>
+      <li>Be low income; elderly and/or disabled; families with children; veterans
+        </li>
+      <li>Be unable both financially and physically to complete repairs themselves
+        </li>
+      <li>Live in a property located in the City of Portland
+      </li>
+      </ul>
+      
+      <p>
+      <strong>Each year Rebuilding Together Portland, screens approximately 150 low income homeowners</strong> and selects about 50-60 homes for
+      repair. In addition 5-8 non-profit organizations benefit on the workday and projects throughout the year. Rebuilding Together
+      Portland organizes 1,200-1,500 volunteers from all walks of life to unite on the last Saturday in April each year to complete
+      equivalent to $900,000 worth of improvements to the community on that day. Other individual projects are performed throughout
+      the year, but most of the work is done on the big day in April. These efforts are made possible with the help of a 20 member
+      working board, financial contributions and the efforts of over 1,300 volunteers.
+      </p>
+      <img src="/images/photos/0425RTP53.jpg" />
+      <p>
+      <strong>Homeowner safety and security are the first priorities</strong> of Rebuilding Together.
+      Our skilled and unskilled volunteers do all types of work including painting, plumbing, electrical, carpentry,
+      roofing, weatherization, yard cleaning, debris removal, and much more!  We do need the homeowners to understand
+      that time and weather may prevent these volunteers from accomplishing everything that the applicant would like done
+      to their home on <strong>our next workday, Saturday, April 24, 2010.</strong>
+      </p>
+      <p>
+      This is an annual "barn-raising" event designed to repair and rehabilitate the homes of low-income, elderly, and
+      disabled homeowners as well as selected community non-profit facilities. After a year of planning and preparation,
+      the program culminates in a one day "blitz" the last Saturday in April. The program has now expanded to include projects
+      not only on this day, but year-round as well.
+      </p>
+      
+      <p>
+      <strong>Rebuilding Together is a nation-wide organization</strong> that, in partnership with the community, rehabilitates the homes of low-income
+      homeowners, particularly families with children and the elderly and disabled so that they can continue to live in warmth, safety
+      and independence. Rebuilding Together-Portland also assists in the rehabilitation of community centers, schools and non-profits.
+      </p>
+      <div>
+      <em>  
+      Check out the Rebuilding Together Twitter feed shown here to learn about activities in other cities.
+      </em>
+      <br /><br />
+      
+      
+      </div>
+      <div style="clear:both;">&#160;</div>
+      <h2>Contact Information</h2>
+      <strong>Rebuilding Together * Portland</strong>
+      <br />
+      5000 N. Willamette Blvd. Portland, OR 97203-5798<br />
+      Phone: 503-943-7515<br />
+      Fax: 503-943-7322<br />
+      MikeMalone@rebuildingtogetherportland.org<br />
+      
+      <p>
+      <a href="/official-logos">Official Logos available for download</a>
+      </p>
+    - 2011-12-24 20:46:03 Z
+    - 2011-12-24 21:03:42 Z
+  - - 5
+    - 5
     - en
-    - ! " <p>House Captains are our project leaders, and help ensure that each and
-      every project is a success on rebuilding day.\r\n\r\n If you are interested
-      in becoming a House Captain, please contact <a href=\"mailto:MikeMalone@RebuildingTogetherPortland.org\">Mike
-      Malone at MikeMalone@RebuildingTogetherPortland.org</a>\r\n</p>\r\n\r\n\r\n\r\n
-      <p>If you've already signed up, <strong>thank you!</strong> The House Captain's
-      role is a crucial element in making our program a success.  It is your skills,
-      hard work and dedication that get our repair and rehabilitation work completed
-      effectively and efficiently.  This role will be challenging and at the same
-      time very rewarding.\r\n\r\n </p>\r\n\r\n<p>\r\n\r\nFor more information, start
-      here: <a href=\"/files/RT2011hcltter.doc\">Letter to House Captains</a> (with
-      2011 schedule)\r\n\r\n</p>\r\n\r\n<h2>Resources for House Captains</h2>\r\n\r\n<ul>\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/new.png);margin-bottom: 20px;\"><em>Updated
-      for 2011</em>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li style=\"list-style-image:
-      url(/images/icons/page_white_acrobat.png);\"><a href=\"/files/2011/2011_campus_map.pdf\">\r\n\r\n\t\r\n\r\n\t\tCampus\r\n\r\n\r\n\r\n\t\tMap\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_guidelines_for_house_liaisons.doc\">\r\n\r\n\t\r\n\r\n\t\tGuidelines\r\n\r\n\r\n\r\n\t\tFor\r\n\r\n\r\n\r\n\t\tHouse\r\n\r\n\r\n\r\n\t\tLiaisons\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_hc_handbook_planning_ahead.doc.doc\">\r\n\r\n\t\r\n\r\n\t\tHc\r\n\r\n\r\n\r\n\t\tHandbook\r\n\r\n\r\n\r\n\t\tPlanning\r\n\r\n\r\n\r\n\t\tAhead\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_hc_handbook_the_work_day.doc.doc\">\r\n\r\n\t\r\n\r\n\t\tHc\r\n\r\n\r\n\r\n\t\tHandbook\r\n\r\n\r\n\r\n\t\tThe\r\n\r\n\r\n\r\n\t\tWork\r\n\r\n\r\n\r\n\t\tDay\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_hc_orientation_agenda.doc\">\r\n\r\n\t\r\n\r\n\t\tHc\r\n\r\n\r\n\r\n\t\tOrientation\r\n\r\n\r\n\r\n\t\tAgenda\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_hc_role_&amp;_responsibilities.doc\">\r\n\r\n\t\r\n\r\n\t\tHc\r\n\r\n\r\n\r\n\t\tRole\r\n\r\n\r\n\r\n\t\t&amp;\r\n\r\n\r\n\r\n\t\tResponsibilities\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_hc_volunteer_list_work_sheet.doc\">\r\n\r\n\t\r\n\r\n\t\tHc\r\n\r\n\r\n\r\n\t\tVolunteer\r\n\r\n\r\n\r\n\t\tList\r\n\r\n\r\n\r\n\t\tWork\r\n\r\n\r\n\r\n\t\tSheet\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_homeowner_agreement.doc\">\r\n\r\n\t\r\n\r\n\t\tHomeowner\r\n\r\n\r\n\r\n\t\tAgreement\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_homeowner_interview-house_inspection_sign_up.doc\">\r\n\r\n\t\r\n\r\n\t\tHomeowner\r\n\r\n\r\n\r\n\t\tInterview-house\r\n\r\n\r\n\r\n\t\tInspection\r\n\r\n\r\n\r\n\t\tSign\r\n\r\n\r\n\r\n\t\tUp\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_house_captain_evaluation.doc\">\r\n\r\n\t\r\n\r\n\t\tHouse\r\n\r\n\r\n\r\n\t\tCaptain\r\n\r\n\r\n\r\n\t\tEvaluation\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_house_captains_reminder_lttr.doc\">\r\n\r\n\t\r\n\r\n\t\tHouse\r\n\r\n\r\n\r\n\t\tCaptains\r\n\r\n\r\n\r\n\t\tReminder\r\n\r\n\r\n\r\n\t\tLttr\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_house_caption_flow_chart_for_recruiting_volunteers.doc\">\r\n\r\n\t\r\n\r\n\t\tHouse\r\n\r\n\r\n\r\n\t\tCaption\r\n\r\n\r\n\r\n\t\tFlow\r\n\r\n\r\n\r\n\t\tChart\r\n\r\n\r\n\r\n\t\tFor\r\n\r\n\r\n\r\n\t\tRecruiting\r\n\r\n\r\n\r\n\t\tVolunteers\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_lead-safe_remodeling_procedures.doc\">\r\n\r\n\t\r\n\r\n\t\tLead-safe\r\n\r\n\r\n\r\n\t\tRemodeling\r\n\r\n\r\n\r\n\t\tProcedures\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_white_acrobat.png);\"><a href=\"/files/2011/2011_lowes_order_form.pdf\">\r\n\r\n\t\r\n\r\n\t\tLowes\r\n\r\n\r\n\r\n\t\tOrder\r\n\r\n\r\n\r\n\t\tForm\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_excel.png);\"><a href=\"/files/2011/2011_material_help.xls\">\r\n\r\n\t\r\n\r\n\t\tMaterial\r\n\r\n\r\n\r\n\t\tHelp\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_med_treatment_authorization_for_minor.doc\">\r\n\r\n\t\r\n\r\n\t\tMed\r\n\r\n\r\n\r\n\t\tTreatment\r\n\r\n\r\n\r\n\t\tAuthorization\r\n\r\n\r\n\r\n\t\tFor\r\n\r\n\r\n\r\n\t\tMinor\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_safety_tool_box_talk_guidelines.doc\">\r\n\r\n\t\r\n\r\n\t\tSafety\r\n\r\n\r\n\r\n\t\tTool\r\n\r\n\r\n\r\n\t\tBox\r\n\r\n\r\n\r\n\t\tTalk\r\n\r\n\r\n\r\n\t\tGuidelines\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_scope_of_work.doc\">\r\n\r\n\t\r\n\r\n\t\tScope\r\n\r\n\r\n\r\n\t\tOf\r\n\r\n\r\n\r\n\t\tWork\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_updated_volunteer_agreement_and_release.doc\">\r\n\r\n\t\r\n\r\n\t\tUpdated\r\n\r\n\r\n\r\n\t\tVolunteer\r\n\r\n\r\n\r\n\t\tAgreement\r\n\r\n\r\n\r\n\t\tAnd\r\n\r\n\r\n\r\n\t\tRelease\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_volunteer_estimate_form.doc\">\r\n\r\n\t\r\n\r\n\t\tVolunteer\r\n\r\n\r\n\r\n\t\tEstimate\r\n\r\n\r\n\r\n\t\tForm\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_volunteer_opportunities_form.doc\">\r\n\r\n\t\r\n\r\n\t\tVolunteer\r\n\r\n\r\n\r\n\t\tOpportunities\r\n\r\n\r\n\r\n\t\tForm\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/lowes_material_procedures_2011.doc\">\r\n\r\n\t\r\n\r\n\t\tLowes\r\n\r\n\r\n\r\n\t\tMaterial\r\n\r\n\r\n\r\n\t\tProcedures\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/xmas_2011_hc_lttr.doc\">\r\n\r\n\t\r\n\r\n\t\tXmas\r\n\r\n\r\n\r\n\t\tHc\r\n\r\n\r\n\r\n\t\tLttr\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n</ul>\r\n\r\n\r\n\r\n
-      <h2>Contact Information</h2>\r\n\r\n<strong>Dave Lyons, Committee Chairman</strong>\r\n<br
-      />\r\n\r\nDays - 503-248-2030 and evenings - 503-287-9915<br />\r\n\r\nPlease
-      confirm your attendance: <a href=\"dave@jdldev.com\">Dave Lyons - dave@jdldev.com</a>
-      or <a href=\"mailto:MikeMalone@RebuildingTogetherPortland.org\">Mike Malone
-      - MikeMalone@RebuildingTogetherPortland.org</a>\r\n\r\n<br /><br />\r\n\r\n<strong>Rebuilding
-      Together * Portland</strong>\r\n<br />\r\n\r\n5000 N. Willamette Blvd. Portland,
-      OR 97203-5798<br />\r\n\r\nPhone: 503-943-7515<br />\r\n\r\nFax: 503-943-7322<br
-      />\r\n\r\n<a href=\"mailto:MikeMalone@rebuildingtogetherportland.org\">MikeMalone@rebuildingtogetherportland.org</a>\r\n<br
-      />\r\n\r\n\r\n\r\n"
-    - '2011-09-11 22:26:30'
-    - '2011-09-11 22:26:30'
-  - - '10'
-    - '10'
+    - ""
+    - 2011-12-24 20:46:03 Z
+    - 2011-12-24 20:54:45 Z
+  - - 6
+    - 6
     - en
-    - ! " <p>\r\n We rely on social service agencies, town offices, service organizations,
-      churches, community groups, and individuals\r\n to help us identify homeowners
-      in Portland in need of our assistance. <strong>Do you know an elderly person,
-      somebody with a disability,\r\n or a working family who could use our help?</strong>\r\n
-      Please review the information on this site and contact us with a completed Home
-      Referral Form.\r\n </p>\r\n<p>\r\n<strong>All repairs are free for homeowners.
-      </strong>Labor and many supplies are typically donated. Homeowners and family
-      members are asked to welcome the volunteers into their homes and work alongside
-      them to the extent possible. Our work is done with families and neighborhoods,
-      not for them. A homeowner brochure is provided to clarify our process and partnership.\r\n</p>\r\n<img
-      src=\"/images/photos/2.jpg\" />\r\n <p>\r\nEligibility requirements include:\r\n</p>\r\n<ul>\r\n
-      \ <li>Applicants must own and live in the property where repair work will be
-      done.\r\n  </li>\r\n<li>Assist low income individuals whom are also elderly
-      or disabled or with children\r\n  </li>\r\n<li>Be unable both financially and
-      physically to effect repairs themselves\r\n  </li>\r\n<li>Applicants must be
-      able to produce their mortgage payment book, deed, or other documents showing
-      ownership, if requested.\r\n  </li>\r\n<li>The property is not subject to any
-      pending foreclosure actions or actions to enforce liens.\r\n  </li>\r\n<li>Persons
-      residing in your home or visiting on the designated workday who are physically
-      able will work alongside the volunteers.\r\n   </li>\r\n<li>Be located on a
-      property in the city of Portland.\r\n</li>\r\n</ul>\r\n<p>\r\nIneligible homes
-      include:\r\n</p>\r\n<ul>\r\n  <li>Rental properties\r\n  </li>\r\n<li>Household
-      income above federal poverty guidelines\r\n</li>\r\n</ul>\r\n<p>\r\nHomeowners
-      are carefully selected through an application process which includes income
-      thresholds and a home inspection.\r\nMembers of our House Selection Committees
-      visit applicant homes to confirm eligibility and assess work that needs to be
-      done.\r\nWhile we complete major renovations — including upgrading electrical
-      systems, and many other home\r\nimprovements — we narrow the scope of the work
-      we undertake to what we believe a team of 10-50 skilled and unskilled\r\nvolunteers
-      can accomplish in a day.\r\n</p>\r\n <p>\r\nThe number of homes we work on is
-      tied directly to the amount of money we can raise during the year.\r\nThe House
-      Selection Committee selects the qualifying homes for each year. On average,
-      we renovate more than 50 homes a year\r\nfrom a list of about 150 homeowners.
-      House Captains, generally skilled workers from sponsor groups select homes they\r\nwill
-      champion and set up a detailed plan of work to be done at the home and is the
-      primary contact for the homeowner\r\nthrough completion of the work.\r\n </p>\r\n
-      <p>\r\nThere are no promises that the work planned will actually be done. Weather,
-      volunteer availability and other factors may affect the actual work completed.
-      The House Captain will decide what work can and cannot be done on the day of
-      work. If your home is chosen for the rehabilitation work, there will be NO charge
-      for our service.\r\n</p>\r\n <p>\r\n  <a href=\"/forms/2011/HomeownerReferralForm.docx\"
-      style=\"font-size:1.4em;\">Click Here to Download an Application</a>\r\n </p>\r\n
-      <h2>Contact Information</h2>\r\n<strong>Rebuilding Together * Portland</strong>\r\n<br
-      />\r\n5000 N. Willamette Blvd. Portland, OR 97203-5798<br />\r\nPhone: 503-943-7515<br
-      />\r\nFax: 503-943-7322<br />\r\n<a href=\"mailto:MikeMalone@rebuildingtogetherportland.org\">MikeMalone@rebuildingtogetherportland.org</a>\r\n<br
-      />\r\n\r\n"
-    - '2011-09-11 22:26:56'
-    - '2011-09-11 22:26:56'
-  - - '11'
-    - '11'
-    - en
-    - ! "<p>\r\nRebuilding Together * Portland is a non-profit organization supported
-      entirely by contributions of time, labor, materials, and money.  We are dedicated
-      to repairing the homes of those who, due to financial hardship, age, and/or
-      disability cannot do the work themselves.  Skilled and unskilled volunteers
-      along with able-bodied members of the recipients' family and friends complete
-      repairs  at\r\n<strong>no cost to the homeowner.</strong>\r\n</p>\r\n<p>\r\nTo
-      be eligible for consideration for 2012 the applicant must:\r\n</p>\r\n<ul>\r\n
-      \ <li>Be the owner and occupant of the property\r\n  </li>\r\n<li>Be low income;
-      elderly and/or disabled; families with children; veterans\r\n  </li>\r\n<li>Be
-      unable both financially and physically to complete repairs themselves\r\n  </li>\r\n<li>Live
-      in a property located in the City of Portland\r\n</li>\r\n</ul>\r\n\r\n<p>\r\n<strong>Each
-      year Rebuilding Together Portland, screens approximately 150 low income homeowners</strong>
-      and selects about 50-60 homes for\r\nrepair. In addition 5-8 non-profit organizations
-      benefit on the workday and projects throughout the year. Rebuilding Together\r\nPortland
-      organizes 1,200-1,500 volunteers from all walks of life to unite on the last
-      Saturday in April each year to complete\r\nequivalent to $900,000 worth of improvements
-      to the community on that day. Other individual projects are performed throughout\r\nthe
-      year, but most of the work is done on the big day in April. These efforts are
-      made possible with the help of a 20 member\r\nworking board, financial contributions
-      and the efforts of over 1,300 volunteers.\r\n</p>\r\n<img src=\"/images/photos/0425RTP53.jpg\"
-      />\r\n<p>\r\n<strong>Homeowner safety and security are the first priorities</strong>
-      of Rebuilding Together.\r\nOur skilled and unskilled volunteers do all types
-      of work including painting, plumbing, electrical, carpentry,\r\nroofing, weatherization,
-      yard cleaning, debris removal, and much more!  We do need the homeowners to
-      understand\r\nthat time and weather may prevent these volunteers from accomplishing
-      everything that the applicant would like done\r\nto their home on <strong>our
-      next workday, Saturday, April 28th, 2012.</strong>\r\n</p>\r\n<p>\r\nThis is
-      an annual \"barn-raising\" event designed to repair and rehabilitate the homes
-      of low-income, elderly, and\r\ndisabled homeowners as well as selected community
-      non-profit facilities. After a year of planning and preparation,\r\nthe program
-      culminates in a one day \"blitz\" the last Saturday in April. The program has
-      now expanded to include projects\r\nnot only on this day, but year-round as
-      well.\r\n</p>\r\n\r\n<p>\r\n<strong>Rebuilding Together is a nation-wide organization</strong>
-      that, in partnership with the community, rehabilitates the homes of low-income\r\nhomeowners,
-      particularly families with children and the elderly and disabled so that they
-      can continue to live in warmth, safety\r\nand independence. Rebuilding Together-Portland
-      also assists in the rehabilitation of community centers, schools and non-profits.\r\n</p>\r\n<div>\r\n<em>
-      \ \r\nCheck out the Rebuilding Together Twitter feed shown here to learn about
-      activities in other cities.\r\n</em>\r\n<br /><br />\r\n\r\n\r\n\r\n</div>\r\n<div
-      style=\"clear:both;\">&#160;</div>\r\n<h2>Contact Information</h2>\r\n<strong>Rebuilding
-      Together * Portland</strong>\r\n<br />\r\n5000 N. Willamette Blvd. Portland,
-      OR 97203-5798<br />\r\nPhone: 503-943-7515<br />\r\nFax: 503-943-7322<br />\r\nMikeMalone@rebuildingtogetherportland.org<br
-      />\r\n\r\n<p>\r\n<a href=\"/r/logos_page\">Official Logos available for download</a>\r\n</p>\r\n"
-    - '2011-09-11 22:40:02'
-    - '2011-09-11 22:40:02'
+    - |
+      <h2>Board Officers</h2>
+      <table class="boardnames">
+      <tbody><tr><td class="name">Scott Williams	</td>
+      <td>President 	</td>
+      <td>	Accenture</td>
+      </tr>
+      <tr><td class="name">Paul Luty 	</td>
+      <td>Vice President 	</td>
+      <td>	University of Portland - Physical Plant</td>
+      </tr>
+      <tr><td class="name">Brian Vetrone 	</td>
+      <td>Treasurer 	</td>
+      <td>	Hampton Affiliates</td>
+      </tr>
+      <tr><td class="name">Mike Malone 	</td>
+      <td>Executive Director 	</td>
+      <td>	Rebuilding Together*Portland</td>
+      </tr>
+      <tr><td class="name">Brian Thompson 	</td>
+      <td>Legal 	</td>
+      <td> 	Miller Nash LLP</td>
+      </tr>
+      <tr><td class="name">Kate Chavez 	</td>
+      <td>Secretary</td>
+      <td>The Richman Group Affordable Housing Corporation</td>
+      </tr>
+      </tbody>
+      </table>
+      
+      <h2>Board of Directors</h2>
+      <table class="boardnames">
+      <tbody><tr><td class="name">Michael Desimone       </td>
+      <td>Key Bank</td>
+      </tr>
+      <tr><td class="name">Mark Easley 	</td>
+      <td>KEMA Consulting</td>
+      </tr>
+      <tr><td class="name">Valerie Ebinger</td>
+      <td><a href="http://corsource.net">CorSource Technology Group, Inc.</a>
+      </td>
+      </tr>
+      
+      <tr><td class="name">Mitch Falkenstein</td>
+      <td>&#160;</td>
+      </tr>
+      
+      <tr><td class="name">Dan Gemme       </td>
+      <td><a href="http://turnerconstruction.com/portland/default.asp">Turner Construction</a>
+      </td>
+      </tr>
+      <tr><td class="name">Dave Lyons 	</td>
+      <td>JDL Development</td>
+      </tr>
+      <tr><td class="name">Ella Mills 	</td>
+      <td><a href="http://biellalighting.com">Biella Lighting Design</a>
+      </td>
+      </tr>
+      <tr><td class="name">Pat Olson 	</td>
+      <td>Standard Supply Company</td>
+      </tr>
+      <tr><td class="name">Deacon John Ries 	</td>
+      <td>St. Mary's Cathedral</td>
+      </tr>
+      <tr><td class="name">Joshua Siler</td>
+      <td><a href="http://www.bnj.com">Babcock &amp; Jenkins</a>
+      </td>
+      </tr>
+      <tr><td class="name">Emily Watson 	</td>
+      <td>Mediamerica</td>
+      </tr>
+      <tr><td class="name">Brandon Zabrocki 	</td>
+      <td>US Bank</td>
+      </tr>
+      </tbody>
+      </table>
 
----
-page_parts:
-  columns:
+    - 2011-12-24 20:58:11 Z
+    - 2011-12-24 20:58:11 Z
+  - - 7
+    - 7
+    - en
+    - ""
+    - 2011-12-24 20:58:11 Z
+    - 2011-12-24 20:58:11 Z
+  - - 8
+    - 8
+    - en
+    - "<h1>Homeowners</h1>\r\n <p>\r\n We rely on social service agencies, town offices, service organizations, churches, community groups, and individuals\r\n to help us identify homeowners in Portland in need of our assistance. <strong>Do you know an elderly person, somebody with a disability,\r\n or a working family who could use our help?</strong>\r\n Please review the information on this site and contact us with a completed Home Referral Form.\r\n </p>\r\n\
+      <p>\r\n\
+      <strong>All repairs are free for homeowners. </strong>Labor and many supplies are typically donated. Homeowners and family members are asked to welcome the volunteers into their homes and work alongside them to the extent possible. Our work is done with families and neighborhoods, not for them. A homeowner brochure is provided to clarify our process and partnership.\r\n\
+      </p>\r\n\
+      <img src=\"/images/photos/2.jpg\" />\r\n <p>\r\n\
+      Eligibility requirements include:\r\n\
+      </p>\r\n\
+      <ul>\r\n  <li>Applicants must own and live in the property where repair work will be done.\r\n  </li>\r\n\
+      <li>Assist low income individuals whom are also elderly or disabled or with children\r\n  </li>\r\n\
+      <li>Be unable both financially and physically to effect repairs themselves\r\n  </li>\r\n\
+      <li>Applicants must be able to produce their mortgage payment book, deed, or other documents showing ownership, if requested.\r\n  </li>\r\n\
+      <li>The property is not subject to any pending foreclosure actions or actions to enforce liens.\r\n  </li>\r\n\
+      <li>Persons residing in your home or visiting on the designated workday who are physically able will work alongside the volunteers.\r\n   </li>\r\n\
+      <li>Be located on a property in the city of Portland.\r\n\
+      </li>\r\n\
+      </ul>\r\n\
+      <p>\r\n\
+      Ineligible homes include:\r\n\
+      </p>\r\n\
+      <ul>\r\n  <li>Rental properties\r\n  </li>\r\n\
+      <li>Household income above federal poverty guidelines\r\n\
+      </li>\r\n\
+      </ul>\r\n\
+      <p>\r\n\
+      Homeowners are carefully selected through an application process which includes income thresholds and a home inspection.\r\n\
+      Members of our House Selection Committees visit applicant homes to confirm eligibility and assess work that needs to be done.\r\n\
+      While we complete major renovations \xE2\x80\x94 including upgrading electrical systems, and many other home\r\n\
+      improvements \xE2\x80\x94 we narrow the scope of the work we undertake to what we believe a team of 10-50 skilled and unskilled\r\n\
+      volunteers can accomplish in a day.\r\n\
+      </p>\r\n <p>\r\n\
+      The number of homes we work on is tied directly to the amount of money we can raise during the year.\r\n\
+      The House Selection Committee selects the qualifying homes for each year. On average, we renovate more than 50 homes a year\r\n\
+      from a list of about 150 homeowners. House Captains, generally skilled workers from sponsor groups select homes they\r\n\
+      will champion and set up a detailed plan of work to be done at the home and is the primary contact for the homeowner\r\n\
+      through completion of the work.\r\n </p>\r\n <p>\r\n\
+      There are no promises that the work planned will actually be done. Weather, volunteer availability and other factors may affect the actual work completed. The House Captain will decide what work can and cannot be done on the day of work. If your home is chosen for the rehabilitation work, there will be NO charge for our service.\r\n\
+      </p>\r\n <p>\r\n  <a href=\"/forms/Homeowner Referral Form.pdf\" style=\"font-size:1.4em;\">Click Here to Download an Application</a>\r\n </p>\r\n <h2>Contact Information</h2>\r\n\
+      <strong>Rebuilding Together * Portland</strong>\r\n\
+      <br />\r\n\
+      5000 N. Willamette Blvd. Portland, OR 97203-5798<br />\r\n\
+      Phone: 503-943-7515<br />\r\n\
+      Fax: 503-943-7322<br />\r\n\
+      <a href=\"mailto:MikeMalone@rebuildingtogetherportland.org\">MikeMalone@rebuildingtogetherportland.org</a>\r\n\
+      <br />\r\n\
+      \r\n"
+    - 2011-12-24 20:59:29 Z
+    - 2011-12-24 20:59:29 Z
+  - - 9
+    - 9
+    - en
+    - |
+      
+       <p>House Captains are our project leaders, and help ensure that each and every project is a success on rebuilding day.
+       If you are interested in becoming a House Captain, please contact <a href="mailto:MikeMalone@RebuildingTogetherPortland.org">Mike Malone at MikeMalone@RebuildingTogetherPortland.org</a>
+      </p>
+       
+       <p>If you've already signed up, <strong>thank you!</strong> The House Captain's role is a crucial element in making our program a success.  It is your skills, hard work and dedication that get our repair and rehabilitation work completed effectively and efficiently.  This role will be challenging and at the same time very rewarding.  Please note the following important dates for your calendar.
+       </p>
+      
+      <p>This year's House Captain's meeting is mandatory attendance.  We are tightening up the time line in an effort to
+      increase efficiency within the organization and to minimize your time requirements.  For these goals to be
+      obtained we need you at the meeting.</p>
+      <p>The role of House Captain is old hat to some of you and we appreciate your continued participation.
+      And we still want you at this meeting, to meet the other House Captains and to learn of the new procedures.</p>
+      <style>
+      table
+      {
+      
+      	border-collapse: collapse;
+      	padding: 0px;
+      	margin: 0px;
+      	border: 2px solid #888;
+      	width: 650px;
+      }
+      table td
+      { 
+      	padding: 6px;
+      	margin: 0px;
+      	font-size: 12px;
+      	vertical-align:top;
+       	border-bottom: 1px solid #000;
+       }
+      
+      </style>
+      <table>
+      <tbody><tr><td><strong>March 3	5:30pm</strong>
+      </td>
+       <td>Room 319, Shiley Hall on the University of Portland campus (look fo r the signs).  This will be our only House Captain meeting.
+       We will be explaining the new procedures regarding material lists and time lines.  <strong>House selection will take place at this meeting.</strong>
+      </td>
+      </tr>
+      <tr><td><strong>March 22</strong>
+      </td>
+       <td>	Have house inspection completed.
+      </td>
+      </tr>
+      <tr><td><strong>April 2</strong>
+      </td>
+       <td>	Notify Rebuilding Together * Portland with the number of volunteers that you have, or the number of skilled and unskilled volunteers that you need.
+      </td>
+      </tr>
+      <tr><td><strong>April 2</strong>
+      </td>
+       <td>	Material list must be in by this date.  It's extremely important to the process of material gathering that the lists get back to us on time.
+      </td>
+      </tr>
+      <tr><td><strong>April 17</strong>
+      </td>
+       <td>	Skilled labor and prep day.  This day has been scheduled to accommodate large jobs where more than one stage of work needs to take place, or where power washing and prepping need to be done prior to the 24th.
+      </td>
+      </tr>
+      <tr><td><strong>April 24</strong>
+      </td>
+       <td>	It's ShowTime!  Rebuilding Together * Portland workday!
+      </td>
+      </tr>
+      <tr><td><strong>April 30</strong>
+      </td>
+       <td>	Evaluations are due back at head quarters.  House Captains must communicate whether or not all of the work started was completed.  If it has not, please confirm what arrangements have been made for completion.
+      </td>
+      </tr>
+      </tbody>
+      </table>
+      
+      <p>If you have any questions please feel free to call the numbers listed below or call our Rebuilding Together * Portland office at 943-7515.
+      </p>
+      <p>We continue to look for additional people to fill the role of House Captain, if you know of someone qualified and interested please ask them to call our office to get involved this year.
+      </p>
+      <p>Thank you again for your interest and willingness to participate in this important endeavor.  As a Rebuilding Together * Portland House Captain this year, you will be joining over 1,500 other individuals around the Portland area, helping make this local and national program a success.  We simply could not accomplish this work without the support and volunteerism of organizers like you.
+      </p>
+      <h2>Resources for House Captains</h2>
+      <ul>
+      <li style="list-style-image: url(/images/icons/page_white_acrobat.png);"><a href="/files/2010 campus map.pdf"> Campus Map</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 HC Volunteer List Work Sheet.doc">HC Volunteer List Work Sheet</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 HC Handbook - Planning ahead.doc.doc"> HC Handbook - Planning ahead</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 HC Handbook - The Work Day.doc.doc"> HC Handbook - The Work Day</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 HC Role &amp; Responsibilities.doc"> HC Role &amp; Responsibilities</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 House Captain Evaluation.doc"> House Captain Evaluation</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_white_acrobat.png);"><a href="/files/2010 Lowe's Order Form.pdf">Lowe's Order Form</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Lowe's material procedures.doc"> Lowe's material procedures</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_excel.png);"><a href="/files/2010 Material Help.xls"> Material Help</a>
+      </li>
+      
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Updated Volunteer Agreement and Release.doc"> Updated Volunteer Agreement and Release</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Guidelines for House Liaisons.doc">Guidelines for House Liaisons</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Homeowner Agreement.doc"> 2010 Homeowner Agreement</a>
+      </li>
+      
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Volunteer Estimate Form.doc"> Volunteer Estimate Form</a>
+      </li>
+      
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Med Treatment Authorization for Minor.doc"> Med Treatment Authorization for Minor</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Volunteer Opportunities Form.doc"> Volunteer Opportunities Form</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Lead-safe remodeling Procedures.doc"> Lead-safe remodeling Procedures</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_white_acrobat.png);"><a href="/files/leadpdfe.pdf">Lead Information</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Safety Tool box talk guidelines.doc"> Safety Tool box talk guidelines</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 WARNING SIGN.doc"> WARNING SIGN</a>
+      </li>
+      
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Scope of Work.doc"> Scope of Work</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_white_acrobat.png);"><a href="/files/homeowner_brochure.pdf">Homeowner Brochure</a>
+      </li>
+      </ul>
+       <h2>Contact Information</h2>
+      <strong>Dave Lyons, Committee Chairman</strong>
+      <br />
+      Days - 503-248-2030 and evenings - 503-287-9915<br />
+      Please confirm your attendance: <a href="dave@jdldev.com">Dave Lyons - dave@jdldev.com</a> or <a href="mailto:MikeMalone@RebuildingTogetherPortland.org">Mike Malone - MikeMalone@RebuildingTogetherPortland.org</a>
+      <br /><br />
+      <strong>Rebuilding Together * Portland</strong>
+      <br />
+      5000 N. Willamette Blvd. Portland, OR 97203-5798<br />
+      Phone: 503-943-7515<br />
+      Fax: 503-943-7322<br />
+      <a href="mailto:MikeMalone@rebuildingtogetherportland.org">MikeMalone@rebuildingtogetherportland.org</a>
+      <br />
+      
+
+    - 2011-12-24 20:59:55 Z
+    - 2011-12-24 20:59:55 Z
+  - - 10
+    - 10
+    - en
+    - |
+      <p>
+      <strong>Free facility repairs available for Non-Profits.</strong> It's Rebuilding Together Portland to the rescue!
+      </p>
+      <p>
+      Since 1990 Rebuilding Together Portland has been realizing ambitious annual goals to repair and rehabilitate both homes and non-profit community facilities. While more than 50 homes are worked on each year, Rebuilding Together Portland also helps five or six non-profits each year with free facility repairs. Rebuilding Together Portland matches coordinates projects year-round, but most of the work is done on the last Saturday in April each year by more than a thousand volunteers on that one day.
+      </p>
+      <p>
+      Rebuilding Together is a non-profit organization supported entirely by contributions of time, labor, materials, and money. Our core competencies include identifying worthy homeowners and non-profits in need and matching them with volunteers, supplies and materials. Rebuilding Together Portland coordinates skilled and unskilled volunteers and materials needed to complete the work in a day or two. We are always looking for good projects at non-profit properties where volunteers will enjoy and appreciate their contribution.
+      </p>
+      <p>
+      To be eligible for consideration, the applicant's property must:
+      </p>
+      <ul>
+          <li>Be the owner and occupant of the property
+          </li>
+      <li>Assist low income individuals whom are also elderly or disabled or with children
+          </li>
+      <li>Be unable both financially and physically to effect repairs themselves
+          </li>
+      <li>Be located on a property in the city of Portland.
+      </li>
+      </ul>
+      <p>
+      Safety and security are the first priorities of Rebuilding Together. Our skilled and unskilled volunteers do all
+      types of work including painting, plumbing, electrical, carpentry, weatherization, yard cleaning,
+      debris removal, and much more!
+      </p>
+      <p>
+      When a project is accepted, a scope of work is defined in advance, but the non-profit organization and homeowners
+      need to understand these are volunteers and that time and weather may prevent them from
+      accomplishing everything planned to be completed.
+      </p>
+      <p>
+      To become eligible for assistance, fill out our Non-profit Referral Form.
+      </p>
+       <p>
+        <a href="/forms/Non-ProfitReferralForm.pdf" style="font-size:1.4em;">Click Here to Download an Application</a>
+       </p>
+       <h2>Contact Information</h2>
+      <strong>Rebuilding Together * Portland</strong>
+      <br />
+      5000 N. Willamette Blvd. Portland, OR 97203-5798<br />
+      Phone: 503-943-7515<br />
+      Fax: 503-943-7322<br />
+      <a href="mailto:MikeMalone@rebuildingtogetherportland.org">MikeMalone@rebuildingtogetherportland.org</a>
+      <br />
+
+    - 2011-12-24 21:00:43 Z
+    - 2011-12-24 21:00:43 Z
+  - - 11
+    - 11
+    - en
+    - "The elements of the \r\n\
+      \t\t\t\t\t\t\t\t\tnational logo consist of the artwork (\"the \r\n\
+      \t\t\t\t\t\t\t\t\tsymbol\") and the words Rebuilding Together. \r\n\
+      \t\t\t\t\t\t\t\t\tIt is a unique mark and may not be altered. \r\n\
+      \t\t\t\t\t\t\t\t\tThe logo must not be redrawn and cannot \r\n\
+      \t\t\t\t\t\t\t\t\tinclude any additional graphic \r\n\
+      \t\t\t\t\t\t\t\t\tembellishments. The position and size \r\n\
+      \t\t\t\t\t\t\t\t\trelationship of the elements should not be \r\n\
+      \t\t\t\t\t\t\t\t\tchanged. It should be reproduced from the \r\n\
+      \t\t\t\t\t\t\t\t\tartwork provided by the national \r\n\
+      \t\t\t\t\t\t\t\t\torganization or from a digital version, \r\n\
+      \t\t\t\t\t\t\t\t\tavailable on the CD accompanying this manual \r\n\
+      \t\t\t\t\t\t\t\t\tor downloadable from the members-only \r\n\
+      \t\t\t\t\t\t\t\t\tsection of www.rebuildingtogether.org in a \r\n\
+      \t\t\t\t\t\t\t\t\tnumber of formats and versions. The national \r\n\
+      \t\t\t\t\t\t\t\t\toffice has trademark protection for the \r\n\
+      \t\t\t\t\t\t\t\t\tRebuilding Together logo. Always use the \xC2\xAE \r\n\
+      \t\t\t\t\t\t\t\t\tthat appears at the base of the \"r\" in \r\n\
+      \t\t\t\t\t\t\t\t\t\"Together.\" Do not use the logo as a part of \r\n\
+      \t\t\t\t\t\t\t\t\tanother corporate name.<br />\r\n\
+      \t\t\t\t\t\t\t\t\tBy downloading any logos from this site, you \r\n\
+      \t\t\t\t\t\t\t\t\tare agreeing to adhere to these guidelines.\r\n\
+      \r\n\
+      <h2>Downloads</h2>\r\n\
+      <style>\r\n  img\r\n  {\r\n    border: none;\r\n  }\r\n\
+      </style>\r\n\
+      <table style=\"width: 100%\">\r\n\
+      \t\t\t\t\t\t\t\t\t<tbody><tr>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<td class=\"style20\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style19\">&#160;<a href=\"/logos/RT_2Clogo_horiz.jpg\" class=\"style14\"><img src=\"/images/RT_2Clogo_horiz_small.jpg\" width=\"344\" height=\"100\" class=\"style17\" /></a>\r\n\
+      <br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_2Clogo_horiz.eps\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_2Clogo_horiz.eps</a>\r\n\
+      <br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_2Clogo_horiz.jpg\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_2Clogo_horiz.jpg</a>\r\n\
+      <br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      </td>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<td class=\"style23\">&#160;<a href=\"/logos/RT_2Clogo_stacked.jpg\"><span class=\"style22\"><img src=\"/images/RT_2Clogo_stacked_small.jpg\" width=\"204\" height=\"100\" class=\"style21\" /></span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_2Clogo_stacked.jpg\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_2Clogo_stacked.jpg</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_2Clogo_stacked.eps\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_2Clogo_stacked.eps</span>\r\n\
+      </a>\r\n\
+      </td>\r\n\
+      \t\t\t\t\t\t\t\t\t</tr>\r\n\
+      \t\t\t\t\t\t\t\t\t<tr class=\"style19\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<td class=\"style23\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">&#160;</span>\r\n\
+      <a href=\"/logos/RT_Blacklogo_horiz.jpg\"><span class=\"style22\"><img src=\"/images/RT_Blacklogo_horiz_small.jpg\" width=\"344\" height=\"100\" class=\"style21\" /></span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_Blacklogo_horiz.jpg\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_Blacklogo_horiz.jpg</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_Blacklogo_horiz.eps\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_Blacklogo_horiz.eps</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      </td>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<td class=\"style23\">&#160;<a href=\"/logos/RT_Blacklogo_stacked.jpg\"><span class=\"style22\"><img src=\"/images/RT_Blacklogo_stacked_small.jpg\" width=\"204\" height=\"100\" class=\"style21\" /></span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_Blacklogo_stacked.jpg\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_Blacklogo_stacked.jpg</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_Blacklogo_stacked.eps\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_Blacklogo_stacked.eps</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      </td>\r\n\
+      \t\t\t\t\t\t\t\t\t</tr>\r\n\
+      \t\t\t\t\t\t\t\t\t<tr class=\"style19\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<td class=\"style23\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">&#160;</span>\r\n\
+      <a href=\"/logos/RT_GSlogo_horiz.jpg\"><span class=\"style22\"><img src=\"/images/RT_GSlogo_horiz_small.jpg\" width=\"344\" height=\"100\" class=\"style21\" /></span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_GSlogo_horiz.jpg\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_GSlogo_horiz.jpg</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_GSlogo_horiz.eps\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_GSlogo_horiz.eps</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      </td>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<td class=\"style23\">&#160;<a href=\"/logos/RT_GSlogo_stacked.jpg\"><span class=\"style22\"><img src=\"/images/RT_GSlogo_stacked_small.jpg\" width=\"204\" height=\"100\" class=\"style21\" /></span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_GSlogo_stacked.jpg\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_GSlogo_stacked.jpg</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_GSlogo_stacked.eps\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_GSlogo_stacked.eps</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      </td>\r\n\
+      \t\t\t\t\t\t\t\t\t</tr>\r\n\
+      \t\t\t\t\t\t\t\t\t<tr class=\"style19\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<td class=\"style23\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">&#160;</span>\r\n\
+      <a href=\"/logos/RT_PMS368logo_horiz.jpg\"><span class=\"style22\"><img src=\"/images/RT_PMS368logo_horiz_small.jpg\" width=\"344\" height=\"100\" class=\"style21\" /></span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_PMS368logo_horiz.jpg\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_PMS368logo_horiz.jpg</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_PMS368logo_horiz.eps\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_PMS368logo_horiz.eps</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      </td>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<td class=\"style23\">&#160;<a href=\"/logos/RT_PMS368logo_stacked.jpg\"><span class=\"style22\"><img src=\"/images/RT_PMS368logo_stacked_small.jpg\" width=\"204\" height=\"100\" class=\"style21\" /></span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_PMS368logo_stacked.jpg\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_PMS368logo_stacked.jpg</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_PMS368logo_stacked.eps\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_PMS368logo_stacked.eps</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      </td>\r\n\
+      \t\t\t\t\t\t\t\t\t</tr>\r\n\
+      \t\t\t\t\t\t\t\t\t<tr class=\"style19\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<td class=\"style23\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">&#160;</span>\r\n\
+      <a href=\"/logos/RT_KOlogo_horiz.jpg\"><span class=\"style22\"><img src=\"/images/RT_KOlogo_horiz_small.jpg\" width=\"291\" height=\"100\" class=\"style21\" /></span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_KOlogo_horiz.jpg\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_KOlogo_horiz.jpg</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_KOlogo_horiz.eps\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_KOlogo_horiz.eps</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      </td>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<td class=\"style23\">&#160;<a href=\"/logos/RT_KOlogo_stacked.jpg\"><span class=\"style22\"><img src=\"/images/RT_KOlogo_stacked_small.jpg\" width=\"192\" height=\"100\" class=\"style21\" /></span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_KOlogo_stacked.jpg\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_KOlogo_stacked.jpg</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_KOlogo_stacked.eps\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_KOlogo_stacked.eps</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      </td>\r\n\
+      \t\t\t\t\t\t\t\t\t</tr>\r\n\
+      \t\t\t\t\t\t\t\t\t<tr class=\"style19\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<td class=\"style23\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">&#160;</span>\r\n\
+      <a href=\"/logos/RT_KOlogo_horizWHT.jpg\"><span class=\"style22\"><img src=\"/images/RT_KOlogo_horizWHT_small.jpg\" width=\"282\" height=\"100\" class=\"style21\" /></span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_KOlogo_horizWHT.jpg\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_KOlogo_horizWHT.jpg</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_KOlogo_horizWHT.eps\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_KOlogo_horizWHT.eps</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      </td>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<td class=\"style23\">&#160;<a href=\"/logos/RT_KOlogo_stackedWHT.jpg\"><span class=\"style22\"><img src=\"/images/RT_KOlogo_stackedWHT_small.jpg\" width=\"184\" height=\"100\" class=\"style21\" /></span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_KOlogo_stackedWHT.jpg\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_KOlogo_stackedWHT.jpg</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_KOlogo_stackedWHT.eps\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_KOlogo_stackedWHT.eps</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      </td>\r\n\
+      \t\t\t\t\t\t\t\t\t</tr>\r\n\
+      \t\t\t\t\t\t\t\t</tbody>\r\n\
+      </table>"
+    - 2011-12-24 21:02:35 Z
+    - 2011-12-24 21:03:14 Z
+
+--- 
+page_parts: 
+  columns: 
   - id
   - page_id
   - title
@@ -398,394 +731,710 @@ page_parts:
   - created_at
   - updated_at
   records: 
----
-  - - '5'
-    - '3'
+  - - 1
+    - 1
     - Body
-    - ! "<h2>Board Officers</h2>\r\n<table class=\"boardnames\">\r\n<tbody><tr><td
-      class=\"name\">Paul Luty \t</td>\r\n<td>President \t</td>\r\n<td>\tUniversity
-      of Portland - Physical Plant</td>\r\n</tr>\r\n<tr><td class=\"name\">Michael
-      Desimone \t</td>\r\n<td>Vice President \t</td>\r\n<td>Key Bank</td>\r\n</tr>\r\n<tr><td
-      class=\"name\">Brian Vetrone \t</td>\r\n<td>Treasurer \t</td>\r\n<td>\tHampton
-      Affiliates</td>\r\n</tr>\r\n<tr><td class=\"name\">Mike Malone \t</td>\r\n<td>Executive
-      Director \t</td>\r\n<td>\tRebuilding Together*Portland</td>\r\n</tr>\r\n<tr><td
-      class=\"name\">Brian Thompson \t</td>\r\n<td>Legal \t</td>\r\n<td> \tMiller
-      Nash LLP</td>\r\n</tr>\r\n<tr><td class=\"name\">Kate Chavez \t</td>\r\n<td>Secretary</td>\r\n<td><a
-      href=\"http://www.enterprisecommunity.com\">Enterprise Community Investment,
-      Inc.</a>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n\r\n<h2>Board of Directors</h2>\r\n<table
-      class=\"boardnames\">\r\n<tbody><tr><td class=\"name\">Mark Easley \t</td>\r\n<td>KEMA
-      Consulting</td>\r\n</tr>\r\n<tr><td class=\"name\">Valerie Ebinger</td>\r\n<td><a
-      href=\"http://corsource.net\">CorSource Technology Group, Inc.</a>\r\n</td>\r\n</tr>\r\n\r\n<tr><td
-      class=\"name\">Mitch Falkenstein</td>\r\n<td><a href=\"http://www.paramountequity.com\">Paramount
-      Equity Mortgage</a>\r\n</td>\r\n</tr>\r\n\r\n<tr><td class=\"name\">Dave Lyons
-      \t</td>\r\n<td><a href=\"http://www.jdldev.com\">JDL Development</a>\r\n</td>\r\n</tr>\r\n<tr><td
-      class=\"name\">Thomas Moore</td>\r\n<td><a href=\"http://www.turnerconstruction.com\">Turner
-      Construction</a>\r\n</td>\r\n</tr>\r\n<tr><td class=\"name\">Pat Olson \t</td>\r\n<td>Standard
-      Supply Company</td>\r\n</tr>\r\n<tr><td class=\"name\">Deacon John Ries \t</td>\r\n<td>St.
-      Mary's Cathedral</td>\r\n</tr>\r\n\r\n<tr><td class=\"name\">Joshua Siler</td>\r\n<td><a
-      href=\"http://www.bnj.com\">Babcock &amp; Jenkins</a>\r\n</td>\r\n</tr>\r\n<tr><td
-      class=\"name\">Sarah Williams</td>\r\n<td><a href=\"http://www.hollandresidential.com\">Holland
-      Residential</a>\r\n</td>\r\n</tr>\r\n<tr><td class=\"name\">Brandon Zabrocki
-      \t</td>\r\n<td><a href=\"http://www.usbank.com\">US Bank</a>\r\n</td>\r\n</tr>\r\n\r\n</tbody>\r\n</table>\r\n"
-    - '0'
-    - '2011-09-11 22:23:58'
-    - '2011-09-11 22:40:42'
-  - - '6'
-    - '4'
+    - |-
+      
+       Rebuilding Together * Portland is a non-profit organization supported entirely by contributions of time, labor, materials, and money.
+      		    We are dedicated to repairing the homes of those who, due to financial hardship, age, and/or disability cannot do the work themselves.
+      		    Skilled and unskilled volunteers, along with able-bodied members of the recipients' family and friends, complete repairs  at no cost to the homeowner.
+      		    <br /><br />
+      		    <strong>Free home repairs</strong> are available for low-income homeowners. <a href="&lt;%= url_for :controller =&gt; :mainsite, :action =&gt; :homeowners_page %&gt;">Learn more</a>
+      		    <br /><br />
+      		    We will be celebrating our 20th year on April 24, 2010.  Our goal is to repair and rehabilitate over 50 homes and non-profit community facilities.
+      		    <br /><br />
+      		    <a href="&lt;%= url_for :controller =&gt; :contacts, :action =&gt; :new%&gt;">Sign up today</a> and join our 1500 strong volunteer workforce on <strong>Rebuilding Day 2010</strong>!
+      		    <br /><br />
+      		    
+      		    <img src="/images/photos/_DSC0393.JPG" />
+      		    <img src="/images/photos/128group.JPG" />
+      		    <br /><br />
+      		    A few of our sponsors:<br /><br />
+      		    <img src="/images/logo-sample.gif" alt="Sponsor logos" style="margin-left:150px;" />
+      		    <img alt="Cricket Wireless" src="/images/cricketwireless.gif" />
+      <h2>Recent Projects</h2>
+      <a href="http://www.mtscottlearningcenters.org/CultivatingMinds.htm">Cultivating Minds</a> <small>with
+        <a href="http://www.handsonportland.org/">Hands On Portland</a> and <a href="http://www.mycricket.com/portland">Cricket Wireless</a>
+      </small>
+    - 0
+    - 2011-12-24 20:46:03 Z
+    - 2011-12-24 21:05:01 Z
+  - - 3
+    - 2
     - Body
-    - ! "<p>\r\n<strong>Free facility repairs available for Non-Profits.</strong>
-      It's Rebuilding Together Portland to the rescue!\r\n</p>\r\n<p>\r\nSince 1990
-      Rebuilding Together Portland has been realizing ambitious annual goals to repair
-      and rehabilitate both homes and non-profit community facilities. While more
-      than 50 homes are worked on each year, Rebuilding Together Portland also helps
-      five or six non-profits each year with free facility repairs. Rebuilding Together
-      Portland matches coordinates projects year-round, but most of the work is done
-      on the last Saturday in April each year by more than a thousand volunteers on
-      that one day.\r\n</p>\r\n<p>\r\nRebuilding Together is a non-profit organization
-      supported entirely by contributions of time, labor, materials, and money. Our
-      core competencies include identifying worthy homeowners and non-profits in need
-      and matching them with volunteers, supplies and materials. Rebuilding Together
-      Portland coordinates skilled and unskilled volunteers and materials needed to
-      complete the work in a day or two. We are always looking for good projects at
-      non-profit properties where volunteers will enjoy and appreciate their contribution.\r\n</p>\r\n<p>\r\nTo
-      be eligible for consideration, the applicant's property must:\r\n</p>\r\n<ul>\r\n
-      \   <li>Be the owner and occupant of the property\r\n    </li>\r\n<li>Assist
-      low income individuals whom are also elderly or disabled or with children\r\n
-      \   </li>\r\n<li>Be unable both financially and physically to effect repairs
-      themselves\r\n    </li>\r\n<li>Be located on a property in the city of Portland.\r\n</li>\r\n</ul>\r\n<p>\r\nSafety
-      and security are the first priorities of Rebuilding Together. Our skilled and
-      unskilled volunteers do all\r\ntypes of work including painting, plumbing, electrical,
-      carpentry, weatherization, yard cleaning,\r\ndebris removal, and much more!\r\n</p>\r\n<p>\r\nWhen
-      a project is accepted, a scope of work is defined in advance, but the non-profit
-      organization and homeowners\r\nneed to understand these are volunteers and that
-      time and weather may prevent them from\r\naccomplishing everything planned to
-      be completed.\r\n</p>\r\n<p>\r\nTo become eligible for assistance, fill out
-      our Non-profit Referral Form.\r\n</p>\r\n <p>\r\n  <a href=\"/forms/2012/Non-ProfitReferralForm12.doc\"
-      style=\"font-size:1.4em;\">Click Here to Download an Application</a>\r\n </p>\r\n
-      <h2>Contact Information</h2>\r\n<strong>Rebuilding Together * Portland</strong>\r\n<br
-      />\r\n5000 N. Willamette Blvd. Portland, OR 97203-5798<br />\r\nPhone: 503-943-7515<br
-      />\r\nFax: 503-943-7322<br />\r\n<a href=\"mailto:MikeMalone@rebuildingtogetherportland.org\">MikeMalone@rebuildingtogetherportland.org</a>\r\n<br
-      />\r\n\r\n"
-    - '0'
-    - '2011-09-11 22:24:21'
-    - '2011-09-11 22:40:17'
-  - - '7'
-    - '5'
+    - <h2>Sorry, there was a problem...</h2><p>The page you requested was not found.</p><p><a href='/'>Return to the home page</a></p>
+    - 0
+    - 2011-12-24 20:46:03 Z
+    - 2011-12-24 20:46:03 Z
+  - - 4
+    - 3
     - Body
-    - ! "<h1>Official Logos</h1>\r\nThe elements of the \r\n\t\t\t\t\t\t\t\t\tnational
-      logo consist of the artwork (\"the \r\n\t\t\t\t\t\t\t\t\tsymbol\") and the words
-      Rebuilding Together. \r\n\t\t\t\t\t\t\t\t\tIt is a unique mark and may not be
-      altered. \r\n\t\t\t\t\t\t\t\t\tThe logo must not be redrawn and cannot \r\n\t\t\t\t\t\t\t\t\tinclude
-      any additional graphic \r\n\t\t\t\t\t\t\t\t\tembellishments. The position and
-      size \r\n\t\t\t\t\t\t\t\t\trelationship of the elements should not be \r\n\t\t\t\t\t\t\t\t\tchanged.
-      It should be reproduced from the \r\n\t\t\t\t\t\t\t\t\tartwork provided by the
-      national \r\n\t\t\t\t\t\t\t\t\torganization or from a digital version, \r\n\t\t\t\t\t\t\t\t\tavailable
-      on the CD accompanying this manual \r\n\t\t\t\t\t\t\t\t\tor downloadable from
-      the members-only \r\n\t\t\t\t\t\t\t\t\tsection of www.rebuildingtogether.org
-      in a \r\n\t\t\t\t\t\t\t\t\tnumber of formats and versions. The national \r\n\t\t\t\t\t\t\t\t\toffice
-      has trademark protection for the \r\n\t\t\t\t\t\t\t\t\tRebuilding Together logo.
-      Always use the ® \r\n\t\t\t\t\t\t\t\t\tthat appears at the base of the \"r\"
-      in \r\n\t\t\t\t\t\t\t\t\t\"Together.\" Do not use the logo as a part of \r\n\t\t\t\t\t\t\t\t\tanother
-      corporate name.<br />\r\n\t\t\t\t\t\t\t\t\tBy downloading any logos from this
-      site, you \r\n\t\t\t\t\t\t\t\t\tare agreeing to adhere to these guidelines.\r\n\r\n<h2>Downloads</h2>\r\n<style>\r\n
-      \ img\r\n  {\r\n    border: none;\r\n  }\r\n</style>\r\n<table style=\"width:
-      100%\">\r\n\t\t\t\t\t\t\t\t\t<tbody><tr>\r\n\t\t\t\t\t\t\t\t\t\t<td class=\"style20\">\r\n\t\t\t\t\t\t\t\t\t\t<span
-      class=\"style19\">&#160;<a href=\"/logos/RT_2Clogo_horiz.jpg\" class=\"style14\"><img
-      src=\"/images/RT_2Clogo_horiz_small.jpg\" width=\"344\" height=\"100\" class=\"style17\"
-      /></a>\r\n<br />\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_2Clogo_horiz.eps\">\r\n\t\t\t\t\t\t\t\t\t\tRT_2Clogo_horiz.eps</a>\r\n<br
-      />\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_2Clogo_horiz.jpg\">\r\n\t\t\t\t\t\t\t\t\t\tRT_2Clogo_horiz.jpg</a>\r\n<br
-      />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n</td>\r\n\t\t\t\t\t\t\t\t\t\t<td class=\"style23\">&#160;<a
-      href=\"/logos/RT_2Clogo_stacked.jpg\"><span class=\"style22\"><img src=\"/images/RT_2Clogo_stacked_small.jpg\"
-      width=\"204\" height=\"100\" class=\"style21\" /></span>\r\n</a><span class=\"style22\"><br
-      />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_2Clogo_stacked.jpg\">\r\n\t\t\t\t\t\t\t\t\t\t<span
-      class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_2Clogo_stacked.jpg</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_2Clogo_stacked.eps\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_2Clogo_stacked.eps</span>\r\n</a></td>\r\n\t\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t\t\t<tr
-      class=\"style19\">\r\n\t\t\t\t\t\t\t\t\t\t<td class=\"style23\">\r\n\t\t\t\t\t\t\t\t\t\t<span
-      class=\"style22\">&#160;</span>\r\n<a href=\"/logos/RT_Blacklogo_horiz.jpg\"><span
-      class=\"style22\"><img src=\"/images/RT_Blacklogo_horiz_small.jpg\" width=\"344\"
-      height=\"100\" class=\"style21\" /></span>\r\n</a><span class=\"style22\"><br
-      />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_Blacklogo_horiz.jpg\">\r\n\t\t\t\t\t\t\t\t\t\t<span
-      class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_Blacklogo_horiz.jpg</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_Blacklogo_horiz.eps\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_Blacklogo_horiz.eps</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n</td>\r\n\t\t\t\t\t\t\t\t\t\t<td
-      class=\"style23\">&#160;<a href=\"/logos/RT_Blacklogo_stacked.jpg\"><span class=\"style22\"><img
-      src=\"/images/RT_Blacklogo_stacked_small.jpg\" width=\"204\" height=\"100\"
-      class=\"style21\" /></span>\r\n</a><span class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_Blacklogo_stacked.jpg\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_Blacklogo_stacked.jpg</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_Blacklogo_stacked.eps\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_Blacklogo_stacked.eps</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n</td>\r\n\t\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t\t\t<tr
-      class=\"style19\">\r\n\t\t\t\t\t\t\t\t\t\t<td class=\"style23\">\r\n\t\t\t\t\t\t\t\t\t\t<span
-      class=\"style22\">&#160;</span>\r\n<a href=\"/logos/RT_GSlogo_horiz.jpg\"><span
-      class=\"style22\"><img src=\"/images/RT_GSlogo_horiz_small.jpg\" width=\"344\"
-      height=\"100\" class=\"style21\" /></span>\r\n</a><span class=\"style22\"><br
-      />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_GSlogo_horiz.jpg\">\r\n\t\t\t\t\t\t\t\t\t\t<span
-      class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_GSlogo_horiz.jpg</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_GSlogo_horiz.eps\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_GSlogo_horiz.eps</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n</td>\r\n\t\t\t\t\t\t\t\t\t\t<td
-      class=\"style23\">&#160;<a href=\"/logos/RT_GSlogo_stacked.jpg\"><span class=\"style22\"><img
-      src=\"/images/RT_GSlogo_stacked_small.jpg\" width=\"204\" height=\"100\" class=\"style21\"
-      /></span>\r\n</a><span class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_GSlogo_stacked.jpg\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_GSlogo_stacked.jpg</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_GSlogo_stacked.eps\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_GSlogo_stacked.eps</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n</td>\r\n\t\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t\t\t<tr
-      class=\"style19\">\r\n\t\t\t\t\t\t\t\t\t\t<td class=\"style23\">\r\n\t\t\t\t\t\t\t\t\t\t<span
-      class=\"style22\">&#160;</span>\r\n<a href=\"/logos/RT_PMS368logo_horiz.jpg\"><span
-      class=\"style22\"><img src=\"/images/RT_PMS368logo_horiz_small.jpg\" width=\"344\"
-      height=\"100\" class=\"style21\" /></span>\r\n</a><span class=\"style22\"><br
-      />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_PMS368logo_horiz.jpg\">\r\n\t\t\t\t\t\t\t\t\t\t<span
-      class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_PMS368logo_horiz.jpg</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_PMS368logo_horiz.eps\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_PMS368logo_horiz.eps</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n</td>\r\n\t\t\t\t\t\t\t\t\t\t<td
-      class=\"style23\">&#160;<a href=\"/logos/RT_PMS368logo_stacked.jpg\"><span class=\"style22\"><img
-      src=\"/images/RT_PMS368logo_stacked_small.jpg\" width=\"204\" height=\"100\"
-      class=\"style21\" /></span>\r\n</a><span class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_PMS368logo_stacked.jpg\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_PMS368logo_stacked.jpg</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_PMS368logo_stacked.eps\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_PMS368logo_stacked.eps</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n</td>\r\n\t\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t\t\t<tr
-      class=\"style19\">\r\n\t\t\t\t\t\t\t\t\t\t<td class=\"style23\">\r\n\t\t\t\t\t\t\t\t\t\t<span
-      class=\"style22\">&#160;</span>\r\n<a href=\"/logos/RT_KOlogo_horiz.jpg\"><span
-      class=\"style22\"><img src=\"/images/RT_KOlogo_horiz_small.jpg\" width=\"291\"
-      height=\"100\" class=\"style21\" /></span>\r\n</a><span class=\"style22\"><br
-      />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_KOlogo_horiz.jpg\">\r\n\t\t\t\t\t\t\t\t\t\t<span
-      class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_KOlogo_horiz.jpg</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_KOlogo_horiz.eps\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_KOlogo_horiz.eps</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n</td>\r\n\t\t\t\t\t\t\t\t\t\t<td
-      class=\"style23\">&#160;<a href=\"/logos/RT_KOlogo_stacked.jpg\"><span class=\"style22\"><img
-      src=\"/images/RT_KOlogo_stacked_small.jpg\" width=\"192\" height=\"100\" class=\"style21\"
-      /></span>\r\n</a><span class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_KOlogo_stacked.jpg\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_KOlogo_stacked.jpg</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_KOlogo_stacked.eps\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_KOlogo_stacked.eps</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n</td>\r\n\t\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t\t\t<tr
-      class=\"style19\">\r\n\t\t\t\t\t\t\t\t\t\t<td class=\"style23\">\r\n\t\t\t\t\t\t\t\t\t\t<span
-      class=\"style22\">&#160;</span>\r\n<a href=\"/logos/RT_KOlogo_horizWHT.jpg\"><span
-      class=\"style22\"><img src=\"/images/RT_KOlogo_horizWHT_small.jpg\" width=\"282\"
-      height=\"100\" class=\"style21\" /></span>\r\n</a><span class=\"style22\"><br
-      />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_KOlogo_horizWHT.jpg\">\r\n\t\t\t\t\t\t\t\t\t\t<span
-      class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_KOlogo_horizWHT.jpg</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_KOlogo_horizWHT.eps\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_KOlogo_horizWHT.eps</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n</td>\r\n\t\t\t\t\t\t\t\t\t\t<td
-      class=\"style23\">&#160;<a href=\"/logos/RT_KOlogo_stackedWHT.jpg\"><span class=\"style22\"><img
-      src=\"/images/RT_KOlogo_stackedWHT_small.jpg\" width=\"184\" height=\"100\"
-      class=\"style21\" /></span>\r\n</a><span class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_KOlogo_stackedWHT.jpg\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_KOlogo_stackedWHT.jpg</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t\t\t<a
-      href=\"/logos/RT_KOlogo_stackedWHT.eps\">\r\n\t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\t\t\t\t\t\t\t\t\t\tRT_KOlogo_stackedWHT.eps</span>\r\n</a><span
-      class=\"style22\"><br />\r\n\t\t\t\t\t\t\t\t\t\t</span>\r\n</td>\r\n\t\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t\t</tbody>\r\n</table>"
-    - '0'
-    - '2011-09-11 22:24:39'
-    - '2011-09-11 22:24:39'
-  - - '8'
-    - '6'
+    - |-
+      <p>
+      Rebuilding Together * Portland is a non-profit organization supported entirely by contributions of time, labor, materials, and money.  We are dedicated to repairing the homes of those who, due to financial hardship, age, and/or disability cannot do the work themselves.  Skilled and unskilled volunteers along with able-bodied members of the recipients' family and friends complete repairs  at
+      <strong>no cost to the homeowner.</strong>
+      </p>
+      <p>
+      To be eligible for consideration for 2010 the applicant must:
+      </p>
+      <ul>
+        <li>Be the owner and occupant of the property
+        </li>
+      <li>Be low income; elderly and/or disabled; families with children; veterans
+        </li>
+      <li>Be unable both financially and physically to complete repairs themselves
+        </li>
+      <li>Live in a property located in the City of Portland
+      </li>
+      </ul>
+      
+      <p>
+      <strong>Each year Rebuilding Together Portland, screens approximately 150 low income homeowners</strong> and selects about 50-60 homes for
+      repair. In addition 5-8 non-profit organizations benefit on the workday and projects throughout the year. Rebuilding Together
+      Portland organizes 1,200-1,500 volunteers from all walks of life to unite on the last Saturday in April each year to complete
+      equivalent to $900,000 worth of improvements to the community on that day. Other individual projects are performed throughout
+      the year, but most of the work is done on the big day in April. These efforts are made possible with the help of a 20 member
+      working board, financial contributions and the efforts of over 1,300 volunteers.
+      </p>
+      <img src="/images/photos/0425RTP53.jpg" />
+      <p>
+      <strong>Homeowner safety and security are the first priorities</strong> of Rebuilding Together.
+      Our skilled and unskilled volunteers do all types of work including painting, plumbing, electrical, carpentry,
+      roofing, weatherization, yard cleaning, debris removal, and much more!  We do need the homeowners to understand
+      that time and weather may prevent these volunteers from accomplishing everything that the applicant would like done
+      to their home on <strong>our next workday, Saturday, April 24, 2010.</strong>
+      </p>
+      <p>
+      This is an annual "barn-raising" event designed to repair and rehabilitate the homes of low-income, elderly, and
+      disabled homeowners as well as selected community non-profit facilities. After a year of planning and preparation,
+      the program culminates in a one day "blitz" the last Saturday in April. The program has now expanded to include projects
+      not only on this day, but year-round as well.
+      </p>
+      
+      <p>
+      <strong>Rebuilding Together is a nation-wide organization</strong> that, in partnership with the community, rehabilitates the homes of low-income
+      homeowners, particularly families with children and the elderly and disabled so that they can continue to live in warmth, safety
+      and independence. Rebuilding Together-Portland also assists in the rehabilitation of community centers, schools and non-profits.
+      </p>
+      <div>
+      <em>  
+      Check out the Rebuilding Together Twitter feed shown here to learn about activities in other cities.
+      </em>
+      <br /><br />
+      
+      
+      </div>
+      <div style="clear:both;">&#160;</div>
+      <h2>Contact Information</h2>
+      <strong>Rebuilding Together * Portland</strong>
+      <br />
+      5000 N. Willamette Blvd. Portland, OR 97203-5798<br />
+      Phone: 503-943-7515<br />
+      Fax: 503-943-7322<br />
+      MikeMalone@rebuildingtogetherportland.org<br />
+      
+      <p>
+      <a href="/official-logos">Official Logos available for download</a>
+      </p>
+    - 0
+    - 2011-12-24 20:46:03 Z
+    - 2011-12-24 21:03:42 Z
+  - - 6
+    - 4
     - Body
-    - ! "\t\t    <div style=\"width:280px;float:right;\"><div id=\"fb-root\"></div>\r\n<br
-      />\r\n<div style=\"width:200px;border: 1px solid #555;padding:10px; margin:
-      10px;font-size:12px;text-align:center;\">\r\n<strong>Interested in making a
-      donation?</strong> You can make a real difference for homeowners in need. Click
-      the button below to donate via Paypal.<br />\r\n<br />\r\n<form action=\"https://www.paypal.com/cgi-bin/webscr\"
-      method=\"post\">\r\n<input type=\"hidden\" name=\"cmd\" value=\"_s-xclick\"
-      />\r\n<input type=\"hidden\" name=\"hosted_button_id\" value=\"NXLK47HQCDWMY\"
-      />\r\n<input type=\"image\" src=\"https://www.paypalobjects.com/WEBSCR-640-20110306-1/en_US/i/btn/btn_donateCC_LG.gif\"
-      name=\"submit\" alt=\"PayPal - The safer, easier way to pay online!\" />\r\n<img
-      src=\"https://www.paypalobjects.com/WEBSCR-640-20110306-1/en_US/i/scr/pixel.gif\"
-      width=\"1\" height=\"1\" />\r\n</form> </div>\r\n</div>\r\n\r\n Rebuilding Together
-      * Portland is a non-profit organization supported entirely by contributions
-      of time, labor, materials, and money.\r\n\t\t    We are dedicated to repairing
-      the homes of those who, due to financial hardship, age, and/or disability cannot
-      do the work themselves.\r\n\t\t    Skilled and unskilled volunteers, along with
-      able-bodied members of the recipients' family and friends, complete repairs
-      \ at no cost to the homeowner.\r\n<br /><br />\r\n\r\nCheck out the new <a href=\"http://www.rebuildingtogether.org/content/multimedia/detail/7788/\">Rebuilding
-      Together PSA</a> with Morgan Freeman.\r\n\t\t    <br /><br />\r\n\t\t    <strong>Free
-      home repairs</strong> are available for low-income homeowners. <a href=\"&lt;%=
-      url_for :controller =&gt; :mainsite, :action =&gt; :homeowners_page %&gt;\">Learn
-      more</a>\r\n\t\t    <br /><br />\r\n\t\t    We celebrated our 21st year on April
-      30, 2011.  Our goal was to repair and rehabilitate over 50 homes and non-profit
-      community facilities, and by every measure the day was a success!\r\n\t\t    <br
-      /><br />\r\n\t\t    <a href=\"/plogger/index.php\">We have some great photos</a>
-      from last year's project day. Thanks to the photographers that volunteered their
-      time to help us show off. \r\n<br /><br />\r\nAlso, a great quote from one of
-      our project homeowner's family:<br /><br />\r\n<em>\"I don't know how to put
-      into words how much I want to thank everyone that helped on the house. It was
-      a great experience for all of us, I think, and it definitely inspired me to
-      go out and help others.\" </em>\r\n<br /><br /> \r\n<a href=\"http://4-24-10.blogspot.com/2010/05/dear-portland-rebuilding-together.html\">Check
-      out the full blog post</a> and a big thank you from one of the homeowners we
-      helped out April 2010!.<br />\r\n<br /><br />\r\n\t\t    <img src=\"/images/photos/_DSC0393.JPG\"
-      />\r\n\t\t    <img src=\"/images/photos/128group.JPG\" />\r\n\t\t    <br /><br
-      />\r\n\t\t    A few of our sponsors:<br /><br />\r\n\t\t    <img src=\"/images/logo-sample.gif\"
-      alt=\"Sponsor logos\" style=\"margin-left:150px;\" />\r\n\t\t    <img alt=\"Cricket
-      Wireless\" src=\"/images/cricketwireless.gif\" />\r\n<h2>Recent Projects</h2>\r\n<a
-      href=\"http://www.mtscottlearningcenters.org/CultivatingMinds.htm\">Cultivating
-      Minds</a> <small>with\r\n  <a href=\"http://www.handsonportland.org/\">Hands
-      On Portland</a> and <a href=\"http://www.mycricket.com/portland\">Cricket Wireless</a>\r\n</small>\r\n
-      \r\n"
-    - '0'
-    - '2011-09-11 22:25:33'
-    - '2011-09-11 22:34:37'
-  - - '9'
-    - '7'
-    - Body
-    - ! " <p>House Captains are our project leaders, and help ensure that each and
-      every project is a success on rebuilding day.\r\n\r\n If you are interested
-      in becoming a House Captain, please contact <a href=\"mailto:MikeMalone@RebuildingTogetherPortland.org\">Mike
-      Malone at MikeMalone@RebuildingTogetherPortland.org</a>\r\n</p>\r\n\r\n\r\n\r\n
-      <p>If you've already signed up, <strong>thank you!</strong> The House Captain's
-      role is a crucial element in making our program a success.  It is your skills,
-      hard work and dedication that get our repair and rehabilitation work completed
-      effectively and efficiently.  This role will be challenging and at the same
-      time very rewarding.\r\n\r\n </p>\r\n\r\n<p>\r\n\r\nFor more information, start
-      here: <a href=\"/files/RT2011hcltter.doc\">Letter to House Captains</a> (with
-      2011 schedule)\r\n\r\n</p>\r\n\r\n<h2>Resources for House Captains</h2>\r\n\r\n<ul>\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/new.png);margin-bottom: 20px;\"><em>Updated
-      for 2011</em>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li style=\"list-style-image:
-      url(/images/icons/page_white_acrobat.png);\"><a href=\"/files/2011/2011_campus_map.pdf\">\r\n\r\n\t\r\n\r\n\t\tCampus\r\n\r\n\r\n\r\n\t\tMap\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_guidelines_for_house_liaisons.doc\">\r\n\r\n\t\r\n\r\n\t\tGuidelines\r\n\r\n\r\n\r\n\t\tFor\r\n\r\n\r\n\r\n\t\tHouse\r\n\r\n\r\n\r\n\t\tLiaisons\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_hc_handbook_planning_ahead.doc.doc\">\r\n\r\n\t\r\n\r\n\t\tHc\r\n\r\n\r\n\r\n\t\tHandbook\r\n\r\n\r\n\r\n\t\tPlanning\r\n\r\n\r\n\r\n\t\tAhead\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_hc_handbook_the_work_day.doc.doc\">\r\n\r\n\t\r\n\r\n\t\tHc\r\n\r\n\r\n\r\n\t\tHandbook\r\n\r\n\r\n\r\n\t\tThe\r\n\r\n\r\n\r\n\t\tWork\r\n\r\n\r\n\r\n\t\tDay\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_hc_orientation_agenda.doc\">\r\n\r\n\t\r\n\r\n\t\tHc\r\n\r\n\r\n\r\n\t\tOrientation\r\n\r\n\r\n\r\n\t\tAgenda\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_hc_role_&amp;_responsibilities.doc\">\r\n\r\n\t\r\n\r\n\t\tHc\r\n\r\n\r\n\r\n\t\tRole\r\n\r\n\r\n\r\n\t\t&amp;\r\n\r\n\r\n\r\n\t\tResponsibilities\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_hc_volunteer_list_work_sheet.doc\">\r\n\r\n\t\r\n\r\n\t\tHc\r\n\r\n\r\n\r\n\t\tVolunteer\r\n\r\n\r\n\r\n\t\tList\r\n\r\n\r\n\r\n\t\tWork\r\n\r\n\r\n\r\n\t\tSheet\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_homeowner_agreement.doc\">\r\n\r\n\t\r\n\r\n\t\tHomeowner\r\n\r\n\r\n\r\n\t\tAgreement\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_homeowner_interview-house_inspection_sign_up.doc\">\r\n\r\n\t\r\n\r\n\t\tHomeowner\r\n\r\n\r\n\r\n\t\tInterview-house\r\n\r\n\r\n\r\n\t\tInspection\r\n\r\n\r\n\r\n\t\tSign\r\n\r\n\r\n\r\n\t\tUp\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_house_captain_evaluation.doc\">\r\n\r\n\t\r\n\r\n\t\tHouse\r\n\r\n\r\n\r\n\t\tCaptain\r\n\r\n\r\n\r\n\t\tEvaluation\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_house_captains_reminder_lttr.doc\">\r\n\r\n\t\r\n\r\n\t\tHouse\r\n\r\n\r\n\r\n\t\tCaptains\r\n\r\n\r\n\r\n\t\tReminder\r\n\r\n\r\n\r\n\t\tLttr\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_house_caption_flow_chart_for_recruiting_volunteers.doc\">\r\n\r\n\t\r\n\r\n\t\tHouse\r\n\r\n\r\n\r\n\t\tCaption\r\n\r\n\r\n\r\n\t\tFlow\r\n\r\n\r\n\r\n\t\tChart\r\n\r\n\r\n\r\n\t\tFor\r\n\r\n\r\n\r\n\t\tRecruiting\r\n\r\n\r\n\r\n\t\tVolunteers\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_lead-safe_remodeling_procedures.doc\">\r\n\r\n\t\r\n\r\n\t\tLead-safe\r\n\r\n\r\n\r\n\t\tRemodeling\r\n\r\n\r\n\r\n\t\tProcedures\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_white_acrobat.png);\"><a href=\"/files/2011/2011_lowes_order_form.pdf\">\r\n\r\n\t\r\n\r\n\t\tLowes\r\n\r\n\r\n\r\n\t\tOrder\r\n\r\n\r\n\r\n\t\tForm\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_excel.png);\"><a href=\"/files/2011/2011_material_help.xls\">\r\n\r\n\t\r\n\r\n\t\tMaterial\r\n\r\n\r\n\r\n\t\tHelp\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_med_treatment_authorization_for_minor.doc\">\r\n\r\n\t\r\n\r\n\t\tMed\r\n\r\n\r\n\r\n\t\tTreatment\r\n\r\n\r\n\r\n\t\tAuthorization\r\n\r\n\r\n\r\n\t\tFor\r\n\r\n\r\n\r\n\t\tMinor\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_safety_tool_box_talk_guidelines.doc\">\r\n\r\n\t\r\n\r\n\t\tSafety\r\n\r\n\r\n\r\n\t\tTool\r\n\r\n\r\n\r\n\t\tBox\r\n\r\n\r\n\r\n\t\tTalk\r\n\r\n\r\n\r\n\t\tGuidelines\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_scope_of_work.doc\">\r\n\r\n\t\r\n\r\n\t\tScope\r\n\r\n\r\n\r\n\t\tOf\r\n\r\n\r\n\r\n\t\tWork\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_updated_volunteer_agreement_and_release.doc\">\r\n\r\n\t\r\n\r\n\t\tUpdated\r\n\r\n\r\n\r\n\t\tVolunteer\r\n\r\n\r\n\r\n\t\tAgreement\r\n\r\n\r\n\r\n\t\tAnd\r\n\r\n\r\n\r\n\t\tRelease\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_volunteer_estimate_form.doc\">\r\n\r\n\t\r\n\r\n\t\tVolunteer\r\n\r\n\r\n\r\n\t\tEstimate\r\n\r\n\r\n\r\n\t\tForm\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/2011_volunteer_opportunities_form.doc\">\r\n\r\n\t\r\n\r\n\t\tVolunteer\r\n\r\n\r\n\r\n\t\tOpportunities\r\n\r\n\r\n\r\n\t\tForm\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/lowes_material_procedures_2011.doc\">\r\n\r\n\t\r\n\r\n\t\tLowes\r\n\r\n\r\n\r\n\t\tMaterial\r\n\r\n\r\n\r\n\t\tProcedures\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n\r\n\r\n<li
-      style=\"list-style-image: url(/images/icons/page_word.png);\"><a href=\"/files/2011/xmas_2011_hc_lttr.doc\">\r\n\r\n\t\r\n\r\n\t\tXmas\r\n\r\n\r\n\r\n\t\tHc\r\n\r\n\r\n\r\n\t\tLttr\r\n\r\n</a>\r\n</li>\r\n\r\n\r\n\r\n</ul>\r\n\r\n\r\n\r\n
-      <h2>Contact Information</h2>\r\n\r\n<strong>Dave Lyons, Committee Chairman</strong>\r\n<br
-      />\r\n\r\nDays - 503-248-2030 and evenings - 503-287-9915<br />\r\n\r\nPlease
-      confirm your attendance: <a href=\"dave@jdldev.com\">Dave Lyons - dave@jdldev.com</a>
-      or <a href=\"mailto:MikeMalone@RebuildingTogetherPortland.org\">Mike Malone
-      - MikeMalone@RebuildingTogetherPortland.org</a>\r\n\r\n<br /><br />\r\n\r\n<strong>Rebuilding
-      Together * Portland</strong>\r\n<br />\r\n\r\n5000 N. Willamette Blvd. Portland,
-      OR 97203-5798<br />\r\n\r\nPhone: 503-943-7515<br />\r\n\r\nFax: 503-943-7322<br
-      />\r\n\r\n<a href=\"mailto:MikeMalone@rebuildingtogetherportland.org\">MikeMalone@rebuildingtogetherportland.org</a>\r\n<br
-      />\r\n\r\n\r\n\r\n"
-    - '0'
-    - '2011-09-11 22:26:30'
-    - '2011-09-11 22:26:30'
-  - - '10'
-    - '8'
-    - Body
-    - ! " <p>\r\n We rely on social service agencies, town offices, service organizations,
-      churches, community groups, and individuals\r\n to help us identify homeowners
-      in Portland in need of our assistance. <strong>Do you know an elderly person,
-      somebody with a disability,\r\n or a working family who could use our help?</strong>\r\n
-      Please review the information on this site and contact us with a completed Home
-      Referral Form.\r\n </p>\r\n<p>\r\n<strong>All repairs are free for homeowners.
-      </strong>Labor and many supplies are typically donated. Homeowners and family
-      members are asked to welcome the volunteers into their homes and work alongside
-      them to the extent possible. Our work is done with families and neighborhoods,
-      not for them. A homeowner brochure is provided to clarify our process and partnership.\r\n</p>\r\n<img
-      src=\"/images/photos/2.jpg\" />\r\n <p>\r\nEligibility requirements include:\r\n</p>\r\n<ul>\r\n
-      \ <li>Applicants must own and live in the property where repair work will be
-      done.\r\n  </li>\r\n<li>Assist low income individuals whom are also elderly
-      or disabled or with children\r\n  </li>\r\n<li>Be unable both financially and
-      physically to effect repairs themselves\r\n  </li>\r\n<li>Applicants must be
-      able to produce their mortgage payment book, deed, or other documents showing
-      ownership, if requested.\r\n  </li>\r\n<li>The property is not subject to any
-      pending foreclosure actions or actions to enforce liens.\r\n  </li>\r\n<li>Persons
-      residing in your home or visiting on the designated workday who are physically
-      able will work alongside the volunteers.\r\n   </li>\r\n<li>Be located on a
-      property in the city of Portland.\r\n</li>\r\n</ul>\r\n<p>\r\nIneligible homes
-      include:\r\n</p>\r\n<ul>\r\n  <li>Rental properties\r\n  </li>\r\n<li>Household
-      income above federal poverty guidelines\r\n</li>\r\n</ul>\r\n<p>\r\nHomeowners
-      are carefully selected through an application process which includes income
-      thresholds and a home inspection.\r\nMembers of our House Selection Committees
-      visit applicant homes to confirm eligibility and assess work that needs to be
-      done.\r\nWhile we complete major renovations — including upgrading electrical
-      systems, and many other home\r\nimprovements — we narrow the scope of the work
-      we undertake to what we believe a team of 10-50 skilled and unskilled\r\nvolunteers
-      can accomplish in a day.\r\n</p>\r\n <p>\r\nThe number of homes we work on is
-      tied directly to the amount of money we can raise during the year.\r\nThe House
-      Selection Committee selects the qualifying homes for each year. On average,
-      we renovate more than 50 homes a year\r\nfrom a list of about 150 homeowners.
-      House Captains, generally skilled workers from sponsor groups select homes they\r\nwill
-      champion and set up a detailed plan of work to be done at the home and is the
-      primary contact for the homeowner\r\nthrough completion of the work.\r\n </p>\r\n
-      <p>\r\nThere are no promises that the work planned will actually be done. Weather,
-      volunteer availability and other factors may affect the actual work completed.
-      The House Captain will decide what work can and cannot be done on the day of
-      work. If your home is chosen for the rehabilitation work, there will be NO charge
-      for our service.\r\n</p>\r\n <p>\r\n  <a href=\"/forms/2011/HomeownerReferralForm.docx\"
-      style=\"font-size:1.4em;\">Click Here to Download an Application</a>\r\n </p>\r\n
-      <h2>Contact Information</h2>\r\n<strong>Rebuilding Together * Portland</strong>\r\n<br
-      />\r\n5000 N. Willamette Blvd. Portland, OR 97203-5798<br />\r\nPhone: 503-943-7515<br
-      />\r\nFax: 503-943-7322<br />\r\n<a href=\"mailto:MikeMalone@rebuildingtogetherportland.org\">MikeMalone@rebuildingtogetherportland.org</a>\r\n<br
-      />\r\n\r\n"
-    - '0'
-    - '2011-09-11 22:26:56'
-    - '2011-09-11 22:26:56'
-  - - '11'
-    - '9'
-    - Body
-    - ! "<p>\r\nRebuilding Together * Portland is a non-profit organization supported
-      entirely by contributions of time, labor, materials, and money.  We are dedicated
-      to repairing the homes of those who, due to financial hardship, age, and/or
-      disability cannot do the work themselves.  Skilled and unskilled volunteers
-      along with able-bodied members of the recipients' family and friends complete
-      repairs  at\r\n<strong>no cost to the homeowner.</strong>\r\n</p>\r\n<p>\r\nTo
-      be eligible for consideration for 2012 the applicant must:\r\n</p>\r\n<ul>\r\n
-      \ <li>Be the owner and occupant of the property\r\n  </li>\r\n<li>Be low income;
-      elderly and/or disabled; families with children; veterans\r\n  </li>\r\n<li>Be
-      unable both financially and physically to complete repairs themselves\r\n  </li>\r\n<li>Live
-      in a property located in the City of Portland\r\n</li>\r\n</ul>\r\n\r\n<p>\r\n<strong>Each
-      year Rebuilding Together Portland, screens approximately 150 low income homeowners</strong>
-      and selects about 50-60 homes for\r\nrepair. In addition 5-8 non-profit organizations
-      benefit on the workday and projects throughout the year. Rebuilding Together\r\nPortland
-      organizes 1,200-1,500 volunteers from all walks of life to unite on the last
-      Saturday in April each year to complete\r\nequivalent to $900,000 worth of improvements
-      to the community on that day. Other individual projects are performed throughout\r\nthe
-      year, but most of the work is done on the big day in April. These efforts are
-      made possible with the help of a 20 member\r\nworking board, financial contributions
-      and the efforts of over 1,300 volunteers.\r\n</p>\r\n<img src=\"/images/photos/0425RTP53.jpg\"
-      />\r\n<p>\r\n<strong>Homeowner safety and security are the first priorities</strong>
-      of Rebuilding Together.\r\nOur skilled and unskilled volunteers do all types
-      of work including painting, plumbing, electrical, carpentry,\r\nroofing, weatherization,
-      yard cleaning, debris removal, and much more!  We do need the homeowners to
-      understand\r\nthat time and weather may prevent these volunteers from accomplishing
-      everything that the applicant would like done\r\nto their home on <strong>our
-      next workday, Saturday, April 28th, 2012.</strong>\r\n</p>\r\n<p>\r\nThis is
-      an annual \"barn-raising\" event designed to repair and rehabilitate the homes
-      of low-income, elderly, and\r\ndisabled homeowners as well as selected community
-      non-profit facilities. After a year of planning and preparation,\r\nthe program
-      culminates in a one day \"blitz\" the last Saturday in April. The program has
-      now expanded to include projects\r\nnot only on this day, but year-round as
-      well.\r\n</p>\r\n\r\n<p>\r\n<strong>Rebuilding Together is a nation-wide organization</strong>
-      that, in partnership with the community, rehabilitates the homes of low-income\r\nhomeowners,
-      particularly families with children and the elderly and disabled so that they
-      can continue to live in warmth, safety\r\nand independence. Rebuilding Together-Portland
-      also assists in the rehabilitation of community centers, schools and non-profits.\r\n</p>\r\n<div>\r\n<em>
-      \ \r\nCheck out the Rebuilding Together Twitter feed shown here to learn about
-      activities in other cities.\r\n</em>\r\n<br /><br />\r\n\r\n\r\n\r\n</div>\r\n<div
-      style=\"clear:both;\">&#160;</div>\r\n<h2>Contact Information</h2>\r\n<strong>Rebuilding
-      Together * Portland</strong>\r\n<br />\r\n5000 N. Willamette Blvd. Portland,
-      OR 97203-5798<br />\r\nPhone: 503-943-7515<br />\r\nFax: 503-943-7322<br />\r\nMikeMalone@rebuildingtogetherportland.org<br
-      />\r\n\r\n<p>\r\n<a href=\"/r/logos_page\">Official Logos available for download</a>\r\n</p>\r\n"
-    - '0'
-    - '2011-09-11 22:40:02'
-    - '2011-09-11 22:40:02'
+    - |
+      <h2>Board Officers</h2>
+      <table class="boardnames">
+      <tbody><tr><td class="name">Scott Williams	</td>
+      <td>President 	</td>
+      <td>	Accenture</td>
+      </tr>
+      <tr><td class="name">Paul Luty 	</td>
+      <td>Vice President 	</td>
+      <td>	University of Portland - Physical Plant</td>
+      </tr>
+      <tr><td class="name">Brian Vetrone 	</td>
+      <td>Treasurer 	</td>
+      <td>	Hampton Affiliates</td>
+      </tr>
+      <tr><td class="name">Mike Malone 	</td>
+      <td>Executive Director 	</td>
+      <td>	Rebuilding Together*Portland</td>
+      </tr>
+      <tr><td class="name">Brian Thompson 	</td>
+      <td>Legal 	</td>
+      <td> 	Miller Nash LLP</td>
+      </tr>
+      <tr><td class="name">Kate Chavez 	</td>
+      <td>Secretary</td>
+      <td>The Richman Group Affordable Housing Corporation</td>
+      </tr>
+      </tbody>
+      </table>
+      
+      <h2>Board of Directors</h2>
+      <table class="boardnames">
+      <tbody><tr><td class="name">Michael Desimone       </td>
+      <td>Key Bank</td>
+      </tr>
+      <tr><td class="name">Mark Easley 	</td>
+      <td>KEMA Consulting</td>
+      </tr>
+      <tr><td class="name">Valerie Ebinger</td>
+      <td><a href="http://corsource.net">CorSource Technology Group, Inc.</a>
+      </td>
+      </tr>
+      
+      <tr><td class="name">Mitch Falkenstein</td>
+      <td>&#160;</td>
+      </tr>
+      
+      <tr><td class="name">Dan Gemme       </td>
+      <td><a href="http://turnerconstruction.com/portland/default.asp">Turner Construction</a>
+      </td>
+      </tr>
+      <tr><td class="name">Dave Lyons 	</td>
+      <td>JDL Development</td>
+      </tr>
+      <tr><td class="name">Ella Mills 	</td>
+      <td><a href="http://biellalighting.com">Biella Lighting Design</a>
+      </td>
+      </tr>
+      <tr><td class="name">Pat Olson 	</td>
+      <td>Standard Supply Company</td>
+      </tr>
+      <tr><td class="name">Deacon John Ries 	</td>
+      <td>St. Mary's Cathedral</td>
+      </tr>
+      <tr><td class="name">Joshua Siler</td>
+      <td><a href="http://www.bnj.com">Babcock &amp; Jenkins</a>
+      </td>
+      </tr>
+      <tr><td class="name">Emily Watson 	</td>
+      <td>Mediamerica</td>
+      </tr>
+      <tr><td class="name">Brandon Zabrocki 	</td>
+      <td>US Bank</td>
+      </tr>
+      </tbody>
+      </table>
 
----
-page_translations:
-  columns:
+    - 0
+    - 2011-12-24 20:58:11 Z
+    - 2011-12-24 20:58:11 Z
+  - - 8
+    - 5
+    - Body
+    - "<h1>Homeowners</h1>\r\n <p>\r\n We rely on social service agencies, town offices, service organizations, churches, community groups, and individuals\r\n to help us identify homeowners in Portland in need of our assistance. <strong>Do you know an elderly person, somebody with a disability,\r\n or a working family who could use our help?</strong>\r\n Please review the information on this site and contact us with a completed Home Referral Form.\r\n </p>\r\n\
+      <p>\r\n\
+      <strong>All repairs are free for homeowners. </strong>Labor and many supplies are typically donated. Homeowners and family members are asked to welcome the volunteers into their homes and work alongside them to the extent possible. Our work is done with families and neighborhoods, not for them. A homeowner brochure is provided to clarify our process and partnership.\r\n\
+      </p>\r\n\
+      <img src=\"/images/photos/2.jpg\" />\r\n <p>\r\n\
+      Eligibility requirements include:\r\n\
+      </p>\r\n\
+      <ul>\r\n  <li>Applicants must own and live in the property where repair work will be done.\r\n  </li>\r\n\
+      <li>Assist low income individuals whom are also elderly or disabled or with children\r\n  </li>\r\n\
+      <li>Be unable both financially and physically to effect repairs themselves\r\n  </li>\r\n\
+      <li>Applicants must be able to produce their mortgage payment book, deed, or other documents showing ownership, if requested.\r\n  </li>\r\n\
+      <li>The property is not subject to any pending foreclosure actions or actions to enforce liens.\r\n  </li>\r\n\
+      <li>Persons residing in your home or visiting on the designated workday who are physically able will work alongside the volunteers.\r\n   </li>\r\n\
+      <li>Be located on a property in the city of Portland.\r\n\
+      </li>\r\n\
+      </ul>\r\n\
+      <p>\r\n\
+      Ineligible homes include:\r\n\
+      </p>\r\n\
+      <ul>\r\n  <li>Rental properties\r\n  </li>\r\n\
+      <li>Household income above federal poverty guidelines\r\n\
+      </li>\r\n\
+      </ul>\r\n\
+      <p>\r\n\
+      Homeowners are carefully selected through an application process which includes income thresholds and a home inspection.\r\n\
+      Members of our House Selection Committees visit applicant homes to confirm eligibility and assess work that needs to be done.\r\n\
+      While we complete major renovations \xE2\x80\x94 including upgrading electrical systems, and many other home\r\n\
+      improvements \xE2\x80\x94 we narrow the scope of the work we undertake to what we believe a team of 10-50 skilled and unskilled\r\n\
+      volunteers can accomplish in a day.\r\n\
+      </p>\r\n <p>\r\n\
+      The number of homes we work on is tied directly to the amount of money we can raise during the year.\r\n\
+      The House Selection Committee selects the qualifying homes for each year. On average, we renovate more than 50 homes a year\r\n\
+      from a list of about 150 homeowners. House Captains, generally skilled workers from sponsor groups select homes they\r\n\
+      will champion and set up a detailed plan of work to be done at the home and is the primary contact for the homeowner\r\n\
+      through completion of the work.\r\n </p>\r\n <p>\r\n\
+      There are no promises that the work planned will actually be done. Weather, volunteer availability and other factors may affect the actual work completed. The House Captain will decide what work can and cannot be done on the day of work. If your home is chosen for the rehabilitation work, there will be NO charge for our service.\r\n\
+      </p>\r\n <p>\r\n  <a href=\"/forms/Homeowner Referral Form.pdf\" style=\"font-size:1.4em;\">Click Here to Download an Application</a>\r\n </p>\r\n <h2>Contact Information</h2>\r\n\
+      <strong>Rebuilding Together * Portland</strong>\r\n\
+      <br />\r\n\
+      5000 N. Willamette Blvd. Portland, OR 97203-5798<br />\r\n\
+      Phone: 503-943-7515<br />\r\n\
+      Fax: 503-943-7322<br />\r\n\
+      <a href=\"mailto:MikeMalone@rebuildingtogetherportland.org\">MikeMalone@rebuildingtogetherportland.org</a>\r\n\
+      <br />\r\n\
+      \r\n"
+    - 0
+    - 2011-12-24 20:59:29 Z
+    - 2011-12-24 20:59:29 Z
+  - - 9
+    - 6
+    - Body
+    - |
+      
+       <p>House Captains are our project leaders, and help ensure that each and every project is a success on rebuilding day.
+       If you are interested in becoming a House Captain, please contact <a href="mailto:MikeMalone@RebuildingTogetherPortland.org">Mike Malone at MikeMalone@RebuildingTogetherPortland.org</a>
+      </p>
+       
+       <p>If you've already signed up, <strong>thank you!</strong> The House Captain's role is a crucial element in making our program a success.  It is your skills, hard work and dedication that get our repair and rehabilitation work completed effectively and efficiently.  This role will be challenging and at the same time very rewarding.  Please note the following important dates for your calendar.
+       </p>
+      
+      <p>This year's House Captain's meeting is mandatory attendance.  We are tightening up the time line in an effort to
+      increase efficiency within the organization and to minimize your time requirements.  For these goals to be
+      obtained we need you at the meeting.</p>
+      <p>The role of House Captain is old hat to some of you and we appreciate your continued participation.
+      And we still want you at this meeting, to meet the other House Captains and to learn of the new procedures.</p>
+      <style>
+      table
+      {
+      
+      	border-collapse: collapse;
+      	padding: 0px;
+      	margin: 0px;
+      	border: 2px solid #888;
+      	width: 650px;
+      }
+      table td
+      { 
+      	padding: 6px;
+      	margin: 0px;
+      	font-size: 12px;
+      	vertical-align:top;
+       	border-bottom: 1px solid #000;
+       }
+      
+      </style>
+      <table>
+      <tbody><tr><td><strong>March 3	5:30pm</strong>
+      </td>
+       <td>Room 319, Shiley Hall on the University of Portland campus (look fo r the signs).  This will be our only House Captain meeting.
+       We will be explaining the new procedures regarding material lists and time lines.  <strong>House selection will take place at this meeting.</strong>
+      </td>
+      </tr>
+      <tr><td><strong>March 22</strong>
+      </td>
+       <td>	Have house inspection completed.
+      </td>
+      </tr>
+      <tr><td><strong>April 2</strong>
+      </td>
+       <td>	Notify Rebuilding Together * Portland with the number of volunteers that you have, or the number of skilled and unskilled volunteers that you need.
+      </td>
+      </tr>
+      <tr><td><strong>April 2</strong>
+      </td>
+       <td>	Material list must be in by this date.  It's extremely important to the process of material gathering that the lists get back to us on time.
+      </td>
+      </tr>
+      <tr><td><strong>April 17</strong>
+      </td>
+       <td>	Skilled labor and prep day.  This day has been scheduled to accommodate large jobs where more than one stage of work needs to take place, or where power washing and prepping need to be done prior to the 24th.
+      </td>
+      </tr>
+      <tr><td><strong>April 24</strong>
+      </td>
+       <td>	It's ShowTime!  Rebuilding Together * Portland workday!
+      </td>
+      </tr>
+      <tr><td><strong>April 30</strong>
+      </td>
+       <td>	Evaluations are due back at head quarters.  House Captains must communicate whether or not all of the work started was completed.  If it has not, please confirm what arrangements have been made for completion.
+      </td>
+      </tr>
+      </tbody>
+      </table>
+      
+      <p>If you have any questions please feel free to call the numbers listed below or call our Rebuilding Together * Portland office at 943-7515.
+      </p>
+      <p>We continue to look for additional people to fill the role of House Captain, if you know of someone qualified and interested please ask them to call our office to get involved this year.
+      </p>
+      <p>Thank you again for your interest and willingness to participate in this important endeavor.  As a Rebuilding Together * Portland House Captain this year, you will be joining over 1,500 other individuals around the Portland area, helping make this local and national program a success.  We simply could not accomplish this work without the support and volunteerism of organizers like you.
+      </p>
+      <h2>Resources for House Captains</h2>
+      <ul>
+      <li style="list-style-image: url(/images/icons/page_white_acrobat.png);"><a href="/files/2010 campus map.pdf"> Campus Map</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 HC Volunteer List Work Sheet.doc">HC Volunteer List Work Sheet</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 HC Handbook - Planning ahead.doc.doc"> HC Handbook - Planning ahead</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 HC Handbook - The Work Day.doc.doc"> HC Handbook - The Work Day</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 HC Role &amp; Responsibilities.doc"> HC Role &amp; Responsibilities</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 House Captain Evaluation.doc"> House Captain Evaluation</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_white_acrobat.png);"><a href="/files/2010 Lowe's Order Form.pdf">Lowe's Order Form</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Lowe's material procedures.doc"> Lowe's material procedures</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_excel.png);"><a href="/files/2010 Material Help.xls"> Material Help</a>
+      </li>
+      
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Updated Volunteer Agreement and Release.doc"> Updated Volunteer Agreement and Release</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Guidelines for House Liaisons.doc">Guidelines for House Liaisons</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Homeowner Agreement.doc"> 2010 Homeowner Agreement</a>
+      </li>
+      
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Volunteer Estimate Form.doc"> Volunteer Estimate Form</a>
+      </li>
+      
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Med Treatment Authorization for Minor.doc"> Med Treatment Authorization for Minor</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Volunteer Opportunities Form.doc"> Volunteer Opportunities Form</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Lead-safe remodeling Procedures.doc"> Lead-safe remodeling Procedures</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_white_acrobat.png);"><a href="/files/leadpdfe.pdf">Lead Information</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Safety Tool box talk guidelines.doc"> Safety Tool box talk guidelines</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 WARNING SIGN.doc"> WARNING SIGN</a>
+      </li>
+      
+      <li style="list-style-image: url(/images/icons/page_word.png);"><a href="/files/2010 Scope of Work.doc"> Scope of Work</a>
+      </li>
+      <li style="list-style-image: url(/images/icons/page_white_acrobat.png);"><a href="/files/homeowner_brochure.pdf">Homeowner Brochure</a>
+      </li>
+      </ul>
+       <h2>Contact Information</h2>
+      <strong>Dave Lyons, Committee Chairman</strong>
+      <br />
+      Days - 503-248-2030 and evenings - 503-287-9915<br />
+      Please confirm your attendance: <a href="dave@jdldev.com">Dave Lyons - dave@jdldev.com</a> or <a href="mailto:MikeMalone@RebuildingTogetherPortland.org">Mike Malone - MikeMalone@RebuildingTogetherPortland.org</a>
+      <br /><br />
+      <strong>Rebuilding Together * Portland</strong>
+      <br />
+      5000 N. Willamette Blvd. Portland, OR 97203-5798<br />
+      Phone: 503-943-7515<br />
+      Fax: 503-943-7322<br />
+      <a href="mailto:MikeMalone@rebuildingtogetherportland.org">MikeMalone@rebuildingtogetherportland.org</a>
+      <br />
+      
+
+    - 0
+    - 2011-12-24 20:59:55 Z
+    - 2011-12-24 20:59:55 Z
+  - - 10
+    - 7
+    - Body
+    - |
+      <p>
+      <strong>Free facility repairs available for Non-Profits.</strong> It's Rebuilding Together Portland to the rescue!
+      </p>
+      <p>
+      Since 1990 Rebuilding Together Portland has been realizing ambitious annual goals to repair and rehabilitate both homes and non-profit community facilities. While more than 50 homes are worked on each year, Rebuilding Together Portland also helps five or six non-profits each year with free facility repairs. Rebuilding Together Portland matches coordinates projects year-round, but most of the work is done on the last Saturday in April each year by more than a thousand volunteers on that one day.
+      </p>
+      <p>
+      Rebuilding Together is a non-profit organization supported entirely by contributions of time, labor, materials, and money. Our core competencies include identifying worthy homeowners and non-profits in need and matching them with volunteers, supplies and materials. Rebuilding Together Portland coordinates skilled and unskilled volunteers and materials needed to complete the work in a day or two. We are always looking for good projects at non-profit properties where volunteers will enjoy and appreciate their contribution.
+      </p>
+      <p>
+      To be eligible for consideration, the applicant's property must:
+      </p>
+      <ul>
+          <li>Be the owner and occupant of the property
+          </li>
+      <li>Assist low income individuals whom are also elderly or disabled or with children
+          </li>
+      <li>Be unable both financially and physically to effect repairs themselves
+          </li>
+      <li>Be located on a property in the city of Portland.
+      </li>
+      </ul>
+      <p>
+      Safety and security are the first priorities of Rebuilding Together. Our skilled and unskilled volunteers do all
+      types of work including painting, plumbing, electrical, carpentry, weatherization, yard cleaning,
+      debris removal, and much more!
+      </p>
+      <p>
+      When a project is accepted, a scope of work is defined in advance, but the non-profit organization and homeowners
+      need to understand these are volunteers and that time and weather may prevent them from
+      accomplishing everything planned to be completed.
+      </p>
+      <p>
+      To become eligible for assistance, fill out our Non-profit Referral Form.
+      </p>
+       <p>
+        <a href="/forms/Non-ProfitReferralForm.pdf" style="font-size:1.4em;">Click Here to Download an Application</a>
+       </p>
+       <h2>Contact Information</h2>
+      <strong>Rebuilding Together * Portland</strong>
+      <br />
+      5000 N. Willamette Blvd. Portland, OR 97203-5798<br />
+      Phone: 503-943-7515<br />
+      Fax: 503-943-7322<br />
+      <a href="mailto:MikeMalone@rebuildingtogetherportland.org">MikeMalone@rebuildingtogetherportland.org</a>
+      <br />
+
+    - 0
+    - 2011-12-24 21:00:43 Z
+    - 2011-12-24 21:00:43 Z
+  - - 11
+    - 8
+    - Body
+    - "The elements of the \r\n\
+      \t\t\t\t\t\t\t\t\tnational logo consist of the artwork (\"the \r\n\
+      \t\t\t\t\t\t\t\t\tsymbol\") and the words Rebuilding Together. \r\n\
+      \t\t\t\t\t\t\t\t\tIt is a unique mark and may not be altered. \r\n\
+      \t\t\t\t\t\t\t\t\tThe logo must not be redrawn and cannot \r\n\
+      \t\t\t\t\t\t\t\t\tinclude any additional graphic \r\n\
+      \t\t\t\t\t\t\t\t\tembellishments. The position and size \r\n\
+      \t\t\t\t\t\t\t\t\trelationship of the elements should not be \r\n\
+      \t\t\t\t\t\t\t\t\tchanged. It should be reproduced from the \r\n\
+      \t\t\t\t\t\t\t\t\tartwork provided by the national \r\n\
+      \t\t\t\t\t\t\t\t\torganization or from a digital version, \r\n\
+      \t\t\t\t\t\t\t\t\tavailable on the CD accompanying this manual \r\n\
+      \t\t\t\t\t\t\t\t\tor downloadable from the members-only \r\n\
+      \t\t\t\t\t\t\t\t\tsection of www.rebuildingtogether.org in a \r\n\
+      \t\t\t\t\t\t\t\t\tnumber of formats and versions. The national \r\n\
+      \t\t\t\t\t\t\t\t\toffice has trademark protection for the \r\n\
+      \t\t\t\t\t\t\t\t\tRebuilding Together logo. Always use the \xC2\xAE \r\n\
+      \t\t\t\t\t\t\t\t\tthat appears at the base of the \"r\" in \r\n\
+      \t\t\t\t\t\t\t\t\t\"Together.\" Do not use the logo as a part of \r\n\
+      \t\t\t\t\t\t\t\t\tanother corporate name.<br />\r\n\
+      \t\t\t\t\t\t\t\t\tBy downloading any logos from this site, you \r\n\
+      \t\t\t\t\t\t\t\t\tare agreeing to adhere to these guidelines.\r\n\
+      \r\n\
+      <h2>Downloads</h2>\r\n\
+      <style>\r\n  img\r\n  {\r\n    border: none;\r\n  }\r\n\
+      </style>\r\n\
+      <table style=\"width: 100%\">\r\n\
+      \t\t\t\t\t\t\t\t\t<tbody><tr>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<td class=\"style20\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style19\">&#160;<a href=\"/logos/RT_2Clogo_horiz.jpg\" class=\"style14\"><img src=\"/images/RT_2Clogo_horiz_small.jpg\" width=\"344\" height=\"100\" class=\"style17\" /></a>\r\n\
+      <br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_2Clogo_horiz.eps\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_2Clogo_horiz.eps</a>\r\n\
+      <br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_2Clogo_horiz.jpg\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_2Clogo_horiz.jpg</a>\r\n\
+      <br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      </td>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<td class=\"style23\">&#160;<a href=\"/logos/RT_2Clogo_stacked.jpg\"><span class=\"style22\"><img src=\"/images/RT_2Clogo_stacked_small.jpg\" width=\"204\" height=\"100\" class=\"style21\" /></span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_2Clogo_stacked.jpg\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_2Clogo_stacked.jpg</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_2Clogo_stacked.eps\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_2Clogo_stacked.eps</span>\r\n\
+      </a>\r\n\
+      </td>\r\n\
+      \t\t\t\t\t\t\t\t\t</tr>\r\n\
+      \t\t\t\t\t\t\t\t\t<tr class=\"style19\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<td class=\"style23\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">&#160;</span>\r\n\
+      <a href=\"/logos/RT_Blacklogo_horiz.jpg\"><span class=\"style22\"><img src=\"/images/RT_Blacklogo_horiz_small.jpg\" width=\"344\" height=\"100\" class=\"style21\" /></span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_Blacklogo_horiz.jpg\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_Blacklogo_horiz.jpg</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_Blacklogo_horiz.eps\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_Blacklogo_horiz.eps</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      </td>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<td class=\"style23\">&#160;<a href=\"/logos/RT_Blacklogo_stacked.jpg\"><span class=\"style22\"><img src=\"/images/RT_Blacklogo_stacked_small.jpg\" width=\"204\" height=\"100\" class=\"style21\" /></span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_Blacklogo_stacked.jpg\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_Blacklogo_stacked.jpg</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_Blacklogo_stacked.eps\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_Blacklogo_stacked.eps</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      </td>\r\n\
+      \t\t\t\t\t\t\t\t\t</tr>\r\n\
+      \t\t\t\t\t\t\t\t\t<tr class=\"style19\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<td class=\"style23\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">&#160;</span>\r\n\
+      <a href=\"/logos/RT_GSlogo_horiz.jpg\"><span class=\"style22\"><img src=\"/images/RT_GSlogo_horiz_small.jpg\" width=\"344\" height=\"100\" class=\"style21\" /></span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_GSlogo_horiz.jpg\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_GSlogo_horiz.jpg</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_GSlogo_horiz.eps\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_GSlogo_horiz.eps</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      </td>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<td class=\"style23\">&#160;<a href=\"/logos/RT_GSlogo_stacked.jpg\"><span class=\"style22\"><img src=\"/images/RT_GSlogo_stacked_small.jpg\" width=\"204\" height=\"100\" class=\"style21\" /></span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_GSlogo_stacked.jpg\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_GSlogo_stacked.jpg</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_GSlogo_stacked.eps\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_GSlogo_stacked.eps</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      </td>\r\n\
+      \t\t\t\t\t\t\t\t\t</tr>\r\n\
+      \t\t\t\t\t\t\t\t\t<tr class=\"style19\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<td class=\"style23\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">&#160;</span>\r\n\
+      <a href=\"/logos/RT_PMS368logo_horiz.jpg\"><span class=\"style22\"><img src=\"/images/RT_PMS368logo_horiz_small.jpg\" width=\"344\" height=\"100\" class=\"style21\" /></span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_PMS368logo_horiz.jpg\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_PMS368logo_horiz.jpg</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_PMS368logo_horiz.eps\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_PMS368logo_horiz.eps</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      </td>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<td class=\"style23\">&#160;<a href=\"/logos/RT_PMS368logo_stacked.jpg\"><span class=\"style22\"><img src=\"/images/RT_PMS368logo_stacked_small.jpg\" width=\"204\" height=\"100\" class=\"style21\" /></span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_PMS368logo_stacked.jpg\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_PMS368logo_stacked.jpg</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_PMS368logo_stacked.eps\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_PMS368logo_stacked.eps</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      </td>\r\n\
+      \t\t\t\t\t\t\t\t\t</tr>\r\n\
+      \t\t\t\t\t\t\t\t\t<tr class=\"style19\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<td class=\"style23\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">&#160;</span>\r\n\
+      <a href=\"/logos/RT_KOlogo_horiz.jpg\"><span class=\"style22\"><img src=\"/images/RT_KOlogo_horiz_small.jpg\" width=\"291\" height=\"100\" class=\"style21\" /></span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_KOlogo_horiz.jpg\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_KOlogo_horiz.jpg</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_KOlogo_horiz.eps\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_KOlogo_horiz.eps</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      </td>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<td class=\"style23\">&#160;<a href=\"/logos/RT_KOlogo_stacked.jpg\"><span class=\"style22\"><img src=\"/images/RT_KOlogo_stacked_small.jpg\" width=\"192\" height=\"100\" class=\"style21\" /></span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_KOlogo_stacked.jpg\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_KOlogo_stacked.jpg</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_KOlogo_stacked.eps\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_KOlogo_stacked.eps</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      </td>\r\n\
+      \t\t\t\t\t\t\t\t\t</tr>\r\n\
+      \t\t\t\t\t\t\t\t\t<tr class=\"style19\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<td class=\"style23\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">&#160;</span>\r\n\
+      <a href=\"/logos/RT_KOlogo_horizWHT.jpg\"><span class=\"style22\"><img src=\"/images/RT_KOlogo_horizWHT_small.jpg\" width=\"282\" height=\"100\" class=\"style21\" /></span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_KOlogo_horizWHT.jpg\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_KOlogo_horizWHT.jpg</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_KOlogo_horizWHT.eps\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_KOlogo_horizWHT.eps</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      </td>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<td class=\"style23\">&#160;<a href=\"/logos/RT_KOlogo_stackedWHT.jpg\"><span class=\"style22\"><img src=\"/images/RT_KOlogo_stackedWHT_small.jpg\" width=\"184\" height=\"100\" class=\"style21\" /></span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_KOlogo_stackedWHT.jpg\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_KOlogo_stackedWHT.jpg</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      \t\t\t\t\t\t\t\t\t\t<a href=\"/logos/RT_KOlogo_stackedWHT.eps\">\r\n\
+      \t\t\t\t\t\t\t\t\t\t<span class=\"style22\">\r\n\
+      \t\t\t\t\t\t\t\t\t\tRT_KOlogo_stackedWHT.eps</span>\r\n\
+      </a>\r\n\
+      <span class=\"style22\"><br />\r\n\
+      \t\t\t\t\t\t\t\t\t\t</span>\r\n\
+      </td>\r\n\
+      \t\t\t\t\t\t\t\t\t</tr>\r\n\
+      \t\t\t\t\t\t\t\t</tbody>\r\n\
+      </table>"
+    - 0
+    - 2011-12-24 21:02:35 Z
+    - 2011-12-24 21:03:14 Z
+
+--- 
+page_translations: 
+  columns: 
   - id
   - page_id
   - locale
@@ -794,241 +1443,215 @@ page_translations:
   - created_at
   - updated_at
   records: 
----
-  - - '3'
-    - '3'
+  - - 1
+    - 1
     - en
-    - Board of Directors
-    - ''
-    - '2011-09-10 19:22:19'
-    - '2011-09-11 22:40:42'
-  - - '6'
-    - '3'
+    - Rebuilding Together Portland
+    - ""
+    - 2011-12-24 20:46:03 Z
+    - 2011-12-24 21:04:29 Z
+  - - 2
+    - 2
     - en
-    - !!null 
-    - !!null 
-    - '2011-09-11 22:23:58'
-    - '2011-09-11 22:23:58'
-  - - '7'
-    - '4'
-    - en
-    - Non-Profits
-    - ''
-    - '2011-09-11 22:24:21'
-    - '2011-09-11 22:40:17'
-  - - '8'
-    - '5'
-    - en
-    - Official Logos
-    - ''
-    - '2011-09-11 22:24:39'
-    - '2011-09-11 22:24:39'
-  - - '9'
-    - '6'
-    - en
-    - Welcome to Rebuilding Together Portland
-    - ''
-    - '2011-09-11 22:25:33'
-    - '2011-09-11 22:34:37'
-  - - '10'
-    - '7'
-    - en
-    - House Captains
-    - ''
-    - '2011-09-11 22:26:30'
-    - '2011-09-11 22:26:30'
-  - - '11'
-    - '8'
-    - en
-    - Homeowners
-    - ''
-    - '2011-09-11 22:26:56'
-    - '2011-09-11 22:26:56'
-  - - '12'
-    - '9'
+    - Page not found
+    - 
+    - 2011-12-24 20:46:03 Z
+    - 2011-12-24 20:46:03 Z
+  - - 3
+    - 3
     - en
     - About Us
-    - ''
-    - '2011-09-11 22:40:02'
-    - '2011-09-11 22:40:02'
+    - ""
+    - 2011-12-24 20:46:03 Z
+    - 2011-12-24 20:53:55 Z
+  - - 4
+    - 4
+    - en
+    - Board of Directors
+    - ""
+    - 2011-12-24 20:58:11 Z
+    - 2011-12-24 20:58:11 Z
+  - - 5
+    - 5
+    - en
+    - Homeowners
+    - ""
+    - 2011-12-24 20:59:29 Z
+    - 2011-12-24 20:59:29 Z
+  - - 6
+    - 6
+    - en
+    - House Captains
+    - ""
+    - 2011-12-24 20:59:55 Z
+    - 2011-12-24 20:59:55 Z
+  - - 7
+    - 7
+    - en
+    - Non-Profits
+    - ""
+    - 2011-12-24 21:00:43 Z
+    - 2011-12-24 21:00:43 Z
+  - - 8
+    - 8
+    - en
+    - Official Logos
+    - ""
+    - 2011-12-24 21:02:35 Z
+    - 2011-12-24 21:03:14 Z
 
----
-pages:
-  columns:
+--- 
+pages: 
+  columns: 
   - id
-  - title
   - parent_id
   - position
   - path
   - created_at
   - updated_at
-  - meta_keywords
-  - meta_description
   - show_in_menu
   - link_url
   - menu_match
   - deletable
-  - custom_title
   - custom_title_type
   - draft
-  - browser_title
   - skip_to_first_child
   - lft
   - rgt
   - depth
   records: 
----
-  - - '3'
-    - Board of Directors
-    - !!null 
-    - '2'
-    - !!null 
-    - '2011-09-11 22:23:58'
-    - '2011-09-11 22:40:42'
-    - ''
-    - ''
-    - true
-    - ''
-    - !!null 
-    - true
-    - ''
-    - none
-    - false
-    - ''
-    - false
-    - '1'
-    - '2'
-    - !!null 
-  - - '4'
-    - Non-Profits
-    - !!null 
-    - '3'
-    - !!null 
-    - '2011-09-11 22:24:21'
-    - '2011-09-11 22:40:17'
-    - ''
-    - ''
-    - true
-    - ''
-    - !!null 
-    - true
-    - ''
-    - none
-    - false
-    - ''
-    - false
-    - '3'
-    - '4'
-    - !!null 
-  - - '5'
-    - Official Logos
-    - !!null 
-    - '4'
-    - !!null 
-    - '2011-09-11 22:24:39'
-    - '2011-09-11 22:24:39'
-    - ''
-    - ''
-    - true
-    - ''
-    - !!null 
-    - true
-    - ''
-    - none
-    - false
-    - ''
-    - false
-    - '5'
-    - '6'
-    - !!null 
-  - - '6'
-    - Welcome to Rebuilding Together Portland
-    - !!null 
-    - '5'
-    - !!null 
-    - '2011-09-11 22:25:33'
-    - '2011-09-11 22:34:37'
-    - ''
-    - ''
+  - - 1
+    - 
+    - 0
+    - 
+    - 2011-12-24 20:46:03 Z
+    - 2011-12-24 21:05:01 Z
     - true
     - /
-    - !!null 
-    - true
-    - ''
+    - 
+    - false
     - none
     - false
-    - ''
     - false
-    - '7'
-    - '8'
-    - !!null 
-  - - '7'
-    - House Captains
-    - !!null 
-    - '6'
-    - !!null 
-    - '2011-09-11 22:26:30'
-    - '2011-09-11 22:26:30'
-    - ''
-    - ''
-    - true
-    - ''
-    - !!null 
-    - true
-    - ''
+    - 1
+    - 4
+    - 
+  - - 2
+    - 1
+    - 0
+    - 
+    - 2011-12-24 20:46:03 Z
+    - 2011-12-24 20:46:03 Z
+    - false
+    - 
+    - ^/404$
+    - false
     - none
     - false
-    - ''
     - false
-    - '9'
-    - '10'
-    - !!null 
-  - - '8'
-    - Homeowners
-    - !!null 
-    - '7'
-    - !!null 
-    - '2011-09-11 22:26:56'
-    - '2011-09-11 22:26:56'
-    - ''
-    - ''
+    - 2
+    - 3
+    - 
+  - - 3
+    - 
+    - 1
+    - 
+    - 2011-12-24 20:46:03 Z
+    - 2011-12-24 21:03:42 Z
     - true
-    - ''
-    - !!null 
+    - ""
+    - 
     - true
-    - ''
     - none
     - false
-    - ''
     - false
-    - '11'
-    - '12'
-    - !!null 
-  - - '9'
-    - About Us
-    - !!null 
-    - '8'
-    - !!null 
-    - '2011-09-11 22:40:02'
-    - '2011-09-11 22:40:02'
-    - ''
-    - ''
+    - 5
+    - 6
+    - 
+  - - 4
+    - 
+    - 2
+    - 
+    - 2011-12-24 20:58:11 Z
+    - 2011-12-24 20:58:11 Z
     - true
-    - ''
-    - !!null 
+    - ""
+    - 
     - true
-    - ''
     - none
     - false
-    - ''
     - false
-    - '13'
-    - '14'
-    - !!null 
+    - 7
+    - 8
+    - 
+  - - 5
+    - 
+    - 3
+    - 
+    - 2011-12-24 20:59:29 Z
+    - 2011-12-24 20:59:29 Z
+    - true
+    - ""
+    - 
+    - true
+    - none
+    - false
+    - false
+    - 9
+    - 10
+    - 
+  - - 6
+    - 
+    - 4
+    - 
+    - 2011-12-24 20:59:55 Z
+    - 2011-12-24 20:59:55 Z
+    - true
+    - ""
+    - 
+    - true
+    - none
+    - false
+    - false
+    - 11
+    - 12
+    - 
+  - - 7
+    - 
+    - 5
+    - 
+    - 2011-12-24 21:00:43 Z
+    - 2011-12-24 21:00:43 Z
+    - true
+    - ""
+    - 
+    - true
+    - none
+    - false
+    - false
+    - 13
+    - 14
+    - 
+  - - 8
+    - 
+    - 6
+    - 
+    - 2011-12-24 21:02:35 Z
+    - 2011-12-24 21:03:14 Z
+    - true
+    - ""
+    - 
+    - true
+    - none
+    - false
+    - false
+    - 15
+    - 16
+    - 
 
----
-refinery_settings:
-  columns:
+--- 
+refinery_settings: 
+  columns: 
   - id
   - name
   - value
@@ -1040,375 +1663,288 @@ refinery_settings:
   - callback_proc_as_string
   - form_value_type
   records: 
----
-  - - '1'
-    - dragonfly_secret
-    - ! '--- 99fd867eb0972b507d4e9989d6ea112bb79a7eca151852e1
-
-      ...
-
-'
-    - true
-    - '2011-09-11 21:45:25'
-    - '2011-09-11 21:45:25'
-    - !!null 
-    - false
-    - !!null 
-    - text_area
-  - - '2'
-    - i18n_translation_default_frontend_locale
-    - ! '--- :en
-
-      ...
-
-'
-    - true
-    - '2011-09-11 21:45:27'
-    - '2011-09-11 21:45:27'
-    - refinery
-    - false
-    - !!null 
-    - text_area
-  - - '3'
-    - approximate_ascii
-    - ! '--- ''false''
-
-'
-    - true
-    - '2011-09-11 21:45:27'
-    - '2011-09-11 21:45:27'
-    - pages
-    - false
-    - !!null 
-    - text_area
-  - - '4'
-    - strip_non_ascii
-    - ! '--- ''false''
-
-'
-    - true
-    - '2011-09-11 21:45:27'
-    - '2011-09-11 21:45:27'
-    - pages
-    - false
-    - !!null 
-    - text_area
-  - - '5'
+  - - 1
     - use_marketable_urls
-    - ! '--- ''true''
+    - |
+      --- "true"
 
-'
     - true
-    - '2011-09-11 21:45:27'
-    - '2011-09-11 21:45:27'
+    - 2011-12-24 20:46:03 Z
+    - 2011-12-24 20:46:03 Z
     - pages
     - false
-    - !!null 
+    - 
     - text_area
-  - - '6'
+  - - 2
+    - dragonfly_secret
+    - |
+      --- 51c976986283de43e4ea5c95f7e105f24f973bc96f53cc18
+
+    - true
+    - 2011-12-24 20:46:13 Z
+    - 2011-12-24 20:46:13 Z
+    - 
+    - false
+    - 
+    - text_area
+  - - 3
+    - approximate_ascii
+    - |
+      --- "false"
+
+    - true
+    - 2011-12-24 20:46:14 Z
+    - 2011-12-24 20:46:14 Z
+    - pages
+    - false
+    - 
+    - text_area
+  - - 4
+    - strip_non_ascii
+    - |
+      --- "false"
+
+    - true
+    - 2011-12-24 20:46:14 Z
+    - 2011-12-24 20:46:14 Z
+    - pages
+    - false
+    - 
+    - text_area
+  - - 5
+    - i18n_translation_default_frontend_locale
+    - |
+      --- :en
+
+    - true
+    - 2011-12-24 20:52:20 Z
+    - 2011-12-24 20:52:20 Z
+    - refinery
+    - false
+    - 
+    - text_area
+  - - 6
     - i18n_translation_enabled
-    - ! '--- ''true''
+    - |
+      --- "true"
 
-'
     - true
-    - '2011-09-11 21:45:42'
-    - '2011-09-11 21:45:42'
+    - 2011-12-24 20:52:27 Z
+    - 2011-12-24 20:52:27 Z
     - refinery
     - false
-    - !!null 
+    - 
     - text_area
-  - - '7'
+  - - 7
     - i18n_translation_locales
-    - '---
-
-      :en: English
-
-      :fr: Français
-
-      :nl: Nederlands
-
-      :pt-BR: Português
-
-      :da: Dansk
-
-      :nb: Norsk Bokmål
-
-      :sl: Slovenian
-
-      :es: Español
-
+    - |
+      --- 
       :it: Italiano
-
+      :da: Dansk
+      :nl: Nederlands
       :de: Deutsch
-
       :lv: Latviski
-
-      :ru: Русский
-
-      :sv: Svenska
-
-      :pl: Polski
-
-      :zh-CN: Simplified Chinese
-
-      :zh-TW: Traditional Chinese
-
-      :el: Ελληνικά
-
+      :en: English
       :rs: Srpski
+      :nb: "Norsk Bokm\xC3\xA5l"
+      :ru: !binary |
+        0KDRg9GB0YHQutC40Lk=
+      
+      :sk: "Slovensk\xC3\xBD"
+      :sl: Slovenian
+      :cs: !binary |
+        xIxlc2t5
+      
+      :"zh-CN": Simplified Chinese
+      :sv: Svenska
+      :fr: "Fran\xC3\xA7ais"
+      :jp: !binary |
+        5pel5pys6Kqe
+      
+      :es: "Espa\xC3\xB1ol"
+      :el: !binary |
+        zpXOu867zrfOvc65zrrOrA==
+      
+      :"zh-TW": Traditional Chinese
+      :pl: Polski
+      :"pt-BR": "Portugu\xC3\xAAs"
 
-      :cs: Česky
-
-      :sk: Slovenský
-
-      :jp: 日本語
-
-'
     - true
-    - '2011-09-11 21:45:42'
-    - '2011-09-11 21:45:42'
+    - 2011-12-24 20:52:27 Z
+    - 2011-12-24 20:52:27 Z
     - refinery
     - false
-    - !!null 
+    - 
     - text_area
-  - - '8'
-    - site_name
-    - ! '--- Rebuilding Together Portland
-
-      ...
-
-'
-    - true
-    - '2011-09-11 21:45:50'
-    - '2011-09-11 21:51:16'
-    - !!null 
-    - false
-    - !!null 
-    - text_area
-  - - '9'
-    - use_resource_caching
-    - ! '--- ''true''
-
-'
-    - true
-    - '2011-09-11 21:45:50'
-    - '2011-09-11 21:45:50'
-    - !!null 
-    - false
-    - !!null 
-    - text_area
-  - - '10'
-    - use_google_ajax_libraries
-    - ! '--- ''false''
-
-'
-    - true
-    - '2011-09-11 21:45:50'
-    - '2011-09-11 21:45:50'
-    - !!null 
-    - false
-    - !!null 
-    - text_area
-  - - '11'
+  - - 8
     - i18n_translation_default_locale
-    - ! '--- :en
+    - |
+      --- :en
 
-      ...
-
-'
     - true
-    - '2011-09-11 21:47:10'
-    - '2011-09-11 21:47:10'
+    - 2011-12-24 20:52:27 Z
+    - 2011-12-24 20:52:27 Z
     - refinery
     - false
-    - !!null 
+    - 
     - text_area
-  - - '12'
+  - - 9
     - i18n_translation_current_locale
-    - ! '--- :en
+    - |
+      --- :en
 
-      ...
-
-'
     - true
-    - '2011-09-11 21:47:10'
-    - '2011-09-11 21:47:10'
+    - 2011-12-24 20:52:27 Z
+    - 2011-12-24 20:52:27 Z
     - refinery
     - false
-    - !!null 
+    - 
     - text_area
-  - - '13'
+  - - 10
     - i18n_translation_frontend_locales
-    - ! '---
-
+    - |
+      --- 
       - :en
 
-'
     - true
-    - '2011-09-11 21:47:10'
-    - '2011-09-11 21:47:10'
+    - 2011-12-24 20:52:27 Z
+    - 2011-12-24 20:52:27 Z
     - refinery
     - false
-    - !!null 
+    - 
     - text_area
-  - - '14'
-    - activity_show_limit
-    - ! '--- 7
+  - - 11
+    - site_name
+    - |
+      --- Rebuilding Together Portland
 
-      ...
-
-'
     - true
-    - '2011-09-11 21:47:10'
-    - '2011-09-11 21:47:10'
-    - !!null 
+    - 2011-12-24 20:52:28 Z
+    - 2011-12-24 20:53:06 Z
+    - 
     - false
-    - !!null 
+    - 
     - text_area
-  - - '15'
-    - default_page_parts
-    - ! '---
+  - - 12
+    - use_resource_caching
+    - |
+      --- "true"
 
+    - true
+    - 2011-12-24 20:52:28 Z
+    - 2011-12-24 20:52:28 Z
+    - 
+    - false
+    - 
+    - text_area
+  - - 13
+    - use_google_ajax_libraries
+    - |
+      --- "false"
+
+    - true
+    - 2011-12-24 20:52:28 Z
+    - 2011-12-24 20:52:28 Z
+    - 
+    - false
+    - 
+    - text_area
+  - - 14
+    - activity_show_limit
+    - |
+      --- 7
+
+    - true
+    - 2011-12-24 20:52:47 Z
+    - 2011-12-24 20:52:47 Z
+    - 
+    - false
+    - 
+    - text_area
+  - - 15
+    - cache_pages_backend
+    - |
+      --- "false"
+
+    - true
+    - 2011-12-24 20:53:10 Z
+    - 2011-12-24 20:53:10 Z
+    - 
+    - false
+    - 
+    - text_area
+  - - 16
+    - new_page_parts
+    - |
+      --- "false"
+
+    - true
+    - 2011-12-24 20:53:18 Z
+    - 2011-12-24 20:53:18 Z
+    - 
+    - false
+    - 
+    - text_area
+  - - 17
+    - page_title
+    - |
+      --- 
+      :page_title: 
+        :wrap_if_not_chained: false
+        :class: 
+        :tag: 
+      :ancestors: 
+        :class: ancestors
+        :tag: span
+        :separator: " | "
+      :chain_page_title: false
+
+    - true
+    - 2011-12-24 20:54:02 Z
+    - 2011-12-24 20:54:02 Z
+    - 
+    - false
+    - 
+    - text_area
+  - - 18
+    - default_page_parts
+    - |
+      --- 
       - Body
 
-'
     - true
-    - '2011-09-11 21:51:39'
-    - '2011-09-11 22:18:04'
-    - !!null 
+    - 2011-12-24 20:57:23 Z
+    - 2011-12-24 20:58:25 Z
+    - 
     - false
-    - !!null 
-    - text_area
-  - - '16'
-    - new_page_parts
-    - ! '--- ''false''
-
-'
-    - true
-    - '2011-09-11 21:51:39'
-    - '2011-09-11 21:51:39'
-    - !!null 
-    - false
-    - !!null 
-    - text_area
-  - - '17'
-    - cache_pages_backend
-    - ! '--- ''false''
-
-'
-    - true
-    - '2011-09-11 21:52:11'
-    - '2011-09-11 21:52:11'
-    - !!null 
-    - false
-    - !!null 
-    - text_area
-  - - '18'
-    - page_title
-    - "---\n:chain_page_title: false\n:ancestors:\n  :separator: ! ' | '\n  :class:
-      ancestors\n  :tag: span\n:page_title:\n  :class: !!null \n  :tag: !!null \n
-      \ :wrap_if_not_chained: false\n"
-    - true
-    - '2011-09-11 21:52:17'
-    - '2011-09-11 21:52:17'
-    - !!null 
-    - false
-    - !!null 
-    - text_area
-  - - '19'
-    - authenticity_token_on_frontend
-    - ! '--- ''true''
-
-'
-    - true
-    - '2011-09-11 21:52:18'
-    - '2011-09-11 21:52:18'
-    - !!null 
-    - false
-    - !!null 
-    - text_area
-  - - '21'
-    - menu_hide_children
-    - ! '--- ''false''
-
-'
-    - true
-    - '2011-09-11 21:52:18'
-    - '2011-09-11 21:52:18'
-    - !!null 
-    - false
-    - !!null 
-    - text_area
-  - - '22'
-    - image_views
-    - ! '---
-
-      - :grid
-
-      - :list
-
-'
-    - true
-    - '2011-09-11 21:52:42'
-    - '2011-09-11 21:52:42'
-    - !!null 
-    - false
-    - !!null 
-    - text_area
-  - - '23'
-    - preferred_image_view
-    - ! '--- :grid
-
-      ...
-
-'
-    - true
-    - '2011-09-11 21:52:42'
-    - '2011-09-11 21:52:42'
-    - !!null 
-    - false
-    - !!null 
-    - text_area
-  - - '24'
-    - superuser_can_assign_roles
-    - ! '--- ''false''
-
-'
-    - true
-    - '2011-09-11 21:52:53'
-    - '2011-09-11 21:52:53'
-    - !!null 
-    - false
-    - !!null 
+    - 
     - text_area
 
----
-roles:
-  columns:
+--- 
+roles: 
+  columns: 
   - id
   - title
   records: 
----
-  - - '1'
+  - - 1
     - Refinery
-  - - '2'
+  - - 2
     - Superuser
 
----
-roles_users:
-  columns:
+--- 
+roles_users: 
+  columns: 
   - user_id
   - role_id
   records: 
----
-  - - '1'
-    - '1'
-  - - '1'
-    - '2'
+  - - 1
+    - 1
+  - - 1
+    - 2
 
----
-seo_meta:
-  columns:
+--- 
+seo_meta: 
+  columns: 
   - id
   - seo_meta_id
   - seo_meta_type
@@ -1418,75 +1954,74 @@ seo_meta:
   - created_at
   - updated_at
   records: 
----
-  - - '3'
-    - '3'
+  - - 1
+    - 1
     - Page::Translation
-    - !!null 
-    - !!null 
-    - !!null 
-    - '2011-09-10 19:22:20'
-    - '2011-09-10 19:22:20'
-  - - '6'
-    - '6'
+    - ""
+    - ""
+    - ""
+    - 2011-12-24 20:46:03 Z
+    - 2011-12-24 21:04:29 Z
+  - - 2
+    - 2
     - Page::Translation
-    - !!null 
-    - !!null 
-    - !!null 
-    - '2011-09-11 22:23:58'
-    - '2011-09-11 22:23:58'
-  - - '7'
-    - '7'
+    - 
+    - 
+    - 
+    - 2011-12-24 20:46:03 Z
+    - 2011-12-24 20:46:03 Z
+  - - 3
+    - 3
     - Page::Translation
-    - !!null 
-    - !!null 
-    - !!null 
-    - '2011-09-11 22:24:21'
-    - '2011-09-11 22:24:21'
-  - - '8'
-    - '8'
+    - ""
+    - ""
+    - ""
+    - 2011-12-24 20:46:03 Z
+    - 2011-12-24 20:53:55 Z
+  - - 4
+    - 4
     - Page::Translation
-    - !!null 
-    - !!null 
-    - !!null 
-    - '2011-09-11 22:24:39'
-    - '2011-09-11 22:24:39'
-  - - '9'
-    - '9'
+    - ""
+    - ""
+    - ""
+    - 2011-12-24 20:58:11 Z
+    - 2011-12-24 20:58:11 Z
+  - - 5
+    - 5
     - Page::Translation
-    - !!null 
-    - !!null 
-    - !!null 
-    - '2011-09-11 22:25:33'
-    - '2011-09-11 22:25:33'
-  - - '10'
-    - '10'
+    - ""
+    - ""
+    - ""
+    - 2011-12-24 20:59:29 Z
+    - 2011-12-24 20:59:29 Z
+  - - 6
+    - 6
     - Page::Translation
-    - !!null 
-    - !!null 
-    - !!null 
-    - '2011-09-11 22:26:30'
-    - '2011-09-11 22:26:30'
-  - - '11'
-    - '11'
+    - ""
+    - ""
+    - ""
+    - 2011-12-24 20:59:55 Z
+    - 2011-12-24 20:59:55 Z
+  - - 7
+    - 7
     - Page::Translation
-    - !!null 
-    - !!null 
-    - !!null 
-    - '2011-09-11 22:26:56'
-    - '2011-09-11 22:26:56'
-  - - '12'
-    - '12'
+    - ""
+    - ""
+    - ""
+    - 2011-12-24 21:00:43 Z
+    - 2011-12-24 21:00:43 Z
+  - - 8
+    - 8
     - Page::Translation
-    - !!null 
-    - !!null 
-    - !!null 
-    - '2011-09-11 22:40:02'
-    - '2011-09-11 22:40:02'
+    - ""
+    - ""
+    - ""
+    - 2011-12-24 21:02:35 Z
+    - 2011-12-24 21:02:35 Z
 
----
-slugs:
-  columns:
+--- 
+slugs: 
+  columns: 
   - id
   - name
   - sluggable_id
@@ -1496,137 +2031,159 @@ slugs:
   - created_at
   - locale
   records: 
----
-  - - '1'
-    - rebuilding
-    - '1'
-    - '1'
-    - User
-    - !!null 
-    - '2011-09-11 21:47:00'
-    - en
-  - - '5'
-    - board-of-directors
-    - '3'
-    - '1'
-    - Page
-    - !!null 
-    - '2011-09-11 22:23:58'
-    - en
-  - - '6'
-    - non-profits
-    - '4'
-    - '1'
-    - Page
-    - !!null 
-    - '2011-09-11 22:24:21'
-    - en
-  - - '7'
-    - official-logos
-    - '5'
-    - '1'
-    - Page
-    - !!null 
-    - '2011-09-11 22:24:39'
-    - en
-  - - '9'
-    - house-captains
-    - '7'
-    - '1'
-    - Page
-    - !!null 
-    - '2011-09-11 22:26:30'
-    - en
-  - - '10'
-    - homeowners
-    - '8'
-    - '1'
-    - Page
-    - !!null 
-    - '2011-09-11 22:26:56'
-    - en
-  - - '11'
+  - - 1
     - home
-    - '6'
-    - '1'
+    - 1
+    - 1
     - Page
-    - !!null 
-    - '2011-09-11 22:31:48'
+    - 
+    - 2011-12-24 20:46:03 Z
     - en
-  - - '12'
-    - welcome-to-rebuilding-together-portland
-    - '6'
-    - '1'
+  - - 2
+    - page-not-found
+    - 2
+    - 1
     - Page
-    - !!null 
-    - '2011-09-11 22:34:37'
+    - 
+    - 2011-12-24 20:46:03 Z
     - en
-  - - '13'
+  - - 3
+    - about
+    - 3
+    - 1
+    - Page
+    - 
+    - 2011-12-24 20:46:03 Z
+    - en
+  - - 4
+    - rebuilding
+    - 1
+    - 1
+    - User
+    - 
+    - 2011-12-24 20:52:46 Z
+    - en
+  - - 5
     - about-us
-    - '9'
-    - '1'
+    - 3
+    - 1
     - Page
-    - !!null 
-    - '2011-09-11 22:40:02'
+    - 
+    - 2011-12-24 20:53:55 Z
+    - en
+  - - 6
+    - board-of-directors
+    - 4
+    - 1
+    - Page
+    - 
+    - 2011-12-24 20:58:11 Z
+    - en
+  - - 7
+    - homeowners
+    - 5
+    - 1
+    - Page
+    - 
+    - 2011-12-24 20:59:29 Z
+    - en
+  - - 8
+    - house-captains
+    - 6
+    - 1
+    - Page
+    - 
+    - 2011-12-24 20:59:55 Z
+    - en
+  - - 9
+    - non-profits
+    - 7
+    - 1
+    - Page
+    - 
+    - 2011-12-24 21:00:43 Z
+    - en
+  - - 10
+    - logos-page
+    - 8
+    - 1
+    - Page
+    - 
+    - 2011-12-24 21:02:35 Z
+    - en
+  - - 11
+    - official-logos
+    - 8
+    - 1
+    - Page
+    - 
+    - 2011-12-24 21:03:14 Z
+    - en
+  - - 12
+    - rebuilding-together-portland
+    - 1
+    - 1
+    - Page
+    - 
+    - 2011-12-24 21:04:29 Z
     - en
 
----
-user_plugins:
-  columns:
+--- 
+user_plugins: 
+  columns: 
   - id
   - user_id
   - name
   - position
   records: 
----
-  - - '7'
-    - '1'
+  - - 7
+    - 1
     - refinery_dashboard
-    - '0'
-  - - '8'
-    - '1'
+    - 0
+  - - 8
+    - 1
     - refinery_files
-    - '1'
-  - - '9'
-    - '1'
+    - 1
+  - - 9
+    - 1
     - refinery_images
-    - '2'
-  - - '10'
-    - '1'
+    - 2
+  - - 10
+    - 1
     - refinery_pages
-    - '3'
-  - - '11'
-    - '1'
+    - 3
+  - - 11
+    - 1
     - refinery_settings
-    - '4'
-  - - '12'
-    - '1'
+    - 4
+  - - 12
+    - 1
     - refinery_users
-    - '5'
-  - - '13'
-    - '1'
+    - 5
+  - - 13
+    - 1
     - refinerycms_base
-    - '6'
-  - - '14'
-    - '1'
+    - 6
+  - - 14
+    - 1
     - refinery_core
-    - '7'
-  - - '15'
-    - '1'
+    - 7
+  - - 15
+    - 1
     - refinery_dialogs
-    - '8'
-  - - '16'
-    - '1'
+    - 8
+  - - 16
+    - 1
     - refinery_i18n
-    - '9'
-  - - '17'
-    - '1'
+    - 9
+  - - 17
+    - 1
     - refinery_generators
-    - '10'
+    - 10
 
----
-users:
-  columns:
+--- 
+users: 
+  columns: 
   - id
   - username
   - email
@@ -1644,20 +2201,19 @@ users:
   - reset_password_token
   - remember_created_at
   records: 
----
-  - - '1'
+  - - 1
     - rebuilding
     - joshua.siler@gmail.com
-    - $2a$10$9HqGinvdHgREe5TaNzqwveQW9BNX8g5QrAUeRgC.2oqyu1nxNa0LG
-    - !!null 
-    - '2011-09-11 21:47:00'
-    - '2011-09-11 21:47:00'
-    - !!null 
-    - '2011-09-11 21:47:00'
-    - '2011-09-11 21:47:00'
-    - 192.168.1.102
-    - 192.168.1.102
-    - '1'
-    - !!null 
-    - !!null 
-    - !!null 
+    - $2a$10$bfNsfOEIJpu0Gjtw4v2vIO9JryApxv9jXabRHWuq55P.f5H5mr5YK
+    - 
+    - 2011-12-24 20:52:46 Z
+    - 2011-12-24 20:52:46 Z
+    - 
+    - 2011-12-24 20:52:46 Z
+    - 2011-12-24 20:52:46 Z
+    - 127.0.0.1
+    - 127.0.0.1
+    - 1
+    - 
+    - 
+    - 

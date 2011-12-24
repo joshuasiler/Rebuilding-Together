@@ -1,10 +1,10 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.10'
+gem 'rails', '3.0.11'
 
-gem 'mysql'
+gem 'mysql2', '0.2.18'
 gem 'yaml_db'
-gem 'refinerycms',              '~> 1.0.8'
+gem 'refinerycms',              '~> 1.0.9'
 
 group :development, :test do
   # To use refinerycms-testing, uncomment it (if it's commented out) and run 'bundle install'
