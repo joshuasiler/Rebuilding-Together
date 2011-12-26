@@ -5,12 +5,12 @@
 		<div style="clear:both;font-size:0em;">&nbsp;</div>
 		<div id="nav">
 		    <a href="/">Home</a>
-		    <a href="/r/about_page">About Us</a>
-		    <a href="/contacts/new">Volunteer</a>
-				<a href="/r/house_captains">House Captains</a>
-		    <a href=/r/homeowners_page>Homeowners</a>
-		    <a href="/r/nonprofits_page">Non-Profits</a>
-		    <a href="/r/board_page">Board of Directors</a>
+		    <a href="/about-us">About Us</a>
+		    <a href="/contact">Volunteer</a>
+				<a href="/house-captains">House Captains</a>
+		    <a href=/homeowners>Homeowners</a>
+		    <a href="/non-profits">Non-Profits</a>
+		    <a href="/board-of-directors">Board of Directors</a>
 		    <a href="/plogger/index.php">Project Photos</a>
 		</div>
 		<div id="content">
