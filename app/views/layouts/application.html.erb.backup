@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Rebuilding Together Portland</title>
+    <link href="/stylesheets/public.css" rel="stylesheet" type="text/css" />
+    <%= javascript_include_tag :defaults %>
+  </head>
+    <body>
+	<div id="containerOuter">
+	    <div id="container">
+		<img src="/images/painter.jpg" alt="House painter on ladder." style="float:left;" />
+		<img src="/images/big-logo.png" alt="Rebuilding Together Portland logo." style="margin-left: 125px; margin-top: 5px;" />
+		<div style="clear:both;font-size:0em;">&nbsp;</div>
+		<div id="nav">
+		    <a href="/">Home</a>
+		    <a href="/about-us">About Us</a>
+		    <a href="/contacts/new">Volunteer</a>
+				<a href="/house-captains">House Captains</a>
+		    <a href=/homeowners>Homeowners</a>
+		    <a href="/non-profits">Non-Profits</a>
+		    <a href="/board-of-directors">Board of Directors</a>
+		    <a href="/plogger/index.php">Project Photos</a>
+		</div>
+		<div id="content">
+		   <%= yield %>
+		
+		</div>
+		<div id="footer">
+		    Rebuilding Together Portland, &copy; 2011
+		</div>
+	    </div>
+	</div>
+<% if RAILS_ENV=="production" %>
+	<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12635422-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<% end %>
+  </body>
+</html>

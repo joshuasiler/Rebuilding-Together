@@ -1,0 +1,103 @@
+/* Plogger gallery admin login stylesheet */
+
+/* Body and general styles */
+
+html, body, p, form {
+	font-family: tahoma, verdana, arial, sans-serif;
+	font-size: 14px;
+}
+
+a, a:link, a:visited, a:active {
+	color: #369;
+	font-size: 13px;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #519e51;
+	text-decoration: underline;
+}
+
+label {
+	font-weight: normal;
+}
+
+input {
+	margin: 1px;
+	font-family: verdana, arial, sans-serif;
+	font-size: 13px;
+	width: 180px;
+}
+
+input.submit {
+	border: none;
+	background-color: #369;
+	background-image: url("../images/blue-button-bg.gif");
+	background-repeat: repeat-x;
+	-moz-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	-khtml-box-sizing: content-box;
+	box-sizing: content-box;
+	color: #fff;
+	font-family: verdana, arial, sans-serif;
+	font-size: 12px !important;
+	font-weight: bold;
+	padding: 3px 8px;
+	cursor: pointer;
+	margin-left: 0;
+	width: auto;
+}
+
+input.submit:hover {
+	color: #a0cca0;
+}
+
+/* Login page structure/elements */
+
+#login-page {
+	border-top: 20px solid #369;
+	background: #fff;
+	padding-top: 80px;
+	margin: auto;
+}
+
+#login-logo, #login-nav {
+	text-align: center;
+	margin: auto;
+}
+
+#login-box, #login-error, #login-action {
+	width: 285px;
+	-moz-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+}
+
+#login-error, #login-action {
+	color: #000;
+	margin: 15px auto;
+	padding: 10px 15px;
+}
+
+#login-box {
+	background-color: #f9f9f9;
+	border: 1px solid #d9d9d9;
+	padding: 20px 15px 5px;
+	margin: 10px auto;
+}
+
+#login-error {
+	border: 1px solid maroon;
+	background-color: #fcc;
+}
+
+#login-action {
+	border: 1px solid #bb0;
+	background-color: #ffffe0;
+}
