@@ -12,10 +12,11 @@ $(document).ready(function() {
 		tform.find('.message_field').before('<div class="field" style="clear:left; margin-top: 20px;"><label for="formadd_message">Message</label><textarea cols="40" id="formadd_message" name="message" rows="8"></textarea></div>')
 		// put all these new fields into the one message on submit
 		tform.submit( function() { 
-			$('textarea#inquiry_message').val("Group:" + $('#formadd_group').val() +
-					"\nSkills:" + $('#formadd_skills').val() +
-					"\nPast Participation:" + $('#formadd_past').val() +
-					"\nMessage:" + $('#formadd_message').val()
+			$('textarea#inquiry_message').val(
+            "Group:              " + $('#formadd_group').val() +
+					"\nSkills:             " + $('#formadd_skills').val() +
+					"\nPast Participation: " + $('#formadd_past').val() +
+					"\nMessage:\n" + $('#formadd_message').val()
 					);
 		 } );
 	} 
