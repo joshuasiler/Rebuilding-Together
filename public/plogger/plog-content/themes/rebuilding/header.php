@@ -6,9 +6,9 @@
 		<div id="nav">
 		    <a href="/">Home</a>
 		    <a href="/about-us">About Us</a>
-		    <a href="/contact">Volunteer</a>
+		    <a href="/volunteer">Volunteer</a>
 				<a href="/house-captains">House Captains</a>
-		    <a href=/homeowners>Homeowners</a>
+		    <a href="/homeowners">Homeowners</a>
 		    <a href="/non-profits">Non-Profits</a>
 		    <a href="/board-of-directors">Board of Directors</a>
 		    <a href="/plogger/index.php">Project Photos</a>
