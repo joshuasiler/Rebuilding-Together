@@ -1,11 +1,12 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.11'
+gem 'rails', '3.0.20'
 
 gem 'mysql2', '0.2.18'
 gem 'yaml_db'
-gem 'refinerycms',              '~> 1.0.9'
-
+gem 'refinerycms', '~> 1.0.11'
+gem 'seo_meta', '1.1'
+\
 group :development, :test do
   # To use refinerycms-testing, uncomment it (if it's commented out) and run 'bundle install'
   # Then, run 'rails generate refinerycms_testing' which will copy its support files.
