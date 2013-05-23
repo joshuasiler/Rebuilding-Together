@@ -168,3 +168,11 @@ border-bottom: 1px solid #888;
 .actions input {    
     margin-left: 135px;
     font-size: 18px;}
+
+.sponsors-partners .inner a {
+	width: 225px;
+	height: 225px;
+	float: left;
+	margin: 30px;
+	text-align: center;
+}
