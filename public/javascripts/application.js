@@ -19,4 +19,26 @@ $(document).ready(function() {
 					);
 		 } );
 	} 
+
+	var logos = [],
+		row = 0;
+	logos.push([]);
+	$('.sponsors-partners .inner a').each(function(idx, logo) {
+		if (logos[row].length > 2) {
+			row++;
+			logos.push([]);
+		}
+		logos[row].push(logo);
+	});
+	for (var i = 0; i < logos.length; i++) {
+		var heights = [];
+		var row = $();
+		for (var j = 0; j < logos[i].length; j++) {
+			var el = $(logos[i][j]);
+			heights.push($('img', el).height());
+			row = row.add(el);
+		}
+		var height = Math.max.apply(null, heights);
+		row.css('height', height+'px');
+	}
 });
