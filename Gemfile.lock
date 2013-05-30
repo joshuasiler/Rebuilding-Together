@@ -40,7 +40,7 @@ GEM
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.0.3)
       warden (~> 1.0.3)
-    dragonfly (0.9.13)
+    dragonfly (0.9.14)
       multi_json (~> 1.0)
       rack
     erubis (2.6.6)
